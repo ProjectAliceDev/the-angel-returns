@@ -102,6 +102,8 @@ define audio.closet_close = "sfx/closet-close.ogg"
 define audio.page_turn = "sfx/pageflip.ogg"
 define audio.fall = "sfx/fall.ogg"
 
+define audio.b1 = "mod_assets/music/MUS_CH3_oldfriendsnewfaces.oga"
+define audio.b2 = "mod_assets/music/MUS_Lobby_Jazz.oga"
 
 image black = "#000000"
 image dark = "#000000e4"

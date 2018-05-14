@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script-poemresponses.rpy", line 28: expected statement.
-    n_readpoem
-              ^
-
-File "game/script-poemresponses.rpy", line 30: expected statement.
-    !n_readpoem
-    ^
+File "game/script-prech0.rpy", line 1: expected ':' not found.
+    label pre_ch0
+                 ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Thu May 10 21:16:43 2018
+Sun May 13 19:54:58 2018
