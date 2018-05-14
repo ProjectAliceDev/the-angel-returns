@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Doki Doki game files
+game/images.rpa
+game/scripts.rpa
+game/fonts.rpa
+game/audio.rpa
