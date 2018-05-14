@@ -1,0 +1,70 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 226, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/splash.rpy", line 281, in script
+    show splash_warning "[splash_message]" with Dissolve(0.5, alpha=True)
+Exception: Could not find font u'mod_assets/gui/font/regular.ttf'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 226, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/splash.rpy", line 281, in script
+    show splash_warning "[splash_message]" with Dissolve(0.5, alpha=True)
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/ast.py", line 1337, in execute
+    renpy.exports.with_statement(trans, paired)
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/exports.py", line 1413, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2193, in do_with
+    clear=clear)
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2635, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3118, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2041, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 485, in renpy.display.render.render_screen
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/display/transition.py", line 361, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "accelerator.pyx", line 108, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/display/image.py", line 414, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/display/image.py", line 229, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/text/text.py", line 1807, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/text/text.py", line 590, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/text/text.py", line 238, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample)
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/text/font.py", line 663, in get_font
+    face = load_face(fn)
+  File "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy/text/font.py", line 604, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font u'mod_assets/gui/font/regular.ttf'.
+
+Linux-4.15.0-20-generic-x86_64-with-debian-buster-sid
+Ren'Py 6.99.14.3.3347
+Doki Doki: The Angel Returns 0.1.0
+Sun May 13 18:37:34 2018

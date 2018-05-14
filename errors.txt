@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script-poemresponses.rpy", line 28: expected statement.
+    n_readpoem
+              ^
+
+File "game/script-poemresponses.rpy", line 30: expected statement.
+    !n_readpoem
+    ^
+
+Ren'Py Version: Ren'Py 6.99.14.3.3347
+Thu May 10 21:16:43 2018
