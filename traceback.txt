@@ -37,4 +37,4 @@ IOError: Couldn't find file 'bgm/t1.ogg'.
 Linux-4.15.0-20-generic-x86_64-with-debian-buster-sid
 Ren'Py 6.99.14.3.3347
 Doki Doki: The Angel Returns 0.1.0
-Sun May 13 20:30:53 2018
+Mon May 14 15:36:28 2018
