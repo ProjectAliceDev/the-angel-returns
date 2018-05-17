@@ -326,6 +326,144 @@ label ch0_main:
     show natsuki 1a zorder 2 at t44
     m 4b "Well, that went wonderful today!"
     show monika zorder 2 at t41
-    show yuri zorder 3 at t43
+    show yuri zorder 3 at f43
     y "Yes, the poems were absolutely exquisite today."
+    show yuri zorder 2 at t43
+    show sayori zorder 3 at f42
+    s 3r "We keep getting better!"
+    show sayori zorder 2 at t42
+    show natsuki zorder 3 at f44
+    n "..."
+    n 5q "No comment."
+    show natsuki zorder 2 at t44
+    show monika zorder 3 at f41
+    m "Alright, everyone!"
+    m "There's just one more thing we need to address."
+    show monika zorder 2 at t41
+    show sayori zorder 3 at f42
+    s 1o "Oh shoots! Spring break!"
+    s 1a "Have we decided on what we'll be doing this week?"
+    s 2r "I hope it'll be fun!"
+    show sayori zorder 2 at t42
+    show natsuki zorder 3 at f44
+    n 2m "Wait, we didn't decide anything..."
+    show natsuki zorder 2 at t44
+    show yuri zorder 3 at f43
+    y 2e "I don't think we've had the proper time to discuss it..."
+    show yuri zorder 2 at t43
+    show monika zorder 3 at f41
+    m 3i "You're right, we really didn't discuss that."
+    m 3g "Sayori, please tell me you have a backup plan for this..."
+    show monika zorder 2 at t41
+    show sayori zorder 3 at f42
+    s 2o "Wait."
+    "Sayori thinks for a moment, making various faces."
+    s 1h "Well, I do have {i}something{/i}..."
+    s 1k "I don't know how well it'd work, though."
+    s 5a "I forgot to do research on it, ehehe~"
+    show sayori zorder 2 at t42
+    show monika zorder 3 at f41
+    m 4i "Wait. You had something..."
+    m "But you didn't look into it?"
+    m "It's kind of late now to do anything about it, but what is it?"
+    show monika zorder 2 at t41
+    show sayori zorder 3 at f42
+    s 1l "So, uh... I got a letter in the mail..."
+    s "And I opened it and read the letter..."
+    s 5a "And there may or may not be someone willing to support the club?"
+    show sayori zorder 2 at t42
+    show monika zorder 3 at f41
+    m "..."
+    m 1g "Sayori, why didn't you say something?"
+    m "I could've looked into it myself..."
+    show monika zorder 2 at t41
+    show sayori zorder 3 at f42
+    s "Ehehe~"
+    s 5b "It's kind of personal..."
+    s "It was, uh, written for me, you know?"
+    mc "Sayori, you don't need to give us all of the details."
+    mc "You're not supposed to tell us that kind of thing, anyway."
+    s 5c "Meanie."
+    show sayori zorder 2 at t42
+    show yuri zorder 3 at f43
+    y 1f "It sounds like an opporunity."
+    y "I'm a bit surprised that someone sent you a letter and knew about our literature club."
+    y "Who's the letter from?"
+    show yuri zorder 2 at t43
+    show sayori zorder 3 at f42
+    s 1l "Ehehe..."
+    s "J-Joey Drew?"
+    show sayori zorder 2 at t42
+    "An awkward silence occurs."
+    show natsuki zorder 3 at f44
+    n 2p "Oh, hell no!"
+    "Natsuki steps out of the conversation."
+    show natsuki at thide
+    hide natsuki
+    show yuri zorder 3 at f43
+    y "Joey Drew?"
+    y 1g "The name sounds familiar, but I can't recall it..."
+    show yuri zorder 2 at t33
+    show sayori zorder 2 at t32
+    show monika zorder 3 at f31
+    m 1g "Joey Drew?"
+    m 4g "As in Joey Drew Studios?"
+    show monika zorder 2 at t31
+    show sayori zorder 3 at f32
+    s 5a "Yeah..."
+    show monika zorder 3 at f31
+    show sayori zorder 2 at t32
+    m 1i "..."
+    m 1d "How does a cartoon studio know about you and this club?"
+    m "I'm a bit flattered, but this seems skeptical."
+    m "I now understand why you wanted to do more research."
+    show monika zorder 2 at t31
+    show yuri zorder 3 at f33
+    y 3f "How interesting..."
+    y "What did he say in the letter."
+    show yuri zorder 2 at t33
+    show sayori zorder 3 at f32
+    s 1c "Well, he said some stuff about being interested in literature and that sort of thing."
+    s "And then he went on a splurge about animations."
+    s "And then he talked about formally inviting us to check out the studio for a week..."
+    s 1k "But it sounded fishy..."
+    s "It sounded like it was written from a girl."
+    mc "Sayori, how would you know that?"
+    mc "You practically just appreciate every poem I throw at you, regardless of its quality."
+    s 5c "Hey!"
+    s "That has nothing to do with it!"
+    s "I like reading your poems!"
+    s 1j "But, anyway..."
+    s "I wanted us to be safe."
+    s 1h "So that's why I didn't say anything about it."
+    show sayori zorder 2 at t32
+    show monika zorder 3 at f31
+    m 1e "Sayori, I appreciate you looking out for our welfare."
+    m "Personally, I'd like to take a look. Do you have a copy of the letter on you?"
+    "Sayori hastily grabs the letter from her bag between her math notebook and her English textbook."
+    "Monika carefully uncrumples the envelope and pulls the letter out."
+    mc "Sayori, you got to be a little more careful with your stuff..."
+    show sayori zorder 3 at f32
+    show monika zorder 2 at t31
+    s 1j "I was in a rush!"
+    s 5d "I overslept again this morning, you know..."
+    show monika zorder 3 at f31
+    show sayori zorder 2 at t32
+    "Monika scans through the letter."
+    m 1i "Mhm..."
+    m "I see why you're concerned."
+    m 4i "There is some questionable language in here that suggests that this might be a trap."
+    m "I, for one, am not able to understand the condition of the studio at this time."
+    m "Furthermore, there's a few ink splatters on the corners of the letter."
+    m 1i "Nonetheless, Sayori, it doesn't appear to be written by a girl."
+    m 5a "Rather, I just think Joey likes you, ehehe~"
+    show monika zorder 2 at t31
+    show sayori zorder 3 at f32
+    s 4p "Uwaa~!"
+    show sayori zorder 2 at t32
+    show yuri zorder 3 at f33
+    y 3d "Aww, how cute!"
+    call screen dialog("Uh...", ok_action=Return())
+    call screen dialog("Does she know?", ok_action=Return())
+    call screen dialog("Oh, God...", ok_action=Return())
     return

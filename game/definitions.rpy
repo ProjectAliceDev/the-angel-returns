@@ -1333,7 +1333,7 @@ define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suff
 define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxpink.png", xalign=0.5, yalign=1.0), who_style='say_label_pink')
 define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxpurple.png", xalign=0.5, yalign=1.0), who_style='say_label_purple')
 define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define a = DynamicCharacter('a_name', image='alice', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define a = DynamicCharacter('a_name', image='alice', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxamber.png", xalign=0.5, yalign=1.0), who_style='say_label_amber')
 define b = DynamicCharacter('b_name')
 define sa = Character('Ali & Sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 

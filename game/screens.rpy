@@ -1694,6 +1694,14 @@ style say_label_mc:
     yalign 0.5
     outlines [(3, "#594b38", 0, 0), (1, "#594b38", 1, 1)]
 
+style say_label_amber:
+    color gui.accent_color
+    font gui.name_font
+    size gui.name_text_size
+    xalign gui.name_xalign
+    yalign 0.5
+    outlines [(3, "#986c0b", 0, 0), (1, "#986c0b", 1, 1)]
+
 style say_label_green:
     color gui.accent_color
     font gui.name_font
