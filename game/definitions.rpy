@@ -1326,12 +1326,12 @@ image monika g2:
     repeat
 
 
-define narrator = Character(ctc="ctc", ctc_position="fixed")
-define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define narrator = Character(ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxmc.png", xalign=0.5, yalign=1.0))
+define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxmc.png", xalign=0.5, yalign=1.0), who_style='say_label_mc')
+define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxblue.png", xalign=0.5, yalign=1.0), who_style='say_label_blue')
+define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxgreen.png", xalign=0.5, yalign=1.0), who_style='say_label_green')
+define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxpink.png", xalign=0.5, yalign=1.0), who_style='say_label_pink')
+define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxpurple.png", xalign=0.5, yalign=1.0), who_style='say_label_purple')
 define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define a = DynamicCharacter('a_name', image='alice', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define b = DynamicCharacter('b_name')

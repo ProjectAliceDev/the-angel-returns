@@ -1583,3 +1583,137 @@ init -1 style notify_frame:
 init -1 style notify_text:
     size gui.notify_text_size
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+
+# you will need to create a .png file to each namebox on /mod_assets/images/gui/
+# Replace your screen say(who, what) block with the following:
+screen say(who, what):
+    style_prefix "say"
+
+    window:
+        id "window"
+
+        text what id "what"
+
+        if who is not None:
+            if who == s_name: #Sayori namebox
+                window:
+                    style "nameboxblue"
+                    text who id "who"
+            if who == m_name: #Monika namebox
+                window:
+                    style "nameboxgreen"
+                    text who id "who"
+            if who == y_name: #Yuri namebox
+                window:
+                    style "nameboxpurple"
+                    text who id "who"
+            if who == n_name: #Natsuki namebox
+                window:
+                    style "nameboxpink"
+                    text who id "who"
+            if who == player: #MC namebox
+                window:
+                    style "namebox_mc"
+                    text who id "who"
+            if who != s_name and who != m_name and who != y_name and who != n_name and who != player: #Everyone else namebox
+                window:
+                    style "namebox"
+                    text who id "who"
+
+# We are not using "style nameboxblue is namebox" because it makes the game crash if you use rollback
+# if you don't use rollback you can replace all the window codes for something like this:
+#
+# style nameboxblue is namebox:
+#     background Frame("/mod_assets/images/gui/nameboxblue.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+
+style nameboxblue:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+    background Frame("/mod_assets/images/gui/nameboxblue.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
+style namebox_mc:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+    background Frame("/mod_assets/images/gui/nameboxmc.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
+style nameboxgreen:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+    background Frame("/mod_assets/images/gui/nameboxgreen.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
+style nameboxpurple:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+    background Frame("/mod_assets/images/gui/nameboxpurple.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
+style nameboxpink:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+    background Frame("/mod_assets/images/gui/nameboxpink.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
+
+# We are not using "style say_label_blue is say_label" because it makes the game crash if you use rollback
+# if you don't use rollback you can replace all the window codes for something like this:
+#
+# style say_label_blue is say_label:
+#     outlines [(3, "#58b", 0, 0), (1, "#58b", 1, 1)]
+
+style say_label_blue:
+    color gui.accent_color
+    font gui.name_font
+    size gui.name_text_size
+    xalign gui.name_xalign
+    yalign 0.5
+    outlines [(3, "#58b", 0, 0), (1, "#58b", 1, 1)]
+
+style say_label_mc:
+    color gui.accent_color
+    font gui.name_font
+    size gui.name_text_size
+    xalign gui.name_xalign
+    yalign 0.5
+    outlines [(3, "#594b38", 0, 0), (1, "#594b38", 1, 1)]
+
+style say_label_green:
+    color gui.accent_color
+    font gui.name_font
+    size gui.name_text_size
+    xalign gui.name_xalign
+    yalign 0.5
+    outlines [(3, "#5b5", 0, 0), (1, "#5b5", 1, 1)]
+
+style say_label_purple:
+    color gui.accent_color
+    font gui.name_font
+    size gui.name_text_size
+    xalign gui.name_xalign
+    yalign 0.5
+    outlines [(3, "#8755bb", 0, 0), (1, "#8755bb", 1, 1)]
+
+style say_label_pink:
+    color gui.accent_color
+    font gui.name_font
+    size gui.name_text_size
+    xalign gui.name_xalign
+    yalign 0.5
+    outlines [(3, "#b59", 0, 0), (1, "#b59", 1, 1)]
