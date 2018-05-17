@@ -232,6 +232,12 @@ label ch0_main:
     m "..."
     m "Who?{nw}"
     call updateconsole("r.cache.clear()", "Clearing cache...")
+    python:
+        currentpos = get_pos()
+        startpos = currentpos - 0.3
+        if startpos < 0: startpos = 0
+        track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/8.ogg"
+        renpy.music.play(track, loop=True)
     $ pause(0.75)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -239,8 +245,20 @@ label ch0_main:
     stop sound
     hide screen tear
     call hideconsole
-
-    m 4i "Wait, there's a difference?"
+    stop music
+    show reload_bg zorder 2
+    show fake_reload zorder 2 at truecenter
+    $ renpy.pause(3.0)
+    hide fake_reload
+    $ renpy.pause(0.1)
+    window hide(None)
+    show fake_reload2 zorder 2 at truecenter
+    $ renpy.pause(3.0)
+    hide reload_bg
+    hide fake_reload2
+    window show(None)
+    play music t3
+    m 4i "Wait, there's a difference?{fast}"
     mc "A huge one at that."
     mc "It's like looking at Windows 7 and Windows 8."
     mc "They may perform the same, but they have completely different interfaces."
@@ -280,4 +298,34 @@ label ch0_main:
     s 4r "Yaay!"
     s 1a "I can't wait to read your poem, [player]!"
     "Sayori enthusiastically pulls out her poem from the binder."
+    "Monika takes the book from my hands and pulls out her poem from the cover."
+    "I walk towards my bag to grab mine, getting ready to share my poem{nw}"
+    $ pause(1.25)
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.50)
+    stop sound
+    hide screen tear
+    stop music
+    show reload_bg zorder 2
+    show fake_reload zorder 2 at truecenter
+    $ renpy.pause(3.0)
+    hide fake_reload
+    $ renpy.pause(0.1)
+    window hide(None)
+    show fake_reload2 zorder 2 at truecenter
+    $ renpy.pause(3.0)
+    hide reload_bg
+    hide fake_reload2
+    window show(None)
+
+    play music t3
+    show monika zorder 3 at t41
+    show sayori zorder 2 at t42
+    show yuri 1a zorder 2 at t43
+    show natsuki 1a zorder 2 at t44
+    m 4b "Well, that went wonderful today!"
+    show monika zorder 2 at t41
+    show yuri zorder 3 at t43
+    y "Yes, the poems were absolutely exquisite today."
     return
