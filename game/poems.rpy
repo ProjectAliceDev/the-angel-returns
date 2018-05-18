@@ -758,6 +758,8 @@ screen poem(currentpoem, paper="paper"):
             text "[currentpoem.title]\n\n[currentpoem.text]" style "natsuki_text"
         elif currentpoem.author == "monika":
             text "[currentpoem.title]\n\n[currentpoem.text]" style "monika_text"
+        elif currentpoem.author == "bendy":
+            text "[currentpoem.title]\n\n[currentpoem.text]" style "bendy_text"
         elif currentpoem.author == "alice":
             if currentpoem.alice_2:
                 text "[currentpoem.title]\n\n[currentpoem.text]" style "alice_text_2"
@@ -827,6 +829,13 @@ style alice_text:
 
 style alice_text_2:
     font "mod_assets/gui/font/a2.ttf"
+    size 28
+    color "#000"
+    outlines []
+    justify True
+
+style bendy_text:
+    font "mod_assets/gui/font/b1.ttf"
     size 28
     color "#000"
     outlines []

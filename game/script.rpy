@@ -30,6 +30,7 @@ label start:
         #Call example script
         call pre_ch0
         call ch0_main
+        call ch0_end
 
     if persistent.playthrough == 1:
         #Stuff here would only play after you increased the playthrough count

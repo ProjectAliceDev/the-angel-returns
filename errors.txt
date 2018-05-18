@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script-ch0.rpy", line 228: expected statement.
-    m
-     ^
+File "game/letters.rpy", line 1: expected statement.
+    letter_1=Poem(
+            ^
+    author = "bendy",
+    text = """\
+    Hi Sayori,
+    Wow! 30 years has really passed.
+    
+    - Bendy
+    """
+    )
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Tue May 15 15:14:17 2018
+Thu May 17 20:48:45 2018
