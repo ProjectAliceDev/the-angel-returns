@@ -82,7 +82,7 @@ label pre_ch0:
 
     $ renpy.call_screen("dialog", "Huh?", ok_action=Return())
     $ renpy.call_screen("dialog", "This isn't funny, Monika.", ok_action=Return())
-    $ renpy.call_screen("dialog", "You have to stop plaing around with the code.", ok_action=Return())
+    $ renpy.call_screen("dialog", "You have to stop playing around with the code.", ok_action=Return())
     $ renpy.call_screen("dialog", "You'll never know what happens.", ok_action=Return())
 
     call updateconsole("", "Loading aliceangel.chr...")

@@ -6,10 +6,10 @@ label alice_poem_demos:
     $ y_name = "Yuri"
     y "Did... did you w-want to read this b-book with me?"
 
-    # scene black
-    # show monika 1g zorder 2 at t11
-    # $ m_name = "Monika"
-    # m "I had to do it. {i}She{/i} made me."
+    scene black
+    show monika 4r zorder 2 at t11
+    $ m_name = "Monika"
+    m "Never an honest word from her mouth..."
 
     scene bg club_day
     with wipeleft_scene

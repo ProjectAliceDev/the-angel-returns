@@ -554,6 +554,8 @@ label ch0_end:
     mc "Let me take a look."
     "Natsuki hands me the letter."
     call showletter(letter_1)
+    mc "..."
+    mc "Well, there's an opportunity here with a lot of risk."
     mc "If you girls really want to do this, we have to be careful."
     mc "Any wrong move could cost us big time."
     mc "Sayori, I'm sure that whoever wrote the letter to you must like you or tolerate you enough to not hurt you."
@@ -572,4 +574,57 @@ label ch0_end:
     show yuri zorder 2 at t44
     n 5s "..."
     n 5h "Alright, if you say so..."
+    show natsuki at thide
+    show yuri at thide
+    show sayori at thide
+    hide natsuki
+    hide yuri
+    hide sayori
+    show monika zorder 2 at t11
+    m 1b "Remember to stay safe, everyone!"
+    m "We'll go over a few things in the morning before we venture off."
+    m 4b "Let's meet in front of campus tomorrow morning to take inventory!"
+    m "I look forward to having another adventure with you, [player]..."
+    m 5a "Ehehe~"
+    mc "You too, Monika..."
+    show sayori 2b zorder 3 at f33
+    s "Before I forget!"
+    s "I'll be coming home a bit later, [player]."
+    s 2a "I'm shopping with Natsuki for supplies and stuff."
+    mc "Okay, let me know if you need anything."
+    s 1j "Wait! I'm supposed to say that!"
+    s 1x "You goof!"
+    mc "Well, some things don't go as planned."
+    mc "Just stay safe, alright?"
+    s "No problemo!"
+    show sayori at thide
+    hide sayori
+    m 2b "You're such a dynamic pair!"
+    mc "Just watching out for each other, that's all."
+    m "I shall see you in the morning, then."
+
+    scene bg residential_day
+    with wipeleft_scene
+
+    "With that, I walk home, checking my phone once in a while to see if Sayori texted me."
+    "Spending a solid week in a cartoon studio with:"
+    show sayori 1 zorder 2 at t41
+    "Sayori,"
+    show natsuki 4 zorder 2 at t42
+    "Natsuki,"
+    show yuri 1 zorder 2 at t43
+    "Yuri,"
+    show monika 1 zorder 2 at t44
+    "and, of course, Monika."
+    "This could totally work out and bring us closer to each other."
+    "However, this could also be the end of us..."
+    hide sayori
+    hide natsuki
+    hide yuri
+    hide monika
+    with wipeleft
+    "Alright!"
+    "I just need to grab a few things and I should be ready for the morning."
+    "It's the beginning of a wild adventure..."
+
     return
