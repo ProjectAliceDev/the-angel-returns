@@ -11,8 +11,11 @@ Hrmm... it appears that there are no downloads just yet. Stay tuned!
 
 > By downloading this mod, you are agreeing to the terms listed therein and acknowledge the information regarding copyright. You also acknowledge that this mod is not suitable for children or those who are easily disturbed.
 
+## Developing
+If you are a developer and want to develop for DD:TAR, we recommend installing Atom and the `renpy`, `script`, `flex-tool-bar`, and `tool-bar` plugins.
+
+To run the game without launching the Ren'Py launcher, make the appropriate changes in `run.py` and run it from the terminal. If you have the aforementioned plugins, open `run.py` in Atom and hit the "Run Python Project" button in the toolbar.
+
 ## Contribute
 The easiest way to get started is to join our Discord server:
-<iframe src="https://discordapp.com/widget?id=444929605258838016&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
-
-**Widget not displaying? [Use the invite link &rsaquo;](https://discord.gg/tdvNzjW)**
+**[Use the invite link &rsaquo;](https://discord.gg/tdvNzjW)**
