@@ -495,9 +495,9 @@ init -1 style navigation_button:
 
 init -1 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-    font "mod_assets/gui/font/gui.ttf"
+    font "mod_assets/gui/font/generic2.ttf"
     color "#fff"
-    outlines [(4, "#b59", 0, 0), (2, "#b59", 2, 2)]
+    outlines [(3, "#986c0b", 0, 0), (1, "#986c0b", 1, 1)]
     hover_outlines [(4, "#fac", 0, 0), (2, "#fac", 2, 2)]
     insensitive_outlines [(4, "#fce", 0, 0), (2, "#fce", 2, 2)]
 
@@ -694,7 +694,7 @@ init -1 style game_menu_outer_frame:
     bottom_padding 30
     top_padding 120
 
-    background "gui/overlay/game_menu.png"
+    background "mod_assets/gui/overlay/game_menu.png"
 
 init -1 style game_menu_navigation_frame:
     xsize 280
@@ -719,10 +719,10 @@ init -1 style game_menu_label:
     ysize 120
 
 init -1 style game_menu_label_text:
-    font "mod_assets/gui/font/gui.ttf"
+    font "mod_assets/gui/font/generic2.ttf"
     size gui.title_text_size
     color "#fff"
-    outlines [(6, "#b59", 0, 0), (3, "#b59", 2, 2)]
+    outlines [(3, "#986c0b", 0, 0), (1, "#986c0b", 1, 1)]
     yalign 0.5
 
 init -1 style return_button:
@@ -1054,10 +1054,10 @@ init -1 style pref_label:
     bottom_margin 2
 
 init -1 style pref_label_text:
-    font "mod_assets/gui/font/gui.ttf"
+    font "mod_assets/gui/font/generic2.ttf"
     size 24
     color "#fff"
-    outlines [(3, "#b59", 0, 0), (1, "#b59", 1, 1)]
+    outlines [(3, "#986c0b", 0, 0), (1, "#986c0b", 1, 1)]
     yalign 1.0
 
 init -1 style pref_vbox:

@@ -16,18 +16,17 @@ label ch0_main:
 
     show yuri 1a zorder 2 at t11
     y "[player], it's good to see you again."
-    mc "Yuri, did you dye your hair?"
-    y 3n "D-does it look bad?"
-    mc "What? No, it's fine!"
-    mc "I'm just not used to it."
-    mc "It kind of adds a bit more sophistication to you..."
+    "Yuri fidgets with the corner of her new book/"
+    mc "Ah! I see you're reading something other than the Portrait of Markov, Yuri!"
+    y 3n "E-Eh?"
+    mc "You don't need to be embarassed about it!"
+    mc "Its' perfectly fine to be finished with one book and start another, even though I didn't finish read it yet."
     y 4b "Uu..."
     "We've gotten to know each other quite well, but she's still a little shy."
-    mc "It looks nice."
-    y 4a "Y-you really think so?"
-    y 3f "I-I wanted to try something new."
-    y 1a "I should proabbly make some tea."
-    show yuri at thide
+    mc "So, what book is that?"
+    y 4a "T-The Illusion of L-Living, yes..."
+    y 1o "I'll be right back, I'm making tea..."
+    show yuri at lhide
     hide yuri
     "Yuri walks over to the closet to grab the tea set, as usual."
 
@@ -165,6 +164,7 @@ label ch0_main:
     show monika zorder 2 at t21
     show yuri zorder 2 at t22
     mc "As for you, Yuri..."
+    show yuri 4 zorder 2 at t22
     mc "I apologize for letting you get caught up in our discussion."
     mc "I hope that you also respect my decision."
     show yuri zorder 3 at f22
@@ -554,6 +554,7 @@ label ch0_end:
     mc "Let me take a look."
     "Natsuki hands me the letter."
     call showletter(letter_1)
+    $ poemsread = 4
     mc "..."
     mc "Well, there's an opportunity here with a lot of risk."
     mc "If you girls really want to do this, we have to be careful."

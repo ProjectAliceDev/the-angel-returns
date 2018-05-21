@@ -1,6 +1,6 @@
 init python:
 
-    class Poem:
+    class Letter:
         def __init__(self, author="", title="", text="", yuri_2=False, yuri_3=False, alice_2=False):
             self.author = author
             self.title = title
@@ -10,7 +10,7 @@ init python:
             self.alice_2 = alice_2
 
     # TODO: Have this written preferrably yby a female.
-    letter_1=Poem(
+    letter_1=Letter(
     author = "bendy",
     text = """\
     Hi Sayori,

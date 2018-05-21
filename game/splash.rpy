@@ -270,7 +270,7 @@ label splashscreen:
     show black
     $ persistent.ghost_menu = False #Handling for easter egg from DDLC
     $ splash_message = splash_message_default #Default splash message
-    $ config.main_menu_music = audio.t1
+    $ config.main_menu_music = audio.bt
     $ renpy.music.play(config.main_menu_music)
     show intro with Dissolve(0.5, alpha=True)
     pause 2.5
