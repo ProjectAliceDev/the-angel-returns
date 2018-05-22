@@ -35,6 +35,8 @@ label start:
         call ch0_blackbox_puzzle
 
         $ chapter = 1
+        call pre_ch1
+        call ch1_main
 
     if persistent.playthrough == 1:
         #Stuff here would only play after you increased the playthrough count

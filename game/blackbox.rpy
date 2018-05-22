@@ -12,14 +12,12 @@ label start_blackbox_puzzle:
     call updateconsole("r.file(\"blackbox.chr\")", "Loading blackbox.chr...")
     call updateconsole("box.init(_alice)", "Initialized.")
     window show(None)
-    "Welcome to Doki Doki: The Angel Returns."
-    "This mod's minigames are slightly different from what you might expect."
-    "These games are intended to think about how you use Doki Doki Literature Club! and your computer."
     show blight start zorder 2 at t11
-    "This is a light."
-    "To advance further in the story, you must activate this light."
-    "There are subtle hints in dialogue that may help you, but you may have to do things that you didn't think about before."
-    "For now, we will make this easy."
+    call screen dialog("""\
+    It's time to get your brain working!
+
+    Each minigame has a unique puzzle. Sometimes, this may require changing the game's settings or selecting the right path. Good luck!
+    """, ok_action=Return())
     $ consolehistory = []
     call updateconsole("call _alice", "Loading into scene...")
     $ a_name = "???"
@@ -64,6 +62,11 @@ label ch0_blackbox_puzzle:
     show vignette zorder 4 at truecenter
     play music b3
     show blight start zorder 2 at t11
+    call screen dialog("""\
+It's time to get your brain working! Each minigame has a unique puzzle. Sometimes, this may require changing the game's settings or selecting the right path.
+
+If you get stuck, don't worry; Alice may say something to you as a hint! Good luck.
+    """, ok_action=Return())
     a "[player]..."
     a "[player]..."
     a "Why am I here?"
@@ -74,6 +77,8 @@ label ch0_blackbox_puzzle:
     a "No..."
     a "This can't be..."
     a "Why did you save me?"
+    a "Why did you {i}save{/i} me?"
+    a "{i}Why did you save me?{/i}"
     window hide(config.window_hide_transition)
     $ renpy.jump("ch0_blackbox_puzzle_loop")
     return
@@ -99,5 +104,10 @@ label ch0_blackbox_puzzle_loop:
 
 label ch0_blackbox_puzzle_success:
     show blight complete zorder 2 at t11
-    a "Why?"
+    $ pause(0.75)
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.25)
+    stop sound
+    hide screen tear
     return

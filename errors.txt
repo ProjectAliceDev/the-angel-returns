@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script-prech0.rpy", line 23: expected statement.
-    plays music b4 fadein 1.0
-                           ^
+The label ch1_main is defined twice, at
+  File "script-ch1.rpyc", line 3 and
+  File "game/script-ch1.rpy", line 1.
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Sun May 20 07:40:20 2018
+Mon May 21 12:03:48 2018

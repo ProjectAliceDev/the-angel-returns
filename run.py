@@ -7,7 +7,6 @@ print("Running DDTAR in developer mode...")
 
 try:
     os.system(renpy + " .")
-    print("Done")
 except:
     print("Whoops, something went wrong.")
     print("Check your RENPY variable in run.py.")
