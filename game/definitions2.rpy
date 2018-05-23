@@ -18,6 +18,7 @@ define audio.b1 = "mod_assets/music/MUS_CH3_oldfriendsnewfaces.oga"
 define audio.b2 = "mod_assets/music/MUS_Lobby_Jazz.oga"
 define audio.b3 = "mod_assets/music/MUS_CH3_formerglory.oga"
 define audio.b4 = "mod_assets/music/b4.ogg"
+define audio.b5 = "mod_assets/music/THA-thecakeisalie.mp3"
 define audio.a4 = "mod_assets/music/b4g.ogg"
 define audio.bt = "mod_assets/music/backpacking2.ogg"
 

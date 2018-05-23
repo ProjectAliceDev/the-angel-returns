@@ -569,4 +569,95 @@ label ch1_end:
     a 0b "Of course we do!"
     a "It's how my colleagues usually like to calm down, so I always make sure we keep a set around."
     a "They're almost as ubiquitous as our Bendy cutouts, ahaha~!"
+    show yuri zorder 3 at f43
+    show alice zorder 2 at t42
+    y 1bc "Wonderful!"
+    show monika zorder 3 at f41
+    show yuri zorder 2 at t43
+    m 4bb "With that settled, I think this week will run smoothly!"
+    m 2bb "Sayori, Natsuki... please follow Alice to the residential areas."
+    m 1ba "I'd like to have a word with Yuri and [player] before we get completely settled in."
+    show sayori zorder 3 at f44
+    show monika zorder 2 at t41
+    s "Okay! We'll get you when you're ready."
+    show sayori at thide
+    hide sayori
+    show alice zorder 3 at f42
+    a 0b "Alright, Monika."
+    a "I shall see you downstairs soon."
+    show alice at thide
+    hide alice
+    show monika zorder 2 at t21
+    show yuri zorder 2 at t22
+    "Monika watches as Alice guides Natsuki and Sayori upstairs, clutching onto some of our bags."
+    a "Come on, girls! We've got a ways to go."
+    "Yuri eyes the trio down as they exit the break room and close the doors."
+
+    show vignette zorder 1 at vignettefade(1.5)
+    stop music fadeout 1.5
+    show monika zorder 2 at f21
+    show yuri 1be zorder 2 at t22
+    m 1bi "[player], was everything alright with Alice?"
+    mc "Yeah, I guess."
+    mc "She was a bit overwhelemed and got a bit nostalgic."
+    play music b5
+    show yuri zorder 2 at f22
+    show monika zorder 2 at t21
+    y 2bt "She doesn't seem trustworthy."
+    y 1bh "She could be possibly watching our every move."
+    y 1bf "I'll admit, we did walk in on her unexpectedly."
+    y "Still, she raises some suspicions."
+    mc "It doesn't help that she knows that we know about what happened before."
+    show monika at f21
+    show yuri at t22
+    m "What?"
+    m "How could she possibly know?"
+    mc "I don't know..."
+    mc "It's almost like as if she read me like a book."
+    m 4bi "Well, you were looking at her a bit funny."
+    m "Maybe she got the idea that we knew about it from that."
+    show yuri at f22
+    show monika at t21
+    y "She was scrutinizing the letter pretty hard, too."
+    y 2bh "Did anyone find it a bit odd that she knew about the letter?"
+    show yuri at t22
+    "The room falls silent for a second."
+    show monika at f21
+    m 1br "She's onto us, I'm afraid."
+    m 3bi "I surmise that she's the one that wrote the letter in the first place."
+    m "From what it sounded like, she would've better anticipated us to come."
+    m "We came in a time when she least expected it."
+    m 2bp "We're going to have to be a lot more careful if she knows about us."
+    show yuri at f22
+    show monika at t21
+    y 2br "We can't keep leading her on like this."
+    y "There has to be a way around it!"
+    mc "Wait a second."
+    show yuri 4bc at t22
+    mc "If everything holds true..."
+    mc "Then that should mean that the Ink Demon still exists."
+    show monika at f21
+    m 1bi "[player], what are you suggesting?"
+    m "You can't be saying that we're being watched by two ink creatures at the same time..."
+    mc "I skimmed through your notes from the train."
+    mc "Rumor has it that he hears everything."
+    mc "Every door creak, every rustle of paper..."
+    mc "Even this very conversation."
+    m "What are you implying?"
+    show yuri at f22
+    show monika at t21
+    y 4bd "Surely you're not suggesting that Bendy already knows about what could happen, right?"
+    mc "More or less. Perhaps if we can befriend him, we can get to the bottom of this."
+    y 1br "Are you insane?"
+    y "He could have the potential of killing us!"
+    mc "Then why didn't he kill Henry?"
+    show yuri 4bb at s22
+    show monika at f21
+    m 4bi "[player], the relationship between him and Henry and ours is completely different."
+    m "He may not be that willing to cooperate."
+    call screen dialog("That's what they all say...", ok_action=Return())
+    m 4bg "..."
+    m "Eh?"
+    m 1bi "Forget I said anything."
+    m 1bq "Let's just keep this on the down low until we figure out what the hell is going on."
     return
