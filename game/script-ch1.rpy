@@ -256,4 +256,317 @@ label ch1_main:
     "Natsuki and Sayori wave, showing us where to go."
     "We take the three seats perpendicular from them."
     "The train starts to move as we head to the studio."
+    $ pause(0.75)
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    stop music fadeout 0.0
+    show reload_bg zorder 2
+    show fake_reload zorder 2 at truecenter
+    $ renpy.pause(3.0)
+    hide fake_reload
+    $ renpy.pause(0.1)
+    window hide(None)
+    show fake_reload2 zorder 2 at truecenter
+    $ renpy.pause(3.0)
+    hide reload_bg
+    hide fake_reload2
+    window show(None)
+
+    scene black
+    n "Are you sure this is it?"
+    n "It looks kind of run down..."
+    y "This is the only location that Apple Maps brought up."
+    m "Yeah, I'm pretty sure this is the studio."
+    s "Can we go inside already?"
+    mc "We'll go inside soon. We just have to figure out what's going on."
+    y "I don't suppose we can just walk in..."
+    y "The door's unlocked."
+    m "Well, this is a cartoon studio."
+    m "I guess we have no other choice."
+    "Monika gently opens the door."
+    scene bg studio entrance
+    play music m1
+    show monika 1bc zorder 2 at t31
+    m "Whoa..."
+    show yuri 1be zorder 2 at t33
+    y "This isn't what I expected..."
+    mc "I think this is only the lobby."
+    "Suddenly, we hear soft singing coming from the corner."
+    a "{i}I got a friendly halo and I'm filled with love...{/i}"
+    show alice 0j zorder 3 at f32
+    a "{i}I'm Alice...{/i}"
+    a 0d "...Angel?"
+    a 0g "How... did you get in here?"
+    show alice zorder 2 at t32
+    show yuri zorder 3 at f33
+    y 3bp "A-aah!"
+    y 4bc "Th-the door was unlocked."
+    y "W-we thought the studio was o-open..."
+    show yuri at lhide
+    hide yuri
+    show sayori 1bb zorder 2 at t33
+    show monika zorder 3 at f31
+    m 3bd "My apologies if we came here unannounced."
+    m "We came here as per a response to a letter Mr. Joey Drew sent to the vice president of our literature club, Sayori."
+    show sayori zorder 3 at f33
+    show monika zorder 2 at t31
+    s 4br "That's me!"
+    show sayori 1ba zorder 2 at t33
+    show alice zorder 3 at f32
+    a 0d "A letter?"
+    a "From Mr. Drew?"
+    a 0i "That's interesting, he never confided with me about that."
+    a "May I please see a copy of this letter?"
+    "I hand the woman the letter from my coat pocket."
+    a "..."
+    a 0d "Oh..."
+    a "Ah!"
+    a 0b "I'm sorry, I guess I was misinformed."
+    a 0j "Welcome to Joey Drew Studios, home of the Bendy and Alice Angel cartoons!"
+    a 0b "Allow me to introduce myself..."
+    n "Wait a second."
+    show monika zorder 2 at t41
+    show alice zorder 2 at t42
+    show natsuki 5bc zorder 3 at f43
+    show sayori zorder 2 at t44
+    n "You look familiar."
+    "The room falls silent."
+    show monika 1bc zorder 2 at t41
+    show alice 0c zorder 2 at t42
+    n 5bs "..."
+    "Natsuki's pondering again..."
+    n 5bd "You're Alice Angel, aren't you?"
+    show alice zorder 3 at f42
+    show natsuki zorder 2 at t43
+    a "..."
+    $ a_name = "Alice"
+    a 0d "Well, that was rather depressing."
+    mc "Natsuki, I think she was..."
+    a 0g "You could've at least let me properly introduce myself to you..."
+    a 0o "It's been a while since I sang for a crowd of people like this..."
+    show natsuki zorder 3 at f43
+    show alice zorder 2 at t42
+    n 5bs "..."
+    n "Sorry, I didn't mean to spoil the thunder like th{nw}"
+    show sayori zorder 3 at f44
+    show natsuki zorder 2 at t43
+    s 4br "Do it anyway!"
+    show alice zorder 3 at f42
+    show sayori zorder 2 at t44
+    a 0g "W-what?"
+    mc "Don't mind Sayori, she just really loves hea{nw}"
+    show sayori zorder 3 at f44
+    show alice zorder 2 at t42
+    s 2be "Please?"
+    s "I want to hear you sing..."
+    s 1ba "I bet it sounds nice..."
+    show monika zorder 3 at f41
+    show sayori zorder 2 at t44
+    m 2be "I'm sure the club doesn't mind hearing it anyway, even though the surprise has been spoiled."
+    m 4bb "We're all about self-expression, anyway!"
+    m 4bk "That's why we write poems, after all!"
+    show monika 1ba zorder 2 at t41
+    stop music fadeout 1.0
+    play music mend
+    show alice zorder 3 at f42
+    a 0c "Look, I appreciate the concern and your enthusiasm about it."
+    a 0g "It's just that it doesn't have the same effect now."
+    a "I've been doing this for over twenty years."
+    a 0o "I know when something gets too old."
+    show alice zorder 2 at f42
+    s 2bu "B-but..."
+    show sayori at s44
+    m 1bo "You can't beat yourself up like this..."
+    show monika at s41
+    n 5bm "You can't just call it quits like that..."
+    show natsuki at s43
+    show alice zorder 3 at f42
+    a "..."
+    a "It appears you've given me a difficult choice."
+    a "I'm sorry..."
+    a 0g "You can use the directory to find the break room."
+    a "Situate yourselves in there for now."
+    a 0o "I need some time to think..."
+    show alice at lhide
+    hide alice
+    show monika at t31
+    show natsuki at t32
+    show sayori at t33
+    s "..."
+    s 2bw "We scared her away!"
+    show natsuki zorder 3 at f32
+    n 5bn "I'm sorry, guys..."
+    n "I didn't mean for the first day to turn out like this."
+    show natsuki zorder 2 at t32
+    show monika zorder 3 at f31
+    m "Natsuki, it's not your fault."
+    m 3bp "I guess she got a little bit overwhelmed..."
+    m 1bp "We might've pushed her a little too much..."
+    show monika zorder 2 at t31
+    mc "Guys, you can't be beating yourselves up."
+    mc "It sounds like not a lot of people have seen her or this studio for a while."
+    mc "I bet you she's just unsure of how to handle this because she's been lonely for a long while."
+    mc "Monika, take the girls to the break room."
+    mc "I'm going to try finding Alice and taling to her."
+    show monika zorder 3 at f31
+    m 1bg "If you say so, [player]..."
+    show monika zorder 2 at t31
+    mc "It's going to be okay."
+    mc "We'll still make this fun."
+    "The girls rest the bags on the long table and start looking around for the break room."
+    show monika at thide
+    show sayori at thide
+    show natsuki at thide
+    hide monika
+    hide natsuki
+    hide sayori
+    "I look at the directory on the wall and head to where this so-called 'Ink Machine' is."
+
+    scene bg studio inkmachine
+    with dissolve_scene_full
+    mc "...Alice?"
+    show alice 0g at t11
+    a "How did you find me?"
+    mc "I had a hunch, I guess..."
+    a 0i "You shouldn't have tried to find me, ..."
+    mc "[player]."
+    a "[player]..."
+    a 0o "That name sounds so familiar."
+    a 0g "Why did you come here, [player]?"
+    mc "We figured that we wanted to check ou-{nw}"
+    a "No, not that."
+    a "Why are {i}you here{/i}?"
+    mc "..."
+    mc "Alice, how long has it been since someone's come down here?"
+    a "..."
+    a 0n "Too long ago."
+    a "Henry came down here because Joey had sent him a letter, too..."
+    a 0g "And look at where I am."
+    a "I'm forever trapped in this..."
+    a "...lost memory."
+    a "God, it's so weird having real human beings here."
+    a 0i "But you already knew that, didn't you?"
+    stop music fadeout 1.0
+    mc "..."
+    mc "I had a funny feeling."
+    mc "Monika told me a few things before we got here."
+    play music t9
+    a 0t "That girl..."
+    a 0m "Ahaha~"
+    a "She's probably the smart one in your little club, yes?"
+    mc "She's actually the club President. Yuri's the smart one."
+    a 0d "And is Yuri the purple-haired one?"
+    mc "Yeah, ehehe~"
+    "I chuckle sadly."
+    mc "She's a bit shy..."
+    a "I can tell."
+    a "Man, it must be a living {i}hell{/i} dealing with those girls..."
+    mc "They're not as bad as you think."
+    mc "You get kind of used to it, I guess..."
+    a 0m "That's what Joey said to everyone else about me."
+    a 0n "He was a good liar. Sammy, too..."
+    a 0t "I'm sorry for the lackluster first impression."
+    a "This... it just feels so alien."
+    a "Here are you all hoping to see something exciting and I let everyone down."
+    show alice at s11
+    mc "..."
+    mc "Alice, aren't you being a little hard on yourself?"
+    mc "I know you were big in the entertainment industry and all, but..."
+    mc "You can't always go about everything in that kind of light."
+    mc "We're just a bunch of seniors that happen to like poetry, literature, cupcakes..."
+    mc "We're not expecting a grand entrance, you know."
+    a 0g "But [player]..."
+    a "That's the whole point."
+    a "I'm {i}Alice Angel{/i}, for goodness sake!"
+    a "I'm supposed to be like this."
+    a 0t "And I've given you a bad first impression."
+    mc "Look, I'm sure the girls have looked past that already."
+    mc "I bet they're probably blaming themselves for this."
+    mc "I just want everyone to be happy."
+    mc "You don't have to sing for them or anything..."
+    mc "All I ask that you freely present yourself and at least give it a shot."
+    a "..."
+    a 0m "Well, [player], I don't know if anyone's told you that you are a man of many words..."
+    a "But I guess I have to trust you now."
+    stop music fadeout 1.0
+    show alice at t11
+    play music t8 fadein 3.0
+    $ renpy.pause(2.0)
+    a 0d "Tell me, are they really obsessive over cuteness?"
+    mc "Ahaha~"
+    a "What? It's a legitimate concern of mine."
+    mc "It's okay. Just be yourself."
+    a "Fine, then..."
+    a "We should probably meet up with them before things get a bit{nw}"
+    m "[player]?"
+    show monika 1bg zorder 2 at t33
+    m "Is everything alright over here?"
+    mc "Uh, yeah..."
+    mc "We were just chatting for a bit so that we were on the same page."
+    mc "It's fine now."
+    m 2be "Alright, I trust you."
+    m "Alice, I'm sorry if we overwhelmed you."
+    show alice at f11
+    a 0k "No, no, not at all!"
+    a 0b "I guess I was just caught off-guard, you know?"
+    show alice at t11
+    m "Well, we should get going."
+    show monika at thide
+    hide monika
+    mc "Ehehe~"
+    mc "I told you so."
+    a 0r "Mhm..."
+    mc "Uh..."
+    mc "Okay then..."
+    show alice at thide
+    hide alice
+    "We proceed to the break room, with Alice leading the way."
+    return
+
+label ch1_end:
+    scene bg studio breakroom
+    with wipeleft
+    show alice 0b at t42
+    a "Sorry to have kept you waiting, everyone!"
+    show yuri 3bf at t43
+    y "I'm sorry if we overwhelmed you at first."
+    show sayori 1be at t44
+    s "Yeah..."
+    s "I thought that we scared you!"
+    show alice zorder 3 at f42
+    a 0k "It's totally fine!"
+    a "I just wasn't expecting it, that's all!"
+    a 0d "I didn't mean to be a party-pooper or anything..."
+    show monika 4bb zorder 3 at f41
+    show alice zorder 2 at t42
+    m "Ahaha, it's alright!"
+    m "We did kind of throw a curveball at you."
+    show alice zorder 3 at f42
+    show monika zorder 2 at t41
+    a 0b "Well, I imagine that you all must be a bit tired from the travel over here!"
+    a "We have a few residential areas downstairs that you can use."
+    a 0d "Trust me, the studio's a lot bigger than it looks!"
+    show sayori zorder 3 at f44
+    show alice zorder 2 at t42
+    s 1bc "Do you happen to have a kitchen around here?"
+    s "Natsuki brought some equipment and would probably want them in there."
+    n "Hey! I could've asked myself, you know..."
+    show alice zordre 2 at f42
+    show sayori zorder 2 at t44
+    a 0k "Ahaha, no need to worry."
+    a 0b "We have a recreational lounge downstairs with a kitchen."
+    a "I can help bring down some of the stuff with you, if you'd like..."
+    a 0j "Ehehe~"
+    show yuri zorder 3 at f43
+    show alice zorder 2 at t42
+    y 1bb "I'm sure Natsuki would appreciate that very much."
+    y 1be "You don't happen to have a tea set in there, do you?"
+    show alice zorder 3 at f42
+    show yuri zorder 2 at t43
+    a 0b "Of course we do!"
+    a "It's how my colleagues usually like to calm down, so I always make sure we keep a set around."
+    a "They're almost as ubiquitous as our Bendy cutouts, ahaha~!"
     return

@@ -10,6 +10,9 @@ image amesh = "mod_assets/gui/blackbox/ac.png"
 
 image bg campus = "mod_assets/bg/campus.jpg"
 image bg station = "mod_assets/bg/unknown by LeoDeCraprio.png"
+image bg studio entrance = "mod_assets/bg/studio-1.png"
+image bg studio inkmachine = "mod_assets/bg/studio-2.png"
+image bg studio breakroom = "mod_assets/bg/studio-3.png"
 
 define audio.b1 = "mod_assets/music/MUS_CH3_oldfriendsnewfaces.oga"
 define audio.b2 = "mod_assets/music/MUS_Lobby_Jazz.oga"

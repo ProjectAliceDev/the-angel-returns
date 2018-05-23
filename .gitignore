@@ -108,3 +108,7 @@ game/images.rpa
 game/scripts.rpa
 game/fonts.rpa
 game/audio.rpa
+log.txt
+traceback.txt
+errors.txt
+game/cache/*
