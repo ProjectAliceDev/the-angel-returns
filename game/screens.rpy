@@ -694,7 +694,7 @@ init -1 style game_menu_outer_frame:
     bottom_padding 30
     top_padding 120
 
-    background "mod_assets/gui/overlay/game_menu.png"
+    background "mod_assets/images/gui/overlay/game_menu.png"
 
 init -1 style game_menu_navigation_frame:
     xsize 280

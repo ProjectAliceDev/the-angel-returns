@@ -111,4 +111,7 @@ game/audio.rpa
 log.txt
 traceback.txt
 errors.txt
-game/cache/*
+game/cache
+game/cache/bytecode.rpyb
+game/cache/pyanalysis.rpyb
+game/cache/screens.rpyb

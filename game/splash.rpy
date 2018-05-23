@@ -39,12 +39,12 @@ image menu_logo:
 
 image menu_bg:
     topleft
-    "mod_assets/gui/menu_bg.png"
+    "mod_assets/images/menu/menu_bg.png"
     menu_bg_move
 
 image game_menu_bg:
     topleft
-    "mod_assets/gui/menu_bg.png"
+    "mod_assets/images/menu/menu_bg.png"
     menu_bg_loop
 
 image menu_fade:
@@ -60,7 +60,7 @@ label menu_glitch:
 
 image menu_art_a:
     subpixel True
-    "mod_assets/menu_art_a.png"
+    "mod_assets/images/menu/menu_art_a.png"
     xcenter 1000
     ycenter 640
     zoom 1.00
@@ -132,14 +132,14 @@ image menu_art_m_ghost:
 
 image menu_art_s_glitch:
     subpixel True
-    "mod_assets/menu_art_s.png"
+    "mod_assets/images/menu_art_s.png"
     xcenter 470
     ycenter 600
     zoom 0.68
     menu_art_move(.8, 470, .8)
 
 image menu_nav:
-    "mod_assets/gui/overlay/main_menu.png"
+    "mod_assets/images/gui/overlay/main_menu.png"
     menu_nav_move
 
 image menu_particles:
