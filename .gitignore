@@ -115,3 +115,4 @@ game/cache
 game/cache/bytecode.rpyb
 game/cache/pyanalysis.rpyb
 game/cache/screens.rpyb
+game/*.rpyc
