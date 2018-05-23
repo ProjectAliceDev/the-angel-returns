@@ -56,10 +56,10 @@ image alicepupils:
     "mod_assets/images/alice/eyes2.png"
     yuripupils_move
 
-image monika 1b = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1l.png", (0, 0), "mod_assets/images/monika/1r.png", (0, 0), "monika/a.png")
-image monika 2b = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1l.png", (0, 0), "mod_assets/images/monika/2r.png", (0, 0), "monika/a.png")
-image monika 3b = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l.png", (0, 0), "mod_assets/images/monika/1r.png", (0, 0), "monika/a.png")
-image monika 4b = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l.png", (0, 0), "mod_assets/images/monika/2r.png", (0, 0), "monika/a.png")
+image monika 1bx = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1l.png", (0, 0), "mod_assets/images/monika/1r.png", (0, 0), "monika/a.png")
+image monika 2bx = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1l.png", (0, 0), "mod_assets/images/monika/2r.png", (0, 0), "monika/a.png")
+image monika 3bx = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l.png", (0, 0), "mod_assets/images/monika/1r.png", (0, 0), "monika/a.png")
+image monika 4bx = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l.png", (0, 0), "mod_assets/images/monika/2r.png", (0, 0), "monika/a.png")
 
 image monika 1ba = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1l.png", (0, 0), "mod_assets/images/monika/1r.png", (0, 0), "monika/a.png")
 image monika 1bb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1l.png", (0, 0), "mod_assets/images/monika/1r.png", (0, 0), "monika/b.png")
