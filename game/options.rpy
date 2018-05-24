@@ -217,13 +217,17 @@ init python:
 
     ## This is the archive of data for your mod
     #build.archive(build.name, "all")
+    build.archive("ddtar", build.name)
 
 
     ## These files get put into your data file
-    build.classify("game/mod_assets/**",build.name)
+    build.classify("game/mod_assets/**","ddtar")
     #build.classify("game/**.rpy",build.name) #Optional line to include plaintext scripts
     build.classify("game/**.rpyc",build.name) #Serialized scripts must be included
     build.classify("README.html",build.name) #Included help file for mod installation
+    build.classify("game/python-packages/**", "ddtar")
+    build.classify("characters/**",build.name)
+    build.classify("*.py",build.name)
 
     ##Optionally include a zip file with all source code
     build.classify('**.rpy','source')
