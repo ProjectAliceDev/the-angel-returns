@@ -1,4 +1,4 @@
-![Logo](game/mod_assets/logo.png)
+![Screenshot](https://i.imgur.com/IPc1hoB.png)
 # Doki Doki: The Angel Returns
 > Tell me, MC... Why are you here? We're all _dying_ to find out!
 
