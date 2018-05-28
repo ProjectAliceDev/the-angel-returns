@@ -660,4 +660,41 @@ label ch1_end:
     m "Eh?"
     m 1bi "Forget I said anything."
     m 1bq "Let's just keep this on the down low until we figure out what the hell is going on."
+    show monika at t21
+    mc "That seems reasonable."
+    mc "I don't suppose that she{nw}"
+    a "Is everything alright in there?"
+    a "Jeez, you've been in there longer than I ever have, ahaha~!"
+    stop music fadeout 1.0
+    hide vignette
+    play music t8
+    show monika at f21
+    m 4bi "You don't suppose she heard anything, right?"
+    mc "I think we're fine."
+    "I turn towards the door."
+    mc "We'll be there in just a second!"
+    "To our surprise, Alice invites herself in, anyway."
+    show monika 1bm at t31
+    show alice 0b at t32
+    show yuri at t33
+    a "You got me worried there!"
+    a 0d "Is everyone okay? I hope I didn't upset you or anything..."
+    show monika at f31
+    m 1bn "No, no..."
+    m "I just had to clarify a few things."
+    m 1bb "We should be alright, now!"
+    show alice at f32
+    show monika at t31
+    a 0b "Perfect!"
+    a "I take it we're ready to head down to the residential areas, then..."
+    show alice 0j at hop
+    "Alice smiles sweetly."
+    show yuri at f33
+    y 1bb "Yes, we should be alright."
+    y "On your lead, Alice..."
+    show monika at thide
+    show yuri at thide
+    hide yuri
+    hide monika
+    "We huddle behind Alice as she takes us out of the room."
     return

@@ -1,5 +1,5 @@
 init python:
-    waittime = renpy.random.randint(4, 8)
+    u_did_load = 0.0
 
 label start_blackbox_puzzle:
     window hide(None)
@@ -86,6 +86,7 @@ If you get stuck, don't worry; Alice may say something to you as a hint! Good lu
 label ch0_blackbox_puzzle_loop:
     python:
         import os
+        waittime = renpy.random.randint(4, 8)
 
         default = config.savedir
         renpy.list_saved_games()
@@ -97,9 +98,25 @@ label ch0_blackbox_puzzle_loop:
     window hide(config.window_hide_transition)
 
     $ waittime -= 1
+    $ u_did_load += 0.5
     $ pause(5)
+    if u_did_load == 50.0:
+        jump ch0_blackbox_puzzle_failure
     if waittime > 0:
         jump ch0_blackbox_puzzle_loop
+    return
+
+label ch0_blackbox_puzzle_failure:
+    $ sweartext = glitchtext(8)
+    window show(config.window_show_transition)
+    $ style.say_dialogue = style.edited
+    a "How can you be this clueless?"
+    a "Is this your first time playing a visual novel or something?"
+    a "Do you know how to play video games?"
+    a "Just save in the third slot of the first page already, damn it!"
+    a "It's not that [sweartext] hard!"
+    $ style.say_dialogue = style.normal
+    jump ch0_blackbox_puzzle_loop
     return
 
 label ch0_blackbox_puzzle_success:

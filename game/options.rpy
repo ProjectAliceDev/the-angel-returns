@@ -59,7 +59,7 @@ define config.has_voice = False
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "bgm/t1.ogg"
+define config.main_menu_music = "mod_assets/music/backpacking2.ogg"
 
 
 ## Transitions #################################################################
