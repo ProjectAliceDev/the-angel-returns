@@ -206,7 +206,7 @@ image intro:
     truecenter
     "black"
     0.5
-    "bg/splash-white.png" with Dissolve(0.5, alpha=True)
+    "mod_assets/images/bg/splash-white.png" with Dissolve(0.5, alpha=True)
     2.5
     "black" with Dissolve(0.5, alpha=True)
     0.5

@@ -288,13 +288,14 @@ label ch1_main:
     m "I guess we have no other choice."
     "Monika gently opens the door."
     scene bg studio entrance
-    play music m1
+    play music bt
     show monika 1bc zorder 2 at t31
     m "Whoa..."
     show yuri 1be zorder 2 at t33
     y "This isn't what I expected..."
     mc "I think this is only the lobby."
     "Suddenly, we hear soft singing coming from the corner."
+    $ a_name = "???"
     a "{i}I got a friendly halo and I'm filled with love...{/i}"
     show alice 0j zorder 3 at f32
     a "{i}I'm Alice...{/i}"
@@ -333,6 +334,7 @@ label ch1_main:
     show natsuki 5bc zorder 3 at f43
     show sayori zorder 2 at t44
     n "You look familiar."
+    stop music fadeout 1.0
     "The room falls silent."
     show monika 1bc zorder 2 at t41
     show alice 0c zorder 2 at t42
@@ -343,6 +345,7 @@ label ch1_main:
     show natsuki zorder 2 at t43
     a "..."
     $ a_name = "Alice"
+    play music b3
     a 0d "Well, that was rather depressing."
     mc "Natsuki, I think she was..."
     a 0g "You could've at least let me properly introduce myself to you..."
@@ -370,7 +373,7 @@ label ch1_main:
     m 4bk "That's why we write poems, after all!"
     show monika 1ba zorder 2 at t41
     stop music fadeout 1.0
-    play music mend
+    play music b1
     show alice zorder 3 at f42
     a 0c "Look, I appreciate the concern and your enthusiasm about it."
     a 0g "It's just that it doesn't have the same effect now."
@@ -425,10 +428,13 @@ label ch1_main:
     hide sayori
     "I look at the directory on the wall and head to where this so-called 'Ink Machine' is."
 
+
+    stop music fadeout 1.0
     scene bg studio inkmachine
-    with dissolve_scene_full
+    with wipeleft
     mc "...Alice?"
     show alice 0g at t11
+    play music b1
     a "How did you find me?"
     mc "I had a hunch, I guess..."
     a 0i "You shouldn't have tried to find me, ..."
@@ -453,7 +459,7 @@ label ch1_main:
     mc "..."
     mc "I had a funny feeling."
     mc "Monika told me a few things before we got here."
-    play music t9
+    play music b6
     a 0t "That girl..."
     a 0m "Ahaha~"
     a "She's probably the smart one in your little club, yes?"
@@ -493,7 +499,7 @@ label ch1_main:
     a "But I guess I have to trust you now."
     stop music fadeout 1.0
     show alice at t11
-    play music t8 fadein 3.0
+    play music b7 fadein 3.0
     $ renpy.pause(2.0)
     a 0d "Tell me, are they really obsessive over cuteness?"
     mc "Ahaha~"
@@ -667,7 +673,7 @@ label ch1_end:
     a "Jeez, you've been in there longer than I ever have, ahaha~!"
     stop music fadeout 1.0
     hide vignette
-    play music t8
+    play music b7
     show monika at f21
     m 4bi "You don't suppose she heard anything, right?"
     mc "I think we're fine."
@@ -697,4 +703,87 @@ label ch1_end:
     hide yuri
     hide monika
     "We huddle behind Alice as she takes us out of the room."
+
+    scene bg studio lift
+    with wipeleft
+    "As we reach the elevator, Alice signals Yuri to step in first."
+    show alice 0b at t21
+    show yuri 1ba at t22
+    a "I just want to chit-chat with Monika and [player] for a second."
+    "Yuri nods."
+    show yuri at f22
+    y "Which floor do I go to?"
+    show alice at f21
+    show yuri at t22
+    a "Level {i}S{/i}."
+    a "Follow the signs to get to the Archives."
+    a "You'll know what I mean when you see it."
+    "Yuri nods again in response and pushes the button, watching as the doors close."
+    show yuri at thide
+    hide yuri
+    show monika 1ba at t22
+    "The elevator sinks down, taking her straight to Level S."
+    a "Now, as for you two..."
+    show alice at f21
+    stop music fadeout 1.0
+    a 0d "I'm sorry if I seem a little crusty an abrasive about this."
+    play music b5
+    a "But, I need you to understand something."
+    a 0i "The woman you know as Susie Campbell..."
+    a "I guarantee you that she's gone. Completely."
+    a 0n "Please, do your best to not associate me with that sadomasochist."
+    show monika at f22
+    show alice at t21
+    m 1bi "Uh..."
+    m 1bn "Don't you think that's a bit early to tell us something like that?"
+    show alice at f21
+    show monika at t22
+    a 0g "I already know that you are well aware of what's going on here."
+    a "I would expect that from a club President. Wouldn't you?"
+    show alice at t21
+    "The room yet again falls silent."
+    mc "Um..."
+    mc "Why am I exactly a part of this conversation?"
+    show alice 0l at f21
+    a "Ehehe~"
+    a 0i "That's besides the point."
+    a "I don't know if you have plans to stalk me or whatever."
+    a "But let me make one thing clear."
+    show monika 1bg at t22
+    a "I don't like liars, and I don't like those who try to double-cross me."
+    a "It's best that you don't end up on my bad side."
+    a "Do I make myself clear?"
+    show alice at t21
+    mc "..."
+    mc "Yes, ma'am{nw}"
+    show alice at f21
+    a 0k "Ahaha, I'm not worried about you, darling!"
+    a 0i "I'm more concered about your friend here."
+    show alice at t21
+    show monika at f22
+    m "..."
+    m "...me?"
+    m 4bi "Well, as long as you don't try to harm us in any way, I don't see why we can't trust you."
+    m "I'm sure you'll respect my decisions as club President."
+    m "I'm only looking out for my club's safety."
+    show monika at t22
+    show alice at f21
+    a "Perhaps so."
+    a "But if you really were looking out for your members..."
+    a "...coming here would've been an absolute mistake."
+    a "Don't think for a second that I'm not onto you, Monika."
+    a "You may have had control at your clubroom."
+    a "But, you're entering my territory."
+    a "Just don't piss me off, okay?"
+    a "It's a practically easy thing to do."
+    a 0d "Now, let's pretend we were being a bit chummier than usual and go down there, got it?"
+    show monika at f22
+    show alice at t21
+    stop music fadeout 1.0
+    play music b7
+    m 1bb "Okay, everyone!"
+    show monika at thide
+    hide monika
+    show alice at t11
+    a 0b "Alrighty then!"
     return

@@ -13,14 +13,20 @@ image bg station = "mod_assets/images/bg/unknown by LeoDeCraprio.png"
 image bg studio entrance = "mod_assets/images/bg/studio-1.png"
 image bg studio inkmachine = "mod_assets/images/bg/studio-2.png"
 image bg studio breakroom = "mod_assets/images/bg/studio-3.png"
+image bg studio lift = "mod_assets/images/bg/studio-4.jpg"
 
-define audio.b1 = "mod_assets/music/MUS_CH3_oldfriendsnewfaces.oga"
-define audio.b2 = "mod_assets/music/MUS_Lobby_Jazz.oga"
-define audio.b3 = "mod_assets/music/MUS_CH3_formerglory.oga"
+define audio.a4 = "mod_assets/music/b4g.ogg"
+define audio.bt = "mod_assets/music/Julie_Maxwells_Piano_Music_-_09_-__Sakura.mp3"
+
+## Demo Music
+## This WILL be replaced in the final version of the game.
+define audio.b1 = "mod_assets/music/demo/Julie_Maxwell_-_05_-__Stuck_on_the_Pacific.mp3"
+define audio.b2 = "mod_assets/music/demo/Julie_Maxwell_-_06_-__What_could_this_feeling_be.mp3"
+define audio.b3 = "mod_assets/music/demo/Julie_Maxwell_-_08_-_fallen_skies.mp3"
 define audio.b4 = "mod_assets/music/b4.ogg"
 define audio.b5 = "mod_assets/music/THA-thecakeisalie.mp3"
-define audio.a4 = "mod_assets/music/b4g.ogg"
-define audio.bt = "mod_assets/music/backpacking2.ogg"
+define audio.b6 = "mod_assets/music/demo/Julie_Maxwell_-_07_-_Childhood_Memories.mp3"
+define audio.b7 = "mod_assets/music/demo/Julie_Maxwell_-_10_-__Invitation.mp3"
 
 image bendy = "mod_assets/images/bendy.png"
 
