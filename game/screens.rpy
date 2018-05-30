@@ -1620,6 +1620,8 @@ screen say(who, what):
                     style "namebox"
                     text who id "who"
 
+
+        use quick_menu
 # We are not using "style nameboxblue is namebox" because it makes the game crash if you use rollback
 # if you don't use rollback you can replace all the window codes for something like this:
 #
