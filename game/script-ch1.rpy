@@ -776,14 +776,4 @@ label ch1_end:
     a "But, you're entering my territory."
     a "Just don't piss me off, okay?"
     a "It's a practically easy thing to do."
-    a 0d "Now, let's pretend we were being a bit chummier than usual and go down there, got it?"
-    show monika at f22
-    show alice at t21
-    stop music fadeout 1.0
-    play music b7
-    m 1bb "Okay, everyone!"
-    show monika at thide
-    hide monika
-    show alice at t11
-    a 0b "Alrighty then!"
     return
