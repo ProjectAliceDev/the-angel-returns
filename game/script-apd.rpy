@@ -1,21 +1,11 @@
 label alice_poem_demos:
-    image aa = "mod_assets/wtflol.png"
-    scene black
-    play music t3
-    # show yuri 4b zorder 2 at t11
-    $ y_name = "Yuri"
-    y "Did... did you w-want to read this b-book with me?"
-
-    scene black
-    show monika 4r zorder 2 at t11
-    $ m_name = "Monika"
-    m "Never an honest word from her mouth..."
-
     scene bg club_day
     with wipeleft_scene
     play music t5
 
-    show alice a zorder 2 at f11
+    show alice 0bd zorder 2 at t11
+    $ a_name = "Alice"
+    a "Wait, since when was I a part of the Literature Club?"
     a b "Hi, [player]!"
     a "This is just a developer script to see all of my poems and intricate scenes."
     a g "If you are still seeing this, then the developers probably didn't do a good job of cleaning up the release, ahaha~!"

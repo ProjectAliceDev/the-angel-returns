@@ -28,7 +28,7 @@ label start:
     #Here is an example of how you might do that
     if persistent.playthrough == 0:
         #Call example script
-        # call alice_poem_demos
+        #call alice_poem_demos
         call pre_ch0
         call ch0_main
         call ch0_end
