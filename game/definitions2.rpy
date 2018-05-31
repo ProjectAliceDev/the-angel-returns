@@ -28,8 +28,6 @@ define audio.b5 = "mod_assets/music/THA-thecakeisalie.mp3"
 define audio.b6 = "mod_assets/music/demo/Julie_Maxwell_-_07_-_Childhood_Memories.mp3"
 define audio.b7 = "mod_assets/music/demo/Julie_Maxwell_-_10_-__Invitation.mp3"
 
-image bendy = "mod_assets/images/bendy.png"
-
 ## Alice Angel
 ## Note: The '0' indicates the original sprite modifications as by BippityZop.
 ## The 'b' in front of '0' will indicate whether she is disfigured or not.
