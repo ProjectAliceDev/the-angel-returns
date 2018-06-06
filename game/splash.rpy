@@ -219,8 +219,8 @@ image warning:
     "black" with Dissolve(0.5, alpha=True)
     0.5
 
-image tos = "bg/warning.png"
-image tos2 = "bg/warning2.png"
+image tos = "mod_assets/images/menu/warning.png"
+image tos2 = "mod_assets/images/menu/warning2.png"
 
 
 label splashscreen:

@@ -29,6 +29,7 @@ label start:
     if persistent.playthrough == 0:
         #Call example script
         #call alice_poem_demos
+        call setup
         call pre_ch0
         call ch0_main
         call ch0_end
@@ -38,6 +39,9 @@ label start:
         call pre_ch1
         call ch1_main
         call ch1_end
+
+        ## Disable this line if it isn't the demo.
+        call demo_end
 
     if persistent.playthrough == 1:
         #Stuff here would only play after you increased the playthrough count

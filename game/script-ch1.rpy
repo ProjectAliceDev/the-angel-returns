@@ -205,11 +205,12 @@ label ch1_main:
     m 2ba "I won't rest from my duties just yet."
     m "Anyways, I have a feeling that we'll be all over the place."
     m 2bd "I was doing some research last night with Yuri about the studio."
-    m 4bd "Unfortunately, it seems as if Mr.Drew had passed after Sayori received the letter."
-    mc "So who runs the studio now?"
-    m "It's filed under a man named 'Henry', but the day-to-day operations are managed by a 'Susan Campbell', the original voice actress for Alice Angel."
+    m 4bd "Mr.Drew had passed a few months before Sayori received the letter."
+    m "Unfortunately, we found no records of Alice Angel herself taking over."
+    m "It's filed under a man named 'Henry', but the day-to-day operations are managed by a 'Susan Campbell', the original voice actress."
     mc "Susan Campbell? That's an odd choice to leave a huge studio to..."
     m 2bd "It is a bit odd, but I guess Joey trusted her to keep things moving smoothly if Henry wasn't up to the task."
+    m "This is probably why Natsuki thought Susie wrote the letter."
     m "I'm a bit worried, to be honest."
     m "Further research suggests that Ms. Campbell's personality is, well, a bit volatile."
     m "She didn't handle her replacement of roles very well."
@@ -223,11 +224,20 @@ label ch1_main:
     m 2bf "Isn't that kind of messed up?"
     mc "..."
     mc "Uh..."
-    m 4bf "Rumor has it that he even did it to himself."
+    m 4bf "Rumor has it that he, out of remorse, committed suicide."
+    m "Alas, other sources have stated that there were successful prints without the aid of a human."
+    m "They tend to not last long, though..."
     m "We have to be really careful, [player]..."
-    m 4bi "Whatever we do, we have to avoid the ink at all costs."
+    m 4bi "Whatever we do, we have to avoid that machine at all costs."
     mc "Right."
-    m "I don't want anyone else to know about this."
+    m "There may be hope if it does happen."
+    m 2bd "Surprisingly, they have an updated model which is programmable."
+    m "The company behind the software has APIs for it in Python."
+    m "Should something go wrong, there's a Python script that can decouple a human from their inky counterpart."
+    m 2bn "Unfortunately, the success rate of the script is very low for humans."
+    m 2bd "Somehow, the success rate is a bit higher for robots, which is a bit weird..."
+    m 2bn "{i}*Sigh*{/i}"
+    m 2bi "I don't want anyone else to know about what I just told you."
     m "Only Yuri, you, and I know about it."
     m "I think it's best that we bunk with each other to discuss plans."
     m 1bg "I certainly wouldn't want to get Sayori's and Natsuki's hopes down."
@@ -695,7 +705,8 @@ label ch1_end:
     a "I take it we're ready to head down to the residential areas, then..."
     show alice 0j at hop
     "Alice smiles sweetly."
-    show yuri at f33
+    show yuri at f33label demo_end:
+
     y 1bb "Yes, we should be alright."
     y "On your lead, Alice..."
     show monika at thide
@@ -729,9 +740,9 @@ label ch1_end:
     a 0d "I'm sorry if I seem a little crusty an abrasive about this."
     play music b5
     a "But, I need you to understand something."
-    a 0i "The woman you know as Susie Campbell..."
-    a "I guarantee you that she's gone. Completely."
-    a 0n "Please, do your best to not associate me with that sadomasochist."
+    a 0i "Things have changed around here."
+    a "I'm not the same sadomasochist that 'Susie' was."
+    a 0n "Please, do your best to not associate me with that old me."
     show monika at f22
     show alice at t21
     m 1bi "Uh..."
@@ -776,4 +787,11 @@ label ch1_end:
     a "But, you're entering my territory."
     a "Just don't piss me off, okay?"
     a "It's a practically easy thing to do."
+    a 0d "We'll have to wait for the lift to come back."
+    a "In the meantime, I'd like to talk to [player] alone for a second."
+    show alice at t21
+    show monika at f22
+    m "..."
+    m 1bi "Fine."
+    m "Do what you wish...{nw}"
     return

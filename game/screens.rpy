@@ -447,9 +447,9 @@ init -501 screen navigation():
             if main_menu:
 
                 if persistent.playthrough == 1:
-                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Start())
                 else:
-                    textbutton _("New Game") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                    textbutton _("New Game") action If(persistent.playername, true=Start(), false=Start())
 
             else:
 
@@ -1727,3 +1727,17 @@ style say_label_pink:
     xalign gui.name_xalign
     yalign 0.5
     outlines [(3, "#b59", 0, 0), (1, "#b59", 1, 1)]
+
+style input:
+    font "mod_assets/gui/font/mojave.ttf"
+    color "#333"
+    outlines [(3, "#fff", 0, 0), (1, "#fff", 1, 1)]
+
+screen input:
+
+    window:
+
+        style "nvl_window"
+        # style "mojave_text"
+        text prompt xalign 0.5 yalign 0.4
+        input id "input" xalign 0.5 yalign 0.6

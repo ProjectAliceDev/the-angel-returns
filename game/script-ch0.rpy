@@ -222,15 +222,17 @@ label ch0_main:
     $ pause(0.25)
     stop sound
     hide screen tear
-    call screen dialog("What the heck just happened?", ok_action=Return())
+    call screen dialog("Monika, shut your fucking mouth.", ok_action=Return())
     m "..."
-    m 3g "Tell me you saw that."
-    m 4i "It may look like I did something, but I swear I didn't do that."
-    m "Something's up with the code..."
-    call screen dialog("Yeah, something's up...", ok_action=Return())
-    call screen dialog("Looks like she's derailing your conversation.", ok_action=Return())
+    m 3g "[player], tell me you saw that."
+    m 4i "I swear I didn't do that."
+    m "What's going on with the script?"
+    call screen dialog("Can you hear me?", ok_action=Return())
+    call screen dialog("Don't speak of her ever again.", ok_action=Return())
     m "..."
     m "Who?{nw}"
+    m "Nevermind."
+    m 1i "I'll just clear the cache and rewrite that part."
     call updateconsole("r.cache.clear()", "Clearing cache...")
     python:
         currentpos = get_pos()
@@ -300,6 +302,9 @@ label ch0_main:
     "Sayori enthusiastically pulls out her poem from the binder."
     "Monika takes the book from my hands and pulls out her poem from the cover."
     "I walk towards my bag to grab mine, getting ready to share my poem{nw}"
+    call screen dialog("You forgot to write a poem again.", ok_action=Return())
+    call screen dialog("I'm not surprised.", ok_action=Return())
+    call screen dialog("Here, I'll just skip that for you...", ok_action=Return())
     $ pause(1.25)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -388,13 +393,14 @@ label ch0_end:
     s 5c "Meanie."
     show sayori zorder 2 at t42
     show yuri zorder 3 at f43
-    y 1f "It sounds like an opporunity."
+    y 1f "It sounds like an opportunity."
     y "I'm a bit surprised that someone sent you a letter and knew about our literature club."
     y "Who's the letter from?"
     show yuri zorder 2 at t43
     show sayori zorder 3 at f42
     s 1l "Ehehe..."
-    s "J-Joey Drew?"
+    s "I don't know."
+    s "Someone from Joey Drew Studios..."
     show sayori zorder 2 at t42
     "An awkward silence occurs."
     show natsuki zorder 3 at f44
@@ -402,14 +408,11 @@ label ch0_end:
     "Natsuki steps out of the conversation."
     show natsuki at thide
     hide natsuki
-    show yuri zorder 3 at f43
-    y "Joey Drew?"
-    y 1g "The name sounds familiar, but I can't recall it..."
     show yuri zorder 2 at t33
     show sayori zorder 2 at t32
     show monika zorder 3 at f31
-    m 1g "Joey Drew?"
-    m 4g "As in Joey Drew Studios?"
+    m 1g "Joey Drew Studios?"
+    m 4g "As in the guys that made the Bendy cartoons from the 50s?"
     show monika zorder 2 at t31
     show sayori zorder 3 at f32
     s 5a "Yeah..."
@@ -422,14 +425,16 @@ label ch0_end:
     show monika zorder 2 at t31
     show yuri zorder 3 at f33
     y 3f "How interesting..."
-    y "What did he say in the letter?"
+    y "What did this person say in the letter?"
     show yuri zorder 2 at t33
     show sayori zorder 3 at f32
-    s 1c "Well, he said some stuff about being interested in literature and that sort of thing."
-    s "And then he went on a splurge about animations."
-    s "And then he talked about formally inviting us to check out the studio for a week..."
+    s 1c "Well, she said some stuff about being interested in literature and that sort of thing."
+    s "And then she went on a splurge about animations."
+    s "And then she talked about continuing Joey's legacy under a new name and pushing Alice Angel and that kind of stuff...{nw}"
+    s "And then she talked about formally inviting us to check out the studio for a week..."
     s 1k "But it sounded fishy..."
-    s "It sounded like it was written from a girl."
+    s "It sounded like that Susie Campbell chick."
+    s "Even though it was addressed from... 'Alice Angel'..."
     mc "Sayori, how would you know that?"
     mc "You practically just appreciate every poem I throw at you, regardless of its quality."
     s 5c "Hey!"
@@ -458,27 +463,7 @@ label ch0_end:
     m "I, for one, am not able to understand the condition of the studio at this time."
     m "Furthermore, there's a few ink splatters on the corners of the letter."
     m "Something tells me that it's a mess..."
-    m 1i "Nonetheless, Sayori, it doesn't appear to be written by a girl."
-    m 5a "Rather, I just think Joey likes you, ehehe~"
-    show monika zorder 2 at t31
-    show sayori zorder 3 at f32
-    s 4p "Uwaa~!"
-    show sayori zorder 2 at t32
-    show yuri zorder 3 at f33
-    y 3d "Aww, how cute!"
-    call screen dialog("Uh...", ok_action=Return())
-    call screen dialog("Does she know?", ok_action=Return())
-    call screen dialog("Oh, God...", ok_action=Return())
-    y "I didn't realize that that kind of a spiritual figure would like you..."
-    show yuri zorder 2 at t33
-    show monika zorder 3 at f31
-    m 1i "Wait, what do you mean by that?"
-    show sayori zorder 3 at f32
-    show monika zorder 2 at t31
-    s 2w "How can a dead person like me?"
-    s "That's not fair!"
-    mc "Sayori, are you..."
-    s 1g "I'm fine..."
+    m 1i "Nonetheless, Sayori, there's no real need to worry."
     show monika zorder 2 at t41
     show sayori zorder 2 at t42
     show natsuki 2c zorder 2 at f43
@@ -486,31 +471,32 @@ label ch0_end:
     n "No wonder you're skeptical!"
     n "Good thing you didn't speak of this... until now."
     n "Sayori, that's hella freaky."
+    n "I certainly wouldn't trust her."
     n "Maybe you're right..."
     show natsuki zorder 2 at t43
     show monika zorder 3 at f41
-    m "Is he really dead?"
+    m "Did Alice really write this herself?"
     m "It's hard to say with this letter..."
     show natsuki zorder 3 at f43
     show monika zorder 2 at t41
     n 4f "Gimme that."
     "Natsuki snatches the letter from Monika and scrutinizes the contents."
     n 5s "..."
-    n 5h "Not gonna lie here, it really {i}does{/i} sound like a girl wrote it."
-    n "Joey would have more substance in his letters."
+    n 5h "Not gonna lie here, it really {i}does{/i} sound like that baka no-good Campbell."
+    n "Alice would sound a bit more innocent."
     n "This?"
     n 4e "Absolute garbage."
-    n "I don't think I've ever read a paragraph more infested with the word 'dream' than anything else."
-    n "It's too cute to come from a guy."
+    n "I don't think I've ever read a paragraph more infested with the word 'beautiful' than anything else."
+    n "There's absolutely no way that Alice wrote this, it's too cutesy!"
     show yuri zorder 3 at f44
     show natsuki zorder 2 at t43
     y "Like you?"
     show natsuki zorder 3 at f43
     show yuri zorder 2 at t44
-    n 1v "{i}I'm not cute!{/i}"
+    n 1v "{i}I'M NOT CUTE!!!{/i}"
     n 5e "That's beside the point, anyway!"
     n 5c "Sayori could be onto something here."
-    n "This doesn't sound at all like something from him."
+    n "This doesn't sound at all like something from her."
     n "There's absolutely no way!"
     show yuri zorder 3 at f44
     show natsuki zorder 2 at t43
@@ -520,18 +506,18 @@ label ch0_end:
     show yuri zorder 2 at t44
     n 5e "Whoa, slow down there!"
     n "Mind you, there's a manga version of that book!"
-    n "It's a literal reproduction of the book!"
     n 5r "I read that one."
+    n "Rewritten by the employees and characters themselves."
     n 5y "And I liked it!"
-    n 2c "Point is, we shouldn't trust this guy-gal-thing."
+    n 2c "Point is, we shouldn't trust this gal."
     n "It's too dangerous to be meddling with that, anyway."
     show natsuki zorder 2 at t43
     show monika zorder 3 at f41
     m 1i "I'm glad we could have your expertise on board with this."
     m "To be honest, I'm a bit skeptical myself."
-    m 4e "But, I'm sure this mysterious author has his or her reasons."
+    m 4e "But, I'm sure this mysterious author has her reasons."
     m "I'm kind of a but curious to see this place, anyway."
-    m 1b "We pass by it all the time but never stop in."
+    m 1b "I pass by it all the time but never stop in."
     show natsuki zorder 3 at f43
     show monika zorder 2 at t41
     n 5p "No way!"

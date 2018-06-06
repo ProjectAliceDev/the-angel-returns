@@ -1,6 +1,5 @@
 label pre_ch0:
-    stop music fadeout 1.0
-    scene black
+    scene bg mojave desktop
     with dissolve_scene_half
     $ consolehistory = []
     $ config.allow_skipping = False
