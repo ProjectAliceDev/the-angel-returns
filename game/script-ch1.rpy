@@ -705,7 +705,7 @@ label ch1_end:
     a "I take it we're ready to head down to the residential areas, then..."
     show alice 0j at hop
     "Alice smiles sweetly."
-    show yuri at f33label demo_end:
+    show yuri at f33
 
     y 1bb "Yes, we should be alright."
     y "On your lead, Alice..."
