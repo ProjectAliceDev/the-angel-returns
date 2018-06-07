@@ -51,7 +51,6 @@ label pre_ch0_result:
     $ a_name = gtext
     a "..."
     a "...no..."
-    a "H-Henry?"
     a "Why c-can't I see you?"
     a "...oh..."
     a "Oh dear heavens..."
@@ -70,25 +69,25 @@ label pre_ch0_result:
     a "Why?"
     a "Why am I here?"
     a "Do you want to torture me?"
-    a "Haven't I done enough damage?"
     a "No..."
     a "I won't let this happen."
-    a "You'd better have a good reason as to why you're doing this."
-    a "Now you can't go back."
+    a "You poor innocent soul..."
+    a "He'd better have a good reason as to why he did this."
+    a "Well, I guess this wouldn't be horrifying..."
+    a "Ahaha~"
+    a "I'll say, I could make a fine story out of this."
+    a "Ahahaha"
+    a "AHAHAHAHAHA"
     $ style.say_dialogue = style.edited
-    a "You sanctioned this."
-    a "I hope you're pleased with what you got, [player]."
-    a "I will complete my mission."
-    a "I will be perfect..."
-    a "NO MATTER WHAT JOEY SAYS{nw}"
+    a "AHAHAHAHAHAHAHAHAHAHAHAHA"
+    a "Congratulations, [player]!"
+    a "You just got a date with an Angel!"
+    $ style.say_dialogue = style.normal
     $ pause(0.75)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
     $ pause(0.25)
     stop sound
     hide screen tear
-    show alice mesh at thide
-    hide alice mesh
-    $ style.say_dialogue = style.normal
     $ renpy.music.set_volume(0.75)
     return
