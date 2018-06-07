@@ -14,9 +14,10 @@ image bg studio entrance = "mod_assets/images/bg/studio-1.png"
 image bg studio inkmachine = "mod_assets/images/bg/studio-2.png"
 image bg studio breakroom = "mod_assets/images/bg/studio-3.png"
 image bg studio lift = "mod_assets/images/bg/studio-4.png"
+image bg studio office = "mod_assets/images/bg/studio-7.jpg"
 
 define audio.a4 = "mod_assets/music/b4g.ogg"
-define audio.bt = "mod_assets/music/Julie_Maxwells_Piano_Music_-_09_-__Sakura.mp3"
+define audio.bt = "mod_assets/music/ddlc_main_theme_jazz.ogg"
 
 ## Demo Music
 ## This WILL be replaced in the final version of the game.
