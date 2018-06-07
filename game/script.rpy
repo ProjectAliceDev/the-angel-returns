@@ -39,6 +39,12 @@ label start:
         call pre_ch1
         call ch1_main
         call ch1_end
+        call ch1_blackbox_puzzle
+
+        $ chapter = 2
+        # No script for any prologue; Alice has been already introduced. For now.
+        call ch2_main
+        call ch2_end
 
         ## Disable this line if it isn't the demo.
         call demo_end

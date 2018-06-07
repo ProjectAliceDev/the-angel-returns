@@ -321,22 +321,22 @@ label ch1_main:
     show sayori 1bb zorder 2 at t33
     show monika zorder 3 at f31
     m 3bd "My apologies if we came here unannounced."
-    m "We came here as per a response to a letter Mr. Joey Drew sent to the vice president of our literature club, Sayori."
+    m "We came here as per a response to a letter you sent to the vice president of our literature club, Sayori."
     show sayori zorder 3 at f33
     show monika zorder 2 at t31
     s 4br "That's me!"
     show sayori 1ba zorder 2 at t33
     show alice zorder 3 at f32
     a 0d "A letter?"
-    a "From Mr. Drew?"
-    a 0i "That's interesting, he never confided with me about that."
+    a 0i "That's interesting, I don't recall writing a letter to Sayori."
     a "May I please see a copy of this letter?"
     "I hand the woman the letter from my coat pocket."
     a "..."
     a 0d "Oh..."
     a "Ah!"
-    a 0b "I'm sorry, I guess I was misinformed."
-    a 0j "Welcome to Joey Drew Studios, home of the Bendy and Alice Angel cartoons!"
+    a "It's that letter."
+    a 0b "I'm sorry, I must have forgotten that I wrote this one, ehehe!"
+    a 0j "Welcome to Angelhus Productions, formerly Joey Drew Studios, home of the Bendy and Alice Angel cartoons!"
     a 0b "Allow me to introduce myself..."
     n "Wait a second."
     show monika zorder 2 at t41
@@ -356,14 +356,14 @@ label ch1_main:
     a "..."
     $ a_name = "Alice"
     play music b3
-    a 0d "Well, that was rather depressing."
+    a 0d "Welp, there went the surprise."
     mc "Natsuki, I think she was..."
-    a 0g "You could've at least let me properly introduce myself to you..."
-    a 0o "It's been a while since I sang for a crowd of people like this..."
+    a 0g "Jeez, kid, you could've at least let me properly introduce myself to you..."
+    a 0o "It's been a while since I did this kind of an introduction to people like this..."
     show natsuki zorder 3 at f43
     show alice zorder 2 at t42
     n 5bs "..."
-    n "Sorry, I didn't mean to spoil the thunder like th{nw}"
+    n "Sorry, I didn't mean to spoil the surprise like th{nw}"
     show sayori zorder 3 at f44
     show natsuki zorder 2 at t43
     s 4br "Do it anyway!"
@@ -423,7 +423,7 @@ label ch1_main:
     mc "It sounds like not a lot of people have seen her or this studio for a while."
     mc "I bet you she's just unsure of how to handle this because she's been lonely for a long while."
     mc "Monika, take the girls to the break room."
-    mc "I'm going to try finding Alice and taling to her."
+    mc "I'm going to try finding Alice and talking to her."
     show monika zorder 3 at f31
     m 1bg "If you say so, [player]..."
     show monika zorder 2 at t31
@@ -437,7 +437,7 @@ label ch1_main:
     hide natsuki
     hide sayori
     "I look at the directory on the wall and head to where this so-called 'Ink Machine' is."
-
+    "I had a feeling she went this way."
 
     stop music fadeout 1.0
     scene bg studio inkmachine
@@ -445,7 +445,9 @@ label ch1_main:
     mc "...Alice?"
     show alice 0g at t11
     play music b1
+    a "Aah!"
     a "How did you find me?"
+    a "You huys just spawn out of nowhere..."
     mc "I had a hunch, I guess..."
     a 0i "You shouldn't have tried to find me, ..."
     mc "[player]."
@@ -640,7 +642,6 @@ label ch1_end:
     "The room falls silent for a second."
     show monika at f21
     m 1br "She's onto us, I'm afraid."
-    m 3bi "I surmise that she's the one that wrote the letter in the first place."
     m "From what it sounded like, she would've better anticipated us to come."
     m "We came in a time when she least expected it."
     m 2bp "We're going to have to be a lot more careful if she knows about us."
@@ -648,33 +649,18 @@ label ch1_end:
     show monika at t21
     y 2br "We can't keep leading her on like this."
     y "There has to be a way around it!"
-    mc "Wait a second."
     show yuri 4bc at t22
-    mc "If everything holds true..."
-    mc "Then that should mean that the Ink Demon still exists."
+    mc "There's not much we can do."
+    mc "Isn't she always watching?"
     show monika at f21
     m 1bi "[player], what are you suggesting?"
-    m "You can't be saying that we're being watched by two ink creatures at the same time..."
+    m "You can't be saying that we're being stalked..."
     mc "I skimmed through your notes from the train."
-    mc "Rumor has it that he hears everything."
-    mc "Every door creak, every rustle of paper..."
-    mc "Even this very conversation."
-    m "What are you implying?"
-    show yuri at f22
-    show monika at t21
-    y 4bd "Surely you're not suggesting that Bendy already knows about what could happen, right?"
-    mc "More or less. Perhaps if we can befriend him, we can get to the bottom of this."
-    y 1br "Are you insane?"
-    y "He could have the potential of killing us!"
-    mc "Then why didn't he kill Henry?"
-    show yuri 4bb at s22
+    mc "She's always watching."
+    mc "I don't know if it's cameras or something..."
+    mc "But I do know that she is aware that we are conversing with each other in this room."
+    mc "She sees everything in this place."
     show monika at f21
-    m 4bi "[player], the relationship between him and Henry and ours is completely different."
-    m "He may not be that willing to cooperate."
-    call screen dialog("That's what they all say...", ok_action=Return())
-    m 4bg "..."
-    m "Eh?"
-    m 1bi "Forget I said anything."
     m 1bq "Let's just keep this on the down low until we figure out what the hell is going on."
     show monika at t21
     mc "That seems reasonable."
@@ -793,5 +779,39 @@ label ch1_end:
     show monika at f22
     m "..."
     m 1bi "Fine."
-    m "Do what you wish...{nw}"
+    m "Do what you wish."
+    show monika at thide
+    hide monika
+    show alice at t11
+    a "..."
+    a "Uh... okay."
+    a "Does she usually do that?"
+    mc "Not really."
+    mc "I mean, I did promise to spend a little more time with her."
+    a 0g "I wasnt too... {i}aggressive{/i}, was I?"
+    "I honestly cannot find an answer for that."
+    mc "Um..."
+    mc "Mayb-{nw}"
+    a 0n "Nevermind that."
+    a 0d "I'm sure she'd get over it quite easily."
+    a "She seems like the type, anyway..."
+    a "I just don't want things to get ugly around here, you know?"
+    mc "I get it."
+    mc "You can trust Monika, though. She's pretty shrewd about things and will use her best judgement."
+    a 0i "You call deleting your friends and rewriting the entire game so you can be with the player forever 'best judgement'?"
+    a "Jeez, [player], I didn't realize you were {i}that{/i} dense!"
+    mc "Wait, what are you talking about?"
+    a "You're kidding me."
+    a "Perhaps you should be the one wary of Monika."
+    a "I don't know what the hell she's going to do with you."
+    a 0d "Well, it looks like the lift is returning."
+    a "I'll go talk to Monika myself. You can go down there and meet up with everyone else."
+    a "Level S. Just follow the screams... or giggles. It's probably giggles, if anything, knowing those girls."
+    a 0k "Ahaha~"
+    show alice at thide
+    hide alice
+    "Screams?"
+    "I should probably be careful."
+    "With that in mind, I step into the lift and push the button for Level S."
+    "I just hope this doesn't end horribly."
     return
