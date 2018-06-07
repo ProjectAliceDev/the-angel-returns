@@ -95,7 +95,7 @@ label ch1_blackbox_puzzle:
 label ch1_blackbox_puzzle_loop:
     $ waittime = renpy.random.randint(4, 8)
     if preferences.fullscreen == True:
-        jump ch2_blackbox_puzzle_success
+        jump ch1_blackbox_puzzle_success
     else:
         window show(config.window_show_transition)
         a "{i}...or if I am forever trapped in a darkened window.{/i}"
