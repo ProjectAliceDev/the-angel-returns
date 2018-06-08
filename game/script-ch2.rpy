@@ -11,27 +11,27 @@ label ch2_main:
     "Sayori's helping her with some of the baking."
     "Yuri enthusiastically is already working on making the tea."
     "Meanwhile, Monika checks the breakroom for any utensils."
-    show monika 3bd at t11
+    show monika 3cd at t11
     m "[player], do you see any utensils in here?"
     mc "I guess it's in another breakroom or something."
-    m 3bb "I hope Alice isn't hiding them from us, ahaha~!"
+    m 3cb "I hope Alice isn't hiding them from us, ahaha~!"
     mc "Nah, I don't think she'd do that."
     a "Hey, you folks looking for these?"
     "To my surprise, Alice walks into the room with a box."
     "She sets the box down onto the table and then turns towards us."
     show alice 0b at f22
-    show monika 1bb at t21
+    show monika 1cb at t21
     a "I had a funny feeling you'd need some utensils."
     a "So, I grabbed the set we have in the lower levels."
     a 0k "I'm surprised you set up over here instead of down there!"
     a 0d "How come you did?"
     show monika at f21
     show alice at t22
-    m 1bc "You should ask Natsuki."
+    m 1cc "You should ask Natsuki."
     m "I followed her lead this morning. I think she set this up overnight or something."
-    m 3bb "Here, let me see if she's available."
+    m 3cb "Here, let me see if she's available."
     show alice at f22
-    show monika 1ba at t21
+    show monika 1ca at t21
     a 0b "Ahaha, you don't need to do that!"
     a "I'm sure I can ask her in her own time."
     a "Besides, it looks like she's a bit busy..."
@@ -61,33 +61,33 @@ label ch2_main:
     hide alice
     show monika at t11
     stop music fadeout 1.5
-    m 1bd "I kind of feel bad for her if she hasn't seen them in a while."
+    m 1cd "I kind of feel bad for her if she hasn't seen them in a while."
     mc "I'm sure they're just goofing around or something."
     play music t6
     m "Well, at least we have the utensils."
     m "Are there any napkins in there?"
     mc "Umm..."
     "I check the box and pull out a stack of plastic-wrapped napkins."
-    m 2bb "Perfect! These will do."
+    m 2cb "Perfect! These will do."
     m "We can just set them up..."
-    m 3bc "Wait a second."
+    m 3cc "Wait a second."
     m "I think we might need to shuffle a few tables around."
     mc "I'm sure she wouldn't mind."
     "Monika and I push some chairs out of the way, and then two of the tables close to each other."
-    m 4bb "Yeah, I think that will work!"
+    m 4cb "Yeah, I think that will work!"
     m "Thanks, [player]!"
     m "I don't know what the two are making, so I'll just put everything down for now."
-    m 1bc "Unfortunately, I don't think there's anything else I need you to do."
+    m 1cc "Unfortunately, I don't think there's anything else I need you to do."
     n "Sayori, you forgot to turn on the mixer."
     s "It won't turn on!"
     n "Are you pushing the right button?"
     s "Which one's the power button?"
     n "Oh, jeez..."
-    m 1ba "Don't worry. I think I might help them out, too."
+    m 1ca "Don't worry. I think I might help them out, too."
     m "Perhaps you could talk to Alice for a second?"
     mc "Uh... okay."
     mc "Are you alright with that?"
-    m 1bb "Of course!"
+    m 1cb "Of course!"
     m "We may have gotten off on the wrong foot, but I think we'll be fine."
     mc "Alright, if you say so..."
     "Monika winks at me as walks towards Natsuki and Sayori."
@@ -153,12 +153,12 @@ label ch2_main:
     with wipeleft
     play music t7
     show natsuki 1bf at f21
-    show monika 1bi at t22
+    show monika 1ci at t22
     n "Monika, please, for the last time, let me handle this!"
     n "{i}I'm{/i} showing Sayori how to do this."
     show monika at f22
     show natsuki at t21
-    m 4bi "Natsuki, you're blowing this out of proportion."
+    m 4ci "Natsuki, you're blowing this out of proportion."
     m "I was just helping her operate the machine."
     show yuri 3by7 at f33
     show monika at t32
@@ -202,7 +202,7 @@ label ch2_main:
     "I'm stunned at how Alice is pulling this off calmly."
     show monika at f33
     show alice at t32
-    m 1bf "I was helping Sayori operate the machine while she was doing something else."
+    m 1cf "I was helping Sayori operate the machine while she was doing something else."
     m "It seems that Natsuki didn't handle it well and she's upset at me for doing so."
     show alice at f32
     show monika at t33
@@ -260,7 +260,6 @@ label ch2_main:
     y "It's just probably that we're all still waking up."
     "Sayori continues sobbing into Yuri's chest as she embraces her."
     "It's still impressive that we care so much for each other even though things go awry."
-
     return
 
 label ch2_end:
