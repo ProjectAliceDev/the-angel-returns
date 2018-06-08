@@ -8,25 +8,26 @@ image blight start = "mod_assets/images/gui/blackbox/u.png"
 
 image amesh = "mod_assets/images/gui/blackbox/ac.png"
 
-image bg campus = "mod_assets/images/bg/campus.jpg"
+image bg campus = "mod_assets/images/bg/campus.png"
 image bg station = "mod_assets/images/bg/unknown by LeoDeCraprio.png"
 image bg studio entrance = "mod_assets/images/bg/studio-1.png"
 image bg studio inkmachine = "mod_assets/images/bg/studio-2.png"
 image bg studio breakroom = "mod_assets/images/bg/studio-3.png"
 image bg studio lift = "mod_assets/images/bg/studio-4.png"
+image bg studio office = "mod_assets/images/bg/studio-7.jpg"
 
 define audio.a4 = "mod_assets/music/b4g.ogg"
-define audio.bt = "mod_assets/music/Julie_Maxwells_Piano_Music_-_09_-__Sakura.mp3"
+define audio.bt = "mod_assets/music/ddlc_main_theme_jazz.ogg"
 
 ## Demo Music
 ## This WILL be replaced in the final version of the game.
-define audio.b1 = "mod_assets/music/demo/Julie_Maxwell_-_05_-__Stuck_on_the_Pacific.mp3"
-define audio.b2 = "mod_assets/music/demo/Julie_Maxwell_-_06_-__What_could_this_feeling_be.mp3"
-define audio.b3 = "mod_assets/music/demo/Julie_Maxwell_-_08_-_fallen_skies.mp3"
+define audio.b1 = "mod_assets/music/demo/t6.mp3"
+define audio.b2 = "mod_assets/music/demo/mend.mp3"
+define audio.b3 = "mod_assets/music/demo/b3.mp3"
 define audio.b4 = "mod_assets/music/b4.ogg"
 define audio.b5 = "mod_assets/music/THA-thecakeisalie.mp3"
-define audio.b6 = "mod_assets/music/demo/Julie_Maxwell_-_07_-_Childhood_Memories.mp3"
-define audio.b7 = "mod_assets/music/demo/Julie_Maxwell_-_10_-__Invitation.mp3"
+define audio.b6 = "mod_assets/music/demo/t7.mp3"
+define audio.b7 = "mod_assets/music/demo/t8.mp3"
 
 ## Alice Angel
 ## Note: The '0' indicates the original sprite modifications as by BippityZop.
@@ -167,6 +168,91 @@ image monika 4bp = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l
 image monika 4bq = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l.png", (0, 0), "mod_assets/images/monika/2r.png", (0, 0), "monika/q.png")
 image monika 4r = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l.png", (0, 0), "mod_assets/images/monika/2r.png", (0, 0), "monika/r.png")
 
+image monika 1cx = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/a.png")
+image monika 2cx = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/a.png")
+image monika 3cx = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/a.png")
+image monika 4cx = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/a.png")
+
+image monika 1ca = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/a.png")
+image monika 1cb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/b.png")
+image monika 1cc = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/c.png")
+image monika 1cd = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/d.png")
+image monika 1ce = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/e.png")
+image monika 1cf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/f.png")
+image monika 1cg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/g.png")
+image monika 1ch = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/h.png")
+image monika 1ci = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/i.png")
+image monika 1cj = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/j.png")
+image monika 1ck = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/k.png")
+image monika 1cl = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/l.png")
+image monika 1cm = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/m.png")
+image monika 1cn = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/n.png")
+image monika 1co = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/o.png")
+image monika 1cp = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/p.png")
+image monika 1cq = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/q.png")
+image monika 1cr = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/r.png")
+
+image monika 2ca = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/a.png")
+image monika 2cb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/b.png")
+image monika 2cc = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/c.png")
+image monika 2cd = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/d.png")
+image monika 2ce = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/e.png")
+image monika 2cf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/f.png")
+image monika 2cg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/g.png")
+image monika 2ch = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/h.png")
+image monika 2ci = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/i.png")
+image monika 2cj = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/j.png")
+image monika 2ck = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/k.png")
+image monika 2cl = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/l.png")
+image monika 2cm = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/m.png")
+image monika 2cn = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/n.png")
+image monika 2co = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/o.png")
+image monika 2cp = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/p.png")
+image monika 2cq = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/q.png")
+image monika 2cr = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/r.png")
+
+image monika 3ca = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/a.png")
+image monika 3cb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/b.png")
+image monika 3cc = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/c.png")
+image monika 3cd = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/d.png")
+image monika 3ce = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/e.png")
+image monika 3cf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/f.png")
+image monika 3cg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/g.png")
+image monika 3ch = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/h.png")
+image monika 3ci = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/i.png")
+image monika 3cj = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/j.png")
+image monika 3ck = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/k.png")
+image monika 3cl = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/l.png")
+image monika 3cm = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/m.png")
+image monika 3cn = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/n.png")
+image monika 3co = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/o.png")
+image monika 3cp = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/p.png")
+image monika 3cq = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/q.png")
+image monika 3cr = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/3r.png", (0, 0), "monika/r.png")
+
+image monika 4ca = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/a.png")
+image monika 4cb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/b.png")
+image monika 4cc = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/c.png")
+image monika 4cd = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/d.png")
+image monika 4ce = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/e.png")
+image monika 4cf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/f.png")
+image monika 4cg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/g.png")
+image monika 4ch = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/h.png")
+image monika 4ci = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/i.png")
+image monika 4cj = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/j.png")
+image monika 4ck = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/k.png")
+image monika 4cl = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/l.png")
+image monika 4cm = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/m.png")
+image monika 4cn = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/n.png")
+image monika 4co = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/o.png")
+image monika 4cp = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/p.png")
+image monika 4cq = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/4l.png", (0, 0), "mod_assets/images/monika/4r.png", (0, 0), "monika/q.png")
+image monika 4r = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l.png", (0, 0), "mod_assets/images/monika/2r.png", (0, 0), "monika/r.png")
+
+image monika 5ca = "mod_assets/images/monika/5a.png"
+image monika 5cb = "mod_assets/images/monika/5b.png"
+
+image yuri 3by7 = im.Composite((960, 960), (0, 0), "yuri/y7.png", (0, 0), "yuri/2bl.png", (0, 0), "yuri/2br.png")
 
 
 define narrator = Character(ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxmc.png", xalign=0.5, yalign=1.0))

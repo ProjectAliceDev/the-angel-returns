@@ -39,12 +39,25 @@ label start:
         call pre_ch1
         call ch1_main
         call ch1_end
+        call ch1_blackbox_puzzle
 
-        ## Disable this line if it isn't the demo.
+        ## Extra Content
+        # This probably won't be finished, so I am commenting it out.
+        $ chapter = 2
+        # No script for any prologue; Alice has been already introduced. For now.
+        # call ch2_main
+        # call ch2_end
+
+        ## Disable this segment if it isn't the demo.
         call demo_end
+        call ch2_main
+        call demo_end_2
 
     if persistent.playthrough == 1:
         #Stuff here would only play after you increased the playthrough count
+
+        ## Disable this line if this isn't the demo.
+        call demo_end_loop
         pass
 
     return

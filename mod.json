@@ -2,8 +2,8 @@
   "id": 2,
   "name": "Doki Doki: The Angel Returns",
   "author": "applebit109",
-  "tags": ["natsuki"],
+  "tags": ["DDLC", "BATIM", "developer", "Alice Angel"],
   "description": "Join the Literature Club girls in an ever-exciting adventure to Joey Drew Studios during the spring break! Remember to pay a good ol' visit to the Angel and... [ JUST ALICE ]. Doki Doki: The Angel Returns is an unofficial mod for the game Doki Doki Literature Club! that takes place after the events of the game. This mod is the answer to a simple question: What if 'Alice Angel' came to the Doki Doki universe?",
   "version": "0.1.0",
-  "deleteFiles": ["scripts.rpa"]
+  "deleteFiles": [""]
 }
