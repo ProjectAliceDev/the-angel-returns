@@ -709,7 +709,7 @@ label ch1_end:
 
     scene bg studio lift
     with wipeleft
-    "As we reach the elevator, Alice signals Yuri to step in first."
+    "As we reach the lift, Alice signals Yuri to step in first."
     show alice 0b at t21
     show yuri 1ba at t22
     a "I just want to chit-chat with Monika and [player] for a second."
@@ -784,10 +784,13 @@ label ch1_end:
     show alice at t21
     show monika at f22
     m "..."
+    stop music fadeout 1.0
     m 1bi "Fine."
     m "Do what you wish."
     show monika at thide
     hide monika
+
+    play music b7
     show alice at t11
     a "..."
     a "Uh... okay."

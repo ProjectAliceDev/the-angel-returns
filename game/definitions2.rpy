@@ -23,7 +23,7 @@ define audio.bt = "mod_assets/music/ddlc_main_theme_jazz.ogg"
 ## This WILL be replaced in the final version of the game.
 define audio.b1 = "mod_assets/music/demo/t6.mp3"
 define audio.b2 = "mod_assets/music/demo/mend.mp3"
-define audio.b3 = "mod_assets/music/demo/mend.mp3"
+define audio.b3 = "mod_assets/music/demo/b3.mp3"
 define audio.b4 = "mod_assets/music/b4.ogg"
 define audio.b5 = "mod_assets/music/THA-thecakeisalie.mp3"
 define audio.b6 = "mod_assets/music/demo/t7.mp3"

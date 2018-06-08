@@ -48,11 +48,16 @@ label start:
         # call ch2_main
         # call ch2_end
 
-        ## Disable this line if it isn't the demo.
+        ## Disable this segment if it isn't the demo.
         call demo_end
+        call ch2_main
+        call demo_end_2
 
     if persistent.playthrough == 1:
         #Stuff here would only play after you increased the playthrough count
+
+        ## Disable this line if this isn't the demo.
+        call demo_end_loop
         pass
 
     return
