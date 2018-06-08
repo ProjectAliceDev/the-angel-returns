@@ -301,6 +301,7 @@ label ch1_main:
     play music bt
     show monika 1bc zorder 2 at t31
     m "Whoa..."
+    m "This looks totally different from the images on Google."
     show yuri 1be zorder 2 at t33
     y "This isn't what I expected..."
     mc "I think this is only the lobby."
@@ -442,14 +443,19 @@ label ch1_main:
     stop music fadeout 1.0
     scene bg studio inkmachine
     with wipeleft
+    "I glance around the room."
+    "Surprisingly, nothing in here resembles an ink machine."
+    "She probably forgot to change the text or something..."
     mc "...Alice?"
     show alice 0g at t11
     play music b1
     a "Aah!"
     a "How did you find me?"
     a "You huys just spawn out of nowhere..."
-    mc "I had a hunch, I guess..."
-    a 0i "You shouldn't have tried to find me, ..."
+    mc "I had a feeling you were here..."
+    mc "I'll say, your directory's a bit misleading."
+    a "We haven't had the time to change it."
+    a 0i "Y-You shouldn't have tried to find me, ..."
     mc "[player]."
     a "[player]..."
     a 0o "That name sounds so familiar."

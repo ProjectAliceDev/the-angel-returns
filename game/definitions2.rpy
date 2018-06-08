@@ -8,7 +8,7 @@ image blight start = "mod_assets/images/gui/blackbox/u.png"
 
 image amesh = "mod_assets/images/gui/blackbox/ac.png"
 
-image bg campus = "mod_assets/images/bg/campus.jpg"
+image bg campus = "mod_assets/images/bg/campus.png"
 image bg station = "mod_assets/images/bg/unknown by LeoDeCraprio.png"
 image bg studio entrance = "mod_assets/images/bg/studio-1.png"
 image bg studio inkmachine = "mod_assets/images/bg/studio-2.png"
@@ -21,13 +21,13 @@ define audio.bt = "mod_assets/music/ddlc_main_theme_jazz.ogg"
 
 ## Demo Music
 ## This WILL be replaced in the final version of the game.
-define audio.b1 = "mod_assets/music/demo/Julie_Maxwell_-_05_-__Stuck_on_the_Pacific.mp3"
-define audio.b2 = "mod_assets/music/demo/Julie_Maxwell_-_06_-__What_could_this_feeling_be.mp3"
-define audio.b3 = "mod_assets/music/demo/Julie_Maxwell_-_08_-_fallen_skies.mp3"
+define audio.b1 = "mod_assets/music/demo/t6.mp3"
+define audio.b2 = "mod_assets/music/demo/mend.mp3"
+define audio.b3 = "mod_assets/music/demo/mend.mp3"
 define audio.b4 = "mod_assets/music/b4.ogg"
 define audio.b5 = "mod_assets/music/THA-thecakeisalie.mp3"
-define audio.b6 = "mod_assets/music/demo/Julie_Maxwell_-_07_-_Childhood_Memories.mp3"
-define audio.b7 = "mod_assets/music/demo/Julie_Maxwell_-_10_-__Invitation.mp3"
+define audio.b6 = "mod_assets/music/demo/t7.mp3"
+define audio.b7 = "mod_assets/music/demo/t8.mp3"
 
 ## Alice Angel
 ## Note: The '0' indicates the original sprite modifications as by BippityZop.
