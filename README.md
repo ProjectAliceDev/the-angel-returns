@@ -7,9 +7,8 @@ Join the Literature Club girls in an ever-exciting adventure to Joey Drew Studio
 > Note: This mod is not affiliated with Team Salvato or theMeatly Games. Copyrights of characters in this game shall be respected as fan work.
 
 ## Downloads
-Hrmm... it appears that there are no downloads just yet. Stay tuned!
-
-**The demo will be releasing Friday, June 8th!**
+**The demo is here!**
+#### [Get the demo &rsaquo;](https://github.com/alicerunsonfedora/the-angel-returns/releases/tag/0.1.0)
 
 > By downloading this mod, you are agreeing to the terms listed therein and acknowledge the information regarding copyright. You also acknowledge that this mod is not suitable for children or those who are easily disturbed.
 
