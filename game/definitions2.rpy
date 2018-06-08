@@ -168,6 +168,7 @@ image monika 4bp = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l
 image monika 4bq = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l.png", (0, 0), "mod_assets/images/monika/2r.png", (0, 0), "monika/q.png")
 image monika 4r = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l.png", (0, 0), "mod_assets/images/monika/2r.png", (0, 0), "monika/r.png")
 
+image yuri 3by7 = im.Composite((960, 960), (0, 0), "yuri/y7.png", (0, 0), "yuri/2bl.png", (0, 0), "yuri/2br.png")
 
 
 define narrator = Character(ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxmc.png", xalign=0.5, yalign=1.0))

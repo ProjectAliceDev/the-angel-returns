@@ -146,6 +146,121 @@ label ch2_main:
     a 0b "Ahaha, that's fine!"
     a "Anyways, I think we should go back and check on them."
     mc "Yeah, that sounds like a good idea."
+    "Alice follows me as we walk back to the breakroom."
+    stop music fadeout 1.5
+
+    scene bg studio breakroom
+    with wipeleft
+    play music t7
+    show natsuki 1bf at f21
+    show monika 1bi at t22
+    n "Monika, please, for the last time, let me handle this!"
+    n "{i}I'm{/i} showing Sayori how to do this."
+    show monika at f22
+    show natsuki at t21
+    m 4bi "Natsuki, you're blowing this out of proportion."
+    m "I was just helping her operate the machine."
+    show yuri 3by7 at f33
+    show monika at t32
+    show natsuki at t31
+    y "If the both of you keep arguing like this, someone is going to get badly hurt!"
+    show natsuki at f31
+    show yuri at t33
+    n "Stay out of this! This isn't your problem."
+    show alice 0g at f43
+    show natsuki at t41
+    show monika at t42
+    show yuri at t44
+    a "Umm... is everything alright here?"
+    show natsuki zorder 3 at f41
+    show alice at t43
+    n "This doesn't invole you, either!"
+    show natsuki zorder 2 at t41
+    show alice at f43
+    a 0i "Natsuki, calm down. It's getting a bit tense here."
+    a "Yuri, please continue whatever it was that you were doing."
+    a "I'll handle it from here."
+    show yuri at f44
+    show alice at t43
+    y 1bl "As you wish."
+    y "I apologize if I startled everyone."
+    show yuri at thide
+    hide yuri
+    show alice at f32
+    show natsuki at t31
+    show monika at t33
+    stop music fadeout 1.5
+    a "Somebody please explain to me what's going on."
+    show natsuki at f31
+    show alice at t32
+    n "Miss Club President over here is...{nw}"
+    show alice at f32
+    show natsuki at t31
+    a "I'm stopping you there."
+    a "I don't want name calling or insult throwing here."
+    a "Let's try this again: {i}what is going on here{/i}?"
+    "I'm stunned at how Alice is pulling this off calmly."
+    show monika at f33
+    show alice at t32
+    m 1bf "I was helping Sayori operate the machine while she was doing something else."
+    m "It seems that Natsuki didn't handle it well and she's upset at me for doing so."
+    show alice at f32
+    show monika at t33
+    a "I see."
+    a 0g "Sayori, could you come over here for a second?"
+    show monika at thide
+    hide monika
+    show sayori 1bh at t33
+    play music t8
+    a "What happened?"
+    show sayori at f33
+    show alice at t32
+    s "She was only helping me turn the thing on..."
+    s 1bk "I-I'm not really good with this kind of stuff."
+    show alice at f32
+    show sayori at t33
+    a "The fighting's making you feel uncomfortable, isn't it?"
+    show sayori at f33
+    show alice at t32
+    s 3bu "I just want it to stop..."
+    s "I don't like the fighting."
+    "Sayori's trying to hold back her tears."
+    show alice at f32
+    show sayori at t33
+    a 0i "Alright, then."
+    a "Assuming that all we need to do is mix and bake from this point on..."
+    a "Monika, since it appears that you have some experience, finish off the recipe until I return."
+    a "[player], please stay with Sayori and Yuri."
+    a "Natsuki, I'll need to speak to you in private. Follow me, please."
+    show alice at t32
+    show natsuki at f31
+    n 5bs "Fine..."
+    show natsuki at thide
+    show alice at thide
+    hide alice
+    hide natsuki
+    show sayori at t22
+    "And, just like that, the two head off, probably to her office."
+    "Monika gets to work on finishing the recipe."
+    "As the kettle continues to boil, Yuri walks over towards us."
+    show yuri 1bf at f21
+    y "Sayori, are you okay?"
+    show sayori at f22
+    show yuri at t21
+    s "I...I guess..."
+    stop music fadeout 1.5
+    s 1bu "I don't like it when there's fights going around all the time."
+    s 1bw "It's like as if we'll never get along!"
+    play music t9
+    "Sayori starts crying quietly."
+    show yuri behind sayori at t43
+    show sayori 4bu at t22
+    y 1bl "There, there..."
+    y "There's no need to be upset."
+    y "It's just probably that we're all still waking up."
+    "Sayori continues sobbing into Yuri's chest as she embraces her."
+    "It's still impressive that we care so much for each other even though things go awry."
+
     return
 
 label ch2_end:
