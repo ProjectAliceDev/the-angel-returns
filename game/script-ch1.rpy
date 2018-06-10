@@ -205,7 +205,7 @@ label ch1_main:
     m 2ba "I won't rest from my duties just yet."
     m "Anyways, I have a feeling that we'll be all over the place."
     m 2bd "I was doing some research last night with Yuri about the studio."
-    m 4bd "Mr.Drew had passed a few months before Sayori received the letter."
+    m 4bd "Mr. Drew had passed a few months before Sayori received the letter, which makes sense."
     m "Unfortunately, we found no records of Alice Angel herself taking over."
     m "It's filed under a man named 'Henry', but the day-to-day operations are managed by a 'Susan Campbell', the original voice actress."
     mc "Susan Campbell? That's an odd choice to leave a huge studio to..."
@@ -231,10 +231,12 @@ label ch1_main:
     m 4bi "Whatever we do, we have to avoid that machine at all costs."
     mc "Right."
     m "There may be hope if it does happen."
-    m 2bd "Surprisingly, they have an updated model which is programmable."
-    m "The company behind the software has APIs for it in Python."
+    m 2bd "Surprisingly, they have an updated model."
+    m "It's clean, compact, and it's programmable."
+    m "The studio's been writing APIs for it in Python."
     m "Should something go wrong, there's a Python script that can decouple a human from their inky counterpart."
     m 2bn "Unfortunately, the success rate of the script is very low for humans."
+    m "Not to mention it's flagged as a 'legacy' API, which I am assuming that means that cartoon characters are made much differently now."
     m 2bd "Somehow, the success rate is a bit higher for robots, which is a bit weird..."
     m 2bn "{i}*Sigh*{/i}"
     m 2bi "I don't want anyone else to know about what I just told you."
@@ -266,6 +268,7 @@ label ch1_main:
     "Natsuki and Sayori wave, showing us where to go."
     "We take the three seats perpendicular from them."
     "The train starts to move as we head to the studio."
+    call screen dialog("Okay, I'm done waiting. Let's cut to the action!", ok_action=Return())
     $ pause(0.75)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -311,10 +314,10 @@ label ch1_main:
     show alice 0j zorder 3 at f32
     a "{i}I'm Alice...{/i}"
     a 0d "...Angel?"
-    a 0g "How... did you get in here?"
+    a 0g "Who... {i}are{/i} you people?"
     show alice zorder 2 at t32
     show yuri zorder 3 at f33
-    y 3bp "A-aah!"
+    y 3bp "A-aah, s-sorry!"
     y 4bc "Th-the door was unlocked."
     y "W-we thought the studio was o-open..."
     show yuri at lhide
@@ -329,15 +332,17 @@ label ch1_main:
     show sayori 1ba zorder 2 at t33
     show alice zorder 3 at f32
     a 0d "A letter?"
-    a 0i "That's interesting, I don't recall writing a letter to Sayori."
+    a "That's interesting, I don't recall writing a letter to Sayori."
     a "May I please see a copy of this letter?"
     "I hand the woman the letter from my coat pocket."
     a "..."
     a 0d "Oh..."
     a "Ah!"
-    a "It's that letter."
+    "She lightly chuckles to herself."
+    a "It's {i}that{/i} letter!"
     a 0b "I'm sorry, I must have forgotten that I wrote this one, ehehe!"
     a 0j "Welcome to Angelhus Productions, formerly Joey Drew Studios, home of the Bendy and Alice Angel cartoons!"
+    a "A {i}lot{/i} has changed since you got this letter, so, uh..."
     a 0b "Allow me to introduce myself..."
     n "Wait a second."
     show monika zorder 2 at t41
@@ -359,8 +364,9 @@ label ch1_main:
     play music b3
     a 0d "Welp, there went the surprise."
     mc "Natsuki, I think she was..."
-    a 0g "Jeez, kid, you could've at least let me properly introduce myself to you..."
-    a 0o "It's been a while since I did this kind of an introduction to people like this..."
+    a 0g "Jeez, kid, you could've at least let me {i}properly{/i} introduce myself to you..."
+    a 0o "It's been a while since I had to properly introduce myself."
+    a "There was music and everything, too!"
     show natsuki zorder 3 at f43
     show alice zorder 2 at t42
     n 5bs "..."
@@ -454,7 +460,9 @@ label ch1_main:
     a "You huys just spawn out of nowhere..."
     mc "I had a feeling you were here..."
     mc "I'll say, your directory's a bit misleading."
-    a "We haven't had the time to change it."
+    a 0d "We haven't had the time to change it."
+    a "You know, in all of the time we had to build a new studio, we somehow forgot about the sign."
+    a 0n "I digress."
     a 0i "Y-You shouldn't have tried to find me, ..."
     mc "[player]."
     a "[player]..."
@@ -471,6 +479,7 @@ label ch1_main:
     a 0g "And look at where I am."
     a "I'm forever trapped in this..."
     a "...lost memory."
+    a "Heh, at least there's a new coat of paint or something..."
     a "God, it's so weird having real human beings here."
     a 0i "But you already knew that, didn't you?"
     stop music fadeout 1.0
@@ -515,12 +524,14 @@ label ch1_main:
     a "..."
     a 0m "Well, [player], I don't know if anyone's told you that you are a man of many words..."
     a "But I guess I have to trust you now."
+    window hide(None)
     stop music fadeout 1.0
     show alice at t11
     play music b7 fadein 3.0
     $ renpy.pause(2.0)
+    window show(None)
     a 0d "Tell me, are they really obsessive over cuteness?"
-    mc "Ahaha~"
+    mc "What? Ahaha~"
     a "What? It's a legitimate concern of mine."
     mc "It's okay. Just be yourself."
     a "Fine, then..."
