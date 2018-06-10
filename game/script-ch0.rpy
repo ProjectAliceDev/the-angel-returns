@@ -16,7 +16,7 @@ label ch0_main:
 
     show yuri 1a zorder 2 at t11
     y "[player], it's good to see you again."
-    "Yuri fidgets with the corner of her new book/"
+    "Yuri fidgets with the corner of her new book."
     mc "Ah! I see you're reading something other than the Portrait of Markov, Yuri!"
     y 3n "E-Eh?"
     mc "You don't need to be embarassed about it!"
@@ -463,7 +463,6 @@ label ch0_end:
     m "I, for one, am not able to understand the condition of the studio at this time."
     m "Furthermore, there's a few ink splatters on the corners of the letter."
     m "Something tells me that it's a mess..."
-    m 1i "Nonetheless, Sayori, there's no real need to worry."
     show monika zorder 2 at t41
     show sayori zorder 2 at t42
     show natsuki 2c zorder 2 at f43
@@ -534,7 +533,7 @@ label ch0_end:
     y "It adds a bit of mystery to our spring break."
     show yuri zorder 2 at t44
     show sayori zorder 3 at f42
-    s "Guys, doesn't this concern you?"
+    s 1h "Guys, doesn't this concern you?"
     s "I don't want us getting hurt!"
     show sayori zorder 2 at t42
     mc "Let me take a look."

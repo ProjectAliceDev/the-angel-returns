@@ -13,7 +13,7 @@ image bg station = "mod_assets/images/bg/unknown by LeoDeCraprio.png"
 image bg studio entrance = "mod_assets/images/bg/studio-1.png"
 image bg studio inkmachine = "mod_assets/images/bg/studio-2.png"
 image bg studio breakroom = "mod_assets/images/bg/studio-3.png"
-image bg studio lift = "mod_assets/images/bg/studio-4.png"
+image bg studio lift = "mod_assets/images/bg/studio-4.jpg"
 image bg studio office = "mod_assets/images/bg/studio-7.jpg"
 
 define audio.a4 = "mod_assets/music/b4g.ogg"
