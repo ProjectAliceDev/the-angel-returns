@@ -8,6 +8,13 @@ Join the Literature Club girls in an ever-exciting adventure to Joey Drew Studio
 # Downloads
 ## [Latest release: Demo (v. 0.1.1)](https://github.com/alicerunsonfedora/the-angel-returns/releases/tag/0.1.1)
 
+* The bug where the `persistent.playthrough` variable wouldn't set to 1 has been fixed. The game should now start "Act 2" as normal.
+* The lift background (`studio-4.png`) has been replaced with one made from Uncle Mugen (`studio-4.jpg`).
+* A few typographical errors on the first day have been resolved.
+* Slight modifications to the days have been made to clarify or streamline the overall story.
+* The version has been updated to version 0.1.1.
+
+### [Previous release: Demo (0.1.0)](https://github.com/alicerunsonfedora/the-angel-returns/releases/tag/0.1.0)
 
 > By downloading this mod, you are agreeing to the terms listed therein and acknowledge the information regarding copyright. You also acknowledge that this mod is not suitable for children or those who are easily disturbed.
 
