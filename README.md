@@ -6,6 +6,9 @@ Join the Literature Club girls in an ever-exciting adventure to Joey Drew Studio
 
 > Note: This mod is not affiliated with Team Salvato or theMeatly Games. Copyrights of characters in this game shall be respected as fan work.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/BATIM?src=hash&amp;ref_src=twsrc%5Etfw">#BATIM</a> fans check out this awesome demo and experience the Angel wreaking havoc anime style! ❤️😇😈<a href="https://twitter.com/hashtag/Bendy_and_the_ink_machine?src=hash&amp;ref_src=twsrc%5Etfw">#Bendy_and_the_ink_machine</a> <a href="https://twitter.com/themeatly?ref_src=twsrc%5Etfw">@themeatly</a> <a href="https://twitter.com/BATIMgame?ref_src=twsrc%5Etfw">@BATIMgame</a> <a href="https://twitter.com/hashtag/aliceangel?src=hash&amp;ref_src=twsrc%5Etfw">#aliceangel</a> <a href="https://t.co/31nUlHVFLU">https://t.co/31nUlHVFLU</a></p>&mdash; Lauren Synger (@LaurenSynger) <a href="https://twitter.com/LaurenSynger/status/1006415213242044416?ref_src=twsrc%5Etfw">June 12, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## Downloads
 **The demo is here!**
 #### [Get the demo &rsaquo;](https://github.com/alicerunsonfedora/the-angel-returns/releases/tag/0.1.0)
