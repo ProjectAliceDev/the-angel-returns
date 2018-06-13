@@ -248,6 +248,7 @@ label ch0_main:
     hide screen tear
     call hideconsole
     stop music
+    call screen dialog_alert("Cache Missing", "The game needs to reload to generate new cache.", ok_action=Return())
     show reload_bg zorder 2
     show fake_reload zorder 2 at truecenter
     $ renpy.pause(3.0)
@@ -301,7 +302,9 @@ label ch0_main:
     s 1a "I can't wait to read your poem, [player]!"
     "Sayori enthusiastically pulls out her poem from the binder."
     "Monika takes the book from my hands and pulls out her poem from the cover."
-    "I walk towards my bag to grab mine, getting ready to share my poem{nw}"
+    "I walk towards my bag to grab mine, getting ready to share my poem."
+    call screen dialog_alert("Poem Not Found", "The poem required from this script cannot be located.", ok_action=Return())
+    $ renpy.pause(1.5)
     call screen dialog("Crap! Uh...", ok_action=Return())
     call screen dialog("I can't just 'generate' a poem for you.", ok_action=Return())
     call screen dialog("I'll just skip it.", ok_action=Return())
