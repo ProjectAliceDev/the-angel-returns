@@ -4,5 +4,15 @@
 		{
 			"path": "."
 		}
+	],
+
+	"build_systems": 
+	[
+  		{
+    		"name": "DDLC",
+    		"working_dir": "${project_path}",
+    		"cmd": ["python3", "-u", "run.py"],
+    		"selector": "source.python"
+  		}
 	]
 }

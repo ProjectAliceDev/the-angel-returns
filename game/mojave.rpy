@@ -20,6 +20,7 @@ label setup:
     call updateconsole("", "Running initial setup...")
     call hideconsole
     show bg mojave setup zorder 2 with dissolve_scene_full
+    play music m1
     show mojave_setup zorder 2 at truecenter
     show mojave setup header zorder 3:
         xpos 0.3 ypos 0.15
@@ -54,4 +55,5 @@ label setup:
     show mojave_setup_thankyou zorder 3:
         xpos 0.24 ypos 0.25
     $ renpy.pause(3.0)
+    stop music fadeout 1.0
     return

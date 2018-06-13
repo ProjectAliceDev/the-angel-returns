@@ -19,7 +19,7 @@ label ch0_main:
     "Yuri fidgets with the corner of her new book."
     mc "Ah! I see you're reading something other than the Portrait of Markov, Yuri!"
     y 3n "E-Eh?"
-    mc "You don't need to be embarassed about it!"
+    mc "You don't need to be embarrassed about it!"
     mc "Its' perfectly fine to be finished with one book and start another, even though I didn't finish read it yet."
     y 4b "Uu..."
     "We've gotten to know each other quite well, but she's still a little shy."
@@ -134,7 +134,7 @@ label ch0_main:
     m "This isn't helping your case."
     show monika zorder 2 at t31
     show natsuki zorder 3 at f32
-    n 3g "Ha! You're just too embarassed to admit it."
+    n 3g "Ha! You're just too embarrassed to admit it."
     show monika 1o zorder 2 at t31
     show natsuki 5s zorder 2 at t32
     show yuri 4b zorder 2 at t33
@@ -214,7 +214,7 @@ label ch0_main:
     mc "It's like looking at the vast differences between Susan Campbell and Allison Pendle."
     mc "Yes, both of them did play as Alice Angel from the Bendy cartoons."
     mc "But, their voice styles and mannerisms are pretty different from each other."
-    m 1i "I didn't know there were two actresses for that role."
+    m 1d "I didn't know there were two actresses for that role."
     m "I guess there must have been a change or something."
     $ pause(0.75)
     show screen tear(20, 0.1, 0.1, 0, 40)
@@ -302,9 +302,9 @@ label ch0_main:
     "Sayori enthusiastically pulls out her poem from the binder."
     "Monika takes the book from my hands and pulls out her poem from the cover."
     "I walk towards my bag to grab mine, getting ready to share my poem{nw}"
-    call screen dialog("You forgot to write a poem again.", ok_action=Return())
-    call screen dialog("I'm not surprised.", ok_action=Return())
-    call screen dialog("Here, I'll just skip that for you...", ok_action=Return())
+    call screen dialog("Crap! Uh...", ok_action=Return())
+    call screen dialog("I can't just 'generate' a poem for you.", ok_action=Return())
+    call screen dialog("I'll just skip it.", ok_action=Return())
     $ pause(1.25)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -515,7 +515,7 @@ label ch0_end:
     m 1i "I'm glad we could have your expertise on board with this."
     m "To be honest, I'm a bit skeptical myself."
     m 4e "But, I'm sure this mysterious author has her reasons."
-    m "I'm kind of a but curious to see this place, anyway."
+    m "I'm kind of a bit curious to see this place, anyway."
     m 1b "I pass by it all the time but never stop in."
     show natsuki zorder 3 at f43
     show monika zorder 2 at t41
