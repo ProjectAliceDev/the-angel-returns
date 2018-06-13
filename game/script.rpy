@@ -57,6 +57,7 @@ label start:
         #Stuff here would only play after you increased the playthrough count
 
         ## Disable this line if this isn't the demo.
+        call screen dialog_alert("Script Change Detected", "It appears the script has been modified. The story may appear differently than expected.", ok_action=Return())
         call demo_end_loop
         pass
 

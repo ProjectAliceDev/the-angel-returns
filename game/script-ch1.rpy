@@ -180,7 +180,7 @@ label ch1_main:
     hide monika
     "Monika races to the trunk and places the bag in."
     "I do the same and soundly close the trunk."
-    "As everyone else appears to have filld up the back seats, I reluctantly sit right next to Monika in the front."
+    "As everyone else appears to have filled up the back seats, I reluctantly sit right next to Monika in the front."
 
     scene bg station
     with wipeleft
@@ -269,6 +269,7 @@ label ch1_main:
     "We take the three seats perpendicular from them."
     "The train starts to move as we head to the studio."
     call screen dialog("Okay, I'm done waiting. Let's cut to the action!", ok_action=Return())
+    call screen dialog_alert("Reload Required", "The script has been modified and needs to be reloaded.", ok_action=Return())
     $ pause(0.75)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"

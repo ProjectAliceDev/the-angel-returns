@@ -48,6 +48,7 @@ label demo_end_2:
     a 0bf "I at least enjoyed our date!"
     a "Promise me you'll come back, okay?"
     $ persistent.playthrough = 1
+    call screen dialog("Act 2 has been unlocked.", ok_action=Return())
     $ renpy.quit()
     return
 

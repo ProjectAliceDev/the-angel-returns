@@ -8,11 +8,12 @@ label ch0_blackbox_puzzle:
     show vignette zorder 4 at truecenter
     play music b3
     show blight start zorder 2 at t11
-    call screen dialog("""\
-It's time to get your brain working! Each minigame has a unique puzzle. Sometimes, this may require changing the game's settings or selecting the right path.
+    call screen dialog_alert("Puzzle Time", """\
+It's time for a mind teaser! Get the light to turn on to advance the story!
+You may need to interact with the game itself or change a setting.
 
-If you get stuck, don't worry; Alice may say something to you as a hint! Good luck.
-    """, ok_action=Return())
+If you need help, check the dialogue in these scenes.
+        """, ok_action=Return())
     a "[player]..."
     a "[player]..."
     a "Why am I here?"
