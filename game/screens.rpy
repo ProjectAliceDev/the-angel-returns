@@ -136,7 +136,7 @@ init -1 style vslider:
 
 init -1 style frame:
     padding gui.frame_borders.padding
-    background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
+    background Frame("mod_assets/images/gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
 
 
 
@@ -1365,7 +1365,7 @@ init -501 screen name_input(message, ok_action):
 
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
+    add "mod_assets/images/gui/overlay/confirm.png"
     key "K_RETURN" action [Play("sound", gui.activate_sound), ok_action]
 
     frame:
@@ -1401,7 +1401,7 @@ init -501 screen dialog(message, ok_action):
 
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
+    add "mod_assets/images/gui/overlay/confirm.png"
 
     frame:
 
@@ -1427,6 +1427,46 @@ init 499 image confirm_glitch:
     pause 0.02
     repeat
 
+init -501 screen dialog_alert(title, subtitle, ok_action):
+
+
+    modal True
+
+    zorder 200
+
+    style_prefix "confirm"
+
+    add "mod_assets/images/gui/overlay/confirm.png"
+
+    frame:
+
+        has vbox:
+            xalign .5
+            yalign .5
+            spacing 30
+
+        label _(title):
+            style "confirm_prompt"
+            xalign 0.5
+
+        label _(subtitle):
+            style "confirm_prompt_details"
+            xalign 0.5
+
+        hbox:
+            xalign 0.5
+            spacing 100
+
+            textbutton _("OK") action ok_action
+
+init 499 image confirm_glitch:
+    "gui/overlay/confirm_glitch.png"
+    pause 0.02
+    "gui/overlay/confirm_glitch2.png"
+    pause 0.02
+    repeat
+
+
 init -501 screen confirm(message, yes_action, no_action):
 
 
@@ -1436,7 +1476,7 @@ init -501 screen confirm(message, yes_action, no_action):
 
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
+    add "mod_assets/images/gui/overlay/confirm.png"
 
     frame:
 
@@ -1463,28 +1503,46 @@ init -501 screen confirm(message, yes_action, no_action):
 init -1 style confirm_frame is gui_frame
 init -1 style confirm_prompt is gui_prompt
 init -1 style confirm_prompt_text is gui_prompt_text
+init -1 style confirm_prompt_details is gui_prompt
+init -1 style confirm_prompt_details_text is gui_prompt_text
 init -1 style confirm_button is gui_medium_button
 init -1 style confirm_button_text is gui_medium_button_text
 
 init -1 style confirm_frame:
-    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    background Frame([ "gui/confirm_frame.png", "mod_assets/images/gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
     padding gui.confirm_frame_borders.padding
     xalign .5
     yalign .5
 
 init -1 style confirm_prompt_text:
     color "#000"
+    font "mod_assets/gui/font/mojave-bold.ttf"
+    outlines []
+    text_align 0.5
+    layout "subtitle"
+
+init -1 style confirm_prompt_details_text:
+    color "#000"
+    font "mod_assets/gui/font/mojave.ttf"
     outlines []
     text_align 0.5
     layout "subtitle"
 
 init -1 style confirm_button:
     properties gui.button_properties("confirm_button")
+    color "007AFF"
+    font "mod_assets/gui/font/mojave.ttf"
+    hover_color "#5AC8FA"
+    outlines []
     hover_sound gui.hover_sound
     activate_sound gui.activate_sound
 
 init -1 style confirm_button_text is navigation_button_text:
     properties gui.button_text_properties("confirm_button")
+    color "007AFF"
+    font "mod_assets/gui/font/mojave.ttf"
+    hover_color "#5AC8FA"
+    outlines []
 
 
 

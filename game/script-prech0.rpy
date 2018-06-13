@@ -3,6 +3,7 @@ label pre_ch0:
     with dissolve_scene_half
     $ consolehistory = []
     $ config.allow_skipping = False
+    call screen dialog_alert("You desktop environment hasn't been set.", "Please set a desktop environment to use your computer.", ok_action=Return())
     call updateconsole("r = renpy()", "Variable 'r' set.")
     call updateconsole("./build.sh", "Building data...")
     call updateconsole("", "Creating temp folder...")

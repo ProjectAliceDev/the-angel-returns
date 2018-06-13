@@ -1,5 +1,7 @@
 # Developer Notes
 
+> To view any new functions or changes made to extend DDLC, please see [CHANGES.md](CHANGES.md).
+
 ## Developing for Yourself (Non-contribution)
 If you plan to make your own project from this one, please fork this to your account and follow the guidelines listed in IPGuidelines.md before continuing.
 
