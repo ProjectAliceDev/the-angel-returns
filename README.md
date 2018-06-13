@@ -32,9 +32,5 @@ We always recommend downloading the latest version of The Angel Returns, but if 
 
 > Wow, nice mod you got here friend. I just finished it right now with the 0.1.1 update and it's very good. Can't wait for the full release! &mdash; [u/Frostby](https://www.reddit.com/user/Frostby)
 
-# Developing
-For more information regarding the development of this mod, please check the [developer read-me](DEVELOPER.md).
-
-## Contribute
-The easiest way to get started is to join our Discord server:
-**[Use the invite link &rsaquo;](https://discord.gg/tdvNzjW)**
+## Helpful Links
+[Developer README &rsaquo;](DEVELOPER.md) &nbsp; [Discord &rsaquo;](https://discord.gg/tdvNzjW) &nbsp; [Reddit &rsaquo;](https://reddit.com/r/TheAngelReturns)
