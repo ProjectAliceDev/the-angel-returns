@@ -90,7 +90,7 @@ label synger_activator:
     show alice at thide
     hide alice
     a "Jeez, I thought you'd be a bit more intellectual than {i}that{/i}."
-    $ renpy.quit()
+    # $ renpy.quit()
     return
 
 label stanley_activator:
@@ -108,7 +108,7 @@ label stanley_activator:
     a "Okay, I'm done with the bullcrap."
     a "This isn't funny, [player]. It isn't."
     a "Delete the file and wait for the full release. I'm done playing tricks here."
-    $ renpy.quit()
+    # $ renpy.quit()
     return
 
 $ message = """\

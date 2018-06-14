@@ -1,17 +1,23 @@
 label pre_ch0:
-    scene bg mojave desktop
-    with dissolve_scene_half
-    $ consolehistory = []
-    $ config.allow_skipping = False
-    call screen dialog_alert("No Desktop Environment", "Please install a desktop environment to use\nyour computer regularly.\n\nWe recommend installing GNOME Shell.", ok_action=Return())
+    scene black
+    show mask_2
+    show mask_3
+    show room_mask as rm:
+        size (320,180)
+        pos (30,200)
+    show room_mask2 as rm2:
+        size (320,180)
+        pos (935,200)
+    show monika_room
     call updateconsole("", """\
-DDLC RenPy Console
-(C) 2017-2018
+DDLC RenPy Console for AliceOS
+(C) 2017-2018 | Team Salvato.
 All rights reserved.
 
 Ready.
         """)
     $ renpy.pause(0.5)
+    call screen confirm_alert("DDLC Console Would Like To Send You Notifications", "Notifications may include alerts, sounds, and logging.\nThese can be configured in Control Center.", no_action_message="Don't Allow", no_action=Quit(), yes_action_message="OK", yes_action=(Return()))
     $ consolehistory = []
     call updateconsole("r = renpy()", "Variable 'r' set.")
     call updateconsole("./build.sh", "Building data...")
@@ -44,10 +50,11 @@ label pre_ch0_result:
     call updateconsole("", "Loading aliceangel.chr...")
     call updateconsole("init _alice", "Starting init scripts...")
     call hideconsole
+    hide rm
+    hide rm2
+    hide monika_room
     $ config.allow_skipping = True
     window hide(None)
-    show amesh zorder 1 at truecenter
-    show vignette zorder 4 at truecenter
     $ renpy.music.set_volume(0.25)
     play music a4 fadein 5.0
     $ pause(0.75)

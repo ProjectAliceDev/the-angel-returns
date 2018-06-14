@@ -1497,7 +1497,39 @@ init -501 screen confirm(message, yes_action, no_action):
             textbutton _("No") action no_action
 
 
+init -501 screen confirm_alert(title, subtitle, no_action_message, no_action, yes_action_message, yes_action):
 
+
+    modal True
+
+    zorder 200
+
+    style_prefix "confirm"
+
+    add "mod_assets/images/gui/overlay/confirm.png"
+
+    frame:
+
+        has vbox:
+            xalign .5
+            yalign .5
+            spacing 30
+
+        label _(title):
+            style "confirm_prompt"
+            xalign 0.5
+
+        label _(subtitle):
+            style "confirm_prompt_details"
+            xalign 0.5
+
+        hbox:
+            xalign 0.5
+            spacing 100
+
+            textbutton _(no_action_message) action no_action:
+                style "confirm_button_negative"
+            textbutton _(yes_action_message) action yes_action
 
 
 init -1 style confirm_frame is gui_frame
@@ -1506,7 +1538,10 @@ init -1 style confirm_prompt_text is gui_prompt_text
 init -1 style confirm_prompt_details is gui_prompt
 init -1 style confirm_prompt_details_text is gui_prompt_text
 init -1 style confirm_button is gui_medium_button
+init -1 style confirm_button_negative is gui_medium_button
 init -1 style confirm_button_text is gui_medium_button_text
+init -1 style confirm_button_negative_text is gui_medium_button_text
+
 
 init -1 style confirm_frame:
     background Frame([ "gui/confirm_frame.png", "mod_assets/images/gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
@@ -1537,6 +1572,15 @@ init -1 style confirm_button:
     hover_sound gui.hover_sound
     activate_sound gui.activate_sound
 
+init -1 style confirm_button_negative:
+    properties gui.button_properties("confirm_button")
+    color "007AFF"
+    font "mod_assets/gui/font/mojave-bold.ttf"
+    hover_color "#5AC8FA"
+    outlines []
+    hover_sound gui.hover_sound
+    activate_sound gui.activate_sound
+
 init -1 style confirm_button_text is navigation_button_text:
     properties gui.button_text_properties("confirm_button")
     color "007AFF"
@@ -1544,6 +1588,12 @@ init -1 style confirm_button_text is navigation_button_text:
     hover_color "#5AC8FA"
     outlines []
 
+init -1 style confirm_button_negative_text is navigation_button_text:
+    properties gui.button_text_properties("confirm_button")
+    color "007AFF"
+    font "mod_assets/gui/font/mojave-bold.ttf"
+    hover_color "#5AC8FA"
+    outlines []
 
 
 

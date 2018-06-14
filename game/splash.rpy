@@ -234,14 +234,22 @@ label splashscreen:
         scene tos
         with Dissolve(1.0)
         pause 1.0
-        "[config.name] is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato or theMeatly Games."
-        "It is designed to be played only after the official game has been completed, and contains spoilers for the official game."
-        "Game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at: http://ddlc.moe"
-        "This game is also not intended for those who are sensitive or easily disturbed to the contents within."
-        menu:
-            "By playing [config.name] you agree that you have completed Doki Doki Literature Club and accept any spoilers contained within."
-            "I agree.":
-                pass
+        call screen dialog_alert("Mod Disclaimer", """\
+The Angel Returns is a Doki Doki Literature Club fan mod 
+that is not affiliated with Team Salvato or theMeatly 
+Games Ltd. It is designed to be played only after the 
+official games have been completed, and contains spoilers 
+for the official games.
+
+Game files for Doki Doki Literature Club are required to 
+play this mod and can be downloaded for free at: http://ddlc.moe
+
+By playing The Angel Returns you agree that you have 
+completed Doki Doki Literature Club and Bendy and the 
+Ink Machine and accept any spoilers contained within.
+
+Press OK to agree to the terms in this disclaimer.
+            """, ok_action=Return())
         scene tos2
         with Dissolve(1.5)
         pause 1.0
@@ -297,8 +305,7 @@ label after_load:
     if anticheat != persistent.anticheat:
         stop music
         scene black
-        "The save file could not be loaded."
-        "Are you trying to cheat?"
+        call screen dialog("The save file could not be loaded.\nAre you rtying to cheat?", ok_action=Return())
         #Handle however you want, default is to force reset all save data
         $ renpy.utter_restart()
     return
