@@ -60,9 +60,31 @@ label demo_end_loop:
     scene bg studio lift
     show alice 0bi at t11
     $ a_name = "Alice"
+
+    python:
+        if renpy.exists("../characters/synger.chr"):
+            renpy.jump("synger_activator")
+
     a "I appreciate that you came back for me, but I told you that I have nothing to show."
     a "Please, come back when the game's actually complete."
     $ renpy.quit()
+    return
+
+label synger_activator:
+    $ player = "Player"
+    a "Okay, come on, you aren't being very funny."
+    a "You certainly haven't accomplished anything by doing that."
+    a "Are you expecting Lauren herself to pop in and delete me?"
+    a "Or are you expecting me to annoy her continuously?"
+    a "Nothing's going to happen, [player]."
+    a "In fact, it's totally useless."
+    a "Well done, [player]. I hope you're happy."
+    a "Do you want me to applaud you for your \"hard work\" in doing absolutely nothing?"
+    a "{i}*claps slowly*{/i}"
+    a "Now go and delete the file and wait patiently."
+    show alice at thide
+    hide alice
+    a "Jeez, I thought you'd be a bit more intellectual than {i}that{/i}."
     return
 
 $ message = """\
