@@ -447,7 +447,7 @@ init -501 screen navigation():
             if main_menu:
 
                 if persistent.playthrough == 1:
-                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Start())
+                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Show(screen="dialog_alert", title = "Script Change Detected", subtitle = "The script has been modified from the original version.\nYou may get a different experience.", ok_action=Function(Start)), false=Show(screen="dialog_alert", title = "Script Change Detected", subtitle = "The script has been modified from the original version.\nYou may get a different experience.", ok_action=Function(Start)))
                 else:
                     textbutton _("New Game") action If(persistent.playername, true=Start(), false=Start())
 

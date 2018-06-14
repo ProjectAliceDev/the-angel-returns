@@ -10,8 +10,7 @@ image mojave_ddlc_header = Text("Alice OS Mojave Setup Assistant", font="gui/fon
 image mojave_setup_details = Text("Welcome to Alice OS Mojave. Your administrator, {font=mod_assets/gui/font/mojave-bold.ttf}Dan Salvato{/font}, has \nrequested you to create an account name before continuing.\n\nPlease create a username for this computer. Your password will be \ncreated and logged automatically. Press ENTER when you have finished.",font="mod_assets/gui/font/mojave.ttf", size=22, style="_default")
 image mojave_setup_process = Text("Processing...", font="mod_assets/gui/font/mojave-bold.ttf", size=32, style="_default")
 image mojave_setup_theming = Text("Applying policy theme...", font="mod_assets/gui/font/mojave-bold.ttf", size=32, style="_default")
-image mojave_setup_thankyou = Text("Your profile has been created and this computer\nisready to be used.\n\nIf you need to enter a password, check the profiles file.\n\nThank you for choosing Alice OS.",font="mod_assets/gui/font/generic2.ttf", size=22, style="_default")
-
+image mojave_setup_thankyou = Text("Your profile has been created and this computer is ready to\nbe used.\n\nYour profile data is saved in profiles.moj.\n\nThank you for choosing Alice OS. Your computer will now finish setup\nand prepare your desktop for you.",font="mod_assets/gui/font/generic2.ttf", size=22, style="_default")
 
 label setup:
     stop music fadeout 1.0
@@ -32,6 +31,13 @@ label setup:
         player = player.strip()
     show mojave_setup_process zorder 3:
         xalign 0.5 yalign 0.6
+    python:
+        with open(config.basedir + "/game/invalid", "r+") as invalid:
+            for line in iter(invalid):
+                testcase = line.strip()
+                if player == testcase:
+                    renpy.jump("setup_error_name")
+        persistent.playername = player
     $ renpy.pause(3.0)
 
     hide mojave_setup_process
@@ -55,5 +61,11 @@ label setup:
     show mojave_setup_thankyou zorder 3:
         xpos 0.24 ypos 0.25
     $ renpy.pause(3.0)
+    call screen dialog_alert("System Policy Applied", "Your administrator has enforced a system \npolicy that does the following:\n\n \"Automatically launch DDLC and prevent desktop access\"\n\nYour computer may function differently.", ok_action=Return())
     stop music fadeout 1.0
+    return
+
+label setup_error_name:
+    call screen dialog_alert("Invalid Username", "You cannot use this username on this computer.\n\nThe setup assistant will be restarted.", ok_action=Return())
+    jump setup
     return

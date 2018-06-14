@@ -3,7 +3,16 @@ label pre_ch0:
     with dissolve_scene_half
     $ consolehistory = []
     $ config.allow_skipping = False
-    call screen dialog_alert("You desktop environment hasn't been set.", "Please set a desktop environment to use your computer.", ok_action=Return())
+    call screen dialog_alert("No Desktop Environment", "Please install a desktop environment to use\nyour computer regularly.\n\nWe recommend installing GNOME Shell.", ok_action=Return())
+    call updateconsole("", """\
+DDLC RenPy Console
+(C) 2017-2018
+All rights reserved.
+
+Ready.
+        """)
+    $ renpy.pause(0.5)
+    $ consolehistory = []
     call updateconsole("r = renpy()", "Variable 'r' set.")
     call updateconsole("./build.sh", "Building data...")
     call updateconsole("", "Creating temp folder...")
@@ -47,6 +56,7 @@ label pre_ch0_result:
     $ pause(0.25)
     stop sound
     hide screen tear
+    call screen dialog_alert("New Administrator Added", "A new administrator \"Alice Angel\" has been added to the system.\n\nIf you did not initiate this action, contact your\nadministrator immediately.", ok_action=Return())
     window show(None)
     $ gtext = glitchtext(12)
     $ a_name = gtext

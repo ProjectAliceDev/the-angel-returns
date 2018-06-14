@@ -68,6 +68,7 @@ label ch0_blackbox_puzzle_failure:
 
 label ch0_blackbox_puzzle_success:
     show blight complete zorder 2 at t11
+    call screen dialog("The puzzle has been solved.", ok_action=Return())
     $ pause(0.75)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
