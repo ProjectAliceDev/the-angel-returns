@@ -268,7 +268,8 @@ label ch1_main:
     "Natsuki and Sayori wave, showing us where to go."
     "We take the three seats perpendicular from them."
     "The train starts to move as we head to the studio."
-    call screen dialog("Okay, I'm done waiting. Let's cut to the action!", ok_action=Return())
+    play sound ping
+    call screen ios_notify(1, "Alice Angel", "Okay, I'm done waiting. Let's cut to the chase!", dismiss=Return())
     call screen dialog_alert("Reload Required", "The script has been modified and needs to be reloaded.", ok_action=Return())
     $ pause(0.75)
     show screen tear(20, 0.1, 0.1, 0, 40)
@@ -458,7 +459,7 @@ label ch1_main:
     play music b1
     a "Aah!"
     a "How did you find me?"
-    a "You huys just spawn out of nowhere..."
+    a "You guys just spawn out of nowhere..."
     mc "I had a feeling you were here..."
     mc "I'll say, your directory's a bit misleading."
     a 0d "We haven't had the time to change it."
@@ -635,7 +636,7 @@ label ch1_end:
     show yuri 1be zorder 2 at t22
     m 1bi "[player], was everything alright with Alice?"
     mc "Yeah, I guess."
-    mc "She was a bit overwhelemed and got a bit nostalgic."
+    mc "She was a bit overwhelmed and got a bit nostalgic."
     play music b5
     show yuri zorder 2 at f22
     show monika zorder 2 at t21
@@ -773,7 +774,7 @@ label ch1_end:
     mc "Yes, ma'am{nw}"
     show alice at f21
     a 0k "Ahaha, I'm not worried about you, darling!"
-    a 0i "I'm more concered about your friend here."
+    a 0i "I'm more concerned about your friend here."
     show alice at t21
     show monika at f22
     m "..."
@@ -809,7 +810,7 @@ label ch1_end:
     a "Does she usually do that?"
     mc "Not really."
     mc "I mean, I did promise to spend a little more time with her."
-    a 0g "I wasnt too... {i}aggressive{/i}, was I?"
+    a 0g "I wasn't too... {i}aggressive{/i}, was I?"
     "I honestly cannot find an answer for that."
     mc "Um..."
     mc "Mayb-{nw}"

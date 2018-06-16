@@ -25,3 +25,18 @@ This screen is an extension to the DDLC screen `confirm`. This offers a more det
 ```renpy
 call screen confirm_alert("Pages Would Like To Send You Notifications", "Notifications may include alerts, sounds, and icon badges.\nThese can be configured in Settings.", no_action_message="Don't Allow", no_action=Quit(), yes_action_message="OK", yes_action=(Return()))
 ```
+
+## `ios_notify(app, title, message, dismiss)`
+This screen acts like a notification banner in iOS 10+.
+
+* `app` - Determines app icon and name:
+	* `None` - Doki Doki Literature Club! (default)
+	* `1` - Messages
+	* `2` - Alice OS System 
+* `title` - Provides the title of the message
+* `message` - Provides the description
+* `dismiss` - Provides function that occurs when user hits Dismiss to dismiss banner
+
+```renpy
+call screen ios_notify("Craig", "What do you think of the new messages?", dismiss=Return())
+```

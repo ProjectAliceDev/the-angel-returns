@@ -27,6 +27,8 @@ label start:
     # persistent.playthrough variable marks each of the major game events (Sayori hanging, etc.)
     #Here is an example of how you might do that
     if persistent.playthrough == 0:
+        # call gui_playground
+
         call setup
         call init_desktop_load
         call pre_ch0

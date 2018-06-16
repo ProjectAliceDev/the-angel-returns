@@ -24,5 +24,6 @@ label pre_ch1:
     stop sound
     hide screen tear
     $ renpy.music.set_volume(0.75)
-    call screen dialog("The script has been modified successfully.", ok_action=Return())
+    play sound ping
+    call screen ios_notify(None, "Script modified", "The script has been modified. Enjoy the new scene!", dismiss=Return())
     return

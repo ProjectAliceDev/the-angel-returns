@@ -1,0 +1,617 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ios_no",
+				"ios_notify_system_frame"
+			],
+			[
+				"ios_",
+				"ios_notify_dismiss"
+			],
+			[
+				"ios_n",
+				"ios_notify_frame"
+			],
+			[
+				"ios",
+				"ios_notify_frame_app"
+			],
+			[
+				"ios_noti",
+				"ios_notify_frame_sender"
+			],
+			[
+				"confirm_button",
+				"confirm_button_negative"
+			],
+			[
+				"yes_ac",
+				"yes_action_message"
+			],
+			[
+				"mo",
+				"mojave_setup_thankyou"
+			],
+			[
+				"moja",
+				"mojave_setup_complete"
+			],
+			[
+				"stan",
+				"stanley_activator"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "game/script.rpy",
+			"settings":
+			{
+				"buffer_size": 2110,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "game/script-ch1.rpy",
+			"settings":
+			{
+				"buffer_size": 33866,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "game/blackbox.rpy",
+			"settings":
+			{
+				"buffer_size": 4229,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "game/script-prech1.rpy",
+			"settings":
+			{
+				"buffer_size": 1015,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "game/script-ch0.rpy",
+			"settings":
+			{
+				"buffer_size": 25019,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Push",
+				"Git: Push"
+			],
+			[
+				"Git Comm",
+				"Git: Quick Commit"
+			],
+			[
+				"Git Add",
+				"Git: Quick Add"
+			],
+			[
+				"Git push",
+				"Git: Push"
+			],
+			[
+				"Git commit",
+				"Git: Quick Commit"
+			],
+			[
+				"Git COmm",
+				"Git: Commit"
+			],
+			[
+				"Git Push",
+				"Git: Push"
+			],
+			[
+				"GIt Add",
+				"Git: Add Current File"
+			],
+			[
+				"Git Quick",
+				"Git: Quick Commit"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"Snippet: ",
+				"Snippet: DDLCMods"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Quick Commit"
+			],
+			[
+				"Git add",
+				"Git: Quick Add"
+			],
+			[
+				"Markdown",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"COmmit",
+				"Git: Quick Commit"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Git check",
+				"Git: Checkout New Branch"
+			],
+			[
+				"git puh",
+				"Git: Push"
+			],
+			[
+				"git commit",
+				"Git: Quick Commit"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"Mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ayu",
+				"ayu: Activate theme"
+			],
+			[
+				"Ma",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Git: Sta",
+				"Git: Status"
+			],
+			[
+				"git",
+				"GitHub: Open Gist in Browser"
+			],
+			[
+				"Hub",
+				"GitHub: Switch Accounts"
+			],
+			[
+				"Git",
+				"GitHub: Update Gist"
+			],
+			[
+				"GitH",
+				"GitHub: Switch Accounts"
+			],
+			[
+				"Pack",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/marquiskurt/Projects/DDTAR",
+		"/home/marquiskurt/Projects/DDTAR/game",
+		"/home/marquiskurt/Projects/DDTAR/game/python-packages"
+	],
+	"file_history":
+	[
+		"/home/marquiskurt/Projects/DDTAR/game/blackbox.rpy",
+		"/home/marquiskurt/Projects/DDTAR/game/script-ch0.rpy",
+		"/home/marquiskurt/Projects/DDTAR/game/mojave.rpy",
+		"/home/marquiskurt/Projects/DDTAR/CHANGES.md",
+		"/home/marquiskurt/Projects/DDTAR/game/script-prech0.rpy",
+		"/home/marquiskurt/Projects/DDTAR/game/screens.rpy",
+		"/home/marquiskurt/Documents/Goucher Housing EULA",
+		"/home/marquiskurt/Projects/DDTAR/game/tests.rpy",
+		"/home/marquiskurt/Projects/DDTAR/game/script.rpy",
+		"/home/marquiskurt/Projects/DDTAR/game/demo-restricted.rpy",
+		"/home/marquiskurt/Projects/DDTAR/game/invalid",
+		"/home/marquiskurt/.config/sublime-text-3/Packages/User/DDLCBanner.sublime-snippet",
+		"/home/marquiskurt/Projects/DDTAR/game/splash.rpy",
+		"/home/marquiskurt/Projects/DDTAR/characters/stanley.chr",
+		"/home/marquiskurt/Projects/DDTAR/characters/synger.chr",
+		"/home/marquiskurt/Projects/DDTAR/game/script-prech1.rpy",
+		"/home/marquiskurt/Projects/DDTAR/game/script-ch1.rpy",
+		"/home/marquiskurt/Projects/DDTAR/game/gui.rpy",
+		"/home/marquiskurt/Projects/DDTAR/.gitignore",
+		"/home/marquiskurt/.config/sublime-text-3/Packages/User/DDLCAlert.sublime-snippet",
+		"/home/marquiskurt/.config/sublime-text-3/Packages/User/DDLCTerm.sublime-snippet",
+		"/home/marquiskurt/.config/sublime-text-3/Packages/User/DDLCTermNew.sublime-snippet",
+		"/home/marquiskurt/Projects/DDTAR/run.py",
+		"/home/marquiskurt/.config/sublime-text-3/Packages/User/DDLCMods.sublime-snippet",
+		"/home/marquiskurt/Projects/DDTAR/DDTARSublime.sublime-project",
+		"/home/marquiskurt/Projects/DDTAR/DEVELOPER.md",
+		"/home/marquiskurt/Projects/DDTAR/mod.json",
+		"/home/marquiskurt/.config/sublime-text-3/Packages/User/GitHub.sublime-settings",
+		"/home/marquiskurt/.config/sublime-text-3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/home/marquiskurt/.config/sublime-text-3/Packages/sublime-github/GitHub.sublime-settings"
+	],
+	"find":
+	{
+		"height": 54.0
+	},
+	"find_in_files":
+	{
+		"height": 134.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ios_notify",
+			"confirm",
+			"stanley_activator",
+			"\"Start\"",
+			"dialog",
+			"confirm_button",
+			"outlines",
+			"button",
+			"style button",
+			"button",
+			"confirm",
+			"dialog",
+			"text",
+			"confirm",
+			"confirm.png",
+			"gui/frame.png",
+			"gui/frame",
+			"mojave",
+			"mojace"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "game/script.rpy",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1029,
+								1029
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Renpy Language/RenpyLanguage.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 500.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "game/script-ch1.rpy",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33866,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32680,
+								32680
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Renpy Language/RenpyLanguage.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 16100.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "game/blackbox.rpy",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3711,
+								3711
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Renpy Language/RenpyLanguage.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "game/script-prech1.rpy",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1015,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								725,
+								725
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Renpy Language/RenpyLanguage.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "game/script-ch0.rpy",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25019,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12876,
+								12876
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Renpy Language/RenpyLanguage.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6840.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 53.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 144.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-checkout":
+	{
+		"height": 156.0
+	},
+	"output.git-commit":
+	{
+		"height": 156.0
+	},
+	"output.git-push":
+	{
+		"height": 156.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "DDLC",
+	"project": "DDTARSublime.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 271.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

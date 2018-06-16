@@ -84,6 +84,8 @@ label ch0_main:
     $ consolehistory = []
     call updateconsole("game.setroute(_monika)", "Route set to Monika.")
     call hideconsole
+    play sound ping
+    call screen ios_notify(None, "Congratulations!", "You've impressed Monika!", dismiss=Return())
     m 2b "Why don't we do something today, then? Just the both of us..."
 
     show monika 1g zorder 2 at t21
@@ -222,13 +224,17 @@ label ch0_main:
     $ pause(0.25)
     stop sound
     hide screen tear
-    call screen dialog("Monika, shut your fucking mouth.", ok_action=Return())
+    play sound ping
+    call screen ios_notify(1, "Alice Angel", "Monika, shut your fucking mouth.", dismiss=Return())
+    # call screen dialog("Monika, shut your fucking mouth.", ok_action=Return())
     m "..."
     m 3g "[player], tell me you saw that."
     m 4i "I swear I didn't do that."
     m "What's going on with the script?"
-    call screen dialog("Can you hear me?", ok_action=Return())
-    call screen dialog("Don't speak of her ever again.", ok_action=Return())
+    play sound ping
+    call screen ios_notify(1, "Alice Angel", "Can you hear me? Don't speak of her ever again.", dismiss=Return())
+    # call screen dialog("Can you hear me?", ok_action=Return())
+    # call screen dialog("Don't speak of her ever again.", ok_action=Return())
     m "..."
     m "Who?{nw}"
     m "Nevermind."
@@ -305,9 +311,10 @@ label ch0_main:
     "I walk towards my bag to grab mine, getting ready to share my poem."
     call screen dialog_alert("Poem Not Found", "The poem required from this script cannot be located.", ok_action=Return())
     $ renpy.pause(1.5)
-    call screen dialog("Crap! Uh...", ok_action=Return())
-    call screen dialog("I can't just 'generate' a poem for you.", ok_action=Return())
-    call screen dialog("I'll just skip it.", ok_action=Return())
+    play sound ping
+    call screen ios_notify(1, "Alice Angel", "Crap! Uh... well, can't just generate a poem.", dismiss=Return())
+    play sound ping
+    call screen ios_notify(1, "Alice Angel", "Just going to have to skip it, then.", dismiss=Return())
     $ pause(1.25)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"

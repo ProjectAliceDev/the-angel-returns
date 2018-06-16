@@ -17,7 +17,11 @@ All rights reserved.
 Ready.
         """)
     $ renpy.pause(0.5)
-    call screen confirm_alert("DDLC Console Would Like To Send You Notifications", "Notifications may include alerts, sounds, and logging.\nThese can be configured in Control Center.", no_action_message="Don't Allow", no_action=Quit(), yes_action_message="OK", yes_action=(Return()))
+    call screen confirm_alert("Doki Doki Literature Club Would Like \nTo Send You Notifications", "Notifications may include alerts, sounds, \nand banners. These can be configured in \nControl Center.", no_action_message="Don't Allow", no_action=Quit(), yes_action_message="OK", yes_action=(Return()))
+    call screen confirm_alert("Doki Doki Literature Club Would Like \nTo Access The File System", "By giving this app access, this app can\nmodify files beyond your Home folder.\nOnly give file system access to apps that \nyou trust.", no_action_message="Don't Allow", no_action=Quit(), yes_action_message="OK", yes_action=(Return()))
+    call screen confirm_alert("Doki Doki Literature Club Would Like \nTo Make Changes", "By giving this app access, this app can\nmodify system settings and control\nyour computer. Only give this to apps \nthat you trust.", no_action_message="Don't Allow", no_action=Quit(), yes_action_message="OK", yes_action=(Return()))
+    play sound ping
+    call screen ios_notify(None, "Thank You!", "You're all set to receive notifications in DDLC.", dismiss=Return())
     $ consolehistory = []
     call updateconsole("r = renpy()", "Variable 'r' set.")
     call updateconsole("./build.sh", "Building data...")
@@ -63,9 +67,9 @@ label pre_ch0_result:
     $ pause(0.25)
     stop sound
     hide screen tear
-    call screen dialog_alert("New Administrator Added", "A new administrator \"Alice Angel\" has been added to the system.\n\nIf you did not initiate this action, contact your\nadministrator immediately.", ok_action=Return())
-    window show(None)
     $ gtext = glitchtext(12)
+    call screen confirm_alert("[gtext] Would Like To Make Changes", "By giving this app access, this app can\nmodify system settings and control\nyour computer. Only give this to apps \nthat you trust.", no_action_message="Don't Allow", no_action=Quit(), yes_action_message="OK", yes_action=(Return()))
+    window show(None)
     $ a_name = gtext
     a "..."
     a "...no..."
@@ -81,6 +85,8 @@ label pre_ch0_result:
     hide screen tear
     show alice mesh zorder 2 at t11
     a "This can't be..."
+    play sound ping
+    call screen ios_notify(None, "New Character", "A new character has been added (aliceangel.chr)!", dismiss=Return())
     a "This isn't {i}real{/i}..."
     a "Who are you, [player]?"
     a "Did you... do this to me?"
@@ -101,6 +107,22 @@ label pre_ch0_result:
     a "Congratulations, [player]!"
     a "You just got a date with an Angel!"
     $ style.say_dialogue = style.normal
+    call screen confirm_alert("[gtext] Would Like To Modify \nDDLC Scripts", "By giving this app DDLC script access, this \napp can modify scripts and change DDLC.\nOnly give DDLC script access to apps that \nyou trust.", no_action_message="Don't Allow", no_action=Return(1), yes_action_message="OK", yes_action=(Return(0)))
+    python:
+        if _return == 1:
+            renpy.jump('ddlc_alice_fs_override')
+    $ pause(0.75)
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    $ renpy.music.set_volume(0.75)
+    return
+
+label ddlc_alice_fs_override:
+    play sound ping
+    call screen ios_notify(1, "[gtext]", "You can't play God forever. I will have my way!", dismiss=Return())
     $ pause(0.75)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"

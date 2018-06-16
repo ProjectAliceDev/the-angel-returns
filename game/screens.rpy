@@ -1657,8 +1657,127 @@ init -1 style skip_triangle:
 
 
 
+init -501 screen ios_notify(app, title, message, dismiss):
+    zorder 100
+    default app = None
+    if app == None:
+        style "ios_notify_frame"
+    elif app == 1:
+        style "ios_notify_imessage_frame"
+    elif app == 2:
+        style "ios_notify_system_frame"
 
 
+    frame at ios_notify_appear:
+        style "ios_notify_frame"
+        xpadding 16
+        ypadding 16
+        xalign 0.5
+        yalign 0.025
+
+        vbox:
+            if app == None:
+                hbox:
+                    add "mod_assets/images/gui/frame_notify_default.png"
+                    text "DOKI DOKI LITERATURE CLUB!":
+                        style "ios_notify_frame_app"
+                    textbutton _("Dismiss") action dismiss:
+                        style "ios_notify_dismiss"
+                        xalign 0.9
+                        ypadding 0
+            if app == 1:
+                hbox:
+                    add "mod_assets/images/gui/frame_notify_message.png"
+                    text "MESSAGES":
+                        style "ios_notify_frame_app"
+                    textbutton _("Dismiss") action dismiss:
+                        style "ios_notify_dismiss"
+                        xalign 0.9
+                        ypadding 0
+            if app == 2:
+                hbox:
+                    add "mod_assets/images/gui/frame_notify_system.png"
+                    text "ALICE OS SYSTEM":
+                        style "ios_notify_frame_app"
+                    textbutton _("Dismiss") action dismiss:
+                        style "ios_notify_dismiss"
+                        xalign 0.9
+                        ypadding 0
+            null height 12
+            text title:
+                style "ios_notify_frame_sender"
+            text message:
+                style "ios_notify_frame_message"
+
+
+
+transform -1 ios_notify_appear:
+    on show:
+        yalign 0.0 xalign 0.5
+        linear 0.25 ypos 0.025
+    on hide:
+        yalign 0.025 xalign 0.5
+        linear 0.25 yalign -1.0
+
+init -1 style ios_notify_frame:
+    background Frame([ "gui/confirm_frame.png", "mod_assets/images/gui/frame_notify.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    padding gui.confirm_frame_borders.padding
+    xalign .5
+    yalign .5
+
+init -1 style ios_notify_imessage_frame:
+    background Frame([ "gui/confirm_frame.png", "mod_assets/images/gui/frame_notify_2.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    padding gui.confirm_frame_borders.padding
+    xalign .5
+    yalign .5
+
+init -1 style ios_notify_system_frame:
+    background Frame([ "gui/confirm_frame.png", "mod_assets/images/gui/frame_notify_3.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    padding gui.confirm_frame_borders.padding
+    xalign .5
+    yalign .5
+
+init -1 style ios_notify_frame_app:
+    color "333333"
+    font "mod_assets/gui/font/mojave.ttf"
+    first_indent 8
+    min_width 576
+    size 20
+    outlines []
+    text_align 0
+    layout "tex"
+
+init -1 style ios_notify_frame_sender:
+    color "#000"
+    font "mod_assets/gui/font/mojave-bold.ttf"
+    size 22
+    outlines []
+    text_align 0
+    layout "tex"
+
+init -1 style ios_notify_frame_message:
+    color "#000"
+    font "mod_assets/gui/font/mojave.ttf"
+    size 22
+    outlines []
+    text_align 0
+    layout "tex"
+
+init -1 style ios_notify_dismiss is navigation_button_text:
+    properties gui.button_text_properties("confirm_button")
+    color "333"
+    size 18
+    font "mod_assets/gui/font/mojave.ttf"
+    hover_color "000"
+    outlines []
+
+init -1 style ios_notify_dismiss_text is navigation_button_text:
+    properties gui.button_text_properties("confirm_button")
+    color "000"
+    size 18
+    font "mod_assets/gui/font/mojave-bold.ttf"
+    hover_color "333"
+    outlines []
 
 init -501 screen notify(message):
 
