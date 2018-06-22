@@ -1,20 +1,11 @@
 #File format: word,sPoint,nPoint,yPoint
 
 #Sayori's winning words
-machine,3,2,1
-heavenly,3,1,2
-choices,3,2,1
-tainted,3,2,1
-grass,3,1,2
-Alice,3,2,1
-toast,3,1,2
-devise,3,1,2
-promise,3,1,2
-stranger,3,1,2
-obsession,3,1,2
-worthy,3,2,1
-face,3,2,1
-price,3,1,2
+happiness,3,2,1
+sadness,3,2,1
+death,3,1,2
+tragedy,3,1,2
+alone,3,1,2
 love,3,2,1
 adventure,3,2,1
 sweet,3,2,1
@@ -22,7 +13,7 @@ excitement,3,2,1
 fireworks,3,2,1
 romance,3,2,1
 tears,3,1,2
-ink,3,1,2
+depression,3,1,2
 heart,3,2,1
 marriage,3,2,1
 passion,3,2,1
@@ -33,7 +24,7 @@ hope,3,1,2
 friends,3,2,1
 family,3,2,1
 party,3,2,1
-abyss,3,2,1
+vacation,3,2,1
 lazy,3,2,1
 daydream,3,1,2
 pain,3,1,2
@@ -45,7 +36,7 @@ fear,3,1,2
 warm,3,2,1
 flower,3,2,1
 comfort,3,2,1
-perfection,3,2,1
+dance,3,2,1
 sing,3,2,1
 cry,3,1,2
 laugh,3,2,1
@@ -56,7 +47,7 @@ calm,3,1,2
 silly,3,2,1
 flying,3,2,1
 wonderful,3,2,1
-angel,3,1,2
+unrequited,3,1,2
 rose,3,1,2
 together,3,2,1
 promise,3,2,1

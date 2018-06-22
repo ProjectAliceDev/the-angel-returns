@@ -1,34 +1,29 @@
-## This splash screen is the first thing that Renpy will show the player
-##
-## Before load, check to be sure that the archive files were found.
-## If not, display an error message and quit.
+## splash screen is first thing that gets shown to player
 init -100 python:
-    #Check for each archive needed
-    for archive in ['audio','images','scripts','fonts']:
-        if not archive in config.archives:
-            #If one is missing, throw an error and chlose
+
+    # archive check for mods
+    for archive in ['audio','images','fonts']:
+        if archive not in config.archives:
             renpy.error("DDLC archive files not found in /game folder. Check installation and try again.")
 
-## First, a disclaimer declaring this is a mod is shown, then there is a
-## check for the original DDLC assets in the install folder. If those are
-## not found, the player is directed to the developer's site to download.
-##
+# disclaimers
 init python:
     menu_trans_time = 1
-    #The default splash message, originally shown in Act 1 and Act 4
+
     splash_message_default = "This game is not suitable for children\nor those who are easily disturbed."
-    #Optional splash messages, originally chosen at random in Act 2 and Act 3
+
     splash_messages = [
-    "The choices of the beautiful are unbearable."
-    "It took so many tries to make this beautiful."
-    "Fear the Ink Demon."
-    "No angels! He will set us free!"
-    "This game is not suitable for children\nor those who are easily disturbed?"
+        "The choices of the beautiful are unbearable.",
+        "It took so many tries to make this beautiful.",
+        "Fear the Ink Demon.",
+        "No angels! He will set us free!",
+        "This game is not suitable for children\nor those who are easily disturbed?"
     ]
+
 
 image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign=0.5)
 
-##Here's where you can change the logo file to whatever you want
+
 image menu_logo:
     "/mod_assets/logo.png"
     subpixel True
@@ -223,9 +218,31 @@ image tos = "mod_assets/images/menu/warning.png"
 image tos2 = "mod_assets/images/menu/warning2.png"
 
 
-label splashscreen:
+init python:
+    if not persistent.do_not_delete:
 
-    #If this is the first time the game has been run, show a disclaimer
+        import os
+        try:
+            if not os.access(config.basedir + "/characters/", os.F_OK):
+                os.mkdir(config.basedir + "/characters")
+
+            if persistent.playthrough <= 2:
+                try: renpy.file("../characters/monika.chr")
+                except: open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
+            if persistent.playthrough <= 1 or persistent.playthrough == 4:
+                try: renpy.file("../characters/natsuki.chr")
+                except: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
+                try: renpy.file("../characters/yuri.chr")
+                except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
+            if persistent.playthrough == 0 or persistent.playthrough == 4:
+                try: renpy.file("../characters/sayori.chr")
+                except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
+
+        except:
+            pass
+
+
+label splashscreen:
     default persistent.first_run = False
     if not persistent.first_run:
         $ quick_menu = False
@@ -234,52 +251,47 @@ label splashscreen:
         scene tos
         with Dissolve(1.0)
         pause 1.0
-        "[config.name] is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato or theMeatly Games."
+
+        "[config.name] is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato."
         "It is designed to be played only after the official game has been completed, and contains spoilers for the official game."
         "Game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at: http://ddlc.moe"
-        "This game is also not intended for those who are sensitive or easily disturbed to the contents within."
+
         menu:
             "By playing [config.name] you agree that you have completed Doki Doki Literature Club and accept any spoilers contained within."
             "I agree.":
+
                 pass
         scene tos2
         with Dissolve(1.5)
         pause 1.0
 
-        #Optional, load a copy of DDLC save data
-        #call import_ddlc_persistent
 
         scene black
         with Dissolve(1.5)
 
         $ persistent.first_run = True
 
+    python:
+        basedir = config.basedir.replace('\\', '/')
 
-
-    $ basedir = config.basedir.replace('\\', '/')
-
-    #autoload handling
-    #Use persistent.autoload if you want to bypass the splashscreen on startup for some reason
     if persistent.autoload and not _restart:
         jump autoload
 
-    # Start splash logic
     $ config.allow_skipping = False
 
-    # Splash screen
     show black
-    $ persistent.ghost_menu = False #Handling for easter egg from DDLC
-    $ splash_message = splash_message_default #Default splash message
-    $ config.main_menu_music = audio.bt
+    $ persistent.ghost_menu = False
+    $ splash_message = splash_message_default
     $ renpy.music.play(config.main_menu_music)
     show intro with Dissolve(0.5, alpha=True)
     pause 2.5
     hide intro with Dissolve(0.5, alpha=True)
-    #You can use random splash messages, as well. By default, they are only shown during certain acts.
+
     if persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
         $ splash_message = renpy.random.choice(splash_messages)
     show splash_warning "[splash_message]" with Dissolve(0.5, alpha=True)
     pause 2.0
+    hide splash_warning with Dissolve(0.5, alpha=True)
     $ config.allow_skipping = True
     return
 
@@ -291,23 +303,23 @@ label warningscreen:
 label after_load:
     $ config.allow_skipping = allow_skipping
     $ _dismiss_pause = config.developer
-    $ persistent.ghost_menu = False #Handling for easter egg from DDLC
+    $ persistent.ghost_menu = False
     $ style.say_dialogue = style.normal
-    #Check if the save has been tampered with
+
     if anticheat != persistent.anticheat:
         stop music
         scene black
         "The save file could not be loaded."
         "Are you trying to cheat?"
-        #Handle however you want, default is to force reset all save data
+
+
         $ renpy.utter_restart()
     return
 
 
-
 label autoload:
     python:
-        # Stuff that's normally done after splash
+
         if "_old_game_menu_screen" in globals():
             _game_menu_screen = _old_game_menu_screen
             del _old_game_menu_screen
@@ -316,19 +328,23 @@ label autoload:
             del _old_history
         renpy.block_rollback()
 
-        # Fix the game context (normally done when loading save file)
+
         renpy.context()._menu = False
         renpy.context()._main_menu = False
         main_menu = False
         _in_replay = None
 
-    # Pop the _splashscreen label which has _confirm_quit as False and other stuff
+
+
     $ renpy.pop_call()
     jump expression persistent.autoload
 
 label before_main_menu:
-    # $ config.main_menu_music = audio.t1
+    $ config.main_menu_music = audio.t1
     return
 
 label quit:
+
+    # stuff that happens when the game closes
+
     return

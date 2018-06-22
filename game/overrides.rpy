@@ -3,22 +3,29 @@
 ## to replace entire script files that are otherwise fine.
 
 ## Normal overrides
-## These overrides happen after any of the normal init blocks in scripts.
-## Use these to change variables on screens, effects, and the like.
+## These overrides happen after any of the normal init blocks in scripts
+## Use these to chagne variables on screens, effects, etc
 init 10 python:
-    config.developer = "auto" #Overrides definitions.rpyc
     pass
-    
+
+## LAte overrides
+## These overrides happen aftre prety much everything else in startup.
+## Use these to change displayables and other late definitions in renpy.
+init 501 python:
+    pass
+
 ## Early overrides
-## These overrides happen before the normal init blocks in scripts.
-## Use this in the rare event that you need to overwrite some variable
-## before it's called in another init block.
-## You likely won't use this.
+## These overrides happen befoer the normal init blcosk in scripts
+## Use these in the rare event taht you need to overwrite some variable
+## before it's called in another init blcok
+## You probably wont use this
 init -10 python:
     pass
 
 ## Super early overrides
-## You'll need a block like this for creator defined screen language
-## Don't use this unless you know you need it
+## These get called before any of the init blocks are read, before the
+## persistent data is read. Basically right after RenPy loads itself but 
+## before the game / mod is loaded.
+## You almost never will need this
 python early:
     pass
