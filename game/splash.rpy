@@ -246,21 +246,32 @@ label splashscreen:
     default persistent.first_run = False
     if not persistent.first_run:
         $ quick_menu = False
+        stop music fadeout 1.0
+        scene black
+        show powered_by_text:
+            xalign 0.3
+            yalign 0.4
+        show alice_os_name at truecenter
+        show boot_copyright:
+            xalign 0.5
+            yalign 1.0
+        pause 3.0
         scene black
         pause 0.5
         scene tos
         with Dissolve(1.0)
         pause 1.0
+        call screen alert("Mod Disclaimer", """\
+        [config.name] is a Doki Doki Literature Club fan mod that is not affiliated 
+        with Team Salvato or theMeatly Games Ltd. It is designed to be played only after 
+        the official game has been completed, and contains spoilers for the official game(s).
+        Game files for Doki Doki Literature Club are required to play this mod and can be 
+        downloaded for free at: http://ddlc.moe
 
-        "[config.name] is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato."
-        "It is designed to be played only after the official game has been completed, and contains spoilers for the official game."
-        "Game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at: http://ddlc.moe"
-
-        menu:
-            "By playing [config.name] you agree that you have completed Doki Doki Literature Club and accept any spoilers contained within."
-            "I agree.":
-
-                pass
+        By playing [config.name] you agree that you have completed Doki Doki Literature 
+        Club and Bendy and the Ink Machine and accept any spoilers contained within.
+        """, ok_action=Return(0))
+        
         scene tos2
         with Dissolve(1.5)
         pause 1.0

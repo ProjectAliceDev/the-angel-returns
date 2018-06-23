@@ -22,7 +22,7 @@ label start:
     $ allow_skipping = True
     $ config.allow_skipping = True
 
-
+    call oem_boot_screen
     if persistent.playthrough == 0:
         #Call example script
         #call alice_poem_demos

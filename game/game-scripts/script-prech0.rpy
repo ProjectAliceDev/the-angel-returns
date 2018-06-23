@@ -35,7 +35,11 @@ label pre_ch0_result:
     call updateconsole("init _alice", "Starting init scripts...")
     call hideconsole
     $ config.allow_skipping = True
+    $ gtext = glitchtext(12)
     window hide(None)
+    $ aliceangel.long_name = gtext
+    $ aliceangel.ask_app_permissions()
+    $ SystemUIServer.send_temporary_notification("New Admin Helper Added", "[gtext] now has administrative privileges on this device.", action=Return(1))
     show amesh zorder 1 at truecenter
     show vignette zorder 4 at truecenter
     $ renpy.music.set_volume(0.25)
@@ -47,7 +51,6 @@ label pre_ch0_result:
     stop sound
     hide screen tear
     window show(None)
-    $ gtext = glitchtext(12)
     $ a_name = gtext
     a "..."
     a "...no..."
