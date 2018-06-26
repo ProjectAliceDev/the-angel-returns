@@ -1,4 +1,5 @@
-![Promotional image](game/mod_assets/images/menu/warning2.png)
+# Doki Doki: The Angel Returns
+[![Build Status](https://travis-ci.org/TheAngelReturns/the-angel-returns.svg?branch=master)](https://travis-ci.org/TheAngelReturns/the-angel-returns)
 
 It's spring break! Join the Literature Club girls in an exciting one-week adventure as they visit Angelhaus Productions, the successor to Joey Drew Studios! Solve fun minipuzzles and have a good time with the girls. Of course, don't forget about the Angel! You wouldn't want her to `[Just Alice.]`
 
