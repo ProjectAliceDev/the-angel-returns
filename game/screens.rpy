@@ -1611,6 +1611,14 @@ screen say(who, what):
                 window:
                     style "nameboxpink"
                     text who id "who"
+            if who == mi_name: #Mio namebox
+                window:
+                    style "nameboxred"
+                    text who id "who"
+            if who == a_name: #Alice namebox
+                window:
+                    style "namebox_mc"
+                    text who id "who"
             if who == player: #MC namebox
                 window:
                     style "namebox_mc"
@@ -1673,6 +1681,15 @@ style nameboxpink:
     background Frame("/mod_assets/images/gui/nameboxpink.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
+style nameboxred:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+    background Frame("/mod_assets/images/gui/nameboxred.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
 
 # We are not using "style say_label_blue is say_label" because it makes the game crash if you use rollback
 # if you don't use rollback you can replace all the window codes for something like this:
@@ -1703,6 +1720,14 @@ style say_label_amber:
     xalign gui.name_xalign
     yalign 0.5
     outlines [(3, "#986c0b", 0, 0), (1, "#986c0b", 1, 1)]
+
+style say_label_red:
+    color gui.accent_color
+    font gui.name_font
+    size gui.name_text_size
+    xalign gui.name_xalign
+    yalign 0.5
+    outlines [(3, "#c6262e", 0, 0), (1, "#c6262e", 1, 1)]
 
 style say_label_green:
     color gui.accent_color

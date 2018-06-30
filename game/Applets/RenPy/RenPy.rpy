@@ -36,6 +36,9 @@ init python:
 
         # Define what permissions your applet will need.
         permissions = {pm_notify, pm_files, pm_sysadmin}
+
+        def notify_new_char(self, charname):
+            self.send_temporary_notification("New character added!", "Congrats! \""+ charname +"\" has been added to DDLC.", action=Return(1))
     
     renpyApp = RenpyApp()
 

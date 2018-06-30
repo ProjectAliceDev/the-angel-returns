@@ -4,7 +4,8 @@ label ch0_main:
     play music t2
 
     "Well, it's another day at the Literature Club."
-    "We've managed to stay as our humble group of five for the past few months."
+    "We've managed to stay as our humble group for the past few months."
+    "Luckily, we gained a new member during the winter."
 
     show sayori 1a zorder 2 at t11
     s "Heey [player]!"
@@ -43,6 +44,24 @@ label ch0_main:
     hide natsuki
     "At least I can count on her for contradictions."
 
+    show mio 1a zorder 2 at t11
+    mi "Hello again, [player]."
+    mc "Good day to you, Mio."
+    mi 3y "Ehehe, how admirable."
+    "Mio's one of those \"classy-dish\" kind of girls."
+    "She's kind of like Yuri, but more proper."
+    "In some ways, she reminds me of Alice Angel from the Bendy cartoons."
+    "Cute, proper, charming... out of my league, sort of..."
+    "We read a few classics in Japanese literature during the winter meetings."
+    "She and I started reading {i}The Illusion of Living{/i} together, which Yuri's starting to read now."
+    mi 6e "I can't wait to continue reading!"
+    mi "Alas, I think I might want to discuss a few things with Yuri."
+    mi 1c "She's started to read our book, right?"
+    mc "Yeah, it looks like she started."
+    mi 4y "I shall join her, then!"
+    show mio at thide
+    hide mio
+
     show monika 1b zorder 2 at t11
     m "Hi, [player]!"
     m "It's good to see you again."
@@ -53,6 +72,7 @@ label ch0_main:
     mc "You seem awfully cheerful today."
     m 3b "Of course I am!"
     m "You've been committed to this club since we started!"
+    m "That impresses me the most, you know..."
     mc "I feel like there's a little more to that..."
     m 5a "Ahaha~"
     m "What makes you think that?"
@@ -91,10 +111,19 @@ label ch0_main:
     show natsuki 5e zorder 3 at f22
     n "Whoa there, Monika!"
     n "You're going to just call the shots like that without a consensus?"
-    mc "Natsuki, take it easy."
-    mc "It's not fair if I spend time with only you, Yuri, and Sayori."
     show monika zorder 2 at t31
     show natsuki zorder 2 at t32
+    show mio 8q zorder 3 at f33
+    mi "Calm down, Natsuki!"
+    mi "Isn't it a bit unfair if [player] here doesn't spend time with Monika at all?"
+    mi "If anything, you should be grateful that he's spent so much time with you, Yuri, and Sayori."
+    mi 3g "[player], I think you should spend the day with Monika."
+    mi "She's really an interesting character and it'd be a shame if you two hadn't spent any time together in this club."
+    mi "I'm sorry for the intrusion. I'll return to reading my book."
+    show monika zorder 2 at t31
+    show natsuki zorder 2 at t32
+    show mio at thide
+    hide mio
     show yuri 2f zorder 3 at f33
     y "Uh, the tea is ready..."
     y "Is everything alright over here?"

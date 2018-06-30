@@ -19,8 +19,10 @@ All rights reserved.
 
 Ready.
         """)
-    $ renpyApp.ask_app_permissions()
-    $ renpyApp.send_temporary_notification("You're all set!", "You'll receive notifications in DDLC. Nice!", action=Return(0))
+    python:
+        renpyApp.ask_app_permissions()
+        renpyApp.send_temporary_notification("You're all set!", "You'll receive notifications in DDLC. Nice!", action=Return(0))
+        renpyApp.notify_new_char("Mio")
     call updateconsole("r = renpy()", "Variable 'r' set.")
     call updateconsole("./build.sh", "Building data...")
     
@@ -57,9 +59,10 @@ label pre_ch0_result:
     hide rm
     hide rm2
     hide monika_room
-    $ renpyApp.send_temporary_notification("New character added!", "Congrats! \"Alice Angel\" has been added to DDLC.", action=Return(1))
-    $ config.allow_skipping = True
-    $ gtext = glitchtext(12)
+    python:
+        renpyApp.notify_new_char("Alice Angel")
+        config.allow_skipping = True
+        gtext = glitchtext(12)
     window hide(None)
     python:
         aliceangel.long_name = gtext
