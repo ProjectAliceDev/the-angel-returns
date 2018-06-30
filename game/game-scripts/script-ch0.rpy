@@ -84,6 +84,7 @@ label ch0_main:
     $ consolehistory = []
     call updateconsole("game.setroute(_monika)", "Route set to Monika.")
     call hideconsole
+    $ renpyApp.send_temporary_notification("Congratulations!", "You've impressed Monika.", action=Return(0))
     m 2b "Why don't we do something today, then? Just the both of us..."
 
     show monika 1g zorder 2 at t21
@@ -222,13 +223,12 @@ label ch0_main:
     $ pause(0.25)
     stop sound
     hide screen tear
-    call screen dialog("Monika, shut your fucking mouth.", ok_action=Return())
+    $ aliceangel.send_message("Monika, shut your fucking mouth.")
     m "..."
     m 3g "[player], tell me you saw that."
     m 4i "I swear I didn't do that."
     m "What's going on with the script?"
-    call screen dialog("Can you hear me?", ok_action=Return())
-    call screen dialog("Don't speak of her ever again.", ok_action=Return())
+    $ aliceangel.send_message("Can you hear me? Don't speak of her ever again.")
     m "..."
     m "Who?{nw}"
     m "Nevermind."
@@ -247,6 +247,7 @@ label ch0_main:
     stop sound
     hide screen tear
     call hideconsole
+    call screen alert("Cache Missing", "The game needs to reload to generate new cache.", ok_action=Return())
     stop music
     show reload_bg zorder 2
     show fake_reload zorder 2 at truecenter
@@ -301,11 +302,12 @@ label ch0_main:
     s 1a "I can't wait to read your poem, [player]!"
     "Sayori enthusiastically pulls out her poem from the binder."
     "Monika takes the book from my hands and pulls out her poem from the cover."
-    "I walk towards my bag to grab mine, getting ready to share my poem{nw}"
-    call screen dialog("You forgot to write a poem again.", ok_action=Return())
-    call screen dialog("I'm not surprised.", ok_action=Return())
-    call screen dialog("Here, I'll just skip that for you...", ok_action=Return())
-    $ pause(1.25)
+    "I walk towards my bag to grab mine, getting ready to share my poem."
+    call screen alert("Poem Not Found", "The poem required for this section cannot be found.", ok_action=Return(0))
+    python:
+        aliceangel.send_message("Crap! Uh... well, can't just generate a poem.")
+        aliceangel.send_message("Just going to have to skip this section, then.")
+        pause(1.25)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
     $ pause(0.50)
@@ -515,7 +517,7 @@ label ch0_end:
     m 1i "I'm glad we could have your expertise on board with this."
     m "To be honest, I'm a bit skeptical myself."
     m 4e "But, I'm sure this mysterious author has her reasons."
-    m "I'm kind of a but curious to see this place, anyway."
+    m "I'm kind of a bit curious to see this place, anyway."
     m 1b "I pass by it all the time but never stop in."
     show natsuki zorder 3 at f43
     show monika zorder 2 at t41
@@ -612,5 +614,5 @@ label ch0_end:
     "Alright!"
     "I just need to grab a few things and I should be ready for the morning."
     "It's the beginning of a wild adventure..."
-
     return
+    

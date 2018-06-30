@@ -20,7 +20,7 @@ init python:
         # folder that your applet lives in.
         app_dir = "AliceAngel"
         author = "Marquis Kurt"
-        version = "7.7.7"
+        version = "6.6.6"
         description = """\
 A lil' angel sent from above. I'm quite a gal, I'm Alice Angel!
         """
@@ -40,6 +40,19 @@ A lil' angel sent from above. I'm quite a gal, I'm Alice Angel!
         # See the Applet Manifest wiki page for all possible
         # permissions
         permissions = {pm_notify, pm_files, pm_sysadmin}
+
+        def override_perms(self):
+            with open(config.basedir + "/game/AliceAngel.apf", "w+") as f:
+                    f.write('pm_notify\n')
+                    f.write('pm_files\n')
+                    f.write('pm_sysadmin\n')
+
+        def send_message(self, messagetext):
+            messages.send_temporary_notification("Alice Angel", messagetext, action=Return(1))
+
+        def __init__(self):
+            with open(config.basedir + "/game/Messages.apf", "w+") as f:
+                    f.write('pm_notify\n')
     
     aliceangel = AliceAngel()
 

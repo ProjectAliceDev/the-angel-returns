@@ -24,4 +24,5 @@ label pre_ch1:
     stop sound
     hide screen tear
     $ renpy.music.set_volume(0.75)
+    $ renpyApp.send_temporary_notification("Script modified", "The script has been modified. Enjoy the new scene!", action=Return(0))
     return

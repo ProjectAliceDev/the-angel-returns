@@ -8,7 +8,7 @@ label ch0_blackbox_puzzle:
     show vignette zorder 4 at truecenter
     play music b3
     show blight start zorder 2 at t11
-    call screen dialog("""\
+    call screen alert("Puzzle Time", """\
 It's time to get your brain working! Each minigame has a unique puzzle. Sometimes, this may require changing the game's settings or selecting the right path.
 
 If you get stuck, don't worry; Alice may say something to you as a hint! Good luck.
@@ -67,6 +67,7 @@ label ch0_blackbox_puzzle_failure:
 
 label ch0_blackbox_puzzle_success:
     show blight complete zorder 2 at t11
+    $ renpyApp.send_temporary_notification("Chapter unlocked", "Good job on solving the puzzle!", action=Return(0))
     $ pause(0.75)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -108,6 +109,7 @@ label ch1_blackbox_puzzle_loop:
 
 label ch1_blackbox_puzzle_success:
     show blight complete zorder 2 at t11
+    $ renpyApp.send_temporary_notification("Chapter unlocked", "Good job on solving the puzzle!", action=Return(0))
     a "I don't understand this at all."
     a "I didn't want this."
     a "Why would I want to be in somebody else's universe?"

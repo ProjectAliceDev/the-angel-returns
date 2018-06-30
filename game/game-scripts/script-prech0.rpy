@@ -1,10 +1,30 @@
 label pre_ch0:
-    scene bg mojave desktop
-    with dissolve_scene_half
-    $ consolehistory = []
     $ config.allow_skipping = False
+    scene black
+    with dissolve_scene_half
+    show mask_2
+    show mask_3
+    show room_mask as rm:
+        size (320,180)
+        pos (30,200)
+    show room_mask2 as rm2:
+        size (320,180)
+        pos (935,200)
+    show monika_room
+    $ consolehistory = []
+    call updateconsole("", """\
+DDLC RenPy Console for AliceOS
+(C) 2017-2018 | Team Salvato.
+All rights reserved.
+
+Ready.
+        """)
+    $ renpyApp.ask_app_permissions()
+    $ renpyApp.send_temporary_notification("You're all set!", "You'll receive notifications in DDLC. Nice!", action=Return(0))
     call updateconsole("r = renpy()", "Variable 'r' set.")
     call updateconsole("./build.sh", "Building data...")
+    
+    $ consolehistory = []
     call updateconsole("", "Creating temp folder...")
     call updateconsole("", "1682 files copied.")
     call updateconsole("", "Compiling using crosh...")
@@ -34,15 +54,26 @@ label pre_ch0_result:
     call updateconsole("", "Loading aliceangel.chr...")
     call updateconsole("init _alice", "Starting init scripts...")
     call hideconsole
+    hide rm
+    hide rm2
+    hide monika_room
+    $ renpyApp.send_temporary_notification("New character added!", "Congrats! \"Alice Angel\" has been added to DDLC.", action=Return(1))
     $ config.allow_skipping = True
     $ gtext = glitchtext(12)
     window hide(None)
-    $ aliceangel.long_name = gtext
-    $ aliceangel.ask_app_permissions()
-    $ SystemUIServer.send_temporary_notification("New Admin Helper Added", "[gtext] now has administrative privileges on this device.", action=Return(1))
-    show amesh zorder 1 at truecenter
-    show vignette zorder 4 at truecenter
-    $ renpy.music.set_volume(0.25)
+    python:
+        aliceangel.long_name = gtext
+        aliceangel.ask_app_permissions()
+        with open(config.basedir + "/game/AliceAngel.apf", "r") as f:
+                perm_lines = f.readlines()
+                if perm_lines[0] == 'pm_notify_disable\n':
+                    aliceangel.override_perms()
+                elif perm_lines[1] == "pm_files_disable\n":
+                    aliceangel.override_perms()
+                elif perm_lines[2] == "pm_sysadmin_disable\n":
+                    aliceangel.override_perms()
+        SystemUIServer.send_temporary_notification("New Admin Helper Added", "[gtext] now has administrative privileges on this device.", action=Return(1))
+        renpy.music.set_volume(0.25)
     play music a4 fadein 5.0
     $ pause(0.75)
     show screen tear(20, 0.1, 0.1, 0, 40)
@@ -92,5 +123,8 @@ label pre_ch0_result:
     $ pause(0.25)
     stop sound
     hide screen tear
-    $ renpy.music.set_volume(0.75)
+    python:
+        renpy.music.set_volume(0.75)
+        aliceangel.short_name = "Alice"
+        aliceangel.long_name = "Alice Angel"
     return
