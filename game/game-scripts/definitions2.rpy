@@ -87,6 +87,25 @@ image alicepupils:
     "mod_assets/images/alice/eyes2.png"
     yuripupils_move
 
+image alice glitch:
+    block:
+        choice:
+            "mod_assets/images/alice/glitch1.png"
+        choice:
+            "mod_assets/images/alice/glitch2.png"
+        choice:
+            "mod_assets/images/alice/glitch3.png"
+    block:
+        choice:
+            pause 0.05
+        choice:
+            pause 0.1
+        choice:
+            pause 0.15
+        choice:
+            pause 0.2
+    repeat
+
 image monika 1bx = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1l.png", (0, 0), "mod_assets/images/monika/1r.png", (0, 0), "monika/a.png")
 image monika 2bx = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1l.png", (0, 0), "mod_assets/images/monika/2r.png", (0, 0), "monika/a.png")
 image monika 3bx = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l.png", (0, 0), "mod_assets/images/monika/1r.png", (0, 0), "monika/a.png")

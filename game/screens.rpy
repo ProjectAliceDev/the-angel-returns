@@ -1615,10 +1615,6 @@ screen say(who, what):
                 window:
                     style "nameboxred"
                     text who id "who"
-            if who == a_name: #Alice namebox
-                window:
-                    style "namebox_mc"
-                    text who id "who"
             if who == player: #MC namebox
                 window:
                     style "namebox_mc"

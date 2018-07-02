@@ -39,6 +39,9 @@ init python:
 
         def notify_new_char(self, charname):
             self.send_temporary_notification("New character added!", "Congrats! \""+ charname +"\" has been added to DDLC.", action=Return(1))
+
+        def send_mio_message(self, messagetext):
+            messages.send_temporary_notification("Mio", messagetext, action=Return(1))
     
     renpyApp = RenpyApp()
 

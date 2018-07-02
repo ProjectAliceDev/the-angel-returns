@@ -1,3 +1,50 @@
+init -1000 python:
+    blackbox_message = """\
+It's time to get your brain working! Each minigame has a unique puzzle. Sometimes, this may require changing the game's settings or selecting the right path.
+
+If you get stuck, don't worry; Alice may say something to you as a hint! Good luck.
+    """
+    
+init -501 screen blackbox_alert:
+    modal True
+    style_prefix "consent"
+    zorder 2000
+    add "gui/overlay/confirm.png"
+
+
+    frame:
+        xsize 600
+        ysize 592
+        style "confirm_frame"
+        
+        has vbox:
+            xalign .5
+            yalign .5
+            spacing 16
+            
+
+        add "mod_assets/images/gui/puzzle.png":
+            xalign 0.5
+        label _("Puzzle Time"):
+            style "consent_title"
+            xalign 0.5
+
+        label _(blackbox_message):
+            style "consent_message"
+            xalign 0.5
+
+        frame:
+            xalign 0.5
+            xsize 568
+            style "consent_button_frame"
+
+            hbox:
+                xalign 0.5
+                spacing 32
+
+                textbutton _("Get started") action Return(0):
+                    style "consent_button"
+
 init python:
     u_did_load = 0.0
 
@@ -6,13 +53,9 @@ label ch0_blackbox_puzzle:
     scene blackbox bg with trueblack
     $ timeleft = get_pos()
     show vignette zorder 4 at truecenter
-    play music b3
+    play music t4
     show blight start zorder 2 at t11
-    call screen alert("Puzzle Time", """\
-It's time to get your brain working! Each minigame has a unique puzzle. Sometimes, this may require changing the game's settings or selecting the right path.
-
-If you get stuck, don't worry; Alice may say something to you as a hint! Good luck.
-    """, ok_action=Return())
+    call screen blackbox_alert
     a "[player]..."
     a "[player]..."
     a "Why am I here?"

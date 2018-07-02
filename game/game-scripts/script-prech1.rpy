@@ -2,12 +2,12 @@ label pre_ch1:
     stop music fadeout 1.0
     scene black
     with dissolve_scene_half
-    show amesh zorder 1 at truecenter
-    show vignette zorder 4 at truecenter
     $ renpy.music.set_volume(0.25)
     play music a4 fadein 5.0
 
-    show alice mesh zorder 2 at t11
+    show mask_2
+    show mask_3
+    show alice glitch zorder 3 at t11
     $ style.say_dialogue = style.edited
     a "Why do you do this to me?"
     a "Does this entertain you, [player]?"

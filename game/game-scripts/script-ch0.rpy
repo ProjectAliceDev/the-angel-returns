@@ -334,8 +334,8 @@ label ch0_main:
     "I walk towards my bag to grab mine, getting ready to share my poem."
     call screen alert("Poem Not Found", "The poem required for this section cannot be found.", ok_action=Return(0))
     python:
-        aliceangel.send_message("Crap! Uh... well, can't just generate a poem.")
-        aliceangel.send_message("Just going to have to skip this section, then.")
+        renpyApp.send_mio_message("Oops! Uh... well, can't just generate a poem.")
+        renpyApp.send_mio_message("Just going to have to skip this section, then.")
         pause(1.25)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -363,19 +363,6 @@ label ch0_end:
     show yuri 1a zorder 2 at t43
     show natsuki 1a zorder 2 at t44
     m 4b "Well, that went wonderful today!"
-    show monika zorder 2 at t41
-    show yuri zorder 3 at f43
-    y "Yes, the poems were absolutely exquisite today."
-    show yuri zorder 2 at t43
-    show sayori zorder 3 at f42
-    s 3r "We keep getting better!"
-    show sayori zorder 2 at t42
-    show natsuki zorder 3 at f44
-    n "..."
-    n 5q "No comment."
-    show natsuki zorder 2 at t44
-    show monika zorder 3 at f41
-    m "Alright, everyone!"
     m "There's just one more thing we need to address."
     show monika zorder 2 at t41
     show sayori zorder 3 at f42
@@ -396,184 +383,147 @@ label ch0_end:
     show sayori zorder 3 at f42
     s 2o "Wait."
     "Sayori thinks for a moment, making various faces."
-    s 1h "Well, I do have {i}something{/i}..."
-    s 1k "I don't know how well it'd work, though."
-    s 5a "I forgot to do research on it, ehehe~"
+
+    show yuri at thide
+    hide yuri
+    show mio 1b zorder 3 at f43
     show sayori zorder 2 at t42
-    show monika zorder 3 at f41
-    m 4i "Wait. You had something..."
-    m "But you didn't look into it?"
-    m "It's kind of late now to do anything about it, but what is it?"
-    show monika zorder 2 at t41
-    show sayori zorder 3 at f42
-    s 1l "So, uh... I got a letter in the mail..."
-    s "And I opened it and read the letter..."
-    s 5a "And there may or may not be someone willing to support the club?"
-    show sayori zorder 2 at t42
-    show monika zorder 3 at f41
-    m "..."
-    m 1g "Sayori, why didn't you say something?"
-    m "I could've looked into it myself..."
-    show monika zorder 2 at t41
-    show sayori zorder 3 at f42
-    s "Ehehe~"
-    s 5b "It's kind of personal..."
-    s "It was, uh, written for me, you know?"
-    mc "Sayori, you don't need to give us all of the details."
-    mc "You're not supposed to tell us that kind of thing, anyway."
-    s 5c "Meanie."
-    show sayori zorder 2 at t42
-    show yuri zorder 3 at f43
-    y 1f "It sounds like an opportunity."
-    y "I'm a bit surprised that someone sent you a letter and knew about our literature club."
-    y "Who's the letter from?"
-    show yuri zorder 2 at t43
-    show sayori zorder 3 at f42
-    s 1l "Ehehe..."
-    s "I don't know."
-    s "Someone from Joey Drew Studios..."
-    show sayori zorder 2 at t42
+    mi "Sayori, don't stress it."
+    mi "I have an idea."
+    mi "I'm friends with the head of an animation and technology studio."
+    mi 4l "She's, uh... {i}quite a gal{/i}, I guess you could say..."
+    show mio 1j zorder 2 at t43
     "An awkward silence occurs."
     show natsuki zorder 3 at f44
     n 2p "Oh, hell no!"
     "Natsuki steps out of the conversation."
     show natsuki at thide
     hide natsuki
-    show yuri zorder 2 at t33
-    show sayori zorder 2 at t32
-    show monika zorder 3 at f31
-    m 1g "Joey Drew Studios?"
-    m 4g "As in the guys that made the Bendy cartoons from the 50s?"
-    show monika zorder 2 at t31
-    show sayori zorder 3 at f32
-    s 5a "Yeah..."
-    show monika zorder 3 at f31
-    show sayori zorder 2 at t32
-    m 1i "..."
-    m 1d "How does a cartoon studio know about you and this club?"
-    m "I'm a bit flattered, but this seems skeptical."
-    m "I now understand why you wanted to do more research."
-    show monika zorder 2 at t31
-    show yuri zorder 3 at f33
-    y 3f "How interesting..."
-    y "What did this person say in the letter?"
-    show yuri zorder 2 at t33
-    show sayori zorder 3 at f32
-    s 1c "Well, she said some stuff about being interested in literature and that sort of thing."
-    s "And then she went on a splurge about animations."
-    s "And then she talked about continuing Joey's legacy under a new name and pushing Alice Angel and that kind of stuff...{nw}"
-    s "And then she talked about formally inviting us to check out the studio for a week..."
-    s 1k "But it sounded fishy..."
-    s "It sounded like that Susie Campbell chick."
-    s "Even though it was addressed from... 'Alice Angel'..."
-    mc "Sayori, how would you know that?"
-    mc "You practically just appreciate every poem I throw at you, regardless of its quality."
-    s 5c "Hey!"
-    s "That has nothing to do with it!"
-    s "I like reading your poems!"
-    s 1j "But, anyway..."
-    s "I wanted us to be safe."
-    s 1h "So that's why I didn't say anything about it."
-    show sayori zorder 2 at t32
-    show monika zorder 3 at f31
-    m 1e "Sayori, I appreciate you looking out for our welfare."
-    m "Personally, I'd like to take a look. Do you have a copy of the letter on you?"
-    "Sayori hastily grabs the letter from her bag between her math notebook and her English textbook."
-    "Monika carefully uncrumples the envelope and pulls the letter out."
-    mc "Sayori, you got to be a little more careful with your stuff..."
-    show sayori zorder 3 at f32
-    show monika zorder 2 at t31
-    s 1j "I was in a rush!"
-    s 5d "I overslept again this morning, you know..."
-    show monika zorder 3 at f31
-    show sayori zorder 2 at t32
-    "Monika scans through the letter."
-    m 1i "Mhm..."
-    m "I see why you're concerned."
-    m 4i "There is some questionable language in here that suggests that this might be a trap."
-    m "I, for one, am not able to understand the condition of the studio at this time."
-    m "Furthermore, there's a few ink splatters on the corners of the letter."
-    m "Something tells me that it's a mess..."
-    show monika zorder 2 at t41
-    show sayori zorder 2 at t42
-    show natsuki 2c zorder 2 at f43
-    show yuri 3f zorder 2 at t44
-    n "No wonder you're skeptical!"
-    n "Good thing you didn't speak of this... until now."
-    n "Sayori, that's hella freaky."
-    n "I certainly wouldn't trust her."
-    n "Maybe you're right..."
-    show natsuki zorder 2 at t43
-    show monika zorder 3 at f41
-    m "Did Alice really write this herself?"
-    m "It's hard to say with this letter..."
-    show natsuki zorder 3 at f43
-    show monika zorder 2 at t41
-    n 4f "Gimme that."
-    "Natsuki snatches the letter from Monika and scrutinizes the contents."
-    n 5s "..."
-    n 5h "Not gonna lie here, it really {i}does{/i} sound like that baka no-good Campbell."
-    n "Alice would sound a bit more innocent."
-    n "This?"
-    n 4e "Absolute garbage."
-    n "I don't think I've ever read a paragraph more infested with the word 'beautiful' than anything else."
-    n "There's absolutely no way that Alice wrote this, it's too cutesy!"
-    show yuri zorder 3 at f44
-    show natsuki zorder 2 at t43
-    y "Like you?"
-    show natsuki zorder 3 at f43
+    show yuri 1e zorder 3 at f44
+    y "What do you mean by that?"
     show yuri zorder 2 at t44
-    n 1v "{i}I'M NOT CUTE!!!{/i}"
-    n 5e "That's beside the point, anyway!"
-    n 5c "Sayori could be onto something here."
-    n "This doesn't sound at all like something from her."
-    n "There's absolutely no way!"
-    show yuri zorder 3 at f44
-    show natsuki zorder 2 at t43
-    y 2h "How would you know, Natsuki?"
-    y "It's not typical of you to read literature like {i}The Illusion of Living{/i}."
-    show natsuki zorder 3 at f43
-    show yuri zorder 2 at t44
-    n 5e "Whoa, slow down there!"
-    n "Mind you, there's a manga version of that book!"
-    n 5r "I read that one."
-    n "Rewritten by the employees and characters themselves."
-    n 5y "And I liked it!"
-    n 2c "Point is, we shouldn't trust this gal."
-    n "It's too dangerous to be meddling with that, anyway."
-    show natsuki zorder 2 at t43
+    show mio zorder 3 at f43
+    mi 4l "Ehehe~"
+    mi "It's, uh, complicated..."
+    show mio zorder 2 at t43
     show monika zorder 3 at f41
-    m 1i "I'm glad we could have your expertise on board with this."
-    m "To be honest, I'm a bit skeptical myself."
-    m 4e "But, I'm sure this mysterious author has her reasons."
-    m "I'm kind of a bit curious to see this place, anyway."
-    m 1b "I pass by it all the time but never stop in."
-    show natsuki zorder 3 at f43
+    m 4d "You weren't making a reference to...{w=1.0} Alice Angel, were you?"
     show monika zorder 2 at t41
-    n 5p "No way!"
-    n "This is too risky!"
-    show natsuki zorder 2 at t43
+    show mio zorder 3 at f43
+    mi 4l "Ehehe~"
+    mi 4k "Sorry, that was a bit cheesy."
     show monika zorder 3 at f41
-    m 4b "As long as we're careful, I don't possibly see what could go wrong."
-    show natsuki zorder 3 at f43
+    show mio zorder 2 at t43
+    m 1b "Ahaha, don't stress it!"
+    m "I admire the pun."
+    m 1d "But, anyways, you know Joey Drew?"
     show monika zorder 2 at t41
-    n 5p "Did a rock hit your head or something?"
-    show yuri zorder 3 at f44
-    show natsuki zorder 2 at t43
-    y 2b "I'm sure there won't be a problem if we stick together and use common sense."
-    y "It adds a bit of mystery to our spring break."
-    show yuri zorder 2 at t44
+    show mio zorder 3 at f43
+    mi 6n "Eh? Joey Drew?"
+    mi 6k "I, uh... no..."
     show sayori zorder 3 at f42
-    s 1h "Guys, doesn't this concern you?"
-    s "I don't want us getting hurt!"
+    show mio zorder 2 at t43
+    s 1x "Oh, maybe your friends with an Angel!"
+    s 4r "Ehehe~"
     show sayori zorder 2 at t42
-    mc "Let me take a look."
-    "Natsuki hands me the letter."
+    show yuri zorder 3 at f44
+    y 2f "Sayori, I don't think Alice is alive."
+    y "She's just a cartoon character from the 1950s..."
+    show natsuki zorder 3 at f42
+    show yuri zorder 2 at t44
+    show sayori at thide
+    hide sayori
+    n 1f "Oh, that gal's alive, alright..."
+    n "A royal pain in the ass, too!"
+    show mio zorder 3 at f43
+    show natsuki zorder 2 at t42
+    mi 8s "What the hell does {i}that{/i} mean?"
+    show natsuki zorder 3 at f42
+    show mio zorder 2 at t43
+    n 4e "That baka no-good Susie Campbell's a total psycho!"
+    n "Selfish, obsessed with beauty, and a nut job!"
+    show yuri zorder 3 at f44
+    show natsuki zorder 2 at t42
+    y 2h "How would you know that, Natsuki?"
+    y "You've never talked about her at all."
+    show natsuki zorder 3 at f42
+    show yuri zorder 2 at t44
+    n 4o "N-N..."
+    n "Well, maybe..."
+    n 5x "Forget it."
+    n "It'd be weird for me to say that I actually read that damn novel."
+    show monika zorder 3 at f41
+    show natsuki zorder 2 at t42
+    m "You've read {i}The Illusion of Living{/i} before?"
+    show natsuki zorder 3 at f42
+    show monika zorder 2 at t41
+    n 5n "Well, yeah..."
+    n "A manga version of it, anyway..."
+    n 1m "But that's besides the point."
+    n 4e "There's no way I'm trusting that Angel!"
+    show sayori zorder 3 at f44
+    show natsuki zorder 2 at t42
+    show yuri at thide
+    hide yuri
+    s 3h "But what if she's changed?"
+    s "Or what about if she isn't Susie Campbell?"
+    s 1n "What if it's a real-life version of Alice that came from an alien planet?"
+    show natsuki zorder 3 at f42
+    show sayori zorder 2 at t44
+    n 1c "Sayori, there's no such things as aliens."
+    n "Also, angels don't count as aliens."
+    show mio zorder 3 at f43
+    show natsuki zorder 2 at t42
+    mi 3h "Sayori's right. Things have changed."
+    mi "She does look forward to meeting all of you."
+    mi 5x "She even wants to sponsor us!"
+    show monika zorder 3 at f41
+    show mio zorder 2 at t43
+    m 1c "... a sponsor?"
+    m "That's interesting..."
+    m 4d "How would that work, necessarily?"
+    show mio zorder 3 at f43
+    show monika zorder 2 at t41
+    mi 1b "She'd be more than happy to discuss it with you."
+    mi "She's been trying to get me to talk to you about it, but..."
+    show mio zorder 2 at t43
+    mc "Wait, let me get this straight..."
+    mc "Allegedly, Alice Angel wants to sponsor our club."
+    mc "We know nothing about her, and Natsuki is completely skeptical."
+    mc "We don't even know if she runs Joey Drew Studios or something else."
+    "The room falls silent."
+    show mio zorder 3 at f43
+    mi 1k "..."
+    mi "Well, I wouldn't say that necessarily..."
+    mi 3c "She did get control of the old studio a while back."
+    mi "She's not that bad, you know..."
+    mi 1k "I wouldn't know how well she can handle all of you at once, though."
+    mi "She can get overwhelmed pretty easily."
+    show monika zorder 3 at f41
+    show mio zorder 2 at t43
+    m "[player] does bring up a good point."
+    m "At best, everything sounds a bit sketchy."
+    m "I had to research Joey Drew Studios for a history assignment a few weeks ago."
+    m "The results and your claims sound less than credible at this time."
+    show sayori zorder 3 at f44
+    show monika zorder 2 at t41
+    s 1o "Wait!"
+    s 1b "I got something..."
+    "Sayori fumbles through her bag, pulling out a crumpled envelope between her books."
+    s 1x "I got a letter from this 'Alice Angel' a few months ago."
+    s 1l "I keep forgetting to remind you guys, though... Ehehe~"
+    mc "Sayori!"
+    mc "You have to be more vigilant than that!"
+    s 5a "Ehehe~"
+    "Sayori hands me the letter."
     call showletter(letter_1)
     $ poemsread = 4
     mc "..."
-    mc "Well, there's an opportunity here with a lot of risk."
-    mc "If you girls really want to do this, we have to be careful."
+    mc "Well, Sayori's claims and Mio's claims are valid."
+    mc "It looks like she does have interest."
+    mc "Suffice to say, Natsuki's claims are also valid."
+    mc "I don't think I've seen the word 'beautiful' pop up any more times than in this letter."
+    mc "We should be careful."
     mc "Any wrong move could cost us big time."
     mc "Sayori, I'm sure that whoever wrote the letter to you must like you or tolerate you enough to not hurt you."
     mc "Natsuki, consider this a getaway from troubles at home."
@@ -581,13 +531,15 @@ label ch0_end:
     m 5a "Then it's settled!"
     m 1a "Be sure to pack your bags and any safety equipment!"
     m 4b "We're going on an adventure."
-    show sayori zorder 3 at f42
+    show sayori zorder 3 at f44
     show monika zorder 2 at t41
     s 2r "Okay!"
-    show yuri zorder 3 at f44
+    show yuri zorder 3 at f43
+    show mio at thide
+    hide mio
     show sayori zorder 2 at t42
     y 3d "This'll be thrilling!"
-    show natsuki zorder 3 at f43
+    show natsuki zorder 3 at f42
     show yuri zorder 2 at t44
     n 5s "..."
     n 5h "Alright, if you say so..."
@@ -625,13 +577,23 @@ label ch0_end:
 
     "With that, I walk home, checking my phone once in a while to see if Sayori texted me."
     "Spending a solid week in a cartoon studio with:"
-    show sayori 1 zorder 2 at t41
+    show sayori 1 zorder 2 at t11
     "Sayori,"
-    show natsuki 4 zorder 2 at t42
+    show sayori at thide
+    hide sayori
+    show natsuki 4 zorder 2 at t11
     "Natsuki,"
-    show yuri 1 zorder 2 at t43
+    show natsuki at thide
+    hide natsuki
+    show yuri 1 zorder 2 at t11
     "Yuri,"
-    show monika 1 zorder 2 at t44
+    show yuri at thide
+    hide yuri
+    show mio 1 zorder 2 at t11
+    "Mio,"
+    show mio at thide
+    hide mio
+    show monika 1 zorder 2 at t11
     "and, of course, Monika."
     "This could totally work out and bring us closer to each other."
     "However, this could also be the end of us..."
