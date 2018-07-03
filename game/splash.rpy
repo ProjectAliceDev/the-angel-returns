@@ -42,6 +42,7 @@ init -501 screen disclaimer_alert:
 
                 textbutton _("I agree") action Return(0):
                     style "consent_button"
+                    xpadding 128
 
 init -1 style consent_title_text is gui_prompt
 init -1 style consent_message_text is gui_prompt_text
@@ -92,9 +93,10 @@ init python:
     splash_messages = [
         "The choices of the beautiful are unbearable.",
         "It took so many tries to make this beautiful.",
-        "Fear the Ink Demon.",
-        "No angels! He will set us free!",
-        "This game is not suitable for children\nor those who are easily disturbed?"
+        "Fear more than the Ink Demon.",
+        "This game is not suitable for children\nor those who are easily disturbed?",
+        "Dark nights are upon us!",
+        "You will be forever mine."
     ]
 
 
@@ -130,45 +132,53 @@ label menu_glitch:
     hide screen tear
     return
 
-image menu_art_a:
+image menu_art_mi:
     subpixel True
-    "mod_assets/images/menu/menu_art_a.png"
-    xcenter 1000
-    ycenter 640
-    zoom 1.00
-    menu_art_move(1.00, 1000, 1.00)
+    "mod_assets/images/mio/crossedarms.png"
+    xcenter 900
+    ycenter 420
+    zoom 0.65
+    menu_art_move(0.65, 900, 0.65)
 
 image menu_art_y:
     subpixel True
     "gui/menu_art_y.png"
-    xcenter 750
+    xcenter 825
     ycenter 335
     zoom 0.60
-    menu_art_move(0.54, 600, 0.60)
+    menu_art_move(0.54, 825, 0.60)
 
 image menu_art_n:
     subpixel True
     "gui/menu_art_n.png"
-    xcenter 600
-    ycenter 385
+    xcenter 460
+    ycenter 400
     zoom 0.58
-    menu_art_move(0.58, 750, 0.56)
+    menu_art_move(0.54, 750, 0.54)
 
 image menu_art_s:
     subpixel True
     "gui/menu_art_s.png"
-    xcenter 510
-    ycenter 500
-    zoom 0.68
-    menu_art_move(0.68, 510, 0.68)
+    xcenter 665
+    ycenter 345
+    zoom 0.56
+    menu_art_move(0.56, 665, 0.56)
+
+image menu_art_a:
+    subpixel True
+    "mod_assets/images/menu/menu_art_a.png"
+    xcenter 600
+    ycenter 580
+    zoom 0.85
+    menu_art_move(0.85, 600, 0.85)
 
 image menu_art_m:
     subpixel True
     "gui/menu_art_m.png"
-    xcenter 930
-    ycenter 335
-    zoom 0.60
-    menu_art_move(0.54, 600, 0.58)
+    xcenter 1100
+    ycenter 400
+    zoom 0.65
+    menu_art_move(0.54, 1100, 0.65)
 
 image menu_art_y_ghost:
     subpixel True
@@ -278,7 +288,7 @@ image intro:
     truecenter
     "black"
     0.5
-    "mod_assets/images/bg/splash-white.png" with Dissolve(0.5, alpha=True)
+    "images/bg/splash-white.png" with Dissolve(0.5, alpha=True)
     2.5
     "black" with Dissolve(0.5, alpha=True)
     0.5
@@ -372,6 +382,7 @@ label splashscreen:
     show black
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
+    $ config.main_menu_music = audio.t1
     $ renpy.music.play(config.main_menu_music)
     show intro with Dissolve(0.5, alpha=True)
     pause 2.5

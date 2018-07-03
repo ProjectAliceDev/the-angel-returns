@@ -537,10 +537,10 @@ label ch0_end:
     show yuri zorder 3 at f43
     show mio at thide
     hide mio
-    show sayori zorder 2 at t42
+    show sayori zorder 2 at t44
     y 3d "This'll be thrilling!"
     show natsuki zorder 3 at f42
-    show yuri zorder 2 at t44
+    show yuri zorder 2 at t43
     n 5s "..."
     n 5h "Alright, if you say so..."
     show natsuki at thide

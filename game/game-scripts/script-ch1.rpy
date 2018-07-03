@@ -100,21 +100,23 @@ label ch1_main:
     show natsuki zorder 2 at t32
     show yuri zorder 2 at f33
     m "Sorry, everyone!"
-    m "I couldn't find an extra pair of clothing, so I just used on that I packed!"
+    m "I couldn't find an extra pair of clothing, so I just used one that I packed!"
     m "I don't have a lot of clothes, ahaha~."
     show yuri zorder 3 at f33
     show monika zorder 2 at t31
-    y 1bf "For someone of your stature, I wouldv'e thought you had a lot."
+    y 1bf "For someone of your stature, I would've thought you had a lot."
     show monika zorder 3 at f31
     show yuri zorder 2 at t33
     m 2bd "Well, not necessarily..."
-    m "I like living simply."
+    m "I like having a limited wardrobe."
     m 4bd "It helps me stay focused on what needs to get done."
     m 4bn "I'm not really that into fashion either, ehehe~"
+    m "My parents picked most of my clothes..."
     show monika zorder 2 at t31
     show natsuki zorder 3 at f32
     n 5bk "Well, at least you're here..."
     n "Where's this place, anyway?"
+    n "And where's Mio?"
     show yuri at thide
     hide yuri
     show sayori 1bc zorder 3 at f33
@@ -123,7 +125,7 @@ label ch1_main:
     show monika zorder 3 at f31
     m 2bc "You're right, it's a bit far from here."
     m 2bd "The next train should be leaving in thirty minutes or so."
-    m "At least that's what Apple Maps says."
+    m "Mio's already there at the studio and she's watching the schedules for us."
     m 4bb "Don't worry, though!"
     m "I know we have a lot of bags, so I can drive us over to the station."
     show yuri 1bb zorder 3 at f41
@@ -204,18 +206,19 @@ label ch1_main:
     m 2bj "Ahaha, you're funny..."
     m 2ba "I won't rest from my duties just yet."
     m "Anyways, I have a feeling that we'll be all over the place."
-    m 2bd "I was doing some research last night with Yuri about the studio."
-    m 4bd "Mr. Drew had passed a few months before Sayori received the letter, which makes sense."
+    m 2bd "I was doing some more research last night with Yuri about the studio."
+    m 4bd "From our records, Mr. Drew had passed a few months before Sayori received the letter, which makes sense."
     m "Unfortunately, we found no records of Alice Angel herself taking over."
     m "It's filed under a man named 'Henry', but the day-to-day operations are managed by a 'Susan Campbell', the original voice actress."
     mc "Susan Campbell? That's an odd choice to leave a huge studio to..."
     m 2bd "It is a bit odd, but I guess Joey trusted her to keep things moving smoothly if Henry wasn't up to the task."
-    m "This is probably why Natsuki thought Susie wrote the letter."
+    m "This is probably why you thought Susie wrote the letter."
     m "I'm a bit worried, to be honest."
     m "Further research suggests that Ms. Campbell's personality is, well, a bit volatile."
     m "She didn't handle her replacement of roles very well."
     m "She was a bit skeptical to take such an administrative role at first."
     mc "I guess she came to her senses afterwards, right?"
+    mc "Either that or she died and this 'Alice' woman took over for her."
     m 4bi "That's when things got weird. Like, {i}really{/i} weird."
     m "Joey had been working on an ink machine to bring cartoons to life."
     m "You know, like one of the 3D printers at school, only on a biological scale."
@@ -224,6 +227,7 @@ label ch1_main:
     m 2bf "Isn't that kind of messed up?"
     mc "..."
     mc "Uh..."
+    mc "I mean, I did see it coming, but I don't think that she'd be that paranoid."
     m 4bf "Rumor has it that he, out of remorse, committed suicide."
     m "Alas, other sources have stated that there were successful prints without the aid of a human."
     m "They tend to not last long, though..."
@@ -241,6 +245,14 @@ label ch1_main:
     m 2bn "{i}*Sigh*{/i}"
     m 2bi "I don't want anyone else to know about what I just told you."
     m "Only Yuri, you, and I know about it."
+    mc "What about Mio?"
+    mc "I feel like she would know about this, too."
+    m 1bc "Well, I was chatting with her last night, too."
+    m "She says that the place has a lot of backstory, but most of it is 'irrelevant'."
+    m "She also told me that Susie died, which didn't make sense to me at first."
+    mc "Dead?"
+    mc "{i}Maybe I was right...{/i}"
+    m 1bi "I don't think we should be jumping to conclusions that quickly."
     m "I think it's best that we bunk with each other to discuss plans."
     m 1bg "I certainly wouldn't want to get Sayori's and Natsuki's hopes down."
     mc "I understand."
@@ -309,13 +321,21 @@ label ch1_main:
     show yuri 1be zorder 2 at t33
     y "This isn't what I expected..."
     mc "I think this is only the lobby."
+    show mio 1 zorder 2 at t32
+    mi 1e "Hey, everyone!"
+    mi "I hope the directions weren't too confusing, ehehe~"
+    mi 1b "Anyways, Alice is aware that you all came, but I have to warn you."
+    mi 4l "I'm kind of the only human she's had constant contact with."
+    mi "I'm sorry if she gets abrasive at first..."
+    show mio at thide
+    hide mio
     "Suddenly, we hear soft singing coming from the corner."
     $ a_name = "???"
     a "{i}I got a friendly halo and I'm filled with love...{/i}"
     show alice 0j zorder 3 at f32
     a "{i}I'm Alice...{/i}"
     a 0d "...Angel?"
-    a 0g "Who... {i}are{/i} you people?"
+    a 0g "Who {w=1.0}{i}are{/i} you people?"
     show alice zorder 2 at t32
     show yuri zorder 3 at f33
     y 3bp "A-aah, s-sorry!"
@@ -323,18 +343,21 @@ label ch1_main:
     y "W-we thought the studio was o-open..."
     show yuri at lhide
     hide yuri
-    show sayori 1bb zorder 2 at t33
+    show mio 1 zorder 2 at t33
     show monika zorder 3 at f31
     m 3bd "My apologies if we came here unannounced."
     m "We came here as per a response to a letter you sent to the vice president of our literature club, Sayori."
-    show sayori zorder 3 at f33
+    m "As well as Mio's recommendations."
+    show mio zorder 3 at f33
     show monika zorder 2 at t31
-    s 4br "That's me!"
-    show sayori 1ba zorder 2 at t33
+    mi 1e "Alice, this is the Literature Club."
+    mi "I know we're kind of small..."
+    show mio zorder 2 at t33
     show alice zorder 3 at f32
-    a 0d "A letter?"
-    a "That's interesting, I don't recall writing a letter to Sayori."
-    a "May I please see a copy of this letter?"
+    $ a_name = aliceangel.short_name
+    a 0d "The Literature Club...?"
+    a "Uh..."
+    mc "Perhaps it would help if I gave you the letter you wrote to Sayori."
     "I hand the woman the letter from my coat pocket."
     a "..."
     a 0d "Oh..."
@@ -342,110 +365,88 @@ label ch1_main:
     "She lightly chuckles to herself."
     a "It's {i}that{/i} letter!"
     a 0b "I'm sorry, I must have forgotten that I wrote this one, ehehe!"
-    a 0j "Welcome to Angelhus Productions, formerly Joey Drew Studios, home of the Bendy and Alice Angel cartoons!"
+    a "So this is the Literature Club, eh?"
+    a 0j "Well, then... Welcome to Angelhus Productions, formerly Joey Drew Studios, home of the Bendy and Alice Angel cartoons!"
     a "A {i}lot{/i} has changed since you got this letter, so, uh..."
     a 0b "Allow me to introduce myself..."
-    n "Wait a second."
-    show monika zorder 2 at t41
-    show alice zorder 2 at t42
-    show natsuki 5bc zorder 3 at f43
-    show sayori zorder 2 at t44
-    n "You look familiar."
-    stop music fadeout 1.0
-    "The room falls silent."
-    show monika 1bc zorder 2 at t41
-    show alice 0c zorder 2 at t42
-    n 5bs "..."
-    "Natsuki's pondering again..."
-    n 5bd "You're Alice Angel, aren't you?"
-    show alice zorder 3 at f42
-    show natsuki zorder 2 at t43
-    a "..."
-    $ a_name = "Alice"
-    play music b3
-    a 0d "Welp, there went the surprise."
-    mc "Natsuki, I think she was..."
-    a 0g "Jeez, kid, you could've at least let me {i}properly{/i} introduce myself to you..."
-    a 0o "It's been a while since I had to properly introduce myself."
-    a "There was music and everything, too!"
-    show natsuki zorder 3 at f43
-    show alice zorder 2 at t42
-    n 5bs "..."
-    n "Sorry, I didn't mean to spoil the surprise like th{nw}"
-    show sayori zorder 3 at f44
-    show natsuki zorder 2 at t43
-    s 4br "Do it anyway!"
-    show alice zorder 3 at f42
-    show sayori zorder 2 at t44
-    a 0g "W-what?"
-    mc "Don't mind Sayori, she just really loves hea{nw}"
-    show sayori zorder 3 at f44
-    show alice zorder 2 at t42
-    s 2be "Please?"
-    s "I want to hear you sing..."
-    s 1ba "I bet it sounds nice..."
-    show monika zorder 3 at f41
-    show sayori zorder 2 at t44
-    m 2be "I'm sure the club doesn't mind hearing it anyway, even though the surprise has been spoiled."
-    m 4bb "We're all about self-expression, anyway!"
-    m 4bk "That's why we write poems, after all!"
-    show monika 1ba zorder 2 at t41
-    stop music fadeout 1.0
-    play music b1
-    show alice zorder 3 at f42
-    a 0c "Look, I appreciate the concern and your enthusiasm about it."
-    a 0g "It's just that it doesn't have the same effect now."
-    a "I've been doing this for over twenty years."
-    a 0o "I know when something gets too old."
-    show alice zorder 2 at f42
-    s 2bu "B-but..."
-    show sayori at s44
-    m 1bo "You can't beat yourself up like this..."
-    show monika at s41
-    n 5bm "You can't just call it quits like that..."
-    show natsuki at s43
-    show alice zorder 3 at f42
-    a "..."
-    a "It appears you've given me a difficult choice."
-    a "I'm sorry..."
-    a 0g "You can use the directory to find the break room."
-    a "Situate yourselves in there for now."
-    a 0o "I need some time to think..."
+    show mio zorder 3 at f33
+    show alice zorder 2 at t32
+    mi "Ahaha, I'll take care of that for you."
+    mi "This guy here is [player], the only boy in our club!"
+    mc "Uh..."
+    "Crap. Mio put me in an awkward situation..."
+    mc "Nice to meet you, Alice."
+    show alice at f32
+    a "Ahaha, don't sweat it!"
+    a "He kind of looks like Henry, doesn't he, Mio?"
+    show alice at t32
+    mi "I guess you could say that."
+    mi "Anyways, this is Monika, the president of the club."
+    show mio zorder 2 at t33
+    show monika zorder 3 at f31
+    m 1bb "A pleasure to meet you, Alice!"
+    m "I can't wait to discuss things with you about the club!"
+    show monika at thide
+    hide monika
+    show natsuki 4bd at t31
+    show mio zorder 3 at f33
+    mi "And this is Natsuki, always full of energy!"
+    show mio zorder 2 at t33
+    show natsuki zorder 3 at f31
+    n "And I finally meet the Angel herself!"
+    n "I hope you like manga as much as I do!"
+    show natsuki at thide
+    hide natsuki
+    show alice at f32
+    a 0c "...{w=1.0}Manga?"
+    show alice at t32
+    show mio zorder 3 at f33
+    show sayori 1br at t31
+    mi "And this is Sayori, the vice president."
+    show mio at t33
+    show sayori at f31
+    s "Yaay! You're real!"
+    s "I get to be around an angel for a week!"
+    show sayori at thide
+    hide sayori
+    a 0b "Ahaha, she seems cheerful!"
+    show mio at f33
+    mi "And, finally, we have Yuri, the smartest in the club."
+    show yuri 1ba at f31
+    show mio at t33
+    y "It's a pleasure meeting you."
+    y 2bq "I apologize for running off..."
+    show yuri at thide
+    hide yuri
+    show monika 1ba at t31
+    show mio zorder 3 at f33
+    mi "Everyone, this is the Angel herself, Alice."
+    mi 5x "She's quite a gal! (pun intended)"
+    show alice zorder 3 at f32
+    show mio zorder 2 at t33
+    a 0m "Ehehe~"
+    a 0n "I was kind of hoping you didn't say that..."
+    show mio zorder 3 at f33
+    show alice zorder 2 at t32
+    mi 1e "Ahaha, no need to be embarassed, Alice!"
+    mi "Why don't we head to the breakroom for now?"
+    show alice zorder 3 at f32
+    show mio zorder 2 at t33
+    a "Uh, sure..."
+    a "I'll meet you there in a moment..."
     show alice at lhide
     hide alice
+    show monika at f31
+    m 1bg "Is she alright?"
+    show mio at f33
     show monika at t31
-    show natsuki at t32
-    show sayori at t33
-    s "..."
-    s 2bw "We scared her away!"
-    show natsuki zorder 3 at f32
-    n 5bn "I'm sorry, guys..."
-    n "I didn't mean for the first day to turn out like this."
-    show natsuki zorder 2 at t32
-    show monika zorder 3 at f31
-    m "Natsuki, it's not your fault."
-    m 3bp "I guess she got a little bit overwhelmed..."
-    m 1bp "We might've pushed her a little too much..."
-    show monika zorder 2 at t31
-    mc "Guys, you can't be beating yourselves up."
-    mc "It sounds like not a lot of people have seen her or this studio for a while."
-    mc "I bet you she's just unsure of how to handle this because she's been lonely for a long while."
-    mc "Monika, take the girls to the break room."
-    mc "I'm going to try finding Alice and talking to her."
-    show monika zorder 3 at f31
-    m 1bg "If you say so, [player]..."
-    show monika zorder 2 at t31
-    mc "It's going to be okay."
-    mc "We'll still make this fun."
-    "The girls rest the bags on the long table and start looking around for the break room."
+    mi 4l "I think she's just a bit overwhelmed."
+    mi 3b "[player] and I will go talk to her. We'll meet you down there in a bit."
     show monika at thide
-    show sayori at thide
-    show natsuki at thide
+    show mio at thide
+    hide mio
     hide monika
-    hide natsuki
-    hide sayori
-    "I look at the directory on the wall and head to where this so-called 'Ink Machine' is."
-    "I had a feeling she went this way."
+    "I follow Mio down the corridor to reach some offices, presumably where the Ink Machine used to be."
 
     stop music fadeout 1.0
     scene bg studio inkmachine
@@ -454,26 +455,30 @@ label ch1_main:
     "Surprisingly, nothing in here resembles an ink machine."
     "She probably forgot to change the text or something..."
     mc "...Alice?"
-    show alice 0g at t11
+    show alice 0g at f21
+    show mio 1h at t22
     play music b1
     a "Aah!"
     a "How did you find me?"
     a "You guys just spawn out of nowhere..."
-    mc "I had a feeling you were here..."
+    mc "I followed Mio down here..."
     mc "I'll say, your directory's a bit misleading."
     a 0d "We haven't had the time to change it."
     a "You know, in all of the time we had to build a new studio, we somehow forgot about the sign."
     a 0n "I digress."
-    a 0i "Y-You shouldn't have tried to find me, ..."
-    mc "[player]."
-    a "[player]..."
-    a 0o "That name sounds so familiar."
+    a 0i "Mio, you shouldn't have dragged him here."
     a 0g "Why did you come here, [player]?"
     mc "We figured that we wanted to check ou-{nw}"
     a "No, not that."
     a "Why are {i}you here{/i}?"
     mc "..."
-    mc "Alice, how long has it been since someone's come down here?"
+    show mio at f22
+    show alice at t21
+    mi 4i "We noticed you trailed off after I made that remark."
+    mi 1g "I have [player] here with me because he's pretty good at understanding things."
+    show alice at f21
+    show mio at t22
+    mc "Alice, how long has it been since someone's come down here that isn't Mio?"
     a "..."
     a 0n "Too long ago."
     a "Henry came down here because Joey had sent him a letter, too..."
@@ -487,84 +492,71 @@ label ch1_main:
     mc "..."
     mc "I had a funny feeling."
     mc "Monika told me a few things before we got here."
-    play music b6
-    a 0t "That girl..."
-    a 0m "Ahaha~"
-    a "She's probably the smart one in your little club, yes?"
-    mc "She's actually the club President. Yuri's the smart one."
-    a 0d "And is Yuri the purple-haired one?"
-    mc "Yeah, ehehe~"
-    "I chuckle sadly."
-    mc "She's a bit shy..."
-    a "I can tell."
-    a "Man, it must be a living {i}hell{/i} dealing with those girls..."
+    play music t9
+    a 0m "Man, it must be a living {i}hell{/i} dealing with those girls..."
     mc "They're not as bad as you think."
     mc "You get kind of used to it, I guess..."
-    a 0m "That's what Joey said to everyone else about me."
+    a 0m "That's what Joey said to everyone else about Susie."
     a 0n "He was a good liar. Sammy, too..."
-    a 0t "I'm sorry for the lackluster first impression."
-    a "This... it just feels so alien."
-    a "Here are you all hoping to see something exciting and I let everyone down."
-    show alice at s11
+    show mio at f22
+    show alice at t21
+    mi 4h "It's okay, you can tell him."
+    mi 4g "He'll understand, right?"
+    "I nod."
+    show alice at f21
+    show mio at t22
+    a 0o "{i}*Sigh*{/i}"
+    a "Here we go, I guess..."
+    a 0g "Everyone treats me so much differently ever since the whole...{w=1.0} {i}Susie{/i} thing."
+    a "Allison..."
+    a "Well, I guess it's kind of pointless to really explain all of that."
+    a "You already know what had happened, right?"
+    a 0m "Ahaha~"
+    a 0g "It's just so weird now... everyone thinks I'm Susie, but I'm not, I swear!"
+    a "It's like I'm living someone else's life..."
+    show alice 0o at s21
     mc "..."
     mc "Alice, aren't you being a little hard on yourself?"
-    mc "I know you were big in the entertainment industry and all, but..."
-    mc "You can't always go about everything in that kind of light."
-    mc "We're just a bunch of seniors that happen to like poetry, literature, cupcakes..."
-    mc "We're not expecting a grand entrance, you know."
-    a 0g "But [player]..."
-    a "That's the whole point."
-    a "I'm {i}Alice Angel{/i}, for goodness sake!"
-    a "I'm supposed to be like this."
-    a 0t "And I've given you a bad first impression."
-    mc "Look, I'm sure the girls have looked past that already."
-    mc "I bet they're probably blaming themselves for this."
-    mc "I just want everyone to be happy."
-    mc "You don't have to sing for them or anything..."
-    mc "All I ask that you freely present yourself and at least give it a shot."
-    a "..."
+    mc "I know some of us may be skeptical, but that's not going to make us treat you differently."
+    mc "Sometimes, it just takes some time to really see a change."
+    mc "It's obvious to me that Mio already sees you for who you are and not as Susie."
+    mc "A lot of people see Natsuki as an agressive, underaged girl."
+    mc "If you really get to know her, though, she's an interesting person to be around."
+    mc "Don't beat yourself up over it. I'm sure the club members will understand soon."
+    mc "Promise me and Mio that you'll be yourself, okay?"
+    a 0t "..."
     a 0m "Well, [player], I don't know if anyone's told you that you are a man of many words..."
     a "But I guess I have to trust you now."
-    window hide(None)
     stop music fadeout 1.0
-    show alice at t11
-    play music b7 fadein 3.0
-    $ renpy.pause(2.0)
-    window show(None)
+    show alice at t21
+    show mio at f22
+    mi 5e "That's the spirit!"
+    play music b7
+    show alice at f21
+    show mio at t22
     a 0d "Tell me, are they really obsessive over cuteness?"
-    mc "What? Ahaha~"
+    mc "What?"
+    "Mio stifles a chuckle."
     a "What? It's a legitimate concern of mine."
     mc "It's okay. Just be yourself."
     a "Fine, then..."
-    a "We should probably meet up with them before things get a bit{nw}"
-    m "[player]?"
-    show monika 1bg zorder 2 at t33
-    m "Is everything alright over here?"
-    mc "Uh, yeah..."
-    mc "We were just chatting for a bit so that we were on the same page."
-    mc "It's fine now."
-    m 2be "Alright, I trust you."
-    m "Alice, I'm sorry if we overwhelmed you."
-    show alice at f11
-    a 0k "No, no, not at all!"
-    a 0b "I guess I was just caught off-guard, you know?"
-    show alice at t11
-    m "Well, we should get going."
-    show monika at thide
-    hide monika
-    mc "Ehehe~"
-    mc "I told you so."
-    a 0r "Mhm..."
-    mc "Uh..."
-    mc "Okay then..."
+    a "We should probably meet up with them before things get a bit hectic."
+    mc "Of course!"
+    show mio at f22
+    show alice at t21
+    mi 5x "To the break room!"
     show alice at thide
+    show mio at thide
+    hide mio
     hide alice
     "We proceed to the break room, with Alice leading the way."
     return
 
 label ch1_end:
+    stop music fadeout 1.0
     scene bg studio breakroom
     with wipeleft
+    play music t3
     show alice 0b at t42
     a "Sorry to have kept you waiting, everyone!"
     show yuri 3bf at t43
@@ -575,7 +567,7 @@ label ch1_end:
     show alice zorder 3 at f42
     a 0k "It's totally fine!"
     a "I just wasn't expecting it, that's all!"
-    a 0d "I didn't mean to be a party-pooper or anything..."
+    a 0d "I didn't mean to make things awkward..."
     show monika 4bb zorder 3 at f41
     show alice zorder 2 at t42
     m "Ahaha, it's alright!"
@@ -611,7 +603,7 @@ label ch1_end:
     show monika zorder 3 at f41
     show yuri zorder 2 at t43
     m 4bb "With that settled, I think this week will run smoothly!"
-    m 2bb "Sayori, Natsuki... please follow Alice to the residential areas."
+    m 2bb "Sayori, Natsuki, Mio... please follow Alice to the residential areas."
     m 1ba "I'd like to have a word with Yuri and [player] before we get completely settled in."
     show sayori zorder 3 at f44
     show monika zorder 2 at t41
@@ -627,7 +619,7 @@ label ch1_end:
     show yuri zorder 2 at t22
     "Monika watches as Alice guides Natsuki and Sayori upstairs, clutching onto some of our bags."
     a "Come on, girls! We've got a ways to go."
-    "Yuri eyes the trio down as they exit the break room and close the doors."
+    "Yuri eyes the quartet down as they exit the break room and close the doors."
 
     show vignette zorder 1 at vignettefade(1.5)
     stop music fadeout 1.5
@@ -635,7 +627,7 @@ label ch1_end:
     show yuri 1be zorder 2 at t22
     m 1bi "[player], was everything alright with Alice?"
     mc "Yeah, I guess."
-    mc "She was a bit overwhelmed and got a bit nostalgic."
+    mc "She's just a bit overwhelmed at everything."
     play music b5
     show yuri zorder 2 at f22
     show monika zorder 2 at t21
@@ -643,7 +635,7 @@ label ch1_end:
     y 1bh "She could be possibly watching our every move."
     y 1bf "I'll admit, we did walk in on her unexpectedly."
     y "Still, she raises some suspicions."
-    mc "It doesn't help that she knows that we know about what happened before."
+    mc "Well, it doesn't help that she knows that we know about what happened before."
     show monika at f21
     show yuri at t22
     m "What?"
@@ -655,7 +647,7 @@ label ch1_end:
     show yuri at f22
     show monika at t21
     y "She was scrutinizing the letter pretty hard, too."
-    y 2bh "Did anyone find it a bit odd that she knew about the letter?"
+    y 2bh "Did anyone find it a bit odd that she forgot about the letter?"
     show yuri at t22
     "The room falls silent for a second."
     show monika at f21
@@ -668,21 +660,29 @@ label ch1_end:
     y 2br "We can't keep leading her on like this."
     y "There has to be a way around it!"
     show yuri 4bc at t22
-    mc "There's not much we can do."
-    mc "Isn't she always watching?"
+    mc "Guys, I understand if you're being skeptical and all..."
+    mc "But we shouldn't try to make her out as an enemy."
+    mc "It looks like she's a bit rattled over a few things."
     show monika at f21
     m 1bi "[player], what are you suggesting?"
-    m "You can't be saying that we're being stalked..."
-    mc "I skimmed through your notes from the train."
-    mc "She's always watching."
-    mc "I don't know if it's cameras or something..."
-    mc "But I do know that she is aware that we are conversing with each other in this room."
-    mc "She sees everything in this place."
-    show monika at f21
-    m 1bq "Let's just keep this on the down low until we figure out what the hell is going on."
+    m "You can't be saying that we should be trusting her..."
+    mc "Mio trusts her a lot, and she wanted me to come along because she thought I would understand."
+    mc "If you really want to think of it like this, she's kind of like Natsuki or anyone else in the club."
+    mc "Looks aren't everything, Monika."
+    show yuri at f22
     show monika at t21
-    mc "That seems reasonable."
-    mc "I don't suppose that she{nw}"
+    y 1bs "I think [player]'s right, Monika."
+    y "I think we're getting a bit too skeptical."
+    y 1bs "He really didn't get to know us until he interacted with us more."
+    y 3bs "There should be no reason why we don't do the same to her."
+    show monika at f21
+    show yuri at t22
+    m 1bq "Jeez..." 
+    m "Let's just keep this on the down low until we figure out what the hell is going on."
+    show monika at t21
+    mc "Alright, you do your thing."
+    mc "Meanwhile, I'm going to make sure she doesn't see us as villians."
+    mc "Just don't try to aggravate her or anyth{nw}"
     a "Is everything alright in there?"
     a "Jeez, you've been in there longer than I ever have, ahaha~!"
     stop music fadeout 1.0
@@ -741,12 +741,13 @@ label ch1_end:
     a "Now, as for you two..."
     show alice at f21
     stop music fadeout 1.0
-    a 0d "I'm sorry if I seem a little crusty an abrasive about this."
+    a 0d "I'm sorry if I seem a little crusty and abrasive about this."
     play music b5
     a "But, I need you to understand something."
     a 0i "Things have changed around here."
-    a "I'm not the same sadomasochist that 'Susie' was."
-    a 0n "Please, do your best to not associate me with that old me."
+    a "I'm not that sadomasochist 'Susie'. Trust me."
+    a 0n "Please, do your best to not associate me with that her."
+    a "{i}*Gag*{/i}"
     show monika at f22
     show alice at t21
     m 1bi "Uh..."
@@ -822,7 +823,7 @@ label ch1_end:
     a 0i "You call deleting your friends and rewriting the entire game so you can be with the player forever 'best judgement'?"
     a "Jeez, [player], I didn't realize you were {i}that{/i} dense!"
     mc "Wait, what are you talking about?"
-    a "You're kidding me."
+    a 0g "Please tell me that's a joke."
     a "Perhaps you should be the one wary of Monika."
     a "I don't know what the hell she's going to do with you."
     a 0d "Well, it looks like the lift is returning."

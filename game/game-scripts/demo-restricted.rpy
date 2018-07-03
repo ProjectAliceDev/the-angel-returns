@@ -44,7 +44,7 @@ label demo_end_2:
     a 0bo "{i}*Sigh*{/i}"
     a 0bt "Perhaps doing that was a bit of a mistake."
     a "Well, we all can't be winners, can we?"
-    a 0bg "I guess its' goodbye, for now."
+    a 0bg "I guess it's goodbye, for now."
     a 0bf "I at least enjoyed our date!"
     a "Promise me you'll come back, okay?"
     $ persistent.playthrough = 1
