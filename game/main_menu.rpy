@@ -29,8 +29,8 @@ screen main_menu():
     if gui.show_name:
 
         vbox:
-            text "[config.name!t]":
-                style "main_menu_title"
+            # text "[config.name!t]":
+            #    style "main_menu_title"
 
             text "v. [config.version]":
                 style "main_menu_version"

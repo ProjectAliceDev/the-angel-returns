@@ -381,6 +381,10 @@ init -501 screen quick_menu():
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Load") action ShowMenu('load')
 
+            # Insider Content
+            if "beta" in config.version:
+                textbutton _("Send Feedback") action [Help("feedback.html"), Show(screen="alert", title="Feedback Tool Opened", message="The feedback tool has been opened in your browser.\nIf it doesn't open properly, please file an issue on GitHub.", ok_action=Hide("alert"))]
+
 
             textbutton _("Settings") action ShowMenu('preferences')
 
@@ -462,7 +466,9 @@ init -501 screen navigation():
 
             textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
 
-
+            # Insider Content
+            if "beta" in config.version:
+                textbutton _("Send Feedback") action [Help("feedback.html"), Show(screen="alert", title="Feedback Tool Opened", message="The feedback tool has been opened in your browser.\nIf it doesn't open properly, please file an issue on GitHub.", ok_action=Hide("alert"))]
 
             if renpy.variant("pc"):
 
@@ -525,8 +531,8 @@ init -501 screen main_menu() tag menu:
     if gui.show_name:
 
         vbox:
-            text "[config.name!t]":
-                style "main_menu_title"
+            # text "[config.name!t]":
+                # style "main_menu_title"
 
             text "[config.version]":
                 style "main_menu_version"
@@ -842,7 +848,7 @@ init -501 screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("This slot is empty.")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):

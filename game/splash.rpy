@@ -90,6 +90,8 @@ init python:
 
     splash_message_default = "This game is not suitable for children\nor those who are easily disturbed."
 
+    splash_message_beta = "This is a prerelease version of The Angel Returns: Demo.\nSome things may be changed in the future."
+
     splash_messages = [
         "The choices of the beautiful are unbearable.",
         "It took so many tries to make this beautiful.",
@@ -122,7 +124,7 @@ image game_menu_bg:
     menu_bg_loop
 
 image menu_fade:
-    "black"
+    "white"
     menu_fadeout
 
 label menu_glitch:
@@ -298,7 +300,7 @@ image warning:
     "black"
     "splash_warning" with Dissolve(0.5, alpha=True)
     2.5
-    "black" with Dissolve(0.5, alpha=True)
+    "white" with Dissolve(0.5, alpha=True)
     0.5
 
 image tos = "mod_assets/images/menu/warning.png"
@@ -390,10 +392,13 @@ label splashscreen:
 
     if persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
         $ splash_message = renpy.random.choice(splash_messages)
+    elif "beta" in config.version:
+        $ splash_message = splash_message_beta
     show splash_warning "[splash_message]" with Dissolve(0.5, alpha=True)
     pause 2.0
     hide splash_warning with Dissolve(0.5, alpha=True)
     $ config.allow_skipping = True
+    scene white with Dissolve(0.5, alpha=True)
     return
 
 label warningscreen:

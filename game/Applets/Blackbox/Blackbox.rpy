@@ -43,6 +43,22 @@ Puzzle Time provides a fun and unique way of solving puzzles in between scenes i
 
         def send_success_message(self):
             self.send_temporary_notification("Chapter unlocked", "Good job on solving the puzzle!", action=Return(0))
+
+        def discover_notify(self):
+            with open(config.basedir + "/game/" + self.app_dir + ".apf", "r") as f:
+                perm_lines = f.readlines()
+                if perm_lines[0] == 'pm_notify\n':
+                    return True
+                else:
+                    return False
+
+        def show_puzzle_window(self, puzzleno):
+            if puzzleno == 1:
+                renpy.call_screen("blackbox_puzzle_ch0")
+            elif puzzleno == 2:
+                renpy.call_screen("blackbox_puzzle_ch1")
+            else:
+                pass
     
     blackbox = Blackbox()
 
@@ -51,57 +67,57 @@ Puzzle Time provides a fun and unique way of solving puzzles in between scenes i
 # app's manifest here. This may include screens, labels,
 # or definitions. Please keep all of your applet's code
 # in this file.
-init -1000 python:
-    blackbox_message = """\
-It's time to get your brain working! Each minigame has a unique puzzle. Sometimes, this may require changing the game's settings or selecting the right path.
 
-If you get stuck, don't worry; Alice may say something to you as a hint! Good luck.
-    """
-    
-init -501 screen blackbox_alert:
-    modal True
-    style_prefix "consent"
-    zorder 2000
-    add "gui/overlay/confirm.png"
-
-
+## 1st Blackbox puzzle window.
+init screen blackbox_puzzle_ch0:
+    use UIWindow(blackbox)
     frame:
-        xsize 600
-        ysize 592
-        style "confirm_frame"
+        style "blackbox_start"
+        # xanchor -16
+        yoffset 24
+        xsize 1248
+        ysize 635
         
-        has vbox:
-            xalign .5
-            yalign .5
-            spacing 16
+        vbox:
+            xoffset 32
+            yoffset 32
+            xsize 1216
+            ysize 603
             
+            vbox:
+                text "Did you lose something?":
+                    style "app_default_text"
+                    xoffset 875
+                    yoffset 100
 
-        add "mod_assets/images/gui/puzzle.png":
-            xalign 0.5
-        label _("Puzzle Time"):
-            style "consent_title"
-            xalign 0.5
+## 2nd Blackbox puzzle window.
+init screen blackbox_puzzle_ch1:
+    use UIWindow(blackbox)
+    frame:
+        style "blackbox_elementary"
+        # xanchor -16
+        yoffset 24
+        xsize 1248
+        ysize 635
+        
+        vbox:
+            xoffset 32
+            yoffset 32
+            xsize 1216
+            ysize 603
+            
+            vbox:
+                text "This content is not optimized for this screen size. Please increase your resolution.":
+                    style "app_default_text"
+                    xoffset 350
+                    yoffset 200
 
-        label _(blackbox_message):
-            style "consent_message"
-            xalign 0.5
-
-        frame:
-            xalign 0.5
-            xsize 568
-            style "consent_button_frame"
-
-            hbox:
-                xalign 0.5
-                spacing 16
-
-                textbutton _("Get started") action Return(0):
-                    style "consent_button"
-                    xpadding 128
-
+## Blackbox Puzzles
 init python:
     u_did_load = 0.0
 
+# Puzzle 1 (Chapter 0)
+# Check for Ren'Py saves in a specific spot.
 label ch0_blackbox_puzzle:
     stop music fadeout 1.0
     scene blackbox bg with trueblack
@@ -109,26 +125,35 @@ label ch0_blackbox_puzzle:
     show vignette zorder 4 at truecenter
     play music t4
     show blight start zorder 2 at t11
-    $ blackbox.ask_app_permissions()
-    call screen blackbox_alert
-    a "[player]..."
-    a "[player]..."
-    a "Why am I here?"
-    a "Why are you here?"
-    a "Why am I still alive?"
-    a "I don't understand, [player]..."
-    a "I don't deserve this."
-    a "No..."
-    a "This can't be..."
-    a "Why did you save me?"
-    a "Why did you {i}save{/i} me?"
-    a "{i}Why did you save me?{/i}"
+    python:
+        blackbox.ask_app_permissions()
+        can_notify = blackbox.discover_notify()
+        if can_notify == True:
+            renpy.call_screen("blackbox_alert")
+        else:
+            try: sys.modules['renpy.error'].report_exception("The applet 'Blackbox' could not display the IntroUIView card. This usually happens if the user has disabled notifications for that applet. Please check your applet permissions and then run the applet again.", False)
+            except: pass
+            renpy.quit()
+    # a "[player]..."
+    # a "[player]..."
+    # a "Why am I here?"
+    # a "Why are you here?"
+    # a "Why am I still alive?"
+    # a "I don't understand, [player]..."
+    # a "I don't deserve this."
+    # a "No..."
+    # a "This can't be..."
+    # a "Why did you save me?"
+    # a "Why did you {i}save{/i} me?"
+    # a "{i}Why did you save me?{/i}"
     window hide(config.window_hide_transition)
     $ renpy.jump("ch0_blackbox_puzzle_loop")
     return
 
 label ch0_blackbox_puzzle_loop:
+
     python:
+        blackbox.show_puzzle_window(1)
         import os
         waittime = renpy.random.randint(4, 8)
 
@@ -174,6 +199,8 @@ label ch0_blackbox_puzzle_success:
     hide screen tear
     return
 
+# Puzzle 2 (Chapter 1)
+# Check if the window is fullscreen.
 label ch1_blackbox_puzzle:
     window hide(None)
     stop music fadeout 1.0
@@ -181,7 +208,7 @@ label ch1_blackbox_puzzle:
     show blight start zorder 2 at t11
     $ timeleft = get_pos()
     show vignette zorder 4 at truecenter
-    play music b3
+    play music t4
     a "Well, at least we met each other."
     a "I'm no longer some obscure mystery to you, ahaha~"
     a "You probably already knew that from the start, didn't you?"
@@ -196,11 +223,12 @@ label ch1_blackbox_puzzle_loop:
     if preferences.fullscreen == True:
         jump ch1_blackbox_puzzle_success
     else:
-        window show(config.window_show_transition)
-        a "{i}...or if I am forever trapped in a darkened window.{/i}"
-        window hide(config.window_hide_transition)
+        $ blackbox.show_puzzle_window(2)
+        # window show(config.window_show_transition)
+        # a "{i}...or if I am forever trapped in a darkened window.{/i}"
+        # window hide(config.window_hide_transition)
         $ waittime -= 1
-        $ pause(5)
+        $ pause(3)
         if waittime > 0:
             jump ch1_blackbox_puzzle_loop
     return

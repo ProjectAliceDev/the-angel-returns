@@ -27,8 +27,12 @@ label setup:
         xpos 0.24 ypos 0.25
     window hide(None)
     python:
+        if persistent.playername:
+            p = persistent.playername
+            SystemUIServer.send_temporary_notification("Username detected", "Press Respond to use the name '" + p + "'.", action=Jump("pre_ch0"))
         player = renpy.input(' ')
         player = player.strip()
+        persistent.playername = player
     show mojave_setup_process zorder 3:
         xalign 0.5 yalign 0.6
     $ renpy.pause(3.0)

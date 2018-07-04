@@ -1,0 +1,33 @@
+Demo 0.1.2 Beta Notes
+=====================
+
+Thank you for trying out the beta version of The Angel Returns: Demo (Update 2)!
+There's a lot of features and improvements we are working on, and we're excited
+to show to a working version.
+
+Please note that this is pre-release software and that things may change in future
+versions. Press "Send Feedback" in the game menu or in the Quick Menu to file an
+issue on GitHub.
+
+Changes since 0.1.1
+~~~~~~~~~~~~~~~~~~~
+* We've introduced Mio as a character and hence have revamped the story to include her.
+* The Mojave Setup Assistant will be replaced with AliceOS's setup screen, but we've
+  added a new notification to indicate when the playername has been set already. Pressing
+  "Respond" will give the player the ability to start a new game with that name rather
+  than inputting a new one. Otherwise, the notification will dismiss itself and proceed
+  as normal.
+* AliceOS, or a beta version, anyway, is now included! There's new Applets, frameworks, and
+  services to enhance gameplay for any DDLC mod or Ren'Py projects. This version of AliceOS
+  is special enough where it includes new skins and applets only avaialble in The Angel 
+  Returns.
+* The puzzles now have windows and visual hints rather than cryptic dialogs. This should make
+  solving the puzzles a bit easier and more engaging. This is in part with the new Applets
+  functionality brought by AliceOS.
+* We've overhauled the visual appearance of the mod to make it more in line with AliceOS and
+  the elementaryOS project.
+* We've updated the version to 0.1.2 and clearly display it in the corner of the main menu.
+
+Thanks a lot, and we can't wait to hear your feedback!
+
+- The DDTAR Team
