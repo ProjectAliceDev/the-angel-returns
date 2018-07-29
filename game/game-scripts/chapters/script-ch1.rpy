@@ -314,7 +314,7 @@ label ch1_main:
     m "I guess we have no other choice."
     "Monika gently opens the door."
     scene bg studio entrance
-    play music bt
+    play music bt3
     show monika 1bc zorder 2 at t31
     m "Whoa..."
     m "This looks totally different from the images on Google."

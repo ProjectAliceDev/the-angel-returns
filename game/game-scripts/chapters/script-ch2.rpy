@@ -124,23 +124,22 @@ label ch2_main:
     a 0k "Pfft, she found it on our new site!"
     a 0b "We sell these things, you know? I never thought we'd get into the 3D printing business."
     a 0d "Or the programming one, for that matter."
-    a "It's not easy having to write the APIs for this kind of stuff..."
+    a "It's not easy having to write the APIs for this stuff..."
     mc "I imagine your team does a lot."
-    a "Acutally, I do all of the programming."
+    a "Acutally, I kind of do all of the programming..."
     mc "Really?"
     a 0k "Of course! That way, I know that everyone can easily use it."
     a 0b "It can get a bit difficult, but it entertains me at least."
     mc "I had no idea you were into programming."
     mc "Monika's reading a bit about Python herself."
-    a 0d "Ah, I see."
-    a "That actually makes sense for a gal like her."
-    a "I wonder what brought her to programming."
+    a 0d "Is she now?"
+    a "Well, that certainly makes sense for girls her type."
     a "It's not something everyone wants to do."
-    a "Then again, she did start a literature club... and now you're here."
+    a "Look at her, starting a literature club and managing to learn programming on her own..."
     a "The inner machinations of that girl's mind are an enigma to me."
     a 0b "Well, this should be a bit interesting!"
-    a "I've been working on a few side projects as well."
-    a 0d "Perhaps I'll get to show you two when you have a chance?"
+    a "I've been working on a few side projects myself."
+    a 0d "Perhaps I'll get to show them to you when there's a chance?"
     mc "I don't see why not."
     mc "It's been a while since I touched Python code, though..."
     a 0b "Ahaha, that's fine!"
@@ -152,114 +151,150 @@ label ch2_main:
     scene bg studio breakroom
     with wipeleft
     play music t7
-    show natsuki 1bf at f21
+    show mio 8t at f21
     show monika 1ci at t22
-    n "Monika, please, for the last time, let me handle this!"
-    n "{i}I'm{/i} showing Sayori how to do this."
+    mi "Monika, stay out of this! This doesn't concern you!"
     show monika at f22
-    show natsuki at t21
-    m 4ci "Natsuki, you're blowing this out of proportion."
-    m "I was just helping her operate the machine."
+    show mio at t21
+    m 4ci "Mio, Natsuki is trying to show Sayori how to bake."
+    m "I understand you want to assist, but..."
+    show mio at f21
+    show monika at t22
+    mi "You're blowing this out of proportion!"
     show yuri 3by7 at f33
     show monika at t32
-    show natsuki at t31
-    y "If the both of you keep arguing like this, someone is going to get badly hurt!"
-    show natsuki at f31
-    show yuri at t33
-    n "Stay out of this! This isn't your problem."
+    show mio at t31
+    y "I swear, if the both of you don’t shut up, someone will get badly hurt!"
     show alice 0g at f43
-    show natsuki at t41
+    show mio at t41
     show monika at t42
     show yuri at t44
-    a "Umm... is everything alright here?"
-    show natsuki zorder 3 at f41
+    a "Uh, is everything alright here?"
+    show mio zorder 3 at f41
     show alice at t43
-    n "This doesn't invole you, either!"
-    show natsuki zorder 2 at t41
-    show alice at f43
-    a 0i "Natsuki, calm down. It's getting a bit tense here."
-    a "Yuri, please continue whatever it was that you were doing."
-    a "I'll handle it from here."
-    show yuri at f44
-    show alice at t43
-    y 1bl "As you wish."
-    y "I apologize if I startled everyone."
+    mi "This doesn't invole you either, toots!"
     show yuri at thide
     hide yuri
-    show alice at f32
-    show natsuki at t31
-    show monika at t33
-    stop music fadeout 1.5
-    a "Somebody please explain to me what's going on."
-    show natsuki at f31
-    show alice at t32
-    n "Miss Club President over here is...{nw}"
-    show alice at f32
-    show natsuki at t31
-    a "I'm stopping you there."
-    a "I don't want name calling or insult throwing here."
-    a "Let's try this again: {i}what is going on here{/i}?"
-    "I'm stunned at how Alice is pulling this off calmly."
-    show monika at f33
-    show alice at t32
-    m 1cf "I was helping Sayori operate the machine while she was doing something else."
-    m "It seems that Natsuki didn't handle it well and she's upset at me for doing so."
-    show alice at f32
-    show monika at t33
-    a "I see."
-    a 0g "Sayori, could you come over here for a second?"
-    show monika at thide
-    hide monika
-    show sayori 1bh at t33
-    play music t8
-    a "What happened?"
-    show sayori at f33
-    show alice at t32
-    s "She was only helping me turn the thing on..."
-    s 1bk "I-I'm not really good with this kind of stuff."
-    show alice at f32
-    show sayori at t33
-    a "The fighting's making you feel uncomfortable, isn't it?"
-    show sayori at f33
-    show alice at t32
-    s 3bu "I just want it to stop..."
-    s "I don't like the fighting."
-    "Sayori's trying to hold back her tears."
-    show alice at f32
-    show sayori at t33
-    a 0i "Alright, then."
-    a "Assuming that all we need to do is mix and bake from this point on..."
-    a "Monika, since it appears that you have some experience, finish off the recipe until I return."
-    a "[player], please stay with Sayori and Yuri."
-    a "Natsuki, I'll need to speak to you in private. Follow me, please."
-    show alice at t32
-    show natsuki at f31
-    n 5bs "Fine..."
+    show mio zorder 2 at t41
+    show natsuki 2bp zorder 3 at f44
+    n "Hold on there for just a second, missy!"
+    n "Did you just call her{w=1.0} {i}toots{/i}?"
+    n 5bo "Who do you think she is, a flapper?"
     show natsuki at thide
-    show alice at thide
-    hide alice
     hide natsuki
-    show sayori at t22
-    "And, just like that, the two head off, probably to her office."
-    "Monika gets to work on finishing the recipe."
-    "As the kettle continues to boil, Yuri walks over towards us."
-    show yuri 1bf at f21
-    y "Sayori, are you okay?"
-    show sayori at f22
-    show yuri at t21
-    s "I...I guess..."
+    show sayori 3bu at f44
+    s "Please, make it stop!"
+    show sayori at t44
+    show alice zorder 3 at f43
+    a 0i "Enough!"
+    a "I’ve just about had it with you all bickering at each other!"
+    a "Who on earth started this crap?"
+    show alice zorder 2 at t43
+    show monika zorder 3 at f42
+    m 3cg "In all fairness and honesty, Mio seems to be overreacting and Natsuki’s merely stepping her ground."
+    show alice zorder 3 at f43
+    show monika zorder 2 at t42
+    a 0o "You have to be kidding me."
+    a 0i "Mio, this isn’t what I meant when I said ‘stand up for yourself’."
+    a "There’s a fine line..."
+    show mio zorder 3 at f41
+    show alice 0t zorder 2 at s43
+    mi "You don’t even know half of it!"
+    show natsuki at f44
+    show sayori at thide
+    hide sayori
+    show mio zorder 2 at t41
+    n 5bo "I’d be pretty ticked off if somebody called me toots. Don’t push it."
+    show alice zorder 3 at f43
+    show natsuki 5bo at t44
+    a 0o "My God, you remind me of Susie sometimes..."
+    a 0i "Go take a walk or something."
+    a "And, for goodness sake, get out of that damn uniform!"
+    show mio zorder 3 at f41
+    show alice 0n zorder 2 at t43
+    mi "You know what? I’ll do that; it’ll let me not stare at your faces right now."
     stop music fadeout 1.5
-    s 1bu "I don't like it when there's fights going around all the time."
-    s 1bw "It's like as if we'll never get along!"
-    play music t9
-    "Sayori starts crying quietly."
-    show yuri behind sayori at t43
-    show sayori 4bu at t22
-    y 1bl "There, there..."
-    y "There's no need to be upset."
-    y "It's just probably that we're all still waking up."
-    "Sayori continues sobbing into Yuri's chest as she embraces her."
-    "It's still impressive that we care so much for each other even though things go awry."
+    "Mio abruptly slams the door as she storms out."
+    show mio at thide
+    hide mio
+    show sayori 1ba at t41
+    show alice zorder 3 at f43
+    a 0g "Blimey! Looks like she woke up on the wrong side of the bed this morning..."
+    show natsuki at f44
+    show alice zorder 2 at t43
+    n 5bm "Wait... are you not bothered by th-{nw}"
+    play music t8
+    a 0m "Don’t ask. There are such things as ink demons, you know..."
+    show alice zorder 2 at t43
+    show natsuki at f44
+    n 5bq "Right..."
+    show sayori at f41
+    show natsuki at t44
+    s 1be "Is it over?"
+    show natsuki at f44
+    show sayori at t41
+    n 2bk "Looks like it. Let’s try to pick up where we were, okay?"
+    show sayori at f41
+    show natsuki at t44
+    s 4br "Ehehe~ so, which one’s the power button?"
+    show sayori at thide
+    show natsuki at thide
+    hide sayori
+    hide natsuki
+    show monika at t21
+    show alice at t22
+    "Sayori and Natsuki walk over to the equipment again and resume like nothing happened."
+    show monika at f21
+    m 1cg "Alice, I apologize if..."
+    show alice at f22
+    show monika at t21
+    a 0m "Ah, don’t sweat it. She can get pretty moody in the mornings."
+    a "I would be, too, but I already had my cups of coffee."
+    a "It’s kind of funny, really..."
+    a 0b "You remind me so much of my assistant, Sayonika. Trying to keep the peace and all..."
+    show monika at f21
+    show alice at t22
+    m 4cn "You seemed to handle it better than I did."
+    show alice at f22
+    show monika at t21
+    a 0k "Nah, I just gave her a good ol’ butt whooping."
+    a 0b "No big deal, really."
+    a "So, Monika, is there anything you’d need me to do for you?"
+    show monika at f21
+    show alice at t22
+    m 3cd "Well, it seems that we covered all of our bases here. I’m not sure if there’s something that hasn’t been done..."
+    show alice at f22
+    show monika at t21
+    a 0g "Well, surely there’s something I can assist with..."
+    
+    show alice at t22
+    show monika 1cc at t21
+    s "Umm, weren’t we supposed to have bacon with this?"
+    n "Yeah, why do you ask?"
+    s "Where’s the bacon?"
+    n "..."
+    n "Let me check the fridge."
+    s "Uh oh..."
+    n "Crap! There’s no bacon!"
+    show monika 1cf at t21
+    show alice 0c at t22
+    n "What are we going to do now?"
+    s "I don’t know! This is my first time baking!"
+    
+    show alice at f22
+    show monika at t21
+    a 0m "Well, there’s some form of an opportunity."
+    a 0d "I think we might have some downstairs, actually..."
+    show monika at f21
+    show alice at t22
+    m 2cd "Really?"
+    show alice at f22
+    show monika at t21
+    a 0b "Thomas really likes adding bacon to stuff."
+    a "It must have grown on him from all of the bacon soup we have."
+    show monika at f21
+    show alice at t22
+    m "I don’t suppose that..."
     return
 
 label ch2_end:

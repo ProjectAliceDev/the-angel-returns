@@ -76,6 +76,8 @@ init -1 style consent_button_frame:
     xalign .5
     yalign .5
 
+
+
 ## splash screen is first thing that gets shown to player
 init -100 python:
 
@@ -115,13 +117,17 @@ image menu_logo:
 
 image menu_bg:
     topleft
-    "mod_assets/images/menu/menu_bg.png"
-    menu_bg_move
+    block:
+        choice:
+            "mod_assets/images/menu/hl3.png"
+        choice:
+            "mod_assets/images/menu/hl3-2.png"
+    # menu_bg_move
 
 image game_menu_bg:
     topleft
-    "mod_assets/images/menu/menu_bg.png"
-    menu_bg_loop
+    "mod_assets/images/menu/hl3.png"
+#    menu_bg_loop
 
 image menu_fade:
     "white"
@@ -133,14 +139,6 @@ label menu_glitch:
     $ pause(0.25)
     hide screen tear
     return
-
-image menu_art_mi:
-    subpixel True
-    "mod_assets/images/mio/crossedarms.png"
-    xcenter 900
-    ycenter 420
-    zoom 0.65
-    menu_art_move(0.65, 900, 0.65)
 
 image menu_art_y:
     subpixel True
@@ -166,21 +164,29 @@ image menu_art_s:
     zoom 0.56
     menu_art_move(0.56, 665, 0.56)
 
-image menu_art_a:
-    subpixel True
-    "mod_assets/images/menu/menu_art_a.png"
-    xcenter 600
-    ycenter 580
-    zoom 0.85
-    menu_art_move(0.85, 600, 0.85)
-
 image menu_art_m:
     subpixel True
     "gui/menu_art_m.png"
     xcenter 1100
-    ycenter 400
-    zoom 0.65
-    menu_art_move(0.54, 1100, 0.65)
+    ycenter 580
+    zoom 0.60
+    menu_art_move(0.60, 600, 0.60)
+
+image menu_art_a:
+    subpixel True
+    "mod_assets/images/menu/menu_art_a.png"
+    xcenter 925
+    ycenter 590
+    zoom 0.80
+    menu_art_move(0.54, 1100, 0.80)
+
+image menu_art_mi:
+    subpixel True
+    "mod_assets/images/mio/crossedarms.png"
+    xcenter 700
+    ycenter 480
+    zoom 0.50
+    menu_art_move(0.30, 700, 0.50)
 
 image menu_art_y_ghost:
     subpixel True
@@ -291,7 +297,7 @@ image intro:
     "black"
     0.5
     "images/bg/splash-white.png" with Dissolve(0.5, alpha=True)
-    2.5
+    2.0
     "black" with Dissolve(0.5, alpha=True)
     0.5
 
@@ -384,7 +390,7 @@ label splashscreen:
     show black
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
-    $ config.main_menu_music = audio.t1
+    $ config.main_menu_music = audio.bt
     $ renpy.music.play(config.main_menu_music)
     show intro with Dissolve(0.5, alpha=True)
     pause 2.5
@@ -446,7 +452,7 @@ label autoload:
     jump expression persistent.autoload
 
 label before_main_menu:
-    $ config.main_menu_music = audio.t1
+    $ config.main_menu_music = audio.bt
     return
 
 label quit:

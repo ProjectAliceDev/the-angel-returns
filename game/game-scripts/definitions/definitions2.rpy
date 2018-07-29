@@ -17,7 +17,8 @@ image bg studio lift = "mod_assets/images/bg/studio-4.jpg"
 image bg studio office = "mod_assets/images/bg/studio-7.jpg"
 
 define audio.a4 = "mod_assets/music/b4g.ogg"
-define audio.bt = "mod_assets/music/ddlc_main_theme_jazz.ogg"
+define audio.bt = "<loop 18.073>mod_assets/music/theme.wav"
+define audio.bt3 = "mod_assets/music/theme2.wav"
 
 ## Demo Music
 ## This WILL be replaced in the final version of the game.

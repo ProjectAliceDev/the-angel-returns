@@ -8,7 +8,7 @@ define config.name = "Doki Doki: The Angel Returns"
 define gui.show_name = True
 
 # Version of the game
-define config.version = "0.1.2beta1"
+define config.version = "0.1.2beta2"
 
 # text placed on about screen
 define gui.about = _("")

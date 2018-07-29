@@ -562,7 +562,7 @@ init -1 style main_menu_vbox is vbox
 init -1 style main_menu_text is gui_text
 init -1 style main_menu_title is main_menu_text
 init -1 style main_menu_version is main_menu_text:
-    color "#000000"
+    color "#ffffff"
     size 16
     outlines []
 
@@ -589,6 +589,19 @@ init -1 style main_menu_text:
 init -1 style main_menu_title:
     size gui.title_text_size
 
+init -1 style info_title:
+    size gui.title_text_size
+    xpos gui.navigation_xpos
+    yalign 0.48
+    font "mod_assets/gui/font/generic.ttf"
+    color "#ffffffE6"
+    outlines [(1, "#33333380", 0, 0), (1, "#33333300", 1, 1)]
+
+init -1 style hl3_version_text:
+    color "#ffffff"
+    size 16
+    font "Resources/systemfont/Regular.ttf"
+    outlines []
 
 
 

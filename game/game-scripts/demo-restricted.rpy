@@ -39,7 +39,7 @@ label demo_end_2:
     scene bg mojave desktop
     show alice 0bl at t11
     a "I, uh, I {i}did{/i} say it was unfinished, ehehe~"
-    a 0bg "I'm sorry if that got a little emotional for you."
+    a 0bg "I'm sorry if that got a little awkward for you."
     a 0bf "At least you got to see my office, I guess..."
     a 0bo "{i}*Sigh*{/i}"
     a 0bt "Perhaps doing that was a bit of a mistake."
