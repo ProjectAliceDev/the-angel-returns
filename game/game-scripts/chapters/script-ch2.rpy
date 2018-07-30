@@ -295,6 +295,77 @@ label ch2_main:
     show monika at f21
     show alice at t22
     m "I don’t suppose that..."
+    show monika at t21
+    "Suddenly, the door opens."
+    "A girl with a wrench and pad of bacon steps down and looks at Alice."
+    "She reminded me a bit of Monika and Sayori, mixed together..."
+    sm "Alice! Oh, thank God I found you!"
+    show alice at f22
+    a 0d "Eh?"
+    a "You were looking for me?"
+    "The girl jumps into our group and starts breathing heavily."
+    show monika at t31
+    show alice at t32
+    show sayonika 1a at t33
+    sm "{i}*Pant*{/i}"
+    sm "Tom wanted me to give you this... pack.. of..."
+    show alice at f32
+    a "Jeez, Sayonika, did you run a marathon?"
+    $ sm_name = "Sayonika"
+    show alice at t32
+    show sayonika at f33
+    sm "Well, this place is really big..."
+    sm "And this bacon is really cold..."
+    sm "I think my fingers are frozen and stuck to the package."
+    sm "Ehehe~"
+    show sayonika at t33
+    show alice at f32
+    a 0m "There are lifts, you know..."
+    show sayonika at f33
+    show alice at t32
+    sm "I thought those were still broken!"
+    sm "Did Tom fix them already?"
+    show monika at f31
+    show sayonika at t33
+    m 4cd "So you must be Alice's assistant?"
+    show sayonika at f33
+    show monika at t31
+    sm "Well, more like her 'partner in crime'."
+    sm "I help her with some of the server-side programming and that sort of thing."
+    sm "If that made sense..."
+    sm "Anyways, who are you?"
+    show alice at f32
+    show sayonika at t33
+    a 0b "This is Monika, the president of the literature club that Mio's a part of."
+    show sayonika at f33
+    show alice at t32
+    sm "Oh, the literature club!"
+    sm "No wonder you looked familiar."
+    sm "For a minute, I thought you were a cosplayer or something!"
+    show monika at f31
+    show sayonika at t33
+    m 1cg "Eh?"
+    m "What do you mean?"
+    show alice at f32
+    show monika at t31
+    a 0m "Ehehe~"
+    a "That's... a long sto-{nw}"
+    a "Nevermind. Don't overthink it; I'll explain it to you later."
+    a 0d "It's a lot less complicated for you than it is for anyone else."
+    show monika at f31
+    show alice at t32
+    m 1co "..."
+    m 1cp "Oh."
+    m 1cm "I understand now."
+    m "Ehehe~"
+    m 1cb "Fair enough! Say, I think Natsuki and Sayori needed some bacon."
+    show sayonika at f33
+    show monika at t31
+    sm "Yeah, Tom knew about the girls coming."
+    sm "He wanted me to give you girls this pack since has has a lot in the freezer."
+    sm "Good luck trying to pry it from my hands, though..."
+    sm "And I don't mean that in a selfish way. I think my hands are actually stuck to the package."
+    
     return
 
 label ch2_end:

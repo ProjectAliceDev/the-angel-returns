@@ -166,7 +166,7 @@ image menu_art_s:
 
 image menu_art_m:
     subpixel True
-    "gui/menu_art_m.png"
+    "mod_assets/images/menu/menu_art_sm.png"
     xcenter 1100
     ycenter 580
     zoom 0.60

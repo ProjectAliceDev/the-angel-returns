@@ -16,6 +16,7 @@ label start:
     $ n_name = "Natsuki"
     $ y_name = "Yuri"
     $ mi_name = "Mio"
+    $ sm_name = "???"
 
     $ quick_menu = True
     $ style.say_dialogue = style.normal
