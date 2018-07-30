@@ -6,8 +6,12 @@ screen main_menu():
     style_prefix "main_menu"
 
     add "menu_bg"
-    add "menu_art_y"
-    add "menu_art_n"
+    # add "menu_art_n"
+    # add "menu_art_s"
+    # add "menu_art_y"
+    add "menu_art_m"
+    add "menu_art_mi"
+    add "menu_art_a"
     frame:
         pass
 
@@ -15,24 +19,19 @@ screen main_menu():
 ## contents of the main menu are in the navigation screen.
     use navigation
 
-    add "menu_particles"
-    add "menu_particles"
-    add "menu_particles"
-    add "menu_logo"
-    add "menu_art_s"
-    add "menu_particles"
-    add "menu_art_m"
-    add "menu_art_a"
-    add "menu_fade"
+#    add "menu_particles"
+#    add "menu_particles"
+#    add "menu_particles"
+#    add "menu_logo"
+#    add "menu_particles"
+#    add "menu_fade"
+    text "[config.name!t]":
+        style "info_title"
 
     if gui.show_name:
-
         vbox:
-            text "[config.name!t]":
-                style "main_menu_title"
-
             text "v. [config.version]":
-                style "main_menu_version"
+                style "hl3_version_text"
 
 
     key "K_ESCAPE" action Quit(confirm=False)

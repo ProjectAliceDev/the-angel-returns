@@ -116,3 +116,7 @@ game/cache/bytecode.rpyb
 game/cache/pyanalysis.rpyb
 game/cache/screens.rpyb
 game/*.rpyc
+
+# AliceOS-specific files
+game/*.apf
+game/*.moj

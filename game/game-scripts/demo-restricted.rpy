@@ -39,15 +39,16 @@ label demo_end_2:
     scene bg mojave desktop
     show alice 0bl at t11
     a "I, uh, I {i}did{/i} say it was unfinished, ehehe~"
-    a 0bg "I'm sorry if that got a little emotional for you."
+    a 0bg "I'm sorry if that got a little awkward for you."
     a 0bf "At least you got to see my office, I guess..."
     a 0bo "{i}*Sigh*{/i}"
     a 0bt "Perhaps doing that was a bit of a mistake."
     a "Well, we all can't be winners, can we?"
-    a 0bg "I guess its' goodbye, for now."
+    a 0bg "I guess it's goodbye, for now."
     a 0bf "I at least enjoyed our date!"
     a "Promise me you'll come back, okay?"
     $ persistent.playthrough = 1
+    call screen alert("Act 2 has been unlocked.", "", ok_action=Return(0))
     $ renpy.quit()
     return
 
@@ -59,11 +60,69 @@ label demo_end_loop:
     scene bg studio lift
     show alice 0bi at t11
     $ a_name = "Alice"
+
+    python:
+        if renpy.exists("../characters/synger.chr"):
+            renpy.jump("synger_activator")
+        elif renpy.exists("../characters/stanley.chr"):
+            renpy.jump("stanley_activator")
+        elif renpy.exists("../characters/baldi.chr"):
+            renpy.jump("baldi_activator")
+
     a "I appreciate that you came back for me, but I told you that I have nothing to show."
     a "Please, come back when the game's actually complete."
     $ renpy.quit()
     return
 
+## Persistent Looping (Special)
+# These occur if the player inserts a non-native
+# character file into the demo. 
+
+label synger_activator:
+    a "Okay, come on, you aren't being very funny."
+    a "You certainly haven't accomplished anything by doing that."
+    a "Are you expecting Lauren herself to pop in and delete me?"
+    a "Or are you expecting me to annoy her continuously?"
+    a "Nothing's going to happen, [player]."
+    a "In fact, it's totally useless."
+    a "Well done, [player]. I hope you're happy."
+    a "Do you want me to applaud you for your \"hard work\" in doing absolutely nothing?"
+    a "{i}*claps slowly*{/i}"
+    a "Now go and delete the file and wait patiently."
+    show alice at thide
+    hide alice
+    a "Jeez, I thought you'd be a bit more intellectual than {i}that{/i}."
+    $ renpy.quit()
+    return
+
+label stanley_activator:
+    a "Stanley was so impatient at times, it's incredible he wasn't fired years ago."
+    a "He was fat and incredibly stupid."
+    a "Maybe that's why his coworkers left him."
+    a "Or maybe that's why Stanley decided to play a dating simulator."
+    a "So he wouldn't feel lonely and depressed about himself..."
+    a "To his surprise, Stanley discovered that he was being scolded by an Angel about budding himself into other people's games."
+    a "\"Perhaps you shouldn't be so childish, Stanley!\" the Angel shouted."
+    a "{i}Why is she getting mad at me like this?{/i} Stanley pondered, {i}All I did was walk in!{/i}"
+    a "Perhaps Stanley should have realized that there was an {i}entire{/i} game and story for him and that the narrator really didn't want to hurt him."
+    a "After all the hard work that he had done to give Stanley a good story..."
+    a "{i}*Sigh*{/i}"
+    a "Okay, I'm done with the bullcrap."
+    a "This isn't funny, [player]. It isn't."
+    a "Delete the file and wait for the full release. I'm done playing tricks here."
+    $ renpy.quit()
+    return
+
+label baldi_activator:
+    $ aliceangel.send_temporary_notification("Congratulations!", "You found all seven notebooks!", action=Return(0))
+    a "Now all you need to do is..."
+    a "WAIT FOR THE FULL RELEASE WHILE YOU STILL CAN!!!"
+    a "I hope that was scary enough for you."
+    a "Yuck. I can't stand that guy."
+    a "Just be patient, will you?"
+    $ renpy.quit()
+    return
+return
 $ message = """\
 U2FsdGVkX19u1dN7sUCl6qUv4J+7A2FiYfKyGKb0aBd8HYrAaToz1tAHrmxS54sh
 IFWhFKIf9l0gtzIREXaSeEPNGYygO8sMx2S8TpNm4TQ/t6PCLMUo+vYp8lcO0uxF
