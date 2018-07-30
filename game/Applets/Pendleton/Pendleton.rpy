@@ -46,11 +46,7 @@ AliceOS System sends notifications to inform you about actions that happen betwe
             # Pendleton is a system-wide service. This command overrrides
             # any permissions and takes on a system-like role. This should
             # NOT be used for third-party Applets!
-            if not renpy.exists(config.basedir + "game/Pendleton.apf"):
-                with open(config.basedir + "/game/Pendleton.apf", "w+") as f:
-                    f.write('pm_notify\n')
-            else:
-                pass
+            persistent.aliceos_permissions["Pendleton_notify"] = True
                 
     
     SystemUIServer = Pendleton()

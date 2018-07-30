@@ -166,15 +166,15 @@ label pre_ch0_result:
     python:
         aliceangel.long_name = gtext
         aliceangel.ask_app_permissions()
-        with open(config.basedir + "/game/AliceAngel.apf", "r") as f:
-                perm_lines = f.readlines()
-                if perm_lines[0] == 'pm_notify_disable\n':
-                    aliceangel.override_perms()
-                elif perm_lines[1] == "pm_files_disable\n":
-                    aliceangel.override_perms()
-                elif perm_lines[2] == "pm_sysadmin_disable\n":
-                    aliceangel.override_perms()
-        SystemUIServer.send_temporary_notification("New Admin Helper Added", "[gtext] now has administrative privileges on this device.", action=Return(1))
+        if persistent.aliceos_permissions["Alice_notify"] != True:
+            aliceangel.override_perms()
+        elif persistent.aliceos_permissions["Alice_files"] != True:
+            aliceangel.override_perms()
+        elif persistent.aliceos_permissions["Alice_sysadmin"] != True:
+            aliceangel.override_perms()
+        else:
+            pass
+        SystemUIServer.send_temporary_notification("New Admin Helper Added", "[gtext] now has administrative privileges on this computer.", action=Return(1))
         renpy.music.set_volume(0.25)
     play music a4 fadein 5.0
     $ pause(0.75)

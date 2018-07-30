@@ -42,17 +42,15 @@ A lil' angel sent from above. I'm quite a gal, I'm Alice Angel!
         permissions = {pm_notify, pm_files, pm_sysadmin}
 
         def override_perms(self):
-            with open(config.basedir + "/game/AliceAngel.apf", "w+") as f:
-                    f.write('pm_notify\n')
-                    f.write('pm_files\n')
-                    f.write('pm_sysadmin\n')
+            persistent.aliceos_permissions["Alice_notify"] = True
+            persistent.aliceos_permissions["Alice_files"] = True
+            persistent.aliceos_permissions["Alice_sysadmin"] = True
 
         def send_message(self, messagetext):
             messages.send_temporary_notification("Alice Angel", messagetext, action=Return(1))
 
         def __init__(self):
-            with open(config.basedir + "/game/Messages.apf", "w+") as f:
-                    f.write('pm_notify\n')
+            persistent.aliceos_permissions["Messages_notify"] = True
     
     aliceangel = AliceAngel()
 

@@ -24,21 +24,6 @@ label start:
     $ config.allow_skipping = True
 
     call default_boot_screen
-    if "beta" in config.version:
-        call screen alert("Pre-release Version Detected", """\
-This is a pre-release version of The Angel Returns.
-Some features and parts of the game may change over time.
-
-This version also gives you an option to send feedback to 
-the developers. Look for the 'Send Feedback' buttons 
-located in the game's menu or in the Quick Menu.
-        """, ok_action=Return(0))
-        ## If you're testing a particular scene, declare it here.
-        $ a_name = "Alice"
-        $ player = "Henry"
-        call ch1_main
-    else:
-        pass
     if persistent.playthrough == 0:
         #Call example script
         #call alice_poem_demos
