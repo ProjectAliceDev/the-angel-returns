@@ -1,7 +1,7 @@
 import os
 
 # Set this variable equal to the location of where your Ren'Py install is!
-renpy = "/home/marquiskurt/Desktop/renpy-6.99.14.3-sdk/renpy.sh"
+renpy = "/Applications/RenPy\ SDK\ \(DDLC-compatible\)/renpy.sh"
 
 print("Running DDTAR in developer mode...")
 

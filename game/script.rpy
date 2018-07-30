@@ -15,6 +15,7 @@ label start:
     $ m_name = "Monika"
     $ n_name = "Natsuki"
     $ y_name = "Yuri"
+    $ mi_name = "Mio"
 
     $ quick_menu = True
     $ style.say_dialogue = style.normal
@@ -22,7 +23,7 @@ label start:
     $ allow_skipping = True
     $ config.allow_skipping = True
 
-
+    call default_boot_screen
     if persistent.playthrough == 0:
         #Call example script
         #call alice_poem_demos

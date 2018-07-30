@@ -6,17 +6,6 @@
 
 
 
-
-
-
-init -1 style default:
-    font gui.default_font
-    size gui.text_size
-    color gui.text_color
-    outlines [(2, "#000000aa", 0, 0)]
-    line_overlap_split 1
-    line_spacing 1
-
 init -1 style default_monika is normal:
     slow_cps 30
 
@@ -67,7 +56,7 @@ init -1 style poemgame_text:
 
 init -1 style gui_text:
     font gui.interface_font
-    color gui.interface_text_color
+    color "#0e141f"
     size gui.interface_text_size
 
 
@@ -392,6 +381,10 @@ init -501 screen quick_menu():
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Load") action ShowMenu('load')
 
+            # Insider Content
+            if "beta" in config.version:
+                textbutton _("Send Feedback") action [Help("feedback.html"), Show(screen="alert", title="Feedback Tool Opened", message="The feedback tool has been opened in your browser.\nIf it doesn't open properly, please file an issue on GitHub.", ok_action=Hide("alert"))]
+
 
             textbutton _("Settings") action ShowMenu('preferences')
 
@@ -409,10 +402,12 @@ default -1 quick_menu = True
 init -1 style quick_button:
     properties gui.button_properties("quick_button")
     activate_sound gui.activate_sound
+    color "#0e141f"
 
 init -1 style quick_button_text:
     properties gui.button_text_properties("quick_button")
     outlines []
+    color "#0e141f"
 
 
 
@@ -471,7 +466,9 @@ init -501 screen navigation():
 
             textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
 
-
+            # Insider Content
+            if "beta" in config.version:
+                textbutton _("Send Feedback") action [Help("feedback.html"), Show(screen="alert", title="Feedback Tool Opened", message="The feedback tool has been opened in your browser.\nIf it doesn't open properly, please file an issue on GitHub.", ok_action=Hide("alert"))]
 
             if renpy.variant("pc"):
 
@@ -495,11 +492,11 @@ init -1 style navigation_button:
 
 init -1 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-    font "mod_assets/gui/font/generic2.ttf"
-    color "#fff"
-    outlines [(3, "#986c0b", 0, 0), (1, "#986c0b", 1, 1)]
-    hover_outlines [(4, "#fac", 0, 0), (2, "#fac", 2, 2)]
-    insensitive_outlines [(4, "#fce", 0, 0), (2, "#fce", 2, 2)]
+    font "Resources/systemfont/Medium.ttf"
+    color "#485a6c"
+    outlines [(3, "#f9c440", 0, 0), (1, "#f9c440", 1, 1)]
+    hover_outlines [(4, "#fff394", 0, 0), (2, "#fff394", 2, 2)]
+    insensitive_outlines [(4, "#d48e15", 0, 0), (2, "#d48e15", 2, 2)]
 
 
 
@@ -534,8 +531,8 @@ init -501 screen main_menu() tag menu:
     if gui.show_name:
 
         vbox:
-            text "[config.name!t]":
-                style "main_menu_title"
+            # text "[config.name!t]":
+                # style "main_menu_title"
 
             text "[config.version]":
                 style "main_menu_version"
@@ -565,7 +562,7 @@ init -1 style main_menu_vbox is vbox
 init -1 style main_menu_text is gui_text
 init -1 style main_menu_title is main_menu_text
 init -1 style main_menu_version is main_menu_text:
-    color "#000000"
+    color "#ffffff"
     size 16
     outlines []
 
@@ -592,6 +589,19 @@ init -1 style main_menu_text:
 init -1 style main_menu_title:
     size gui.title_text_size
 
+init -1 style info_title:
+    size gui.title_text_size
+    xpos gui.navigation_xpos
+    yalign 0.48
+    font "mod_assets/gui/font/generic.ttf"
+    color "#ffffffE6"
+    outlines [(1, "#33333380", 0, 0), (1, "#33333300", 1, 1)]
+
+init -1 style hl3_version_text:
+    color "#ffffff"
+    size 16
+    font "Resources/systemfont/Regular.ttf"
+    outlines []
 
 
 
@@ -719,10 +729,10 @@ init -1 style game_menu_label:
     ysize 120
 
 init -1 style game_menu_label_text:
-    font "mod_assets/gui/font/generic2.ttf"
+    font "Resources/systemfont/Medium.ttf"
     size gui.title_text_size
-    color "#fff"
-    outlines [(3, "#986c0b", 0, 0), (1, "#986c0b", 1, 1)]
+    color "#485a6c"
+    outlines [(3, "#f9c440", 0, 0), (1, "#f9c440", 1, 1)]
     yalign 0.5
 
 init -1 style return_button:
@@ -851,7 +861,7 @@ init -501 screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("This slot is empty.")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):
@@ -1054,10 +1064,10 @@ init -1 style pref_label:
     bottom_margin 2
 
 init -1 style pref_label_text:
-    font "mod_assets/gui/font/generic2.ttf"
+    font "Resources/systemfont/Medium.ttf"
     size 24
-    color "#fff"
-    outlines [(3, "#986c0b", 0, 0), (1, "#986c0b", 1, 1)]
+    color "#485a6c"
+    outlines [(1, "#f9c440", 0, 0), (1, "#f9c440", 0, 0)]
     yalign 1.0
 
 init -1 style pref_vbox:
@@ -1528,7 +1538,8 @@ transform -1 delayed_blink(delay, cycle):
 
 
 init -1 style skip_frame is empty
-init -1 style skip_text is gui_text
+init -1 style skip_text is gui_text:
+    color "#fff"
 init -1 style skip_triangle is skip_text
 
 init -1 style skip_frame:
@@ -1611,6 +1622,10 @@ screen say(who, what):
                 window:
                     style "nameboxpink"
                     text who id "who"
+            if who == mi_name: #Mio namebox
+                window:
+                    style "nameboxred"
+                    text who id "who"
             if who == player: #MC namebox
                 window:
                     style "namebox_mc"
@@ -1673,6 +1688,15 @@ style nameboxpink:
     background Frame("/mod_assets/images/gui/nameboxpink.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
+style nameboxred:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+    background Frame("/mod_assets/images/gui/nameboxred.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
 
 # We are not using "style say_label_blue is say_label" because it makes the game crash if you use rollback
 # if you don't use rollback you can replace all the window codes for something like this:
@@ -1703,6 +1727,14 @@ style say_label_amber:
     xalign gui.name_xalign
     yalign 0.5
     outlines [(3, "#986c0b", 0, 0), (1, "#986c0b", 1, 1)]
+
+style say_label_red:
+    color gui.accent_color
+    font gui.name_font
+    size gui.name_text_size
+    xalign gui.name_xalign
+    yalign 0.5
+    outlines [(3, "#c6262e", 0, 0), (1, "#c6262e", 1, 1)]
 
 style say_label_green:
     color gui.accent_color

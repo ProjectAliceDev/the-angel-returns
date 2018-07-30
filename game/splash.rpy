@@ -1,3 +1,83 @@
+init -1000 python:
+    consent_warning_message = """\
+The Angel Returns is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato or theMeatly Games Ltd. It is designed to be played only after the official game has been completed, and contains spoilers for the official game(s). Game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at: http://ddlc.moe. This game also contains highly sensitive content and is not suitable for children or those who are easily disturbed. By clicking "I Agree", you acknowledge this disclaimer and continue at your own risk.
+    """
+    
+init -501 screen disclaimer_alert:
+    modal True
+    style_prefix "consent"
+    zorder 2000
+    add "gui/overlay/confirm.png"
+
+
+    frame:
+        xsize 600
+        ysize 656
+        style "confirm_frame"
+        
+        has vbox:
+            xalign .5
+            yalign .5
+            spacing 16
+            
+
+        add "mod_assets/images/gui/warning.png":
+            xalign 0.5
+        label _("Consent Warning"):
+            style "consent_title"
+            xalign 0.5
+
+        label _(consent_warning_message):
+            style "consent_message"
+            xalign 0.5
+
+        frame:
+            xalign 0.5
+            xsize 568
+            style "consent_button_frame"
+
+            hbox:
+                xalign 0.5
+                spacing 32
+
+                textbutton _("I agree") action Return(0):
+                    style "consent_button"
+                    xpadding 128
+
+init -1 style consent_title_text is gui_prompt
+init -1 style consent_message_text is gui_prompt_text
+
+init -1 style consent_title_text:
+    color "#000"
+    font "Resources/systemfont/Black.ttf"
+    size 48
+    layout "subtitle"
+    outlines []
+    text_align 0.5
+
+init -1 style consent_message_text:
+    color "#000"
+    font "Resources/systemfont/Regular.ttf"
+    size 20
+    outlines []
+    layout "subtitle"
+    justify True
+
+init -1 style consent_button_text:
+    color "#fff"
+    font "Resources/systemfont/Bold.ttf"
+    outlines []
+    layout "subtitle"
+
+init -1 style consent_button_frame:
+    background Frame(["gui/consent_button_frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    xpadding 32
+    ypadding 16
+    xalign .5
+    yalign .5
+
+
+
 ## splash screen is first thing that gets shown to player
 init -100 python:
 
@@ -12,12 +92,15 @@ init python:
 
     splash_message_default = "This game is not suitable for children\nor those who are easily disturbed."
 
+    splash_message_beta = "This is a prerelease version of The Angel Returns: Demo.\nSome things may be changed in the future."
+
     splash_messages = [
         "The choices of the beautiful are unbearable.",
         "It took so many tries to make this beautiful.",
-        "Fear the Ink Demon.",
-        "No angels! He will set us free!",
-        "This game is not suitable for children\nor those who are easily disturbed?"
+        "Fear more than the Ink Demon.",
+        "This game is not suitable for children\nor those who are easily disturbed?",
+        "Dark nights are upon us!",
+        "You will be forever mine."
     ]
 
 
@@ -34,16 +117,20 @@ image menu_logo:
 
 image menu_bg:
     topleft
-    "mod_assets/images/menu/menu_bg.png"
-    menu_bg_move
+    block:
+        choice:
+            "mod_assets/images/menu/hl3.png"
+        choice:
+            "mod_assets/images/menu/hl3-2.png"
+    # menu_bg_move
 
 image game_menu_bg:
     topleft
-    "mod_assets/images/menu/menu_bg.png"
-    menu_bg_loop
+    "mod_assets/images/menu/hl3.png"
+#    menu_bg_loop
 
 image menu_fade:
-    "black"
+    "white"
     menu_fadeout
 
 label menu_glitch:
@@ -53,45 +140,53 @@ label menu_glitch:
     hide screen tear
     return
 
-image menu_art_a:
-    subpixel True
-    "mod_assets/images/menu/menu_art_a.png"
-    xcenter 1000
-    ycenter 640
-    zoom 1.00
-    menu_art_move(1.00, 1000, 1.00)
-
 image menu_art_y:
     subpixel True
     "gui/menu_art_y.png"
-    xcenter 750
+    xcenter 825
     ycenter 335
     zoom 0.60
-    menu_art_move(0.54, 600, 0.60)
+    menu_art_move(0.54, 825, 0.60)
 
 image menu_art_n:
     subpixel True
     "gui/menu_art_n.png"
-    xcenter 600
-    ycenter 385
+    xcenter 460
+    ycenter 400
     zoom 0.58
-    menu_art_move(0.58, 750, 0.56)
+    menu_art_move(0.54, 750, 0.54)
 
 image menu_art_s:
     subpixel True
     "gui/menu_art_s.png"
-    xcenter 510
-    ycenter 500
-    zoom 0.68
-    menu_art_move(0.68, 510, 0.68)
+    xcenter 665
+    ycenter 345
+    zoom 0.56
+    menu_art_move(0.56, 665, 0.56)
 
 image menu_art_m:
     subpixel True
     "gui/menu_art_m.png"
-    xcenter 930
-    ycenter 335
+    xcenter 1100
+    ycenter 580
     zoom 0.60
-    menu_art_move(0.54, 600, 0.58)
+    menu_art_move(0.60, 600, 0.60)
+
+image menu_art_a:
+    subpixel True
+    "mod_assets/images/menu/menu_art_a.png"
+    xcenter 925
+    ycenter 590
+    zoom 0.80
+    menu_art_move(0.54, 1100, 0.80)
+
+image menu_art_mi:
+    subpixel True
+    "mod_assets/images/mio/crossedarms.png"
+    xcenter 700
+    ycenter 480
+    zoom 0.50
+    menu_art_move(0.30, 700, 0.50)
 
 image menu_art_y_ghost:
     subpixel True
@@ -201,8 +296,8 @@ image intro:
     truecenter
     "black"
     0.5
-    "mod_assets/images/bg/splash-white.png" with Dissolve(0.5, alpha=True)
-    2.5
+    "images/bg/splash-white.png" with Dissolve(0.5, alpha=True)
+    2.0
     "black" with Dissolve(0.5, alpha=True)
     0.5
 
@@ -211,7 +306,7 @@ image warning:
     "black"
     "splash_warning" with Dissolve(0.5, alpha=True)
     2.5
-    "black" with Dissolve(0.5, alpha=True)
+    "white" with Dissolve(0.5, alpha=True)
     0.5
 
 image tos = "mod_assets/images/menu/warning.png"
@@ -246,21 +341,34 @@ label splashscreen:
     default persistent.first_run = False
     if not persistent.first_run:
         $ quick_menu = False
+        stop music fadeout 1.0
+        scene black
+        show powered_by_text:
+            xalign 0.3
+            yalign 0.4
+        show alice_os_name at truecenter
+        show boot_copyright:
+            xalign 0.5
+            yalign 1.0
+        pause 3.0
         scene black
         pause 0.5
         scene tos
         with Dissolve(1.0)
         pause 1.0
+        # call screen alert("Mod Disclaimer", """\
+        # [config.name] is a Doki Doki Literature Club fan mod that is not affiliated 
+        # with Team Salvato or theMeatly Games Ltd. It is designed to be played only after 
+        # the official game has been completed, and contains spoilers for the official game(s).
+        # Game files for Doki Doki Literature Club are required to play this mod and can be 
+        # downloaded for free at: http://ddlc.moe
+        # 
+        # By playing [config.name] you agree that you have completed Doki Doki Literature 
+        # Club and Bendy and the Ink Machine and accept any spoilers contained within.
+        # """, ok_action=Return(0))
 
-        "[config.name] is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato."
-        "It is designed to be played only after the official game has been completed, and contains spoilers for the official game."
-        "Game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at: http://ddlc.moe"
-
-        menu:
-            "By playing [config.name] you agree that you have completed Doki Doki Literature Club and accept any spoilers contained within."
-            "I agree.":
-
-                pass
+        call screen disclaimer_alert
+        
         scene tos2
         with Dissolve(1.5)
         pause 1.0
@@ -282,6 +390,7 @@ label splashscreen:
     show black
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
+    $ config.main_menu_music = audio.bt
     $ renpy.music.play(config.main_menu_music)
     show intro with Dissolve(0.5, alpha=True)
     pause 2.5
@@ -289,10 +398,13 @@ label splashscreen:
 
     if persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
         $ splash_message = renpy.random.choice(splash_messages)
+    elif "beta" in config.version:
+        $ splash_message = splash_message_beta
     show splash_warning "[splash_message]" with Dissolve(0.5, alpha=True)
     pause 2.0
     hide splash_warning with Dissolve(0.5, alpha=True)
     $ config.allow_skipping = True
+    scene white with Dissolve(0.5, alpha=True)
     return
 
 label warningscreen:
@@ -340,7 +452,7 @@ label autoload:
     jump expression persistent.autoload
 
 label before_main_menu:
-    $ config.main_menu_music = audio.t1
+    $ config.main_menu_music = audio.bt
     return
 
 label quit:
