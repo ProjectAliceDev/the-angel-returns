@@ -50,6 +50,7 @@ label start:
         ## Disable this segment if it isn't the demo.
         call demo_end
         call ch2_main
+        call ch2_cg
         call demo_end_2
 
     if persistent.playthrough == 1:

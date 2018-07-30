@@ -92,15 +92,18 @@ init python:
 
     splash_message_default = "This game is not suitable for children\nor those who are easily disturbed."
 
-    splash_message_beta = "This is a prerelease version of The Angel Returns: Demo.\nSome things may be changed in the future."
+    splash_message_beta = "This is a prerelease version of The Angel Returns.\nSome things may be changed in the future."
 
     splash_messages = [
         "The choices of the beautiful are unbearable.",
         "It took so many tries to make this beautiful.",
         "Fear more than the Ink Demon.",
-        "This game is not suitable for children\nor those who are easily disturbed?",
         "Dark nights are upon us!",
-        "You will be forever mine."
+        "You will be forever mine.",
+        "I've waited here for the longest time.",
+       "This game is not suitable for children\nor those who are easily disturbed?",
+       "This game is not suitable for children\nor those who are easily dismembered.",
+       "This game is not suitable for children\nor those who are easily disguarded."
     ]
 
 
@@ -130,7 +133,7 @@ image game_menu_bg:
 #    menu_bg_loop
 
 image menu_fade:
-    "white"
+    "black"
     menu_fadeout
 
 label menu_glitch:
@@ -274,6 +277,13 @@ transform menu_nav_move:
     time 1.5
     easein_quint 1 xoffset 0
 
+transform menu_fadein:
+    easeout 0.75 alpha 0
+    time 2.481
+    alpha 0.6
+    easeout 0.5 alpha 1
+
+
 transform menu_fadeout:
     easeout 0.75 alpha 0
     time 2.481
@@ -356,19 +366,7 @@ label splashscreen:
         scene tos
         with Dissolve(1.0)
         pause 1.0
-        # call screen alert("Mod Disclaimer", """\
-        # [config.name] is a Doki Doki Literature Club fan mod that is not affiliated 
-        # with Team Salvato or theMeatly Games Ltd. It is designed to be played only after 
-        # the official game has been completed, and contains spoilers for the official game(s).
-        # Game files for Doki Doki Literature Club are required to play this mod and can be 
-        # downloaded for free at: http://ddlc.moe
-        # 
-        # By playing [config.name] you agree that you have completed Doki Doki Literature 
-        # Club and Bendy and the Ink Machine and accept any spoilers contained within.
-        # """, ok_action=Return(0))
-
         call screen disclaimer_alert
-        
         scene tos2
         with Dissolve(1.5)
         pause 1.0
@@ -404,7 +402,7 @@ label splashscreen:
     pause 2.0
     hide splash_warning with Dissolve(0.5, alpha=True)
     $ config.allow_skipping = True
-    scene white with Dissolve(0.5, alpha=True)
+    with fade
     return
 
 label warningscreen:
@@ -421,10 +419,7 @@ label after_load:
     if anticheat != persistent.anticheat:
         stop music
         scene black
-        "The save file could not be loaded."
-        "Are you trying to cheat?"
-
-
+        call screen alert("Cannot Load Save File", "Are you trying to cheat?", ok_action=Return(0))
         $ renpy.utter_restart()
     return
 

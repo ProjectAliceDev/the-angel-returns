@@ -4,7 +4,7 @@ screen main_menu():
     tag menu
 
     style_prefix "main_menu"
-
+    
     add "menu_bg"
     # add "menu_art_n"
     # add "menu_art_s"
