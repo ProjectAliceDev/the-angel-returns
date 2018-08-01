@@ -16,7 +16,8 @@ init -1000 python:
                     }
     rsod_search_text = "If you'd like to know more, you can search online later for this error: "
 
-image rsod_bg = "#c6262e"
+image rsod_bg_backup = "#c6262e"
+image rsod_bg = "Resources/rsod_overlay.png"
 image rsod_face = Text(":(", font="Resources/systemfont/Regular.ttf", size=128, color="#ff8c82", style="_default")
 image rsod_generic_message = Text("AliceOS ran into an error it couldn't handle and\nneeds to restart.", font="Resources/systemfont/Regular.ttf", size=48, color="#ffffff", style="_default")
 
