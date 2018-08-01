@@ -533,9 +533,10 @@ init -501 screen main_menu() tag menu:
         vbox:
             # text "[config.name!t]":
                 # style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
+            text "v. [config.version] (" + snapshottime + ")":
+                style "hl3_version_text"
+            text "For evauluation purposes only.":
+                style "hl3_version_text"
 
     if not persistent.ghost_menu:
         add "menu_particles"
@@ -1014,10 +1015,15 @@ init -501 screen preferences() tag menu:
                         textbutton _("Mute All"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
-    text "v[config.version]":
-        xalign 1.0 yalign 1.0
-        xoffset -10 yoffset -10
-        style "main_menu_version"
+    if gui.show_name:
+        vbox:
+            xalign 1.0 yalign 1.0
+            xoffset -10 yoffset -10
+            text "v. [config.version] (" + snapshottime + ")":
+                style "main_menu_version"
+            text "For evauluation purposes only.":
+                style "main_menu_version"
+
 
 init -1 style pref_label is gui_label
 init -1 style pref_label_text is gui_label_text

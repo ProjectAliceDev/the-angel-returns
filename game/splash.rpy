@@ -170,7 +170,7 @@ image menu_art_s:
 image menu_art_m:
     subpixel True
     "mod_assets/images/menu/menu_art_sm.png"
-    xcenter 1100
+    xcenter 1050
     ycenter 580
     zoom 0.60
     menu_art_move(0.60, 600, 0.60)
@@ -178,7 +178,7 @@ image menu_art_m:
 image menu_art_a:
     subpixel True
     "mod_assets/images/menu/menu_art_a.png"
-    xcenter 925
+    xcenter 875
     ycenter 590
     zoom 0.80
     menu_art_move(0.54, 1100, 0.80)

@@ -1,6 +1,7 @@
 init -1 python:
     import datetime
-    snapshottime = "nightly_pht-" + datetime.datetime.now().strftime ("%m%d%Y")
+#    snapshottime = "nightly_pht-" + datetime.datetime.now().strftime ("%m%d%Y")
+    snapshottime = "nightly_pht-08012018"
 
 
 screen main_menu():
@@ -35,9 +36,9 @@ screen main_menu():
 
     if gui.show_name:
         vbox:
-            text "v. [config.version]":
+            text "v. [config.version] (" + snapshottime + ")":
                 style "hl3_version_text"
-            text snapshottime:
+            text "For evauluation purposes only.":
                 style "hl3_version_text"
 
 
@@ -87,5 +88,5 @@ init -1 style hl3_version_text:
     color "#ffffff"
     size 16
     font "Resources/systemfont/Regular.ttf"
-    outlines []
+    outlines [(1, "#33333380", 0, 0), (1, "#33333300", 1, 1)]
     xalign 1.0
