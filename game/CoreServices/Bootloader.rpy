@@ -17,6 +17,7 @@ label default_boot_screen:
     #Validating GOBFADU Policy Exists
     if renpy.exists("../game/CoreServices/gobfadu/gobfadupolicy/gobfadupolicygobfadu.rpy"):
         call Integrity
+        pass
     else:
         pass
         #This is where a BIOS HDD/SSD will report DISK BOOT FAILURE or something similar.
@@ -38,6 +39,7 @@ label oem_boot_screen:
     #Validating GOBFADU Policy Exists
     if renpy.exists("../game/CoreServices/gobfadu/gobfadupolicy/gobfadupolicygobfadu.rpy"):
         call Integrity
+        pass
     else:
         pass
         #This is where a BIOS HDD/SSD will report DISK BOOT FAILURE or something similar.

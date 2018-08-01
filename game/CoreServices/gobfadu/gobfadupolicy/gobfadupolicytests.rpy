@@ -8,7 +8,6 @@ label gobfadupolicytests:
     call gobfadutestverify
 label gobfadutestverify:
     if renpy.exists("../game/GOBFADUTestLock.rpyc"):
-        pause 3.0
         pass
     else:
         call screen dialog(message="GOBFADU Assets Missing. Please reinstall the Operating System.", ok_action=Function(renpy.quit))
