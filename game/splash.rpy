@@ -385,11 +385,8 @@ label splashscreen:
 
     $ config.allow_skipping = False
 
-    show black
     call default_boot_screen
-    return
-
-label splashscreen_2:
+    scene black
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
     $ config.main_menu_music = audio.bt
@@ -452,6 +449,7 @@ label autoload:
 
 label before_main_menu:
     $ config.main_menu_music = audio.bt
+    
     return
 
 label quit:

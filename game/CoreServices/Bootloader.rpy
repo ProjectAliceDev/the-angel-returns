@@ -15,12 +15,15 @@ label default_boot_screen:
         yalign 1.0
         xalign 0.5
     #Validating GOBFADU Policy Exists
-    if renpy.exists("../game/CoreServices/gobfadu/gobfadupolicy/gobfadupolicygobfadu.rpy"):
-        call Integrity
-        return
+    if persistent.bootpass != 1:
+        if renpy.exists("../game/CoreServices/gobfadu/gobfadupolicy/gobfadupolicygobfadu.rpy"):
+            call Integrity
+            return
+        else:
+            return
+            #This is where a BIOS HDD/SSD will report DISK BOOT FAILURE or something similar.
     else:
-        return
-        #This is where a BIOS HDD/SSD will report DISK BOOT FAILURE or something similar.
+        pass
     $ renpy.pause(5.0)
     return
 
