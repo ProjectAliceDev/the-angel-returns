@@ -387,8 +387,9 @@ label splashscreen:
 
     show black
     call default_boot_screen
-    #This is where a BIOS HDD/SSD will report DISK BOOT FAILURE or something similar.
-    $ renpy.pause(5.0)
+    return
+
+label splashscreen_2:
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
     $ config.main_menu_music = audio.bt
