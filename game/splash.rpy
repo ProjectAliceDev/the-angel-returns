@@ -449,6 +449,7 @@ label autoload:
 
 label before_main_menu:
     $ config.main_menu_music = audio.bt
+    $ persistent.bootpass = 0
     
     return
 
