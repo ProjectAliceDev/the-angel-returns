@@ -1,3 +1,8 @@
+init -1 python:
+    import datetime
+    snapshottime = "nightly_pht-" + datetime.datetime.now().strftime ("%m%d%Y")
+
+
 screen main_menu():
 
     # This ensures that any other menu screen is replaced.
@@ -31,6 +36,8 @@ screen main_menu():
     if gui.show_name:
         vbox:
             text "v. [config.version]":
+                style "hl3_version_text"
+            text snapshottime:
                 style "hl3_version_text"
 
 
@@ -67,3 +74,18 @@ style main_menu_text:
 
 style main_menu_title:
     size gui.title_text_size
+
+init -1 style info_title:
+    size gui.title_text_size
+    xpos gui.navigation_xpos
+    yalign 0.48
+    font "mod_assets/gui/font/generic.ttf"
+    color "#ffffffE6"
+    outlines [(1, "#33333380", 0, 0), (1, "#33333300", 1, 1)]
+
+init -1 style hl3_version_text:
+    color "#ffffff"
+    size 16
+    font "Resources/systemfont/Regular.ttf"
+    outlines []
+    xalign 1.0
