@@ -115,7 +115,8 @@ game/cache
 game/cache/bytecode.rpyb
 game/cache/pyanalysis.rpyb
 game/cache/screens.rpyb
-game/*.rpyc
+game/**.rpyc
+.DS_Store
 
 # AliceOS-specific files
 game/*.apf
