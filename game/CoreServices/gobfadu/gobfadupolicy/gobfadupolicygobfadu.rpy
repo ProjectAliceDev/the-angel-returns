@@ -1,50 +1,50 @@
 #GOBFADU Policy 1.8 DDLC Edition 6/15/2018
 #Python 3.8 MOS Edition 6/12/2018
 
-label gobfadupolicygobfadu:
+label gobfadu_policy_gobfadu:
     stop music fadeout 2.0
 #    scene black
 #    with dissolve_scene_full
-    call adutarscript
+    call adutar_script
 
-label adutarscript:
+label adutar_script:
     if renpy.exists("script.rpyc"):
-        call adutarsplash
+        call adutar_splash
     else:
         call GOBFADULock
 
-label adutarsplash:
+label adutar_splash:
     if renpy.exists("splash.rpyc"):
-       call adutarmenu
+       call adutar_menu
     else:
        call GOBFADULock
 
-label adutarmenu:
+label adutar_menu:
     if renpy.exists("../game/main_menu.rpyc"):
-        call adutaroptions
+        call adutar_options
     else:
         call GOBFADULock
 
-label adutaroptions:
+label adutar_options:
     if renpy.exists("../game/options.rpyc"):
-        call adutarimport
+        call adutar_import
     else:
         call GOBFADULock 
 
-label adutarimport:
+label adutar_import:
     if renpy.exists("../game/submods/import_ddlc/import_ddlc.rpyc"):
-        call adutaroveride
+        call adutar_overide
     else:
         call GOBFADULock
 
-label adutaroveride:
+label adutar_overide:
     if renpy.exists("../game/overrides.rpyc"):
-        call gobfaduverify
+        call gobfadu_verify
     else:
         call GOBFADULock
 
-label gobfaduverify:
+label gobfadu_verify:
     if renpy.exists("../game/GOBFADULock.rpyc"):
-        call gobfadupolicyapplet
+        call gobfadu_policy_applet
     else:
         call screen dialog(message="GOBFADU Assets Missing. Please reinstall the Operating System.", ok_action=Function(renpy.quit))

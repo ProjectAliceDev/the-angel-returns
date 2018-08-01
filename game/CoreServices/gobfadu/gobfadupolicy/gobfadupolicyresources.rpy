@@ -1,113 +1,113 @@
 #GOBFADU Policy 1.8 DDLC Edition 6/15/2018
 #Python 3.8 MOS Edition 6/12/2018
 
-label gobfadupolicyresources:
+label gobfadu_policy_resources:
     stop music fadeout 2.0
 #    scene black
 #    with dissolve_scene_full
     if renpy.exists("../game/Resources/Branding.rpyc"):
-        call adutarfoblack
+        call adutar_foblack
     else:
         call GOBFADUResourceLock
 
-label adutarfoblack:
+label adutar_foblack:
     if renpy.exists("../game/Resources/systemfont/Black.ttf"):
-        call adutarfoblaital
+        call adutar_foblaital
     else:
         call GOBFADUResourceLock
 
-label adutarfoblaital:
+label adutar_foblaital:
     if renpy.exists("../game/Resources/systemfont/BlackItalic.ttf"):
-        call adutarfobold
+        call adutar_fobold
     else:
         call GOBFADUResourceLock
 
-label adutarfobold:
+label adutar_fobold:
     if renpy.exists("../game/Resources/systemfont/Bold.ttf"):
-        call adutarfoboital
+        call adutar_foboital
     else:
         call GOBFADUResourceLock
 
-label adutarfoboital:
+label adutar_foboital:
     if renpy.exists("../game/Resources/systemfont/BoldItalic.ttf"):
-        call adutarfoital
+        call adutar_foital
     else:
         call GOBFADUResourceLock
 
-label adutarfoital:
+label adutar_foital:
     if renpy.exists("../game/Resources/systemfont/Italic.ttf"):
-        call adutarfoli
+        call adutar_foli
     else:
         call GOBFADUResourceLock
 
-label adutarfoli:
+label adutar_foli:
     if renpy.exists("../game/Resources/systemfont/Light.ttf"):
-        call adutarfolital
+        call adutar_folital
     else:
         call GOBFADUResourceLock
 
-label adutarfoital:
+label adutar_foital:
     if renpy.exists("../game/Resources/systemfont/LightItalic.ttf"):
-        call adutarfomed
+        call adutar_fomed
     else:
         call GOBFADUResourceLock
 
-label adutarfomed:
+label adutar_fomed:
     if renpy.exists("../game/Resources/systemfont/MediumItalic.ttf"):
-        call adutarfomedital
+        call adutar_fomedital
     else:
         call GOBFADUResourceLock
 
-label adutarfomedital:
+label adutar_fomedital:
     if renpy.exists("../game/Resources/systemfont/MediumItalic.ttf"):
-        call adutarforeg
+        call adutar_foreg
     else:
         call GOBFADUResourceLock
 
-label adutarforeg:
+label adutar_foreg:
     if renpy.exists("../game/Resources/systemfont/Regular.ttf"):
-        call adutarfothin
+        call adutar_fothin
     else:
         call GOBFADUResourceLock
 
-label adutarfothin:
+label adutar_fothin:
     if renpy.exists("../game/Resources/systemfont/Thin.ttf"):
-        call adutarfothinital
+        call adutar_fothinital
     else:
         call GOBFADUResourceLock
 
-label adutarfothinital:
+label adutar_fothinital:
     if renpy.exists("../game/Resources/systemfont/ThinItalic.ttf"):
-        call adutarrif
+        call adutar_rif
     else:
         call GOBFADUResourceLock
 
-label adutarrif:
+label adutar_rif:
     if renpy.exists("../game/Resources/systemfont/branding/RifficFree-Bold.ttf"):
-        call adutarsysui
+        call adutar_sysui
     else:
         call GOBFADUResourceLock
 
-label adutarsysui:
+label adutar_sysui:
     if renpy.exists("../game/Resources/systemui/frame_notify.png"):
-        call adutarsysuiframe
+        call adutar_sysuiframe
     else:
         call GOBFADUResourceLock
         
-label adutarsysuiframe:
+label adutar_sysuiframe:
     if renpy.exists("../game/Resources/systemui/frame.png"):
-        call adutarovlay
+        call adutar_ovlay
     else:
         call GOBFADUResourceLock
 
-label adutarovlay:
+label adutar_ovlay:
     if renpy.exists("../game/Resources/systemui/overlay_confirm.png"):
-        call gobfaduresverify
+        call gobfadu_res_verify
     else:
         call GOBFADUResourceLock
 
-label gobfaduresverify:
+label gobfadu_res_verify:
     if renpy.exists("../game/GOBFADUResourceLock.rpyc"):
-        call gobfadupolicytests
+        call gobfadu_policy_tests
     else:
         call screen dialog(message="GOBFADU Assets Missing. Please reinstall the Operating System.", ok_action=Function(renpy.quit))

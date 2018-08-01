@@ -20,7 +20,7 @@ label default_boot_screen:
             call Integrity
             return
         else:
-            return
+            call rsod_boot
             #This is where a BIOS HDD/SSD will report DISK BOOT FAILURE or something similar.
     else:
         pass
@@ -44,7 +44,7 @@ label oem_boot_screen:
         call Integrity
         return
     else:
-        return
+        call rsod_boot
         #This is where a BIOS HDD/SSD will report DISK BOOT FAILURE or something similar.
-    pause 3.0
+    pause 5.0
     return
