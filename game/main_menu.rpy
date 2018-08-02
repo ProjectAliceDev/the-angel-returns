@@ -1,7 +1,8 @@
 init -1 python:
     import datetime
 #    snapshottime = "nightly_pht-" + datetime.datetime.now().strftime ("%m%d%Y")
-    snapshottime = "nightly_pht-08012018"
+#    snapshottime = "nightly_pht-08012018"
+    global snapshottime
 
 
 screen main_menu():
