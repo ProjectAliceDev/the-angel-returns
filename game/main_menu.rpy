@@ -1,8 +1,8 @@
 init -1 python:
     import datetime
 #    snapshottime = "nightly_pht-" + datetime.datetime.now().strftime ("%m%d%Y")
-#    snapshottime = "nightly_pht-08012018"
-    global snapshottime
+    snapshottime = "nightly_pht-08022018"
+#    global snapshottime
 
 
 screen main_menu():
@@ -86,7 +86,7 @@ init -1 style info_title:
     outlines [(1, "#33333380", 0, 0), (1, "#33333300", 1, 1)]
 
 init -1 style hl3_version_text:
-    color "#ffffff"
+    color "#d4d4d4"
     size 16
     font "Resources/systemfont/Regular.ttf"
     outlines [(1, "#33333380", 0, 0), (1, "#33333300", 1, 1)]

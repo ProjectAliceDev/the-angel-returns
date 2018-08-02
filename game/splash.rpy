@@ -352,26 +352,10 @@ label splashscreen:
     if not persistent.first_run:
         $ quick_menu = False
         stop music fadeout 1.0
-        scene black
-        show powered_by_text:
-            xalign 0.3
-            yalign 0.4
-        show alice_os_name at truecenter
-        show boot_copyright:
-            xalign 0.5
-            yalign 1.0
-        pause 3.0
+        call default_boot_screen
         scene black
         pause 0.5
-        scene tos
-        with Dissolve(1.0)
-        pause 1.0
-        call screen disclaimer_alert
-        scene tos2
-        with Dissolve(1.5)
-        pause 1.0
-
-
+        call setup
         scene black
         with Dissolve(1.5)
 

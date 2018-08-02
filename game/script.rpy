@@ -24,11 +24,9 @@ label start:
     $ allow_skipping = True
     $ config.allow_skipping = True
 
-    call default_boot_screen
     if persistent.playthrough == 0:
         #Call example script
         #call alice_poem_demos
-        call setup
         call pre_ch0
         call ch0_main
         call ch0_end

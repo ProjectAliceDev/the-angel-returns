@@ -1774,7 +1774,7 @@ style say_label_pink:
     outlines [(3, "#b59", 0, 0), (1, "#b59", 1, 1)]
 
 style input:
-    font "mod_assets/gui/font/mojave.ttf"
+    font "Resources/systemfont/Regular.ttf"
     color "#333"
     outlines [(3, "#fff", 0, 0), (1, "#fff", 1, 1)]
 
