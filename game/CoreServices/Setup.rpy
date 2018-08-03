@@ -146,11 +146,13 @@ label setup_tos:
     $ ui.close()
     $ choice_selected=ui.interact()
     call screen confirm_alert(title="Confirm Agreement", message="I have read and agreed to the terms of the software license agreement.", no_action_message="Disagree", no_action=Return(1), yes_action_message="Agree", yes_action=Return(0))
-    python:
-        if _return == 1:
-            renpy.utter_restart()
-        else:
-            pass
+    if _return == 1:
+        stop music fadeout 1.0
+        scene black
+        pause 0.5
+        call rsod_cyanide
+    else:
+        pass
     hide setup_tos_info
     hide setup_tos_text
     call setup_tos_game
@@ -166,11 +168,13 @@ label setup_tos_game:
     $ ui.close()
     $ choice_selected=ui.interact()
     call screen confirm_alert(title="Confirm Agreement", message="I have read and agreed to the terms of the game's license agreement.", no_action_message="Disagree", no_action=Return(1), yes_action_message="Agree", yes_action=Return(0))
-    python:
-        if _return == 1:
-            renpy.utter_restart()
-        else:
-            pass
+    if _return == 1:
+        stop music fadeout 1.0
+        scene black
+        pause 0.5
+        call rsod_cyanide
+    else:
+        pass
     hide setup_game_tos_info
     hide setup_game_tos_header
     hide setup_game_tos_text

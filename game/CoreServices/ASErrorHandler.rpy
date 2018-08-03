@@ -12,7 +12,8 @@ init -1000 python:
                      "os_lock": "SYSTEM_INTEGRITY_VIOLATION",
                      "gui_lock": "GUI_INTEGRITY_VIOLATION",
                      "resource_lock": "RESOURCE_INTEGRITY_VIOLATION",
-                     "test_lock": "TEST_INTEGRITY_VIOLATION"
+                     "test_lock": "TEST_INTEGRITY_VIOLATION",
+                     "missing_cyanide": "MISSING_CYANIDE_INSTRUMENT"
                     }
     rsod_search_text = "If you'd like to know more, you can search online later for this error: "
 
@@ -31,6 +32,7 @@ image rsod_gobfadu_os_lock_message = Text(rsod_messages["os_lock"], font="Resour
 image rsod_gobfadu_gui_lock_message = Text(rsod_messages["gui_lock"], font="Resources/systemfont/Medium.ttf", size=24, color="#ffffff", style="_default")
 image rsod_gobfadu_resource_lock_message = Text(rsod_messages["resource_lock"], font="Resources/systemfont/Medium.ttf", size=24, color="#ffffff", style="_default")
 image rsod_gobfadu_test_lock_message = Text(rsod_messages["test_lock"], font="Resources/systemfont/Medium.ttf", size=24, color="#ffffff", style="_default")
+image rsod_cyanide_message = Text(rsod_messages["missing_cyanide"], font="Resources/systemfont/Medium.ttf", size=24, color="#ffffff", style="_default")
 
 label rsod_boot:
     scene rsod_bg
@@ -44,6 +46,24 @@ label rsod_boot:
         xpos 0.1
         yalign 0.75
     show rsod_boot_message:
+        xpos 0.1
+        yalign 0.8
+    pause 10.0
+    $ renpy.utter_restart()
+    return
+
+label rsod_cyanide:
+    scene rsod_bg
+    show rsod_face:
+        xpos 0.1
+        yalign 0.3
+    show rsod_generic_message:
+        xpos 0.1
+        yalign 0.6
+    show rsod_search_error_text:
+        xpos 0.1
+        yalign 0.75
+    show rsod_cyanide_message:
         xpos 0.1
         yalign 0.8
     pause 10.0
