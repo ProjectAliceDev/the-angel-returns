@@ -1,9 +1,0 @@
-[
-  {
-    type: "button"
-    iconset: "fa"
-    icon: "play"
-    callback: "script:run"
-    tooltip: "Run Python Project"
-  }
-]
