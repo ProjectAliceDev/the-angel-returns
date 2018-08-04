@@ -24,11 +24,12 @@ label start:
     $ allow_skipping = True
     $ config.allow_skipping = True
 
-    call default_boot_screen
+    # $ a_name = "Alice"
+    # call demo_end_loop
+
     if persistent.playthrough == 0:
         #Call example script
         #call alice_poem_demos
-        call setup
         call pre_ch0
         call ch0_main
         call ch0_end
@@ -40,12 +41,8 @@ label start:
         call ch1_end
         call ch1_blackbox_puzzle
 
-        ## Extra Content
-        # This probably won't be finished, so I am commenting it out.
+
         $ chapter = 2
-        # No script for any prologue; Alice has been already introduced. For now.
-        # call ch2_main
-        # call ch2_end
 
         ## Disable this segment if it isn't the demo.
         call demo_end
