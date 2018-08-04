@@ -1,3 +1,7 @@
+init python:
+    import json
+    with open('game/version.json', 'r') as f:
+        release_version = json.load(f)
 # human readable name of this game
 # _() marks strings eligable for translation
 define config.name = "Doki Doki: The Angel Returns"
@@ -7,7 +11,7 @@ define gui.show_name = True
 
 # Version of the game
 define config.version = "0.1.2beta2"
-define nightlydate = "08042018"
+define nightlydate = release_version["version"]
 define snapshottime = "nightly_pht-" + nightlydate
 
 # text placed on about screen
@@ -93,7 +97,7 @@ define config.predict_statements = 50
 define config.rollback_enabled = config.developer
 define config.menu_clear_layers = ["front"]
 define config.gl_test_image = "white"
-define config.developer = True
+# define config.developer = True
 
 
 init python:
