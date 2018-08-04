@@ -23,3 +23,10 @@ release:
     bash print_version.sh
     cd renpy 
     ./renpy.sh "../" lint && ./renpy.sh launcher distribute "../"
+
+ci:
+  if [[-z "$TRAVIS_TAG"]]; then
+     release 
+  else 
+     dev
+  fi
