@@ -26,7 +26,6 @@ By clicking \"I Agree\", you acknowledge this disclaimer and continue at your ow
     ycoordinate=0.8
 
 image bg mojave setup = "Resources/bg_setup.png"
-image bg mojave desktop = "mod_assets/images/mojave/bg-desktop.png"
 image setup_feedback = "Resources/feedback.png"
 image mojave_setup = "Resources/setup-window.png"
 

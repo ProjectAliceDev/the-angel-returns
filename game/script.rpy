@@ -24,6 +24,9 @@ label start:
     $ allow_skipping = True
     $ config.allow_skipping = True
 
+    # $ a_name = "Alice"
+    # call demo_end_loop
+
     if persistent.playthrough == 0:
         #Call example script
         #call alice_poem_demos
