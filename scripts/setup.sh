@@ -15,13 +15,13 @@ mc_filename="ddlc_pkg.zip"
 # This is intended for automating unzipping and putting the RPAs into the respect folder
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Installing Minio S3 Client"
 
-#wget "https://dl.minio.io/client/mc/release/linux-amd64/mc" && \
+wget "https://dl.minio.io/client/mc/release/linux-amd64/mc" && \
 
-#chmod +x mc && \
+chmod +x mc && \
 
-#sudo cp -vR mc /usr/bin/mc && \
+sudo cp -vR mc /usr/bin/mc && \
 
-#mc config host add $mc_alias $mc_endpoint $mc_hmac_key $mc_hmac_secret && \
+mc config host add $mc_alias $mc_endpoint $mc_hmac_key $mc_hmac_secret && \
 
 # try if it works
 
@@ -34,14 +34,13 @@ if [ -d "./game" ]; then
     ls
     echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Directory exists. copying files over."
     mc cp "$mc_alias/$mc_bucket/$mc_filename" ./
-    unzip $mc_filename -d  ../game/ 
+    unzip $mc_filename -d  ./game/ 
     exit 0
   else 
     ls
-    echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Directory  does not exist. Creating dir and copying files over" 
-    mkdir -p ../game
+    echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Directory  does not exist. Creating dir and copying files over"
     mc cp "$mc_alias/$mc_bucket/$mc_filename" ./
-    mkdir -p "../game"
+    mkdir -p "./game"
     unzip $mc_filename -d  ../game    
     exit 0 
 fi
