@@ -6,3 +6,26 @@ It's spring break! Join the Literature Club girls in an exciting one-week advent
 *Doki Doki: The Angel Returns* is an unofficial mod for the game _Doki Doki Literature Club!_ that takes place after the events of the game (see [IP Guidelines](IPGuidelines.md) for details). This mod is the answer to a simple question: **What if "Alice Angel" came to the Doki Doki universe?**
 
 > Note: This mod is not affiliated with Team Salvato or theMeatly Games. Copyrights of characters in this game shall be respected as fan work.
+
+# Building
+
+Doki Doki Doki: The Angel Returns requires the following:
+ 
+ - On Windows:
+   - RenPy SDK
+ 
+ - On Linux/macOS/BSD:
+   - CMake
+   - RenPy SDK
+
+To build the mod:
+
+**On windows**
+
+Coming soon.
+
+**On Linux/macOS/BSD**
+
+```
+ make dev
+```
