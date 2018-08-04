@@ -9,6 +9,3 @@ dev:
 release:
 
 	bash scripts/make_release.sh
-
-test:
-	bash scripts/setup.sh
