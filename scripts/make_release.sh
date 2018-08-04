@@ -5,7 +5,7 @@ if [[ -f "renpy-6.99.12.4-sdk" ]]; then
    rm renpy-6.99.12.4-sdk.tar.bz2
    mv renpy-6.99.12.4-sdk renpy
    rm -rf renpy-6.99.12.4-sdk
-   bash ./setup.sh
+   bash bash/setup.sh
    bash print_version.sh
    cd renpy 
    ./renpy.sh "../" lint && ./renpy.sh launcher distribute "../"
@@ -15,7 +15,7 @@ else
    rm renpy-6.99.12.4-sdk.tar.bz2
    mv renpy-6.99.12.4-sdk renpy
    rm -rf renpy-6.99.12.4-sdk
-   bash ./setup.sh
+   bash scripts/setup.sh
    bash print_version.sh
    cd renpy 
   ./renpy.sh "../" lint && ./renpy.sh launcher distribute "../"
