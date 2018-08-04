@@ -1,6 +1,6 @@
 init python:
     import json
-    with open('game/version.json', 'r') as f:
+    with open('version', 'r') as f:
         release_version = json.load(f)
 # human readable name of this game
 # _() marks strings eligable for translation
