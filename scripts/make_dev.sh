@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -f "renpy-6.99.12.4-sdk.tar.bz2" ]]; then
+if [[ -f "renpy-6.99.12.4-sdk.tar.bz2.tar.bz2" ]]; then
     tar xf renpy-6.99.12.4-sdk.tar.bz2
     rm renpy-6.99.12.4-sdk.tar.bz2
     mv renpy-6.99.12.4-sdk renpy
