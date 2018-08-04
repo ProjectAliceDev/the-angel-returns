@@ -3,9 +3,9 @@
 default: dev
 
 dev:
-    bash build/make_dev.sh
+    bash scripts/make_release.sh/make_dev.sh
 release:
-    bash build/make_release.sh
+    bash scripts/make_release.sh
 
 ci:
   if [[-z "$TRAVIS_TAG"]]; then
