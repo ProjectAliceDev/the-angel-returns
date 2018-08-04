@@ -1,3 +1,5 @@
+#!usr/bin/env python
+
 import os
 
 # Set this variable equal to the location of where your Ren'Py install is!

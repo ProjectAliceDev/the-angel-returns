@@ -1,5 +1,3 @@
-
-
 # human readable name of this game
 # _() marks strings eligable for translation
 define config.name = "Doki Doki: The Angel Returns"
@@ -9,6 +7,9 @@ define gui.show_name = True
 
 # Version of the game
 define config.version = "0.1.2beta2"
+define nightlydate = "08032018"
+define snapshottime = "nightly_pht-" + nightlydate
+
 
 # text placed on about screen
 define gui.about = _("")

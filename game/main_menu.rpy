@@ -1,10 +1,3 @@
-init -1 python:
-    import datetime
-#    snapshottime = "nightly_pht-" + datetime.datetime.now().strftime ("%m%d%Y")
-    snapshottime = "nightly_pht-08022018"
-#    global snapshottime
-
-
 screen main_menu():
 
     # This ensures that any other menu screen is replaced.
