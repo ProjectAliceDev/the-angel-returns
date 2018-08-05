@@ -10,8 +10,8 @@ release:
 
 travis_dev:
 	cd the-angel-returns
-	dev
+	bash scripts/make_dev.sh
 
 travis_release:
 	cd the-angel-returns
-	release
+	bash scripts/make_release.sh
