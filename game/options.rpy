@@ -190,6 +190,7 @@ init python:
     build.classify("credits.txt",build.name)
     build.classify("libitina.cfg",build.name)
     build.classify("mod.json",build.name)
+    build.classify("version", build.name)
 
     # Beta stuff if necessary:
     if "beta" in config.version:
