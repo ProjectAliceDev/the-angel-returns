@@ -14,7 +14,7 @@ env:
 # This is the script part. This is where the actual building is happening.
 # This produces an artifact which we'll use later on to publish a release.
 
-script: bash scripts/ci.sh && ls
+script: cd .. && bash the-angel-returns/scripts/ci.sh && ls
 
 # This is where the actual releases happen. Travis has the ability to publish releases from GitHub, Amazon S3, OpenShift, etc.
 # Read on https://docs.travis-ci.com/user/deployment/releases/ to learn more
