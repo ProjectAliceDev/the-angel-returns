@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -f "renpy-6.99.12.4-sdk.tar.bz2" ]]; then
+if  ![[ -f "renpy-6.99.12.4-sdk.tar.bz2" ]]; then
    tar xf renpy-6.99.12.4-sdk.tar.bz2
    rm renpy-6.99.12.4-sdk.tar.bz2
    mv renpy-6.99.12.4-sdk renpy
@@ -8,7 +8,7 @@ if [[ -f "renpy-6.99.12.4-sdk.tar.bz2" ]]; then
    bash bash/setup.sh
    bash scripts/print_version.sh
    cd renpy 
-   ./renpy.sh "../" lint && ./renpy.sh launcher distribute "../"
+   ./renpy.sh "../" lint && ./renpy.sh launcher distribute "../" -d "../dist"
 else
    wget https://www.renpy.org/dl/6.99.12.4/renpy-6.99.12.4-sdk.tar.bz2
    tar xf renpy-6.99.12.4-sdk.tar.bz2
@@ -18,5 +18,5 @@ else
    bash scripts/setup.sh
    bash scripts/print_version.sh
    cd renpy 
-  ./renpy.sh "../" lint && ./renpy.sh launcher distribute "../"
+  ./renpy.sh "../" lint && ./renpy.sh launcher distribute "../" -d "../dist"
 fi
