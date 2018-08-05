@@ -4,7 +4,7 @@ default: dev
 
 dev:
 
-	bash scripts/make_release.sh
+	bash scripts/make_dev.sh
     
 release:
 
