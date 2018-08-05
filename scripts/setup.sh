@@ -30,9 +30,8 @@ fi
 
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Checking for dir if it exists"
 
-if [ -d "./game" ]; then
-    # dir exists, just unzip, and make new dir to add files
-    ls
+if [ -d "./mod" ] && [ -d "./mod/game" ]; then
+    # dir exists, just unzip, and make new dir to add file
     echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Directory exists. copying files over."
     mc cp "$mc_alias/$mc_bucket/$mc_filename" ./
     unzip $mc_filename -d  ./game/ 
@@ -41,7 +40,8 @@ if [ -d "./game" ]; then
     ls
     echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Directory  does not exist. Creating dir and copying files over"
     mc cp "$mc_alias/$mc_bucket/$mc_filename" ./
-    mkdir -p "./game"
+    mkdir -p "./mod"
+    mkdir -p "./mod/game"
     unzip $mc_filename -d  ../game    
     exit 0 
 fi
