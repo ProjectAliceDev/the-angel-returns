@@ -25,7 +25,7 @@ sleep 3;
 if [[ ! -f "$DIRECTORY/build/renpy-6.99.12.4-sdk.tar.bz2" ]]; then
     mkdir -p $DIRECTORY/build$1
     mkdir -p $DIRECTORY/build/mod
-    cp -vRf $DIRECTORY/*$1 $DIRECTORY/build/mod
+    cp -vRf $DIRECTORY/* $DIRECTORY/build/mod$1
     cd $DIRECTORY/build
     tar xf renpy-6.99.12.4-sdk.tar.bz2
     rm renpy-6.99.12.4-sdk.tar.bz2
@@ -34,11 +34,11 @@ if [[ ! -f "$DIRECTORY/build/renpy-6.99.12.4-sdk.tar.bz2" ]]; then
     pull_ddlc_base;
     print_version;
     cd $DIRECTORY/build/renpy 
-    ./renpy.sh "$DIRECTORY/build/mod/" lint && ./renpy.sh launcher distribute "$DIRECTORY/build/mod/"
+    ./renpy.sh "$DIRECTORY/build/mod/" lint$1 && ./renpy.sh launcher distribute "$DIRECTORY/build/mod/"$1
     cd ..
 else
     mkdir -p build$1
-    cp -vRf $DIRECTORY/*$1 $DIRECTORY/mod
+    cp -vRf $DIRECTORY/* $DIRECTORY/mod$1
     cd $DIRECTORY
     wget https://www.renpy.org/dl/6.99.12.4/renpy-6.99.12.4-sdk.tar.bz2
     tar xf renpy-6.99.12.4-sdk.tar.bz2
@@ -48,7 +48,7 @@ else
     pull_ddlc_base;
     print_version;
     cd $DIRECTORY/build/renpy
-    ./renpy.sh "$DIRECTORY/build/mod/" lint && ./renpy.sh launcher distribute "$DIRECTORY/build/mod/"
+    ./renpy.sh "$DIRECTORY/build/mod/" lint$1 && ./renpy.sh launcher distribute "$DIRECTORY/build/mod/"$1
     cd ..
 fi
 
