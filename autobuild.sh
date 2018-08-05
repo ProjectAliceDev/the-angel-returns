@@ -104,9 +104,8 @@ pull_ddlc_base() {
 
 print_version() {
     if [ ! -f "$DIRECTORY/build/mod/version" ]; then
-      echo "{\"version\":\"$(printf "local")\"}" >> $DIRECTORY/build/mod/version
+      echo "{\"version\":\"$(printf "local")\"}" | tee $DIRECTORY/build/mod/version
     else
       echo "Skipping Version File creation."
-      continue
     fi
 }
