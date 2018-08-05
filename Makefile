@@ -7,11 +7,3 @@ dev:
     
 release:
 	bash scripts/make_release.sh
-
-travis_dev:
-	cd the-angel-returns
-	bash scripts/make_dev.sh
-
-travis_release:
-	cd the-angel-returns
-	bash scripts/make_release.sh
