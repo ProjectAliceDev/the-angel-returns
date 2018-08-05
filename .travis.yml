@@ -28,13 +28,7 @@ install:
     
     - cd renpy
 
-    - if ! [ -z "$TRAVIS_TAG" ]; then
-        echo "{\"version\":\"$TRAVIS_TAG\"}" >> ../mod/version;
-        exit 0;
-      else
-        echo "{\"version\":\"$(printf 'local')\"}" >> ../mod/version;  
-        exit 0;
-      fi
+    - bash ./the-angel-returns/travis_print_version.sh
 
 
 env:
