@@ -21,12 +21,11 @@ install:
     # we're copying over the template files into the renpy SDK
     # and CD into the renpy
     
-    - bash ./the-angel-returns/scripts/setup.sh
     
     # Remove README.html to prevent errors.
     - cp -vRf the-angel-returns/* mod/
     
-    - cd mod && bash scripts/print_version.sh && cd ..
+    - bash mod/travis_pull_base.sh
     
     - cd renpy
 
@@ -38,6 +37,17 @@ env:
 # This is the script part. This is where the actual building is happening.
 # This produces an artifact which we'll use later on to publish a release.
 
+before_script:
+        - if ! [ -z "$TRAVIS_TAG" ]; then
+            echo "{\"version\":\"$TRAVIS_TAG\"}" >> ../mod/version;
+            exit 0;
+          else
+             echo "Not a Release - Version will be printed out using Git branch.";
+             echo "{\"version\":\"$(git rev-parse --abbrev-ref HEAD)\"}" >> ../mod/version;  
+            exit 0;
+          fi
+
+          
 script: ./renpy.sh "../mod/" lint && ./renpy.sh launcher distribute "../mod/" && cd ..
         
        
