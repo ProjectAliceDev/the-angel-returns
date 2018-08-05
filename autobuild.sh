@@ -55,7 +55,7 @@ fi
 exit $?
 
 if ! [ exit != 0 ]; then
-   echo "Build Successfully made. Find it at $DIRECTORY/build/$DIRECTORY-dists or similar. Happy modding!"
+   echo "Build Successfully made. Find it at $DIRECTORY/build/ModXY-dists or similar. Happy modding!"
    exit 0;
 else 
    echo "Uh oh, we can't build your mod in $DIRECTORY. If this is a mistake, file a issue. Thank you."
