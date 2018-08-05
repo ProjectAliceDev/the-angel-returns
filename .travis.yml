@@ -21,11 +21,10 @@ install:
     # we're copying over the template files into the renpy SDK
     # and CD into the renpy
     
+    - bash ./the-angel-returns/travis_pull_base.sh
     
     # Remove README.html to prevent errors.
-    - cp -vRf the-angel-returns/* mod/
-    
-    - bash mod/travis_pull_base.sh
+    - rm -rf the-angel-returns/README.html && cp -vRf the-angel-returns/* mod/
     
     - cd renpy
 
@@ -42,15 +41,12 @@ before_script:
             echo "{\"version\":\"$TRAVIS_TAG\"}" >> ../mod/version;
             exit 0;
           else
-             echo "Not a Release - Version will be printed out using Git branch.";
-             echo "{\"version\":\"$(git rev-parse --abbrev-ref HEAD)\"}" >> ../mod/version;  
+             echo "{\"version\":\"$(print 'local')\"}" >> ../mod/version;  
             exit 0;
           fi
 
-          
+
 script: ./renpy.sh "../mod/" lint && ./renpy.sh launcher distribute "../mod/" && cd ..
-        
-       
 
 
 # This is where the actual releases happen. Travis has the ability to publish releases from GitHub, Amazon S3, OpenShift, etc.
