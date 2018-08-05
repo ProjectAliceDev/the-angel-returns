@@ -28,6 +28,14 @@ install:
     
     - cd renpy
 
+    - if ! [ -z "$TRAVIS_TAG" ]; then
+        echo "{\"version\":\"$TRAVIS_TAG\"}" >> ../mod/version;
+        exit 0;
+      else
+        echo "{\"version\":\"$(printf 'local')\"}" >> ../mod/version;  
+        exit 0;
+      fi
+
 
 env:
     # this is required as there was build issues without this, don't remove this.
@@ -35,16 +43,6 @@ env:
 
 # This is the script part. This is where the actual building is happening.
 # This produces an artifact which we'll use later on to publish a release.
-
-before_script:
-        - if ! [ -z "$TRAVIS_TAG" ]; then
-            echo "{\"version\":\"$TRAVIS_TAG\"}" >> ../mod/version;
-            exit 0;
-          else
-             echo "{\"version\":\"$(printf 'local')\"}" >> ../mod/version;  
-            exit 0;
-          fi
-
 
 script: ./renpy.sh "../mod/" lint && ./renpy.sh launcher distribute "../mod/" && cd ..
 
