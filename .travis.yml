@@ -22,13 +22,9 @@ install:
     # and CD into the renpy
     
     - bash ./the-angel-returns/travis_pull_base.sh
-    
-    # Remove README.html to prevent errors.
     - cp -vRf the-angel-returns/* mod/
-    
-    - cd renpy
-
     - bash ./the-angel-returns/travis_print_version.sh
+    - cd renpy
 
 
 env:
