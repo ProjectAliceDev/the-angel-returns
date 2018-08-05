@@ -144,6 +144,7 @@ init python:
     #
 
     # packaged ZIP for distibution
+    build.directory_name = "The_Angel_Returns-" + nightlydate + "-dist"
     build.package(build.directory_name + "Mod",'zip',build.name,description='DDLC Compatible Mod')
 
     # archives to create
