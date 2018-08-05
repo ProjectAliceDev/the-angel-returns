@@ -24,7 +24,7 @@ install:
     - bash ./the-angel-returns/travis_pull_base.sh
     
     # Remove README.html to prevent errors.
-    - rm -rf the-angel-returns/README.html && cp -vRf the-angel-returns/* mod/
+    - cp -vRf the-angel-returns/* mod/
     
     - cd renpy
 
