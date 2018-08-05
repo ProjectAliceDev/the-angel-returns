@@ -13,19 +13,20 @@ mc_filename="ddlc_pkg.zip"
 
 # DO NOT EDIT BELOW THIS LINE
 # This is intended for automating unzipping and putting the RPAs into the respect folder
+if ! [ -z "$(command -v mc)"]; then
+   echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Minio S3 Client exists. Skipping install."
+   mc config host add $mc_alias $mc_endpoint $mc_hmac_key $mc_hmac_secret && \
+   # try if it works
+   mc ls $mc_alias;
+else 
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Installing Minio S3 Client"
-
 wget "https://dl.minio.io/client/mc/release/linux-amd64/mc" && \
-
 chmod +x mc && \
-
 sudo cp -vR mc /usr/bin/mc && \
-
 mc config host add $mc_alias $mc_endpoint $mc_hmac_key $mc_hmac_secret && \
-
 # try if it works
-
 mc ls $mc_alias;
+fi
 
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Checking for dir if it exists"
 
