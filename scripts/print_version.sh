@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -z "$CI" ]] && [[ -z "$TRAVIS_TAG" ]]; then
+if ! [[ -z "$TRAVIS_TAG" ]]; then
   echo "{\"version\":\"$TRAVIS_TAG\"}" >> version;
   exit 0;
 else
