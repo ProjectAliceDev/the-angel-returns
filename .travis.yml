@@ -41,7 +41,7 @@ before_script:
             echo "{\"version\":\"$TRAVIS_TAG\"}" >> ../mod/version;
             exit 0;
           else
-             echo "{\"version\":\"$(print 'local')\"}" >> ../mod/version;  
+             echo "{\"version\":\"$(printf 'local')\"}" >> ../mod/version;  
             exit 0;
           fi
 
