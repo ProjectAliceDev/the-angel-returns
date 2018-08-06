@@ -42,7 +42,7 @@ if [[ -d "$DIRECTORY/build" ]]; then
    echo "Looks like this has built before. Checking if files exists"
    if [[ -f "$DIRECTORY/build/mc" && -d "$DIRECTORY/mod" && -d "$DIRECTORY/renpy" ]] ; then
       echo "Looks like this has been built before. Rebuilding game instead."
-      cp -vRf $DIRECTORY/* $DIRECTORY/mod
+      cp -vRf $DIRECTORY/* $DIRECTORY/build/mod
       print_version;
       cd $DIRECTORY/build/renpy
       ./renpy.sh "$DIRECTORY/build/mod/" lint && ./renpy.sh launcher distribute "$DIRECTORY/build/mod/"$1
@@ -60,11 +60,11 @@ if [[ -d "$DIRECTORY/build" ]]; then
           pull_ddlc_base;
           print_version;
           cd $DIRECTORY/build/renpy 
-          ./renpy.sh "$DIRECTORY/build/mod/" lint$1 && ./renpy.sh launcher distribute "$DIRECTORY/build/mod/"$1
+          ./renpy.sh "$DIRECTORY/build/mod/" lint && ./renpy.sh launcher distribute "$DIRECTORY/build/mod/"$1
           cd ..
        else
           mkdir -p $DIRECTORY/build
-          cp -vRf $DIRECTORY/* $DIRECTORY/mod
+          cp -vRf $DIRECTORY/* $DIRECTORY/build/mod
           cd $DIRECTORY
           wget https://www.renpy.org/dl/6.99.12.4/renpy-6.99.12.4-sdk.tar.bz2
           tar xf renpy-6.99.12.4-sdk.tar.bz2
@@ -74,7 +74,7 @@ if [[ -d "$DIRECTORY/build" ]]; then
           pull_ddlc_base;
           print_version;
           cd $DIRECTORY/build/renpy
-          ./renpy.sh "$DIRECTORY/build/mod/" lint$1 && ./renpy.sh launcher distribute "$DIRECTORY/build/mod/"$1
+          ./renpy.sh "$DIRECTORY/build/mod/" lint && ./renpy.sh launcher distribute "$DIRECTORY/build/mod/"$1
           cd ..
        fi
     fi
