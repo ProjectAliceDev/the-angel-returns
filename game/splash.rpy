@@ -1,83 +1,3 @@
-init -1000 python:
-    consent_warning_message = """\
-The Angel Returns is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato or theMeatly Games Ltd. It is designed to be played only after the official game has been completed, and contains spoilers for the official game(s). Game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at: http://ddlc.moe. This game also contains highly sensitive content and is not suitable for children or those who are easily disturbed. By clicking "I Agree", you acknowledge this disclaimer and continue at your own risk.
-    """
-    
-init -501 screen disclaimer_alert:
-    modal True
-    style_prefix "consent"
-    zorder 2000
-    add "gui/overlay/confirm.png"
-
-
-    frame:
-        xsize 600
-        ysize 656
-        style "confirm_frame"
-        
-        has vbox:
-            xalign .5
-            yalign .5
-            spacing 16
-            
-
-        add "mod_assets/images/gui/warning.png":
-            xalign 0.5
-        label _("Consent Warning"):
-            style "consent_title"
-            xalign 0.5
-
-        label _(consent_warning_message):
-            style "consent_message"
-            xalign 0.5
-
-        frame:
-            xalign 0.5
-            xsize 568
-            style "consent_button_frame"
-
-            hbox:
-                xalign 0.5
-                spacing 32
-
-                textbutton _("I agree") action Return(0):
-                    style "consent_button"
-                    xpadding 128
-
-init -1 style consent_title_text is gui_prompt
-init -1 style consent_message_text is gui_prompt_text
-
-init -1 style consent_title_text:
-    color "#000"
-    font "Resources/systemfont/Black.ttf"
-    size 48
-    layout "subtitle"
-    outlines []
-    text_align 0.5
-
-init -1 style consent_message_text:
-    color "#000"
-    font "Resources/systemfont/Regular.ttf"
-    size 20
-    outlines []
-    layout "subtitle"
-    justify True
-
-init -1 style consent_button_text:
-    color "#fff"
-    font "Resources/systemfont/Bold.ttf"
-    outlines []
-    layout "subtitle"
-
-init -1 style consent_button_frame:
-    background Frame(["gui/consent_button_frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
-    xpadding 32
-    ypadding 16
-    xalign .5
-    yalign .5
-
-
-
 ## splash screen is first thing that gets shown to player
 init -100 python:
 
@@ -92,15 +12,18 @@ init python:
 
     splash_message_default = "This game is not suitable for children\nor those who are easily disturbed."
 
-    splash_message_beta = "This is a prerelease version of The Angel Returns: Demo.\nSome things may be changed in the future."
+    splash_message_beta = "This is a prerelease version of The Angel Returns.\nSome things may be changed in the future."
 
     splash_messages = [
         "The choices of the beautiful are unbearable.",
         "It took so many tries to make this beautiful.",
         "Fear more than the Ink Demon.",
-        "This game is not suitable for children\nor those who are easily disturbed?",
         "Dark nights are upon us!",
-        "You will be forever mine."
+        "You will be forever mine.",
+        "I've waited here for the longest time.",
+       "This game is not suitable for children\nor those who are easily disturbed?",
+       "This game is not suitable for children\nor those who are easily dismembered.",
+       "This game is not suitable for children\nor those who are easily disguarded."
     ]
 
 
@@ -130,7 +53,7 @@ image game_menu_bg:
 #    menu_bg_loop
 
 image menu_fade:
-    "white"
+    "black"
     menu_fadeout
 
 label menu_glitch:
@@ -166,8 +89,8 @@ image menu_art_s:
 
 image menu_art_m:
     subpixel True
-    "gui/menu_art_m.png"
-    xcenter 1100
+    "mod_assets/images/menu/menu_art_sm.png"
+    xcenter 1050
     ycenter 580
     zoom 0.60
     menu_art_move(0.60, 600, 0.60)
@@ -175,7 +98,7 @@ image menu_art_m:
 image menu_art_a:
     subpixel True
     "mod_assets/images/menu/menu_art_a.png"
-    xcenter 925
+    xcenter 875
     ycenter 590
     zoom 0.80
     menu_art_move(0.54, 1100, 0.80)
@@ -274,6 +197,13 @@ transform menu_nav_move:
     time 1.5
     easein_quint 1 xoffset 0
 
+transform menu_fadein:
+    easeout 0.75 alpha 0
+    time 2.481
+    alpha 0.6
+    easeout 0.5 alpha 1
+
+
 transform menu_fadeout:
     easeout 0.75 alpha 0
     time 2.481
@@ -342,38 +272,10 @@ label splashscreen:
     if not persistent.first_run:
         $ quick_menu = False
         stop music fadeout 1.0
-        scene black
-        show powered_by_text:
-            xalign 0.3
-            yalign 0.4
-        show alice_os_name at truecenter
-        show boot_copyright:
-            xalign 0.5
-            yalign 1.0
-        pause 3.0
+        call default_boot_screen
         scene black
         pause 0.5
-        scene tos
-        with Dissolve(1.0)
-        pause 1.0
-        # call screen alert("Mod Disclaimer", """\
-        # [config.name] is a Doki Doki Literature Club fan mod that is not affiliated 
-        # with Team Salvato or theMeatly Games Ltd. It is designed to be played only after 
-        # the official game has been completed, and contains spoilers for the official game(s).
-        # Game files for Doki Doki Literature Club are required to play this mod and can be 
-        # downloaded for free at: http://ddlc.moe
-        # 
-        # By playing [config.name] you agree that you have completed Doki Doki Literature 
-        # Club and Bendy and the Ink Machine and accept any spoilers contained within.
-        # """, ok_action=Return(0))
-
-        call screen disclaimer_alert
-        
-        scene tos2
-        with Dissolve(1.5)
-        pause 1.0
-
-
+        call setup
         scene black
         with Dissolve(1.5)
 
@@ -387,7 +289,8 @@ label splashscreen:
 
     $ config.allow_skipping = False
 
-    show black
+    call default_boot_screen
+    scene black
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
     $ config.main_menu_music = audio.bt
@@ -404,7 +307,7 @@ label splashscreen:
     pause 2.0
     hide splash_warning with Dissolve(0.5, alpha=True)
     $ config.allow_skipping = True
-    scene white with Dissolve(0.5, alpha=True)
+    with fade
     return
 
 label warningscreen:
@@ -421,10 +324,7 @@ label after_load:
     if anticheat != persistent.anticheat:
         stop music
         scene black
-        "The save file could not be loaded."
-        "Are you trying to cheat?"
-
-
+        call screen alert("Cannot Load Save File", "Are you trying to cheat?", ok_action=Return(0))
         $ renpy.utter_restart()
     return
 
@@ -453,6 +353,8 @@ label autoload:
 
 label before_main_menu:
     $ config.main_menu_music = audio.bt
+    $ persistent.bootpass = 0
+    
     return
 
 label quit:

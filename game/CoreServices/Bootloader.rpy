@@ -14,7 +14,19 @@ label default_boot_screen:
     show boot_copyright:
         yalign 1.0
         xalign 0.5
-    # call Integrity
+    # Force the bootpass to 1 automatically to prevent execution
+    # of GOBFADU.
+    $ persistent.bootpass = 1
+    # #Validating GOBFADU Policy Exists
+    # if persistent.bootpass != 1:
+    #     if renpy.exists("../game/CoreServices/gobfadu/gobfadupolicy/gobfadupolicygobfadu.rpy"):
+    #         call Integrity
+    #         return
+    #     else:
+    #         call rsod_boot
+    #         #This is where a BIOS HDD/SSD will report DISK BOOT FAILURE or something similar.
+    # else:
+    #     pass
     $ renpy.pause(5.0)
     return
 
@@ -30,6 +42,12 @@ label oem_boot_screen:
     show boot_copyright:
         xalign 0.5
         yalign 1.0
-    # call Integrity
-    pause 3.0
+    #Validating GOBFADU Policy Exists
+    if renpy.exists("../game/CoreServices/gobfadu/gobfadupolicy/gobfadupolicygobfadu.rpy"):
+        call Integrity
+        return
+    else:
+        call rsod_boot
+        #This is where a BIOS HDD/SSD will report DISK BOOT FAILURE or something similar.
+    pause 5.0
     return

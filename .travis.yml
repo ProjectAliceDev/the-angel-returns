@@ -21,11 +21,9 @@ install:
     # we're copying over the template files into the renpy SDK
     # and CD into the renpy
     
-    - bash ./the-angel-returns/setup.sh
-    
-    # Remove README.html to prevent errors.
-    - rm -rf the-angel-returns/README.html && cp -vRf the-angel-returns/* mod/
-    
+    - bash ./the-angel-returns/travis_pull_base.sh
+    - cp -vRf the-angel-returns/* mod/
+    - bash ./the-angel-returns/travis_print_version.sh
     - cd renpy
 
 
@@ -36,7 +34,7 @@ env:
 # This is the script part. This is where the actual building is happening.
 # This produces an artifact which we'll use later on to publish a release.
 
-script: ./renpy.sh "../mod/" lint && ./renpy.sh launcher distribute "../mod/" && cd ..
+script: ./renpy.sh "../mod/" lint && ./renpy.sh launcher distribute "../mod/" && cd .. && ls
 
 
 # This is where the actual releases happen. Travis has the ability to publish releases from GitHub, Amazon S3, OpenShift, etc.

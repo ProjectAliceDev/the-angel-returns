@@ -1,6 +1,6 @@
 label demo_end:
     stop music fadeout 1.0
-    scene bg mojave desktop
+    scene default_background
     with dissolve_scene_full
     $ consolehistory = []
     call updateconsole("_alice float", "Running aliceangel.chr as tool...")
@@ -9,15 +9,14 @@ label demo_end:
     a "{i}Jeez, I freaking hate demos...{/i}"
     show alice 0bc at t11
     a "[player]..."
-    a "Oh, God... this is probably confusing for you."
-    a 0bt "Well, I guess I owe you an explanation or two."
-    a 0bd "I know it looks like we're in the desert, but we're not actually there."
-    a "Suffice to say, you're... on my desktop."
-    a "I spent countless hours designing a sandboxed operating system specifically for this."
-    a "I was a bit inspired by Apple's latest macOS release, {i}Mojave{/i}, so that's why there's a lot of Mojave branding."
-    a "I don't know why, but Henry slaved away his hours at finding a way for me to live on."
-    a 0bt "Either that or this is supposed to be torture. I can never {i}really{/i} tell with him."
-    a "And now you probably think I've turned into a nerd or something..."
+    a "Well, I have some explaining to do."
+    a 0bm "Ehehe~"
+    a 0bd "Well, I guess there's thing called 'AliceOS'."
+    a "I honestly don't know what it really is or what it can do..."
+    a "But, what I do know is that I have some form of control over it."
+    a "I'm required to have this control over it."
+    a "So, uh..."
+    a 0bm "I guess it was kind of pointless for it to ask you all those permissions."
     a 0bn "Jeez, this game... it does the strangest things. Yet somehow I have control over a lot of aspects of it."
     a 0bo "It's truly a shame, really, because there's so much that you haven't seen..."
     a "There's a lot I've done. It breaks my heart to not show you all of it."
@@ -36,7 +35,7 @@ label demo_end:
 
 label demo_end_2:
     stop music fadeout 1.0
-    scene bg mojave desktop
+    scene default_background
     show alice 0bl at t11
     a "I, uh, I {i}did{/i} say it was unfinished, ehehe~"
     a 0bg "I'm sorry if that got a little awkward for you."
@@ -71,7 +70,10 @@ label demo_end_loop:
 
     a "I appreciate that you came back for me, but I told you that I have nothing to show."
     a "Please, come back when the game's actually complete."
-    $ renpy.quit()
+    window hide(None)
+    show black
+    pause 0.2
+    call rsod_missing_act
     return
 
 ## Persistent Looping (Special)
