@@ -3,6 +3,8 @@
 # Copyright 2018(c) The Sayonika Project Authors
 # Licensed under MIT.
 
+set -e
+
 echo " ==================================================="
 echo "|   Welcome to Sayonika RenPy DDLC Mod Autobuilder  |"
 echo "|                                                   |"
