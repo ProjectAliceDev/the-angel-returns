@@ -6,7 +6,7 @@
 echo " ==================================================="
 echo "|   Welcome to Sayonika RenPy DDLC Mod Autobuilder  |"
 echo "|                                                   |"
-echo "|                 V 1.0.0-alice                     |"
+echo "|                 V 1.1.0-alice                     |"
 echo "|               Licensed under MIT                  |"
 echo " ==================================================="
 echo ""
@@ -104,6 +104,11 @@ case $1 in
     ;;
   "")
      read -p "Enter your mod's Location (use . if you have this script inside your mod folder): " input
+    ;;
+  -* | --*)
+      echo "Invalid option $1"
+      print_help
+      exit 2;
     ;;
 esac
 # Really needed Type Checks
