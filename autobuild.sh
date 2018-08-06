@@ -106,8 +106,9 @@ while getopts :d:h opt; do
   esac
 done
 
-read -p "Enter your mod's Location (use . if you have this script inside your mod folder): " input
-
+if [[ -z $input ]]; then
+    read -p "Enter your mod's Location (use . if you have this script inside your mod folder): " input
+fi
 # Really needed Type Checks
 
 while [[ $input =~ $regex || -z $input ]] ; do
