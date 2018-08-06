@@ -3,8 +3,6 @@
 # Copyright 2018(c) The Sayonika Project Authors
 # Licensed under MIT.
 
-set -e
-
 echo " ==================================================="
 echo "|   Welcome to Sayonika RenPy DDLC Mod Autobuilder  |"
 echo "|                                                   |"
@@ -56,6 +54,17 @@ pull_ddlc_base() {
     fi
 }
 
+print_help() {
+   echo "$0 [-d <DIRECTORY> | -h]"
+   echo ""
+   echo "Builds a mod by creating a build/ folder and compiles releases there."
+   echo "When no arguments are present, the script starts in interactive mode."
+   echo "However, for non-interactive usage, the following is accepted as a argument:"
+   echo ""
+   echo "-d <DIRECTORY>      The Directory of the mod to build."
+   echo "-h                  Print this help dialogue."
+}
+
 # DDTAR-specific Autobuild function.
 # This won't be included in the mainline autobuild.sh
 print_version() {
@@ -69,6 +78,33 @@ print_version() {
 }
 
 regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
+
+
+while getopts :d:h opt; do
+  case $opt in
+  d)
+      input="$2"
+      if [[ $input =~ $regex || -z $input ]] ; then
+         echo "Invalid input. Try again."
+         exit 2;
+      fi
+
+      if [[ ! -d $input ]] ; then
+         echo "Directory does not exist. Try a different directory."
+         exit 1;
+      fi
+      ;;
+  h)
+      print_help
+      exit 0
+      ;;
+  \?)
+      echo "Invalid option: -$OPTARG" >&2
+      print_help
+      exit 0
+      ;;  
+  esac
+done
 
 read -p "Enter your mod's Location (use . if you have this script inside your mod folder): " input
 
