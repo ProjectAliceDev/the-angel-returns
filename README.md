@@ -12,20 +12,12 @@ It's spring break! Join the Literature Club girls in an exciting one-week advent
 Doki Doki Doki: The Angel Returns requires the following:
  
  - On Windows:
-   - RenPy SDK
+   - Windows Subsystem for Linux (or a Bash terminal for Windows)
  
  - On Linux/macOS/BSD:
-   - CMake
-   - RenPy SDK
+   - Terminal (Bash)
 
 To build the mod:
-
-**On windows**
-
-Coming soon.
-
-**On Linux/macOS/BSD**
-
-```
- make dev
+```bash
+./autobuild.sh
 ```
