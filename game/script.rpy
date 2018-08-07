@@ -52,7 +52,9 @@ label start:
 
     if persistent.playthrough == 1:
         #Stuff here would only play after you increased the playthrough count
-
+        $ a_name = "Alice"
+        $ player = persistent.playername
+        call ch2_main
         ## Disable this line if this isn't the demo.
         call demo_end_loop
         pass
