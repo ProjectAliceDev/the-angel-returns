@@ -384,7 +384,7 @@ label ch2_main:
     show alice at t32
     sm 1l "Oh, thank God!"
     sm 4b "SWEET RELIEF!"
-    sm 1l "It'll probably sting now that it has contact with warm air."
+    sm 1o "It'll probably sting now that it has contact with warm air."
     sm 1h "I swear, Tom's freezer is the equivalent of the Arctic circle!"
     show monika at thide
     show alice at thide
