@@ -122,3 +122,6 @@ game/**.rpyc
 # AliceOS-specific files
 game/*.apf
 game/*.moj
+
+# JetBrains IDEA folders
+.idea
