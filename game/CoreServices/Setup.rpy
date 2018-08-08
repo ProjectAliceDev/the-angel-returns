@@ -34,6 +34,7 @@ image mojave setup header = Text("Alice OS Setup Assistant", font="Resources/sys
 image setup_beta_check_header = Text("Enroll in the Beta Program", font="Resources/systemfont/Medium.ttf", size=38, style="_default")
 image setup_game_tos_header = Text("License Agreement", font="Resources/systemfont/Medium.ttf", size=38, style="_default")
 image setup_accounts_header = Text("Create Your Computer Account", font="Resources/systemfont/Medium.ttf", size=38, style="_default")
+image setup_ctf_header = Text("Select a Game Mode", font="Resources/systemfont/Medium.ttf", size=38, style="_default")
 
 # Welcome
 image setup_welcome_text = Text("Welcome to the Alice OS Setup Assistant. This tool will help you\nset up your computer and your game for playing.\n\nWhen you are ready, press 'Next'.",font="Resources/systemfont/Regular.ttf", size=22, style="_default")
@@ -70,6 +71,9 @@ image setup_game_tos_info = Text("AliceOS has detected that this game includes a
 image setup_tos_info = Text("AliceOS is licensed under the GNU GPL v3.\nPlease read the license summary below and agree to the terms.",font="Resources/systemfont/Regular.ttf", size=22, style="_default")
 image setup_game_tos_text = Text(gametos ,font="Resources/systemfont/Regular.ttf", size=16, style="_default")
 image setup_tos_text = Text(gnutos ,font="Resources/systemfont/Regular.ttf", size=16, style="_default")
+
+# Capture the Flag Mode
+image setup_ctf_info = Text("This game uses two different puzzle sets to enhance the gameplay.\n\nIf you want puzzles similar to the iOS game Blackbox, select Basic Mode.\n\n If you want to manipulate the game to acquire flags, select Advanced Mode.")
 
 # Finished
 image setup_complete_thankyou = Text("Your profile has been created and this computer is ready to be used.\n\nIf you need to enter a password, check the profiles file.\n\nThank you for choosing Alice OS.",font="Resources/systemfont/Regular.ttf", size=22, style="_default")
@@ -177,8 +181,28 @@ label setup_tos_game:
     hide setup_game_tos_info
     hide setup_game_tos_header
     hide setup_game_tos_text
-    call setup_accounts
+    call setup_ctf_mode
     return
+
+label setup_ctf_mode:
+    show setup_game_ctf_header zorder 3:
+    xalign 0.5 yalign 0.18
+    show setup_ctf_info zorder 3:
+    xalign 0.5 yalign 0.3
+    python:
+        ui.hbox(xalign=xcoordinate,yalign=ycoordinate)
+        ui.textbutton("Basic", ui.returns("no-ctf"), style="confirm_button", xalign=.5)
+        ui.textbutton("Advanced", ui.returns("ctf"), style="confirm_button", xalign=.5)
+        ui.close()
+        choice_selected=ui.interact()
+        if choice_selected == "no-ctf":
+            persistent.ctf_mode = False
+        elif choice_selected == "ctf":
+            persistent.ctf_mode = True
+    hide setup_ctf_header
+    hide setup_ctf_info
+    call setup_accounts
+return
 
 label setup_accounts:
     show setup_accounts_header zorder 3:
