@@ -84,7 +84,7 @@ image alice_chibi:
     "mod_assets/images/chibis/alice.png"
     xoffset aliceOffset xzoom aliceZoom
     block:
-        function randomPause
+        function randomPauseAlice
         parallel:
             function chibiAliceHop
         repeat
@@ -226,6 +226,8 @@ label setup_ctf_mode:
             persistent.ctf_mode = True
     hide setup_ctf_header
     hide setup_ctf_info
+    hide alice_chibi
+    hide sayonika_chibi
     call setup_accounts
 return
 
