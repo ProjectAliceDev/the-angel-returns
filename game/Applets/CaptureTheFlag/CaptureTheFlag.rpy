@@ -40,8 +40,13 @@ It's time to capture the flag!
         # See the Applet Manifest wiki page for all possible
         # permissions
         permissions = {pm_notify}
+
+        flags = {
+            0: "ctf.45_51mp13_45_1t_g3t5"
+        }
     
     ctf = CaptureTheFlag()
+    flag = ""
 
 ## Applet Code
 # Define your applet after you have established your
@@ -49,3 +54,25 @@ It's time to capture the flag!
 # or definitions. Please keep all of your applet's code
 # in this file.
 image alice_just_main = "mod_assets/images/cg/ja.png"
+
+init -501 screen flag_input(message, ok_action):
+    modal True
+    zorder 200
+
+    style_prefix "confirm"
+
+    add "gui/overlay/confirm.png"
+    key "K_RETURN" action [Play("sound", gui.activate_sound), ok_action]
+
+    frame:
+
+        has vbox:
+            xalign .5
+            yalign .5
+            spacing 30
+
+            label _(message):
+                style "confirm_prompt"
+                xalign 0.5
+
+        input default "ctf." value VariableInputValue("flag")

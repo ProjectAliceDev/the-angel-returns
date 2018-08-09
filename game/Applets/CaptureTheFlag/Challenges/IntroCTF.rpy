@@ -20,4 +20,13 @@ label ctf_intro:
     a "The choices of the beautiful are unbearable; how's a girl to choose?"
     a "Ahaha~"
     a "I'm only kidding, of course."
+    a "I wouldn't have a reason to delete you, anyway..."
+    a "Why would I do such a thing in a world as cruel as this, [player]?"
+    a "Maybe we shall play a game to pass the time..."
+    a "Do you want to be my errand boy, [player]?"
+    a "Yes, I think this will do nicely."
+    a "Ahaha~, I've always been a fan of playing Capture the Flag."
+    a "And I'm sure you know what I mean, ehehe~"
+    a "Perhaps we should start with something simple."
+    call screen flag_input("Enter the flag.", ok_action=Return(0))
 return
