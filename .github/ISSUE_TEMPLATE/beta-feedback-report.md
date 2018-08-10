@@ -4,7 +4,7 @@ about: For those using the beta versions of DDTAR
 
 ---
 
-* Nightly build:
+* Nightly build: (use the 7 digits that follow `X.X.X-nightly_git-`)
 * Platform: 
 * Contact email address:
 > Note: Your email address is for if you don't receive notifications through GitHub.

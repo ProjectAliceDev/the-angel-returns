@@ -6,7 +6,7 @@
 echo " ==================================================="
 echo "|   Welcome to Sayonika RenPy DDLC Mod Autobuilder  |"
 echo "|                                                   |"
-echo "|                 V 1.0.0-alice                     |"
+echo "|                 V 1.1.0-alice                     |"
 echo "|               Licensed under MIT                  |"
 echo " ==================================================="
 echo ""
@@ -54,6 +54,17 @@ pull_ddlc_base() {
     fi
 }
 
+print_help() {
+   echo "$0 [-d <DIRECTORY> | -h]"
+   echo ""
+   echo "Builds a mod by creating a build/ folder and compiles releases there."
+   echo "When no arguments are present, the script starts in interactive mode."
+   echo "However, for non-interactive usage, the following is accepted as a argument:"
+   echo ""
+   echo "-d <DIRECTORY>      The Directory of the mod to build."
+   echo "-h                  Print this help dialogue."
+}
+
 # DDTAR-specific Autobuild function.
 # This won't be included in the mainline autobuild.sh
 print_version() {
@@ -68,17 +79,47 @@ print_version() {
 
 regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
 
-read -p "Enter your mod's Location (use . if you have this script inside your mod folder): " input
 
+case $1 in 
+ -d | --directory)
+      if [[ -z "$2" ]]; then
+         echo "Error: $1 requires a argument"
+         print_help
+         exit 2;
+      else
+        if [[ $2 =~ $regex || -z $2 ]]; then
+          echo "Error: Invalid input. Try again."
+          exit 2;
+        elif [[ ! -d $2 ]]; then
+          echo "Error: Directory does not exist. Try a different directory."
+          exit 2;
+        else
+          input="$2";
+        fi
+      fi
+    ;;
+ -h | --help)
+      print_help
+      exit 0;
+    ;;
+  "")
+     read -p "Enter your mod's Location (use . if you have this script inside your mod folder): " input
+    ;;
+  -* | --*)
+      echo "Invalid option $1"
+      print_help
+      exit 2;
+    ;;
+esac
 # Really needed Type Checks
 
 while [[ $input =~ $regex || -z $input ]] ; do
-  echo "Invalid input. Try again."
+  echo "Error: Invalid input. Try again."
   read -p "Enter your mod's Location (use . if you have this script inside your mod folder): " input
 done
 
 while [[ ! -d $input ]] ; do
-  echo "Directory does not exist. Try a different directory."
+  echo "Error: Directory does not exist. Try a different directory."
   read -p "Enter your mod's Location (use . if you have this script inside your mod folder): " input
 done
 
