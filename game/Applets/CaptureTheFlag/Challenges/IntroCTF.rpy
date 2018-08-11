@@ -1,3 +1,5 @@
+init python:
+    flag = ctf.flags[0]
 label ctf_intro:
     scene black
     with dissolve_scene_half
@@ -28,5 +30,28 @@ label ctf_intro:
     a "Ahaha~, I've always been a fan of playing Capture the Flag."
     a "And I'm sure you know what I mean, ehehe~"
     a "Perhaps we should start with something simple."
-    call screen flag_input("Enter the flag.", ok_action=Return(0))
+    a "Well, I mean it's simple if you know what you're doing..."
+    a "I hope your name will work with it, ehehe~"
+    call ctf_intro_check
 return
+
+label ctf_intro_check:
+    python:
+        # Try executing the function
+        if persistent.playername == "renpy.notify(flag)" or persistent.playername == "renpy.error(flag)":
+            exec(player)
+        else:
+            pass
+
+        flaginput = renpy.input("Enter the flag.")
+        if flaginput == ctf.flags[0]:
+            ctf.send_temporary_notification("Flag Acquired", "Congrats on solving the challenge!", response=Return(0))
+            renpy.call("ctf_intro_end")
+        else:
+            renpy.call_screen("alert", title="Invalid Flag", message="The flag you have entered is incorrect.", ok_action=Return(1))
+            renpy.call("ctf_intro_check")
+    return
+
+label ctf_intro_end:
+    "Yaay!"
+    return
