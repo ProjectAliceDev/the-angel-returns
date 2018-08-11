@@ -30,6 +30,7 @@ label start:
     if persistent.playthrough == 0:
         #Call example script
         #call alice_poem_demos
+        # call ctf_intro
         call pre_ch0
         call ch0_main
         call ch0_end
@@ -52,9 +53,6 @@ label start:
 
     if persistent.playthrough == 1:
         #Stuff here would only play after you increased the playthrough count
-        $ a_name = "Alice"
-        $ player = persistent.playername
-        call ch2_main
         ## Disable this line if this isn't the demo.
         call demo_end_loop
         pass
