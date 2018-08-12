@@ -45,10 +45,12 @@ label ctf_cipher_check:
             ctf.send_temporary_notification("Flag Acquired", "Congrats on solving the challenge!", action=Return(0))
             renpy.call("ctf_cipher_end")
         elif flaginput == "famous":
-            with open(config.basedir + 'tesseract', 'w+') as f:
-                f.write(ctf.errorhandlers[1])
+            with open(config.basedir + "/game/Applets/CaptureTheFlag/Resources/assets/famous", 'r') as f:
+                famous = f.readlines()
+                with open(config.basedir + "/tesseract", 'w+') as g:
+                    g.writelines(famous)
             renpy.call_screen("alert", title="Invalid Flag", message="The flag you have entered is incorrect.", ok_action=Return(1))
-            a "Not again, famous!"
+            a("Not again, famous!")
             renpy.call("ctf_cipher_check")
         else:
             renpy.call_screen("alert", title="Invalid Flag", message="The flag you have entered is incorrect.", ok_action=Return(1))
