@@ -226,6 +226,7 @@ label setup_ctf_mode:
             persistent.ctf_mode = True
     hide setup_ctf_header
     hide setup_ctf_info
+    hide setup_ctf_details_text
     hide alice_chibi
     hide sayonika_chibi
     call setup_accounts

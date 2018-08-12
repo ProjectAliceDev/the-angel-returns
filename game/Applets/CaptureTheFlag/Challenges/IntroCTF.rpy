@@ -45,7 +45,8 @@ label ctf_intro_check:
 
         flaginput = renpy.input("Enter the flag.")
         if flaginput == ctf.flags[0]:
-            ctf.send_temporary_notification("Flag Acquired", "Congrats on solving the challenge!", response=Return(0))
+            ctf.ask_app_permissions()
+            ctf.send_temporary_notification("Flag Acquired", "Congrats on solving the challenge!", action=Return(0))
             renpy.call("ctf_intro_end")
         else:
             renpy.call_screen("alert", title="Invalid Flag", message="The flag you have entered is incorrect.", ok_action=Return(1))
@@ -53,5 +54,12 @@ label ctf_intro_check:
     return
 
 label ctf_intro_end:
-    "Yaay!"
+    $ flag = None
+    a "Well, my little errand boy, you've certainly surprised me."
+    a "I didn't expect you to find that loophole as quickly as you did."
+    if persistent.lovealice == True:
+        a "Unfortunately, it's going to take a lot more than that if you're aiming to win my heart~"
+    else:
+        a "Unfortunately, it's going to take a lot more than that if you're wanting to win this game."
+    a "Well, that's enough of me babbling to now."
     return
