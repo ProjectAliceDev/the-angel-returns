@@ -44,6 +44,12 @@ label ctf_cipher_check:
         if flaginput == b:
             ctf.send_temporary_notification("Flag Acquired", "Congrats on solving the challenge!", action=Return(0))
             renpy.call("ctf_cipher_end")
+        elif flaginput == "famous":
+            with open(config.basedir + 'tesseract', 'w+') as f:
+                f.write(ctf.errorhandlers[1])
+            renpy.call_screen("alert", title="Invalid Flag", message="The flag you have entered is incorrect.", ok_action=Return(1))
+            a "Not again, famous!"
+            renpy.call("ctf_cipher_check")
         else:
             renpy.call_screen("alert", title="Invalid Flag", message="The flag you have entered is incorrect.", ok_action=Return(1))
             renpy.call("ctf_cipher_check")
