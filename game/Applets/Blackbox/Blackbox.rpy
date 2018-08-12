@@ -45,12 +45,10 @@ Puzzle Time provides a fun and unique way of solving puzzles in between scenes i
             self.send_temporary_notification("Chapter unlocked", "Good job on solving the puzzle!", action=Return(0))
 
         def discover_notify(self):
-            with open(config.basedir + "/game/" + self.app_dir + ".apf", "r") as f:
-                perm_lines = f.readlines()
-                if perm_lines[0] == 'pm_notify\n':
-                    return True
-                else:
-                    return False
+            if persistent.aliceos_permissions["Blackbox_notify"] == True:
+                return True
+            else:
+                return False
 
         def show_puzzle_window(self, puzzleno):
             if puzzleno == 1:
