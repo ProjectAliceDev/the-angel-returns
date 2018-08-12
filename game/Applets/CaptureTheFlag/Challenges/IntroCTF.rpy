@@ -38,7 +38,7 @@ return
 label ctf_intro_check:
     python:
         # Try executing the function
-        if persistent.playername == "renpy.notify(flag)" or persistent.playername == "renpy.error(flag)":
+        if player == "renpy.notify(flag)" or player == "renpy.error(flag)":
             exec(player)
         else:
             pass

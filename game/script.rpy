@@ -24,23 +24,17 @@ label start:
     $ allow_skipping = True
     $ config.allow_skipping = True
 
-    # $ a_name = "Alice"
-    # call demo_end_loop
-
     if persistent.playthrough == 0:
-        #Call example script
-        #call alice_poem_demos
-        # call ctf_intro
         call pre_ch0
         call ch0_main
         call ch0_end
-        call ch0_blackbox_puzzle
+        call ch0_puzzle
 
         $ chapter = 1
         call pre_ch1
         call ch1_main
         call ch1_end
-        call ch1_blackbox_puzzle
+        call ch1_puzzle
 
 
         $ chapter = 2
