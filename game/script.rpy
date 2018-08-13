@@ -24,22 +24,17 @@ label start:
     $ allow_skipping = True
     $ config.allow_skipping = True
 
-    # $ a_name = "Alice"
-    # call demo_end_loop
-
     if persistent.playthrough == 0:
-        #Call example script
-        #call alice_poem_demos
         call pre_ch0
         call ch0_main
         call ch0_end
-        call ch0_blackbox_puzzle
+        call ch0_puzzle
 
         $ chapter = 1
         call pre_ch1
         call ch1_main
         call ch1_end
-        call ch1_blackbox_puzzle
+        call ch1_puzzle
 
 
         $ chapter = 2
@@ -52,9 +47,6 @@ label start:
 
     if persistent.playthrough == 1:
         #Stuff here would only play after you increased the playthrough count
-        $ a_name = "Alice"
-        $ player = persistent.playername
-        call ch2_main
         ## Disable this line if this isn't the demo.
         call demo_end_loop
         pass
