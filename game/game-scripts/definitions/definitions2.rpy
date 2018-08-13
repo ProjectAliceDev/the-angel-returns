@@ -15,6 +15,7 @@ image bg studio inkmachine = "mod_assets/images/bg/studio-2.png"
 image bg studio breakroom = "mod_assets/images/bg/studio-3.png"
 image bg studio lift = "mod_assets/images/bg/studio-4.jpg"
 image bg studio office = "mod_assets/images/bg/studio-7.jpg"
+image bg apple = "mod_assets/images/bg/appleshop.png"
 
 define audio.a4 = "mod_assets/music/b4g.ogg"
 define audio.bt = "<loop 18.073>mod_assets/music/theme.wav"
@@ -41,3 +42,4 @@ define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix
 define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define a = DynamicCharacter('a_name', image='alice', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxamber.png", xalign=0.5, yalign=1.0), who_style='say_label_amber')
 define sm = DynamicCharacter('sm_name', image='sayonika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxteal.png", xalign=0.5, yalign=1.0), who_style='say_label_teal')
+define c = DynamicCharacter('c_name', image='craig', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxapple.png", xalign=0.5, yalign=1.0), who_style='say_label_apple')

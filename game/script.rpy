@@ -17,15 +17,13 @@ label start:
     $ y_name = "Yuri"
     $ mi_name = "Mio"
     $ sm_name = "???"
+    $ c_name = "???"
 
     $ quick_menu = True
     $ style.say_dialogue = style.normal
     $ in_sayori_kill = None
     $ allow_skipping = True
     $ config.allow_skipping = True
-
-    # $ a_name = "Alice"
-    # call demo_end_loop
 
     if persistent.playthrough == 0:
         #Call example script
