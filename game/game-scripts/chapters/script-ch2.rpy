@@ -295,6 +295,242 @@ label ch2_main:
     show monika at f21
     show alice at t22
     m "I don’t suppose that..."
+    show monika at t21
+    "Suddenly, the door opens."
+    "A girl with a wrench and pad of bacon steps down and looks at Alice."
+    "She reminded me a bit of Monika and Sayori, mixed together..."
+    sm "Alice! Oh, thank God I found you!"
+    show alice at f22
+    a 0d "Eh?"
+    a "You were looking for me?"
+    "The girl jumps into our group and starts breathing heavily."
+    show monika at t31
+    show alice at t32
+    show sayonika 1a at t33
+    sm "{i}*Pant*{/i}"
+    sm "Tom wanted me to give you this... pack.. of..."
+    show alice at f32
+    a "Jeez, Sayonika, did you run a marathon?"
+    $ sm_name = "Sayonika"
+    show alice at t32
+    show sayonika at f33
+    sm "Well, this place is really big..."
+    sm "And this bacon is really cold..."
+    sm "I think my fingers are frozen and stuck to the package."
+    sm "Ehehe~"
+    show sayonika at t33
+    show alice at f32
+    a 0m "There are lifts, you know..."
+    show sayonika at f33
+    show alice at t32
+    sm "I thought those were still broken!"
+    sm "Did Tom fix them already?"
+    show monika at f31
+    show sayonika at t33
+    m 4cd "So you must be Alice's assistant?"
+    show sayonika at f33
+    show monika at t31
+    sm "Well, more like her 'partner in crime'."
+    sm "I help her with some of the server-side programming and that sort of thing."
+    sm "If that made sense..."
+    sm "Anyways, who are you?"
+    show alice at f32
+    show sayonika at t33
+    a 0b "This is Monika, the president of the literature club that Mio's a part of."
+    show sayonika at f33
+    show alice at t32
+    sm "Oh, the literature club!"
+    sm "No wonder you looked familiar."
+    sm "For a minute, I thought you were a cosplayer or something!"
+    show monika at f31
+    show sayonika at t33
+    m 1cg "Eh?"
+    m "What do you mean?"
+    show alice at f32
+    show monika at t31
+    a 0m "Ehehe~"
+    a "That's... a long sto-{nw}"
+    a "Nevermind. Don't overthink it; I'll explain it to you later."
+    a 0d "It's a lot less complicated for you than it is for anyone else."
+    show monika at f31
+    show alice at t32
+    m 1co "..."
+    m 1cp "Oh."
+    m 1cm "I understand now."
+    m "Ehehe~"
+    m 1cb "Fair enough! Say, I think Natsuki and Sayori needed some bacon."
+    show sayonika at f33
+    show monika at t31
+    sm "Yeah, Tom knew about the girls coming."
+    sm "He wanted me to give you girls this pack since has has a lot in the freezer."
+    sm "Good luck trying to pry it from my hands, though..."
+    sm "And I don't mean that in a selfish way. I think my hands are actually stuck to the package."
+    show monika at f31
+    show sayonika at t33
+    m 1cg "Uh oh..."
+    m 1cp "I don't have a hair dryer or anything, so..."
+    show alice at f32
+    show monika at t31
+    a "Don't worry, I think her hands are just a bit cold."
+    show alice at t32
+    "Gently, Alice slides her hands between Sayonika's and the package."
+    "To our relief, the two break apart quickly, like as if nothing held them."
+    show monika 1ca at t31
+    show alice at f32
+    a 0b "See?"
+    a 0k "I knew she wasn't in terrible danger!"
+    "Sayonika sighs in relief."
+    show sayonika at f33
+    show alice at t32
+    sm "Oh, thank God!"
+    sm "SWEET RELIEF!"
+    sm "It'll probably sting now that it has contact with warm air."
+    sm "I swear, Tom's freezer is the equivalent of the Arctic circle!"
+    show monika at thide
+    show alice at thide
+    show sayonika at thide
+    hide monika
+    hide alice
+    hide sayonika
+    "We deligently finish making and eating breakfast."
+    "Sayori and Natsuki discuss plans of visiting the old theme park below as they clean up the equipment."
+    "Meanwhile, Yuri cleans the cups and starts collecting the dishes."
+    "Monika takes the napkins and other trash to throw out."
+    "Alice helps realign the tables while Sayonika sweeps up the floor."
+    
+    stop music fadeout 1.0
+    scene bg studio lift
+    with wipeleft
+    play music bt3
+    "When everyone's finished, we all head to the lift area."
+    show monika 1ca at t21
+    show natsuki 2ba at f22
+    n "Sayori and I are thinking of heading down to the old amusement park to check out the rides and stuff."
+    n "Alice said that Tom can watch over us so we don't get hurt."
+    show monika at f21
+    show natsuki at t22
+    m 4cd "Alright, just make sure you're careful."
+    m "You never know what could happen down there."
+    show natsuki at f22
+    show monika at t21
+    n 5bd "I think we'll be fine."
+    n "There's something else I'm interested in checking out, anyway..."
+    show natsuki at thide
+    hide natsuki
+    show yuri 1bb at f22
+    y "I heard there's a good selection of prototype artwork up in the art studio."
+    y "I was going to head there myself and take a peek."
+    y "Did you two want to join me?"
+    show monika at f21
+    show yuri at t22
+    m 2ck "Thank you for the offer, but I think Alice wanted to show us a few things."
+    show yuri at f22
+    show monika at t21
+    y 3bd "Of course! I'll let you two be."
+    y 3bb "Maybe Mio will join me when she's not wound up."
+    show yuri at thide
+    hide yuri
+    show alice 0a at t22
+    show monika at f21
+    m 3cb "So, Alice, you wanted to show us something?"
+    show alice at f22
+    show monika at t21
+    a 0b "Sure. Don't mind Sayonika; she'll be working on a few things in my office."
+    show alice 0a at t22
+    mc "Um... I guess."
+    mc "Let's see what you wanted to show us."
+    return
+
+label ch2_cg:
+    stop music fadeout 1.0
+    scene bg studio office
+    with wipeleft
+    play music t6
+    "The four of us enter the office, not saying a word."
+    "Sayonika takes a seat near the wall and pulls out a laptop from underneath her seat."
+    "Meanwhile, Alice sits in the chair across the table."
+    "Monika and I take the seats in front of the table and face Alice."
+    show monika 1ca at t21
+    show alice 0a at t22
+    mc "So, you said you were working on a few side projects."
+    show alice at f22
+    a 0k "Of course! I think you two might like this one."
+    a 0b "So, I've been taking a look at this game engine that allows you to create visual novels..."
+    show monika at f21
+    show alice at t22
+    m 1cd "Visual novels?"
+    show alice at f22
+    show monika 1cc at t21
+    a "It's kind of like a real novel, but-{nw}"
+    show monika at f21
+    show alice at t22
+    m 1cd "I know what you're talking about, but you have interest in those?"
+    show alice at f22
+    show monika 1cc at t21
+    a 0l "Well, I've had an epiphany, and it kinds of started to make me curious about these things."
+    a 0m "So, I grabbed a copy of Ren'Py and started to play around with it."
+    a "At the same time, I've discovered this game..."
+    a 0d "It's called {i}Doki Doki Literature Club{/i}, and the girls in there are strikingly similar to you all."
+    a 0r "Even you, [player]..."
+    show monika at f21
+    show alice at t22
+    m 2cg "Eh?"
+    m "Alice, you're kind of scaring me..."
+    m "I don't like where this is going...{w=1.0} not{w=0.5} one{w=0.5} bit."
+    show alice at f22
+    show monika 2cf at t21
+    a 0g "How come, Monika?"
+    a 0r "You aren't afraid of the truth now,{w=1.5} {i}are you{/i}?"
+    show monika at f21
+    show alice at t22
+    m 2cg "Alice, what are you doing?"
+    m "This better not be malicious or anything..."
+    show alice at f22
+    show monika 2cf at t21
+    a 0d "Malicious?"
+    a 0g "Are you really that scared about what's been happening?"
+    a "All I'm doing is... well, this is hard to explain..."
+    show monika at f21
+    show alice at t22
+    m 4ci "Tampering with a game that's not yours?"
+    m "I'd better be worried because you seem to know everything that's going on..."
+    m 1cp "And what I've done..."
+    show alice at f22
+    show monika at t21
+    a 0g "Jeez, kid..."
+    a "I mean, I'm not one to pry, but you sound like a broken woman."
+    a "I was just trying to make a scene where you get all excited about programming and stuff."
+    a "I don't mean to hurt anyone; that wouldn't be fair in the story I'm wanting to tell."
+    a "Aren't you being a little skeptical?"
+    show monika at f21
+    show alice at t22
+    m "I just don't want to end up doing the wrong thing again."
+    m "There's no happiness here."
+    m "Not by the confines of this world."
+    m "Now it's even scarier because I don't know what's next in your little story."
+    show alice at f22
+    show monika at t21
+    a 0l "Relax! I'm not going to delete you any time soon."
+    a "Now why would I want to do that?"
+    a 0m "To be honest, I think you're a bit fun to play around with."
+    show monika at f21
+    show alice at t22
+    m "..."
+    m 1cg "Is it going to turn out horribly?"
+    show alice at f22
+    show monika 1cf at t21
+    a 0b "Not in my books."
+    a "Why don't you wipe that frown off of your face and let me show you this, hmm?"
+    show monika at f21
+    show alice at t22
+    m "..."
+    m 1ce "Alright, I trust you."
+    show alice at f22
+    show monika 1cf at t21
+    a 0k "That's the spirit!"
+    a 0b "It would be a shame if I didn't show you this, so..."
+    a "Anyways, I started writing my own mods for this game."
+    a "I think you might like it. Let me fire up the laptop."
     return
 
 label ch2_end:

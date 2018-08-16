@@ -50,3 +50,24 @@ init python:
 # app's manifest here. This may include screens, labels,
 # or definitions. Please keep all of your applet's code
 # in this file.
+
+# RSOD Information for Demo End (eg. 'Act 2 is missing')
+image rsod_corrupted_act_message = Text("ACT_FAULT_IN_NONACT_AREA", font="Resources/systemfont/Medium.ttf", size=24, color="#ffffff", style="_default")
+
+label rsod_missing_act:
+    scene rsod_bg
+    show rsod_face:
+        xpos 0.1
+        yalign 0.3
+    show rsod_generic_message:
+        xpos 0.1
+        yalign 0.6
+    show rsod_search_error_text:
+        xpos 0.1
+        yalign 0.75
+    show rsod_corrupted_act_message:
+        xpos 0.1
+        yalign 0.8
+    pause 10.0
+    $ renpy.utter_restart()
+return

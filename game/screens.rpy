@@ -533,9 +533,10 @@ init -501 screen main_menu() tag menu:
         vbox:
             # text "[config.name!t]":
                 # style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
+            text "v. [config.version] (" + snapshottime + ")":
+                style "hl3_version_text"
+            text "For evauluation purposes only.":
+                style "hl3_version_text"
 
     if not persistent.ghost_menu:
         add "menu_particles"
@@ -588,20 +589,6 @@ init -1 style main_menu_text:
 
 init -1 style main_menu_title:
     size gui.title_text_size
-
-init -1 style info_title:
-    size gui.title_text_size
-    xpos gui.navigation_xpos
-    yalign 0.48
-    font "mod_assets/gui/font/generic.ttf"
-    color "#ffffffE6"
-    outlines [(1, "#33333380", 0, 0), (1, "#33333300", 1, 1)]
-
-init -1 style hl3_version_text:
-    color "#ffffff"
-    size 16
-    font "Resources/systemfont/Regular.ttf"
-    outlines []
 
 
 
@@ -1028,10 +1015,15 @@ init -501 screen preferences() tag menu:
                         textbutton _("Mute All"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
-    text "v[config.version]":
-        xalign 1.0 yalign 1.0
-        xoffset -10 yoffset -10
-        style "main_menu_version"
+    if gui.show_name:
+        vbox:
+            xalign 1.0 yalign 1.0
+            xoffset -10 yoffset -10
+            text "v. [config.version] (" + snapshottime + ")":
+                style "main_menu_version"
+            text "For evauluation purposes only.":
+                style "main_menu_version"
+
 
 init -1 style pref_label is gui_label
 init -1 style pref_label_text is gui_label_text
@@ -1626,11 +1618,15 @@ screen say(who, what):
                 window:
                     style "nameboxred"
                     text who id "who"
+            if who == sm_name: #Sayonika namebox
+                window:
+                    style "nameboxteal"
+                    text who id "who"
             if who == player: #MC namebox
                 window:
                     style "namebox_mc"
                     text who id "who"
-            if who != s_name and who != m_name and who != y_name and who != n_name and who != player: #Everyone else namebox
+            if who != s_name and who != m_name and who != y_name and who != n_name and who != player and who != sm_name: #Everyone else namebox
                 window:
                     style "namebox"
                     text who id "who"
@@ -1697,6 +1693,15 @@ style nameboxred:
     background Frame("/mod_assets/images/gui/nameboxred.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
+style nameboxteal:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+    background Frame("/mod_assets/images/gui/nameboxteal.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
 
 # We are not using "style say_label_blue is say_label" because it makes the game crash if you use rollback
 # if you don't use rollback you can replace all the window codes for something like this:
@@ -1711,6 +1716,14 @@ style say_label_blue:
     xalign gui.name_xalign
     yalign 0.5
     outlines [(3, "#58b", 0, 0), (1, "#58b", 1, 1)]
+
+style say_label_teal:
+    color gui.accent_color
+    font gui.name_font
+    size gui.name_text_size
+    xalign gui.name_xalign
+    yalign 0.5
+    outlines [(3, "#00bcd4", 0, 0), (1, "#00bcd4", 1, 1)]
 
 style say_label_mc:
     color gui.accent_color
@@ -1761,7 +1774,7 @@ style say_label_pink:
     outlines [(3, "#b59", 0, 0), (1, "#b59", 1, 1)]
 
 style input:
-    font "mod_assets/gui/font/mojave.ttf"
+    font "Resources/systemfont/Regular.ttf"
     color "#333"
     outlines [(3, "#fff", 0, 0), (1, "#fff", 1, 1)]
 

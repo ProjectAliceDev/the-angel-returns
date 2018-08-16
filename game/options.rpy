@@ -1,5 +1,7 @@
-
-
+init python:
+    import json
+    with open(config.basedir + '/version', 'r') as f:
+        release_version = json.load(f)
 # human readable name of this game
 # _() marks strings eligable for translation
 define config.name = "Doki Doki: The Angel Returns"
@@ -9,6 +11,8 @@ define gui.show_name = True
 
 # Version of the game
 define config.version = "0.1.2beta2"
+define nightlydate = release_version["version"]
+define snapshottime = "nightly_pht-" + nightlydate
 
 # text placed on about screen
 define gui.about = _("")
@@ -93,6 +97,7 @@ define config.predict_statements = 50
 define config.rollback_enabled = config.developer
 define config.menu_clear_layers = ["front"]
 define config.gl_test_image = "white"
+# define config.developer = True
 
 
 init python:
@@ -145,7 +150,7 @@ init python:
     build.archive("scripts",build.name)
     build.archive("mod_assets",build.name)
     build.archive("submods",build.name)
-    build.archive("aliceos",build.name)
+    build.archive("aliceos",build.name) # Create AliceOS RPA
 
     # folder / files to put in archives
     build.classify("game/mod_assets/**","mod_assets")
@@ -185,6 +190,7 @@ init python:
     build.classify("credits.txt",build.name)
     build.classify("libitina.cfg",build.name)
     build.classify("mod.json",build.name)
+    build.classify("version", build.name)
 
     # Beta stuff if necessary:
     if "beta" in config.version:
