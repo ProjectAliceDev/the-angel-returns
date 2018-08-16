@@ -9,6 +9,10 @@ Please note that this is pre-release software and that things may change in futu
 versions. Press "Send Feedback" in the game menu or in the Quick Menu to file an
 issue on GitHub (note: GitHub account required).
 
+Note
+====
+This will be the LAST beta version of 0.1.2 as we are transitioning to nightly builds.
+
 Changes since Beta 1
 ~~~~~~~~~~~~~~~~~~~
 * We've introduced a brand-new main menu! If you're a fan of Source games like Half-Life

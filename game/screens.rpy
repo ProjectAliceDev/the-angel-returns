@@ -535,7 +535,11 @@ init -501 screen main_menu() tag menu:
                 # style "main_menu_title"
             text "v. [config.version] (" + snapshottime + ")":
                 style "hl3_version_text"
+<<<<<<< HEAD
             text "For evauluation purposes only.":
+=======
+            text "For evaluation purposes only.":
+>>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
                 style "hl3_version_text"
 
     if not persistent.ghost_menu:
@@ -1021,7 +1025,11 @@ init -501 screen preferences() tag menu:
             xoffset -10 yoffset -10
             text "v. [config.version] (" + snapshottime + ")":
                 style "main_menu_version"
+<<<<<<< HEAD
             text "For evauluation purposes only.":
+=======
+            text "For evaluation purposes only.":
+>>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
                 style "main_menu_version"
 
 
