@@ -3,17 +3,6 @@
 # Copyright 2018(c) The Sayonika Project Authors
 # Licensed under MIT.
 
-echo " ==================================================="
-echo "|   Welcome to Sayonika RenPy DDLC Mod Autobuilder  |"
-echo "|                                                   |"
-echo "|                 V 1.1.0-alice                     |"
-echo "|               Licensed under MIT                  |"
-echo " ==================================================="
-echo ""
-echo " GitHub: https://github.com/Sayo-nika/autobuild.sh"
-echo " Bug reports : https://github.com/Sayo-nika/autobuild.sh/issues/new"
-echo ""
-
 # This pulls from the Sayonika-maintained S3 Storage for the DDLC base content.
 # It only contains the RPAs required to build a mod.
 
@@ -61,8 +50,8 @@ print_help() {
    echo "When no arguments are present, the script starts in interactive mode."
    echo "However, for non-interactive usage, the following is accepted as a argument:"
    echo ""
-   echo "-d <DIRECTORY>      The Directory of the mod to build."
-   echo "-h                  Print this help dialogue."
+   echo "-d | --directory <DIRECTORY>      The Directory of the mod to build."
+   echo "-h | --help                 Print this help dialogue."
 }
 
 # DDTAR-specific Autobuild function.
@@ -123,6 +112,16 @@ while [[ ! -d $input ]] ; do
   read -p "Enter your mod's Location (use . if you have this script inside your mod folder): " input
 done
 
+echo " ==================================================="
+echo "|   Welcome to Sayonika RenPy DDLC Mod Autobuilder  |"
+echo "|                                                   |"
+echo "|                 V 1.2.0-alice                     |"
+echo "|               Licensed under MIT                  |"
+echo " ==================================================="
+echo ""
+echo " GitHub: https://github.com/Sayo-nika/autobuild.sh"
+echo " Bug reports : https://github.com/Sayo-nika/autobuild.sh/issues/new"
+echo ""
 
 if [[ $input == '.' ]]; then
   echo "Building mod in your PWD context."
