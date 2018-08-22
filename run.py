@@ -1,8 +1,4 @@
-#!usr/bin/env python
-<<<<<<< HEAD
-
-=======
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
+#!usr/bin/python
 import os
 
 
@@ -70,14 +66,6 @@ if __name__ == "__main__":
     else:
         pass
 
-<<<<<<< HEAD
-try:
-    # Run DDTAR via RenPy
-    os.system(renpy + " .")
-except:
-    print("Whoops, something went wrong.")
-    print("Check your RENPY variable in run.py.")
-=======
     delete_check = delete_dummy_version()
     if delete_check != 0:
         print_error()
@@ -87,4 +75,3 @@ except:
     if version_check == 0 and launcher_check == 0 and delete_check == 0:
         print("Success!")
         print("Don't forget to commit your changes to GitHub.")
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522

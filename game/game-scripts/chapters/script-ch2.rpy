@@ -306,11 +306,7 @@ label ch2_main:
     "The girl jumps into our group and starts breathing heavily."
     show monika at t31
     show alice at t32
-<<<<<<< HEAD
-    show sayonika 1a at t33
-=======
     show sayonika 1f at t33
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
     sm "{i}*Pant*{/i}"
     sm "Tom wanted me to give you this... pack.. of..."
     show alice at f32
@@ -318,58 +314,34 @@ label ch2_main:
     $ sm_name = "Sayonika"
     show alice at t32
     show sayonika at f33
-<<<<<<< HEAD
-    sm "Well, this place is really big..."
-    sm "And this bacon is really cold..."
-    sm "I think my fingers are frozen and stuck to the package."
-=======
     sm 1i "Well, this place is really big..."
     sm 1o "And this bacon is really cold..."
     sm 2i "I think my fingers are frozen and stuck to the package."
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
     sm "Ehehe~"
     show sayonika at t33
     show alice at f32
     a 0m "There are lifts, you know..."
     show sayonika at f33
     show alice at t32
-<<<<<<< HEAD
-    sm "I thought those were still broken!"
-    sm "Did Tom fix them already?"
-=======
     sm 3p "I thought those were still broken!"
     sm 3g "Did Tom fix them already?"
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
     show monika at f31
     show sayonika at t33
     m 4cd "So you must be Alice's assistant?"
     show sayonika at f33
     show monika at t31
-<<<<<<< HEAD
-    sm "Well, more like her 'partner in crime'."
-    sm "I help her with some of the server-side programming and that sort of thing."
-    sm "If that made sense..."
-    sm "Anyways, who are you?"
-=======
     sm 1i "Well, more like her 'partner in crime'."
     sm 2h "I help her with some of the server-side programming and that sort of thing."
     sm 2i "If that made sense..."
     sm 1f "Anyways, who are you?"
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
     show alice at f32
     show sayonika at t33
     a 0b "This is Monika, the president of the literature club that Mio's a part of."
     show sayonika at f33
     show alice at t32
-<<<<<<< HEAD
-    sm "Oh, the literature club!"
-    sm "No wonder you looked familiar."
-    sm "For a minute, I thought you were a cosplayer or something!"
-=======
     sm 2b "Oh, the literature club!"
     sm "No wonder you looked familiar."
     sm 4b "For a minute, I thought you were a cosplayer or something!"
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
     show monika at f31
     show sayonika at t33
     m 1cg "Eh?"
@@ -389,17 +361,10 @@ label ch2_main:
     m 1cb "Fair enough! Say, I think Natsuki and Sayori needed some bacon."
     show sayonika at f33
     show monika at t31
-<<<<<<< HEAD
-    sm "Yeah, Tom knew about the girls coming."
-    sm "He wanted me to give you girls this pack since has has a lot in the freezer."
-    sm "Good luck trying to pry it from my hands, though..."
-    sm "And I don't mean that in a selfish way. I think my hands are actually stuck to the package."
-=======
     sm 1g "Yeah, Tom knew about the girls coming."
     sm 3h "He wanted me to give you girls this pack since has has a lot in the freezer."
     sm 1i "Good luck trying to pry it from my hands, though..."
     sm 2i "And I don't mean that in a selfish way. I think my hands are actually stuck to the package."
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
     show monika at f31
     show sayonika at t33
     m 1cg "Uh oh..."
@@ -417,17 +382,10 @@ label ch2_main:
     "Sayonika sighs in relief."
     show sayonika at f33
     show alice at t32
-<<<<<<< HEAD
-    sm "Oh, thank God!"
-    sm "SWEET RELIEF!"
-    sm "It'll probably sting now that it has contact with warm air."
-    sm "I swear, Tom's freezer is the equivalent of the Arctic circle!"
-=======
     sm 1l "Oh, thank God!"
     sm 4b "SWEET RELIEF!"
     sm 1o "It'll probably sting now that it has contact with warm air."
     sm 1h "I swear, Tom's freezer is the equivalent of the Arctic circle!"
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
     show monika at thide
     show alice at thide
     show sayonika at thide
