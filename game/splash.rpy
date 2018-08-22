@@ -11,12 +11,7 @@ init python:
     menu_trans_time = 1
 
     splash_message_default = "This game is not suitable for children\nor those who are easily disturbed."
-
-<<<<<<< HEAD
-    splash_message_beta = "This is a prerelease version of The Angel Returns.\nSome things may be changed in the future."
-=======
     splash_message_beta = "This is a pre-release version of The Angel Returns.\nSome things may be changed in the future."
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
 
     splash_messages = [
         "The choices of the beautiful are unbearable.",
@@ -25,15 +20,9 @@ init python:
         "Dark nights are upon us!",
         "You will be forever mine.",
         "I've waited here for the longest time.",
-<<<<<<< HEAD
-       "This game is not suitable for children\nor those who are easily disturbed?",
-       "This game is not suitable for children\nor those who are easily dismembered.",
-       "This game is not suitable for children\nor those who are easily disguarded."
-=======
         "This game is not suitable for children\nor those who are easily disturbed?",
         "This game is not suitable for children\nor those who are easily dismembered.",
         "This game is not suitable for children\nor those who are easily disguarded."
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
     ]
 
 
