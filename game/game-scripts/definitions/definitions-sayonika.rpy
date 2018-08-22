@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-image sayonika 1a = "mod_assets/images/sayonika/base.png"
-=======
 image sayonika 1 = im.Composite((960, 960), (0, 0), "mod_assets/images/sayonika/1.png", (0, 0), "mod_assets/images/sayonika/[a-z]")
 image sayonika 2 = im.Composite((960, 960), (0, 0), "mod_assets/images/sayonika/2l.png", (0, 0), "mod_assets/images/sayonika/2r1.png", (0, 0), "mod_assets/images/sayonika/a.png")
 image sayonika 3 = im.Composite((960, 960), (0, 0), "mod_assets/images/sayonika/2l.png", (0, 0), "mod_assets/images/sayonika/2r2.png", (0, 0), "mod_assets/images/sayonika/a.png")
@@ -99,4 +96,3 @@ image sayonika 4i = "mod_assets/images/sayonika/3i.png"
 image sayonika 4j = "mod_assets/images/sayonika/3j.png"
 image sayonika 4k = "mod_assets/images/sayonika/3k.png"
 image sayonika 4l = "mod_assets/images/sayonika/3l.png"
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522

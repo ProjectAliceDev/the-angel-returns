@@ -535,11 +535,7 @@ init -501 screen main_menu() tag menu:
                 # style "main_menu_title"
             text "v. [config.version] (" + snapshottime + ")":
                 style "hl3_version_text"
-<<<<<<< HEAD
-            text "For evauluation purposes only.":
-=======
             text "For evaluation purposes only.":
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
                 style "hl3_version_text"
 
     if not persistent.ghost_menu:
@@ -1025,11 +1021,7 @@ init -501 screen preferences() tag menu:
             xoffset -10 yoffset -10
             text "v. [config.version] (" + snapshottime + ")":
                 style "main_menu_version"
-<<<<<<< HEAD
-            text "For evauluation purposes only.":
-=======
             text "For evaluation purposes only.":
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
                 style "main_menu_version"
 
 
@@ -1630,11 +1622,15 @@ screen say(who, what):
                 window:
                     style "nameboxteal"
                     text who id "who"
+            if who == c_name: #Apple Store namebox
+                window:
+                    style "namebox_apple"
+                    text who id "who"
             if who == player: #MC namebox
                 window:
                     style "namebox_mc"
                     text who id "who"
-            if who != s_name and who != m_name and who != y_name and who != n_name and who != player and who != sm_name: #Everyone else namebox
+            if who != s_name and who != m_name and who != y_name and who != n_name and who != player and who != sm_name and who != c_name: #Everyone else namebox
                 window:
                     style "namebox"
                     text who id "who"
@@ -1655,6 +1651,16 @@ style nameboxblue:
     ysize gui.namebox_height
     background Frame("/mod_assets/images/gui/nameboxblue.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
+
+style namebox_apple:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+    background Frame("/mod_assets/images/gui/nameboxapple.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
 
 style namebox_mc:
     xpos gui.name_xpos
@@ -1718,6 +1724,14 @@ style nameboxteal:
 #     outlines [(3, "#58b", 0, 0), (1, "#58b", 1, 1)]
 
 style say_label_blue:
+    color gui.accent_color
+    font gui.name_font
+    size gui.name_text_size
+    xalign gui.name_xalign
+    yalign 0.5
+    outlines [(3, "#58b", 0, 0), (1, "#58b", 1, 1)]
+
+style say_label_apple:
     color gui.accent_color
     font gui.name_font
     size gui.name_text_size

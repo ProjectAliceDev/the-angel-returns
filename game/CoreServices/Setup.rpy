@@ -34,10 +34,7 @@ image mojave setup header = Text("Alice OS Setup Assistant", font="Resources/sys
 image setup_beta_check_header = Text("Enroll in the Beta Program", font="Resources/systemfont/Medium.ttf", size=38, style="_default")
 image setup_game_tos_header = Text("License Agreement", font="Resources/systemfont/Medium.ttf", size=38, style="_default")
 image setup_accounts_header = Text("Create Your Computer Account", font="Resources/systemfont/Medium.ttf", size=38, style="_default")
-<<<<<<< HEAD
-=======
 image setup_ctf_header = Text("Select a Game Mode", font="Resources/systemfont/Medium.ttf", size=38, style="_default")
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
 
 # Welcome
 image setup_welcome_text = Text("Welcome to the Alice OS Setup Assistant. This tool will help you\nset up your computer and your game for playing.\n\nWhen you are ready, press 'Next'.",font="Resources/systemfont/Regular.ttf", size=22, style="_default")
@@ -75,16 +72,12 @@ image setup_tos_info = Text("AliceOS is licensed under the GNU GPL v3.\nPlease r
 image setup_game_tos_text = Text(gametos ,font="Resources/systemfont/Regular.ttf", size=16, style="_default")
 image setup_tos_text = Text(gnutos ,font="Resources/systemfont/Regular.ttf", size=16, style="_default")
 
-<<<<<<< HEAD
 # Finished
 image setup_complete_thankyou = Text("Your profile has been created and this computer is ready to be used.\n\nIf you need to enter a password, check the profiles file.\n\nThank you for choosing Alice OS.",font="Resources/systemfont/Regular.ttf", size=22, style="_default")
-=======
+
 # Capture the Flag Mode
 image setup_ctf_info = Text("Please read the following experiment information.",font="Resources/systemfont/Regular.ttf", size=22, style="_default")
 image setup_ctf_details_text = Text("We're trying a new experiment for advanced users that affect the puzzle minigames in\nThe Angel Returns. We're introducing two modes to the game; the Basic Mode provides\nthe traditional puzzles to the game. The experimental Advanced Mode entails a Capture\nthe Flag-styled puzzles for developers and hackers alike.\n\nDo you want to enable this experiment?" ,font="Resources/systemfont/Regular.ttf", size=16, style="_default")
-
-# Finished
-image setup_complete_thankyou = Text("Your profile has been created and this computer is ready to be used.\n\nIf you need to enter a password, check the profiles file.\n\nThank you for choosing Alice OS.",font="Resources/systemfont/Regular.ttf", size=22, style="_default")
 
 # Chibis
 image alice_chibi:
@@ -103,8 +96,7 @@ image sayonika_chibi:
         parallel:
             function chibiAliceHop
         repeat
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
-
+        
 label setup:
     stop music fadeout 1.0
     scene black with trueblack
@@ -208,11 +200,6 @@ label setup_tos_game:
     hide setup_game_tos_info
     hide setup_game_tos_header
     hide setup_game_tos_text
-<<<<<<< HEAD
-    call setup_accounts
-    return
-
-=======
     call setup_ctf_mode
     return
 
@@ -245,7 +232,6 @@ label setup_ctf_mode:
     call setup_accounts
 return
 
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
 label setup_accounts:
     show setup_accounts_header zorder 3:
         xalign 0.5 yalign 0.18

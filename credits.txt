@@ -10,6 +10,9 @@ Demo music - Julie Maxwell
 DDLC Jazz theme - LeoDiCraprio
 Campus background - yagamirai10
 Studio backgrounds - Uncle Mugen
+Craig sprite - Cyrke, Cylent Night (edits by alicerunsonfedora)
+Apple Store background - Cyrke
+/* NOTE: If you plan to use the Apple Store background in your own mod, please consult Cyrke for permissions. */
 
 # Demo-specific
 Break room - Pexels (edited)

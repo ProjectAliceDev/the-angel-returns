@@ -17,6 +17,7 @@ label start:
     $ y_name = "Yuri"
     $ mi_name = "Mio"
     $ sm_name = "???"
+    $ c_name = "???"
 
     $ quick_menu = True
     $ style.say_dialogue = style.normal
@@ -24,16 +25,7 @@ label start:
     $ allow_skipping = True
     $ config.allow_skipping = True
 
-<<<<<<< HEAD
-    # $ a_name = "Alice"
-    # call demo_end_loop
-
     if persistent.playthrough == 0:
-        #Call example script
-        #call alice_poem_demos
-=======
-    if persistent.playthrough == 0:
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
         call pre_ch0
         call ch0_main
         call ch0_end
@@ -45,11 +37,6 @@ label start:
         call ch1_end
         call ch1_puzzle
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> bf37737f3419d8d457f32c7e2a3c4a5a17295522
         $ chapter = 2
 
         ## Disable this segment if it isn't the demo.
