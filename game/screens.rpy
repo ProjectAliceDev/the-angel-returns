@@ -1022,7 +1022,7 @@ init -501 screen preferences() tag menu:
             text "v. [config.version] (" + snapshottime + ")":
                 style "main_menu_version"
             text "For evaluation purposes only.":
-            style "main_menu_version"
+                style "main_menu_version"
 
 
 init -1 style pref_label is gui_label
