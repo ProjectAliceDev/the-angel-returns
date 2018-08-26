@@ -121,6 +121,7 @@ MUST be built before use.
     call updateconsole("./build.sh", "Building data...")
     
     $ consolehistory = []
+    window hide(None)
     call updateconsole("", "Creating temp folder...")
     call updateconsole("", "1682 files copied.")
     call updateconsole("", "Compiling using crosh...")
@@ -146,6 +147,7 @@ label pre_ch0_err:
 
 label pre_ch0_result:
     call updateconsole("", "Loading aliceangel.chr...")
+    window show(None)
     mi 1g "Well, this is it."
     mi "I'll see you on the other side."
     mi "Just don't let her kill you, alright?"
