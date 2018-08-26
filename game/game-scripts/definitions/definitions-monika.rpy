@@ -162,3 +162,96 @@ image monika 4r = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2l.
 
 image monika 5ca = "mod_assets/images/monika/5a.png"
 image monika 5cb = "mod_assets/images/monika/5b.png"
+
+default persistent.monikatopics = []
+default persistent.monika_reload = 0
+default persistent.tried_skip = None
+default persistent.monika_kill = None
+
+image mask_child:
+    "images/cg/monika/child_2.png"
+    xtile 2
+
+image mask_mask:
+    "images/cg/monika/mask.png"
+    xtile 3
+
+image mask_mask_flip:
+    "images/cg/monika/mask.png"
+    xtile 3 xzoom -1
+
+
+image maskb:
+    "images/cg/monika/maskb.png"
+    xtile 3
+
+image mask_test = AnimatedMask("#ff6000", "mask_mask", "maskb", 0.10, 32)
+image mask_test2 = AnimatedMask("#ffffff", "mask_mask", "maskb", 0.03, 16)
+image mask_test3 = AnimatedMask("#ff6000", "mask_mask_flip", "maskb", 0.10, 32)
+image mask_test4 = AnimatedMask("#ffffff", "mask_mask_flip", "maskb", 0.03, 16)
+
+image mask_2:
+    "images/cg/monika/mask_2.png"
+    xtile 3 subpixel True
+    block:
+        xoffset 1280
+        linear 1200 xoffset 0
+        repeat
+
+image mask_3:
+    "images/cg/monika/mask_3.png"
+    xtile 3 subpixel True
+    block:
+        xoffset 1280
+        linear 180 xoffset 0
+        repeat
+
+image monika_room = "images/cg/monika/monika_room.png"
+image monika_room_highlight:
+    "images/cg/monika/monika_room_highlight.png"
+    function monika_alpha
+image monika_bg = "images/cg/monika/monika_bg.png"
+image monika_bg_highlight:
+    "images/cg/monika/monika_bg_highlight.png"
+    function monika_alpha
+image monika_scare = "images/cg/monika/monika_scare.png"
+
+image monika_body_glitch1:
+    "images/cg/monika/monika_glitch1.png"
+    0.15
+    "images/cg/monika/monika_glitch2.png"
+    0.15
+    "images/cg/monika/monika_glitch1.png"
+    0.15
+    "images/cg/monika/monika_glitch2.png"
+    1.00
+    "images/cg/monika/monika_glitch1.png"
+    0.15
+    "images/cg/monika/monika_glitch2.png"
+    0.15
+    "images/cg/monika/monika_glitch1.png"
+    0.15
+    "images/cg/monika/monika_glitch2.png"
+
+image monika_body_glitch2:
+    "images/cg/monika/monika_glitch3.png"
+    0.15
+    "images/cg/monika/monika_glitch4.png"
+    0.15
+    "images/cg/monika/monika_glitch3.png"
+    0.15
+    "images/cg/monika/monika_glitch4.png"
+    1.00
+    "images/cg/monika/monika_glitch3.png"
+    0.15
+    "images/cg/monika/monika_glitch4.png"
+    0.15
+    "images/cg/monika/monika_glitch3.png"
+    0.15
+    "images/cg/monika/monika_glitch4.png"
+
+
+image room_glitch = "images/cg/monika/monika_bg_glitch.png"
+
+image room_mask = LiveComposite((1280, 720), (0, 0), "mask_test", (0, 0), "mask_test2")
+image room_mask2 = LiveComposite((1280, 720), (0, 0), "mask_test3", (0, 0), "mask_test4")
