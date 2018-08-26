@@ -20,6 +20,8 @@ All rights reserved.
 
 Ready.
         """)
+    pause 1.0
+    call hideconsole
     show mio 1e at t11
     mi "Hi, thank you for playing Doki Doki Literature Club for AliceOS!"
     mi "I'm Mio, your administrative assistant."
