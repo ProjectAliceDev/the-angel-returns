@@ -5,14 +5,15 @@ import os
 # Set this variable equal to the location of where your Ren'Py install is!
 sdk_location = "/Applications/RenPy\ SDK\ \(DDLC-compatible\)/renpy.sh"
 
-
 def show_version_copyright():
+    os.system("clear")
     print("Angle Alice Script Test Tool")
     print("(C) 2018 | Project Alice.")
     print("Licensed under GNU GPL v3.")
 
 
 def print_error():
+    os.system("clear")
     print("We couldn't test your changes to the code.")
     print("This likely means that your build will not function properly during auto-builds.")
 
