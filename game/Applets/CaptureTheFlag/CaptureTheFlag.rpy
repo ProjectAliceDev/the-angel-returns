@@ -55,6 +55,7 @@ It's time to capture the flag!
 # or definitions. Please keep all of your applet's code
 # in this file.
 image alice_just_main = "mod_assets/images/cg/ja_ctf.png"
+image ctf_room = "mod_assets/images/cg/ctf_room.png"
 
 init -501 screen flag_input(message, ok_action):
     modal True
