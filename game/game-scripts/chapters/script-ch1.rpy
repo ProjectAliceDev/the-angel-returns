@@ -836,4 +836,5 @@ label ch1_end:
     "I should probably be careful."
     "With that in mind, I step into the lift and push the button for Level S."
     "I just hope this doesn't end horribly."
+    $ renpyApp.send_temporary_notification("Character file modified", "Mio's character file has been updated.", action=Return(0))
     return
