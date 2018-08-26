@@ -104,11 +104,11 @@ image menu_art_a:
 
 image menu_art_mi:
     subpixel True
-    "mod_assets/images/mio/crossedarms.png"
-    xcenter 700
-    ycenter 480
-    zoom 0.50
-    menu_art_move(0.30, 700, 0.50)
+    "gui/menu_art_m.png"
+    xcenter 725
+    ycenter 580
+    zoom 0.60
+    menu_art_move(0.60, 600, 0.60)
 
 image menu_art_y_ghost:
     subpixel True

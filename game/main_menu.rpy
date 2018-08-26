@@ -5,6 +5,7 @@ screen main_menu():
 
     style_prefix "main_menu"
     
+    add "menu_fade"
     add "menu_bg"
     # add "menu_art_n"
     # add "menu_art_s"
