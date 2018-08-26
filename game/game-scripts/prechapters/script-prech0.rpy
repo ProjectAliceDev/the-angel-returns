@@ -136,13 +136,9 @@ MUST be built before use.
     return
 
 label pre_ch0_err:
-    call updateconsole("", "WARN: \'aliceangel.chr\' not found.")
-    call updateconsole("", "Downloading aliceangel.chr...")
-    call updateconsole("", "Downloaded 130 KB of data.")
     python:
-        open(config.basedir + "/characters/aliceangel.chr", "w").write(aliceangelchr)
-    call updateconsole("", "File copied successfully.")
-    $ renpy.jump("pre_ch0_result")
+        renpy.call_screen("alert", title="A serious error has occured.", message="A required file is missing. Please reinstall the game.", ok_action=Return(0))
+        renpy.quit()
     return
 
 label pre_ch0_result:
