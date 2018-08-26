@@ -79,7 +79,6 @@ label demo_end_loop:
 ## Persistent Looping (Special)
 # These occur if the player inserts a non-native
 # character file into the demo. 
-
 label synger_activator:
     a "Okay, come on, you aren't being very funny."
     a "You certainly haven't accomplished anything by doing that."

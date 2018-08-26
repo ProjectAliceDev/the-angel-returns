@@ -144,7 +144,7 @@ image menu_art_m_ghost:
 
 image menu_art_s_glitch:
     subpixel True
-    "mod_assets/images/menu_art_s.png"
+    "gui/menu_art_s_break.png"
     xcenter 470
     ycenter 600
     zoom 0.68
@@ -237,9 +237,6 @@ image warning:
     2.5
     "white" with Dissolve(0.5, alpha=True)
     0.5
-
-image tos = "mod_assets/images/menu/warning.png"
-image tos2 = "mod_assets/images/menu/warning2.png"
 
 
 init python:

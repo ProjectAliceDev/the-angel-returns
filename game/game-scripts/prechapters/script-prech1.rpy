@@ -64,5 +64,4 @@ label pre_ch1:
     hide monika_room
     hide rm
     hide rm2
-    $ renpyApp.send_temporary_notification("Script modified", "The script has been modified. Enjoy the new scene!", action=Return(0))
     return
