@@ -46,7 +46,7 @@ label pre_ch1:
     mi 3i "Unfortunately, she works a bit more like Monika and me rather than like anyone else."
     mi 4k "She'll gain full knowledge of this world and its infinite tortures."
     mi 3h "Essentially, she'll have full control over the game."
-    mi "It looks like as if the mod was pruposely written for her to write the rest of it."
+    mi "It looks like as if the mod was purposely written for her to write the rest of it."
     mi 4i "[player], I don't know if this is really a good idea."
     mi "She doesn't seem well-equipped to deal with reality, let alone romance."
     mi 1g "But I trust you to make the right decision and play her game carefully."

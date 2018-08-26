@@ -23,7 +23,7 @@ Ready.
     show mio 1e at t11
     mi "Hi, thank you for playing Doki Doki Literature Club for AliceOS!"
     mi "I'm Mio, your administrative assistant."
-    mi "I'll help you set up DDLC so you can get started!"
+    mi "I'll help you set up so you can get started!"
     mi 3b "There's a few things we need to take care of first, though..."
     mi "This is a sandboxed applet, but we need permission to do a few things."
     mi "It's mostly stuff like send notifications and file management."
@@ -48,9 +48,11 @@ Ready.
     mi "Well, I guess I could help you a little in setting everything up."
     mi 1b "It is my job, after all."
     mi "Let's see what we have here..."
-
+    
+    window hide(None)
     call updateconsole("r = renpy()", "Variable 'r' set.")
     $ consolehistory = []
+    window show(None)
 
     mi 1c "Eh?"
     mi "Gimme a sec."
@@ -67,10 +69,9 @@ MUST be built before use.
     mi "You shouldn't have to {i}build{/i} the mod to play it, even if you're a developer."
     mi "I'll inspect this for just a second."
     window hide(None)
-    $ renpy.pause(3.0)
+    $ renpyApp.send_temporary_notification("Scan complete", "Mio has verified all safe files and flagged quarantined ones.", action=Return(0))
     window show(None)
     mi "[player], this mod looks a bit dangerous."
-    mi "I don't know what you think you're going to accomplish, but it may be detrimental."
     mi "I just looked through the entire script."
     mi 4n "Please tell me you don't actually plan to put{w=1.0} {i}her{/i}{w=1.0} in here, do you?"
     mi 3k "I'd hate to be punny, but she really is quite a gal."
@@ -105,7 +106,7 @@ MUST be built before use.
         "Hell no!":
             $ persistent.lovealice = False
             mi 1c "Well, that's not what I expected."
-            mi "In fact, that might be a bit better."
+            mi "In fact, that might be a bit better." 
             mi "So, why would you decide to bring her back?"
             mi "Are you looking for something?"
             mi "Answers? A secret?"
