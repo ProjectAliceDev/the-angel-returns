@@ -20,10 +20,12 @@ All rights reserved.
 
 Ready.
         """)
+    pause 1.0
+    call hideconsole
     show mio 1e at t11
     mi "Hi, thank you for playing Doki Doki Literature Club for AliceOS!"
     mi "I'm Mio, your administrative assistant."
-    mi "I'll help you set up DDLC so you can get started!"
+    mi "I'll help you set up so you can get started!"
     mi 3b "There's a few things we need to take care of first, though..."
     mi "This is a sandboxed applet, but we need permission to do a few things."
     mi "It's mostly stuff like send notifications and file management."
@@ -48,9 +50,11 @@ Ready.
     mi "Well, I guess I could help you a little in setting everything up."
     mi 1b "It is my job, after all."
     mi "Let's see what we have here..."
-
+    
+    window hide(None)
     call updateconsole("r = renpy()", "Variable 'r' set.")
     $ consolehistory = []
+    window show(None)
 
     mi 1c "Eh?"
     mi "Gimme a sec."
@@ -67,10 +71,9 @@ MUST be built before use.
     mi "You shouldn't have to {i}build{/i} the mod to play it, even if you're a developer."
     mi "I'll inspect this for just a second."
     window hide(None)
-    $ renpy.pause(3.0)
+    $ renpyApp.send_temporary_notification("Scan complete", "Mio has verified all safe files and flagged quarantined ones.", action=Return(0))
     window show(None)
     mi "[player], this mod looks a bit dangerous."
-    mi "I don't know what you think you're going to accomplish, but it may be detrimental."
     mi "I just looked through the entire script."
     mi 4n "Please tell me you don't actually plan to put{w=1.0} {i}her{/i}{w=1.0} in here, do you?"
     mi 3k "I'd hate to be punny, but she really is quite a gal."
@@ -105,7 +108,7 @@ MUST be built before use.
         "Hell no!":
             $ persistent.lovealice = False
             mi 1c "Well, that's not what I expected."
-            mi "In fact, that might be a bit better."
+            mi "In fact, that might be a bit better." 
             mi "So, why would you decide to bring her back?"
             mi "Are you looking for something?"
             mi "Answers? A secret?"
@@ -121,6 +124,7 @@ MUST be built before use.
     call updateconsole("./build.sh", "Building data...")
     
     $ consolehistory = []
+    window hide(None)
     call updateconsole("", "Creating temp folder...")
     call updateconsole("", "1682 files copied.")
     call updateconsole("", "Compiling using crosh...")
@@ -135,17 +139,14 @@ MUST be built before use.
     return
 
 label pre_ch0_err:
-    call updateconsole("", "WARN: \'aliceangel.chr\' not found.")
-    call updateconsole("", "Downloading aliceangel.chr...")
-    call updateconsole("", "Downloaded 130 KB of data.")
     python:
-        open(config.basedir + "/characters/aliceangel.chr", "w").write(aliceangelchr)
-    call updateconsole("", "File copied successfully.")
-    $ renpy.jump("pre_ch0_result")
+        renpy.call_screen("alert", title="A serious error has occured.", message="A required file is missing. Please reinstall the game.", ok_action=Return(0))
+        renpy.quit()
     return
 
 label pre_ch0_result:
     call updateconsole("", "Loading aliceangel.chr...")
+    window show(None)
     mi 1g "Well, this is it."
     mi "I'll see you on the other side."
     mi "Just don't let her kill you, alright?"

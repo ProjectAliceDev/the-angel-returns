@@ -10,7 +10,7 @@ label ctf_cipher:
     show room_mask2 as rm2:
         size (320,180)
         pos (935,200)
-    show monika_room
+    show ctf_room
     show alice_just_main at truecenter
     $ a_name = "Alice"
     a "Welcome back, errand boy."

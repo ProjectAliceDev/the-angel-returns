@@ -104,11 +104,11 @@ image menu_art_a:
 
 image menu_art_mi:
     subpixel True
-    "mod_assets/images/mio/crossedarms.png"
-    xcenter 700
-    ycenter 480
-    zoom 0.50
-    menu_art_move(0.30, 700, 0.50)
+    "gui/menu_art_m.png"
+    xcenter 725
+    ycenter 580
+    zoom 0.60
+    menu_art_move(0.60, 600, 0.60)
 
 image menu_art_y_ghost:
     subpixel True
@@ -144,7 +144,7 @@ image menu_art_m_ghost:
 
 image menu_art_s_glitch:
     subpixel True
-    "mod_assets/images/menu_art_s.png"
+    "gui/menu_art_s_break.png"
     xcenter 470
     ycenter 600
     zoom 0.68
@@ -237,9 +237,6 @@ image warning:
     2.5
     "white" with Dissolve(0.5, alpha=True)
     0.5
-
-image tos = "mod_assets/images/menu/warning.png"
-image tos2 = "mod_assets/images/menu/warning2.png"
 
 
 init python:

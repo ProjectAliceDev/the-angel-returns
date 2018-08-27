@@ -70,7 +70,7 @@ default preferences.sfx_volume = 0.75
 #   Linux: $HOME/.renpy/
 #
 # must be a literal string
-define config.save_directory = "Doki_Doki_Alice_ctf"
+define config.save_directory = "Doki_Doki_Alice"
 
 # icon displayed on taskbar / dock
 define config.window_icon = "mod_assets/logo.png"

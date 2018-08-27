@@ -5,6 +5,7 @@ screen main_menu():
 
     style_prefix "main_menu"
     
+    add "menu_fade"
     add "menu_bg"
     # add "menu_art_n"
     # add "menu_art_s"
@@ -32,8 +33,13 @@ screen main_menu():
         vbox:
             text "v. [config.version] (" + snapshottime + ")":
                 style "hl3_version_text"
-            text "For evauluation purposes only.":
-                style "hl3_version_text"
+            if persistent.ctf_mode:
+                text "For evaluation purposes only. CTF mode enabled.":
+                    style "hl3_version_text"
+            else:
+                text "For evaluation purposes only.":
+                    style "hl3_version_text"
+                
 
 
     key "K_ESCAPE" action Quit(confirm=False)
