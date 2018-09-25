@@ -11,6 +11,9 @@ init -10000 python:
     pm_files = "filesystem"
     pm_sysadmin = "administrator"
 
+    """
+    An Applet object.
+    """
     class Applet(object):
         # General manifest items
         short_name = "Short Name"
