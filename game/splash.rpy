@@ -264,19 +264,6 @@ init python:
 
 
 label splashscreen:
-    default persistent.first_run = False
-    if not persistent.first_run:
-        $ quick_menu = False
-        stop music fadeout 1.0
-        call default_boot_screen
-        scene black
-        pause 0.5
-        call setup
-        scene black
-        with Dissolve(1.5)
-
-        $ persistent.first_run = True
-
     python:
         basedir = config.basedir.replace('\\', '/')
 
@@ -284,9 +271,8 @@ label splashscreen:
         jump autoload
 
     $ config.allow_skipping = False
-
-    call default_boot_screen
     scene black
+    call bootloader
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
     $ config.main_menu_music = audio.bt
