@@ -21,9 +21,14 @@ install:
     # we're copying over the template files into the renpy SDK
     # and CD into the renpy
     
-    - bash ./the-angel-returns/travis_pull_base.sh
-    - cp -vRf the-angel-returns/* mod/
-    - bash ./the-angel-returns/travis_print_version.sh
+    - bash ./quickstart-oss/travis/setup.sh
+    
+    # Remove README.html to prevent errors.
+    - rm -rf travis-quickstart/sample_mod/README.html && cp -vRf quickstart-oss/sample_mod/* mod/
+    
+    - bash quickstart-oss/travis/inject_version.sh
+    
+    
     - cd renpy
 
 
@@ -34,7 +39,7 @@ env:
 # This is the script part. This is where the actual building is happening.
 # This produces an artifact which we'll use later on to publish a release.
 
-script: ./renpy.sh "../mod/" lint && ./renpy.sh launcher distribute "../mod/" && cd .. && ls
+script: ./renpy.sh "../mod/" lint && ./renpy.sh launcher distribute "../mod/" && cd ..
 
 
 # This is where the actual releases happen. Travis has the ability to publish releases from GitHub, Amazon S3, OpenShift, etc.
@@ -52,7 +57,3 @@ deploy:
   skip_cleanup: true
   on:
     tags: true # your mods only builds and uploads releases on a GitHub Git tag so make sure you tag and release accordingly!
-
-notifications:
-  webhooks:
-    - https://ddtar-webhook.mybluemix.net/webhook/travis
