@@ -26,7 +26,7 @@ install:
     # Remove README.html to prevent errors.
     - rm -rf the-angel-returns/README.html && cp -vRf the-angel-returns/* mod/
     
-    - bash quickstart-oss/travis/inject_version.sh
+    - bash the-angel-returns/travis/inject_version.sh
     
     
     - cd renpy
