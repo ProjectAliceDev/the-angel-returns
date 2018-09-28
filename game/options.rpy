@@ -1,7 +1,111 @@
 init python:
     import json
     with open(config.basedir + '/version', 'r') as f:
-        release_version = json.load(f)
+        release_version = json.load(f)init python: 
+    import json 
+    with open(config.basedir + '/version', 'r') as f: 
+        release_version = json.load(f) 
+# human readable name of this game 
+# _() marks strings eligable for translation 
+define config.name = "Doki Doki: The Angel Returns" 
+ 
+# True shows the name on main menu, False hides it 
+define gui.show_name = True 
+ 
+# Version of the game 
+define config.version = "0.1.2beta2" 
+define nightlydate = release_version["version"] 
+define snapshottime = "nightly_pht-" + nightlydate 
+ 
+# text placed on about screen 
+define gui.about = _("") 
+ 
+# short name used in executables and dirs. 
+# ASCII-only, no spaces, no colons, no semis 
+define build.name = "TheAngelReturns" 
+ 
+# Controls which sound / music mixers are available 
+define config.has_sound = True 
+define config.has_music = True 
+define config.has_voice = False 
+ 
+# main menu music 
+define config.main_menu_music = audio.t1 
+ 
+# enter / exiting game menu transitions 
+define config.enter_transition = Dissolve(.2) 
+define config.exit_transition = Dissolve(.2) 
+ 
+# transition used when the game has been loaded 
+define config.after_load_transition = None 
+ 
+# transition used when teh game has ended 
+define config.end_game_transition = Dissolve(.5) 
+ 
+# Controls when dialogue window is displayed: 
+#   show - always displayed 
+#   hide - only displayed if dialogue is present 
+#   auto - hidden before scene statements and shown when dialogue is shown 
+# 
+# this can be changed with "window <type>" statements 
+define config.window = "auto" 
+ 
+# transitions used to show / hide the dialogue window 
+define config.window_show_transition = Dissolve(.2) 
+define config.window_hide_transition = Dissolve(.2) 
+ 
+# default text speed 
+# 0 is infinite 
+# > 0 is number of characters per second 
+default preferences.text_cps = 50 
+ 
+# default auto-forward delay. 0 - 30. 
+default preferences.afm_time = 15 
+ 
+# default volumes 
+default preferences.music_volume = 0.75 
+default preferences.sfx_volume = 0.75 
+ 
+# persistent data save directory 
+# this is different per platform: 
+#   Windows: %AAPDATA%\RenPy\ 
+#   Mac: $HOME/Libary/RenPy/ 
+#   Linux: $HOME/.renpy/ 
+# 
+# must be a literal string 
+define config.save_directory = "Doki_Doki_Alice" 
+ 
+# icon displayed on taskbar / dock 
+define config.window_icon = "mod_assets/logo.png" 
+ 
+# True means we allow skipping, False means not 
+define config.allow_skipping = True 
+ 
+# True means we can autosave, false means not 
+define config.has_autosave = False 
+ 
+# True means autosave when we quit, False means not 
+define config.autosave_on_quit = False 
+ 
+# Number of autosave slots to use 
+define config.autosave_slots = 0 
+ 
+# layers that screens / images / anything can be displayed on. Best not to 
+# mess with this 
+define config.layers = [ 'master', 'transient', 'screens', 'overlay', 'front' ] 
+ 
+# Other things to not mess with 
+define config.image_cache_size = 64 
+define config.predict_statements = 50 
+define config.rollback_enabled = config.developer 
+define config.menu_clear_layers = ["front"] 
+define config.gl_test_image = "white" 
+# define config.developer = True 
+ 
+ 
+init python: 
+    if len(renpy.loadsave.location.locations) > 1: del(renpy.loadsave.location.locations[1]) 
+    renpy.game.preferences.pad_enabled = False 
 # human readable name of this game
 # _() marks strings eligable for translation
 define config.name = "Doki Doki: The Angel Returns"
