@@ -103,11 +103,6 @@ define config.name = "Doki Doki: The Angel Returns"
 # True shows the name on main menu, False hides it
 define gui.show_name = True
 
-# Version of the game
-define config.version = "0.1.2beta2"
-# text placed on about screen
-define gui.about = _("")
-
 # short name used in executables and dirs.
 # ASCII-only, no spaces, no colons, no semis
 define build.name = "TheAngelReturns"
