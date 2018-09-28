@@ -24,7 +24,7 @@ install:
     - bash ./the-angel-returns/travis/setup.sh
     
     # Remove README.html to prevent errors.
-    - rm -rf the-angel-returns/README.html && cp -vRf quickstart-oss/sample_mod/* mod/
+    - rm -rf the-angel-returns/README.html && cp -vRf the-angel-returns/* mod/
     
     - bash quickstart-oss/travis/inject_version.sh
     
