@@ -31,7 +31,7 @@ screen main_menu():
 
     if gui.show_name:
         vbox:
-            text "v. [config.version] (" + snapshottime + ")":
+            text "v. [config.version]":
                 style "hl3_version_text"
             if persistent.ctf_mode:
                 text "For evaluation purposes only. CTF mode enabled.":

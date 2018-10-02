@@ -41,6 +41,12 @@ Puzzle Time provides a fun and unique way of solving puzzles in between scenes i
         # permissions
         permissions = {pm_notify, pm_files, pm_sysadmin}
 
+        # Define how your Applet will act with desktop shells.
+        launch = {
+            "action": "[Hide('ActivitiesView'), Return(0)]",
+            "show_in_launcher": False
+        }
+
         def send_success_message(self):
             self.send_temporary_notification("Chapter unlocked", "Good job on solving the puzzle!", action=Return(0))
 

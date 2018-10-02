@@ -271,8 +271,8 @@ label splashscreen:
         jump autoload
 
     $ config.allow_skipping = False
-    scene black
     call bootloader
+    scene black
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
     $ config.main_menu_music = audio.bt

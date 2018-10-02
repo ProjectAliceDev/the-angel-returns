@@ -41,6 +41,12 @@ It's time to capture the flag!
         # permissions
         permissions = {pm_notify}
 
+        # Define how your Applet will act with desktop shells.
+        launch = {
+            "action": "[Hide('ActivitiesView'), Return('ctf')]",
+            "show_in_launcher": False
+        }
+
         flags = {
             0: "n4m35_d0_w0rk_t00",
             1: "MG4xeV80MTFjM19kcjM0bTVfMW5fMGNy",

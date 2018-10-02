@@ -533,7 +533,7 @@ init -501 screen main_menu() tag menu:
         vbox:
             # text "[config.name!t]":
                 # style "main_menu_title"
-            text "v. [config.version] (" + snapshottime + ")":
+            text "v. [config.version]":
                 style "hl3_version_text"
             text "For evaluation purposes only.":
                 style "hl3_version_text"
@@ -1019,7 +1019,7 @@ init -501 screen preferences() tag menu:
         vbox:
             xalign 1.0 yalign 1.0
             xoffset -10 yoffset -10
-            text "v. [config.version] (" + snapshottime + ")":
+            text "v. [config.version]":
                 style "main_menu_version"
             text "For evaluation purposes only.":
                 style "main_menu_version"

@@ -20,7 +20,7 @@ init python:
         # folder that your applet lives in.
         app_dir = "AliceAngel"
         author = "Marquis Kurt"
-        version = "6.6.6"
+        version = "7.7.7"
         description = """\
 A lil' angel sent from above. I'm quite a gal, I'm Alice Angel!
         """
@@ -40,6 +40,12 @@ A lil' angel sent from above. I'm quite a gal, I'm Alice Angel!
         # See the Applet Manifest wiki page for all possible
         # permissions
         permissions = {pm_notify, pm_files, pm_sysadmin}
+
+        # Define how your Applet will act with desktop shells.
+        launch = {
+            "action": "[Hide('ActivitiesView'), Return('aliceangel')]",
+            "show_in_launcher": True
+        }
 
         def override_perms(self):
             persistent.aliceos_permissions["Alice_notify"] = True
