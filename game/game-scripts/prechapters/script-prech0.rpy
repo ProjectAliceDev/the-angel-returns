@@ -84,7 +84,6 @@ label pre_ch0:
     scene oem_background
     with dissolve_scene_full
     if not persistent.alice_activate:
-        call screen alert("This is your desktop.", "To launch an application, click \"Activities\" from the top left corner.", ok_action=Return(0))
         call screen bing_desktop()
         if _return != 'aliceangel':
             call screen alert("Not Initialized", "You must run Alice before you can load DDLC.", ok_action=Return(0))
@@ -93,6 +92,13 @@ label pre_ch0:
             pass
         python:
             aliceangel.ask_app_permissions()
+            mscv = aliceangel.start_build()
+            if mscv != 'go':
+                quick_menu = False
+                renpy.call_screen("ThrowASError", "ALICE_BUILD_DENIED")
+                renpy.utter_restart()
+            else:
+                pass
             aliceangel.send_message("Wh-what?")
             aliceangel.send_message("What is this?")
             aliceangel.send_message("Where am I?")

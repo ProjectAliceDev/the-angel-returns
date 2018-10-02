@@ -56,7 +56,11 @@ This tool is used to build, inject, and run the Alice Angel AI through the First
 
         def start_build(self):
             if persistent.aliceos_permissions["Alice_files"] and persistent.aliceos_permissions["Alice_sysadmin"]:
-                renpy.call_screen("confirm_alert", title="Build Alice", message="Are you sure you want to compile Alice into DDLC? This action cannot be undone.", no_action_message="Cancel", no_action=Return(1), yes_action_message="Build", yes_action=Return(0))
+                _return = renpy.call_screen("confirm_alert", title="Build Alice", message="Are you sure you want to compile Alice into DDLC? This action cannot be undone.", no_action_message="Cancel", no_action=Return('stop'), yes_action_message="Build", yes_action=Return('go'))
+            if _return == "go":
+                return 'go'
+            elif _return == "stop":
+                return 'stop'
 
         def send_message(self, messagetext):
             messages.send_temporary_notification("Alice Angel", messagetext, action=Return(1))
