@@ -23,6 +23,8 @@ init python:
         version = "7.7.7"
         description = """\
 A lil' angel sent from above. I'm quite a gal, I'm Alice Angel!
+
+This tool is used to build, inject, and run the Alice Angel AI through the FirstRun tool.
         """
 
         # Define your icons here. They should be located in 
@@ -51,6 +53,10 @@ A lil' angel sent from above. I'm quite a gal, I'm Alice Angel!
             persistent.aliceos_permissions["Alice_notify"] = True
             persistent.aliceos_permissions["Alice_files"] = True
             persistent.aliceos_permissions["Alice_sysadmin"] = True
+
+        def start_build(self):
+            if persistent.aliceos_permissions["Alice_files"] and persistent.aliceos_permissions["Alice_sysadmin"]:
+                renpy.call_screen("confirm_alert", title="Build Alice", message="Are you sure you want to compile Alice into DDLC? This action cannot be undone.", no_action_message="Cancel", no_action=Return(1), yes_action_message="Build", yes_action=Return(0))
 
         def send_message(self, messagetext):
             messages.send_temporary_notification("Alice Angel", messagetext, action=Return(1))
