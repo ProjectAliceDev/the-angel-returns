@@ -398,33 +398,39 @@ label ch0_main:
 
     "Monika returns to the room with another girl that looks almost like her."
     show sayonika 1a at t43
-    show monika 1b at f41
+    show monika 1b zorder 3 at f41
     show yuri at t42
     show natsuki at t44
     m "Alright, everyone!"
     m 3b "I'd like to introduce a classmate that will be with us the next few days."
     m 3k "This is Sayonika; we're in the same computer science class!"
-    show sayonika at f43
+    show sayonika zorder 3 at f43
     show monika zorder 2 at t41
     $ sm_name = "Sayonika"
     sm 1i "Uh, hey guys..."
     sm 1b "Nice to meet you..."
     show yuri zorder 3 at f42
-    show sayonika at t43
+    show sayonika zorder 2 at t43
     y 1a "Welcome to the Literature Club. It's a pleasure having you."
     y 2f "May I ask what brings you here?"
     show sayonika zorder 3 at f43
-    show yuri at t42
+    show yuri zorder 2 at t42
     sm "Well, I'm here to help you guys out with spring break."
     sm "I don't think Monika said anything yet, so I won't spoil anything for now."
     sm 4b "But I hope I'll make it fun for everyone!"
     show sayonika 1a zorder 2 at t43
+    return
+
+label ch0_end:
+    # Important letter to display
+    # call showletter(letter_1)
+    # $ poemsread = 4
     show monika zorder 3 at f41
     m 1b "Ahaha, yes, that's right!"
     m "This might take a while to discuss, so we'll be holding off on poem sharing today."
     m "Anways, about spring break..."
     m 1d "Sayori, are the pamphlets finished?"
-    show sayori 1 at f44
+    show sayori 1 zorder 3 at f44
     show natsuki at thide
     hide natsuki
     s 1x "All done!"
@@ -436,12 +442,118 @@ label ch0_main:
     show sayori at t44
     m 1b "These are wonderful, Sayori!"
     m 1k "I love how you decorated each of these so uniquely..."
-    return
-
-label ch0_end:
-    # Important letter to display
-    # call showletter(letter_1)
-    # $ poemsread = 4
-    
+    m 1b "Before I get distracted with these, let me talk about the plans for now."
+    m 1d "Literature can be manifested in many different forms, as we all seem to know quite well."
+    m "We've been sharing poems, sometimes reading manga, and even including art."
+    m "So, I figured that our spring break activities could take a different path in literature."
+    m 1b "Sayori, would you like to say where we're going?"
+    show monika 1a zorder 2 at t41
+    show yuri zorder 2 at t42
+    show sayori zorder 3 at f44
+    s 4r "We're going to a cartoon studio!"
+    show sayori zorder 2 at t44
+    "Natsuki's and Yuri's eyes light up, as do mine."
+    "We exchanged excited but puzzled looks with each other."
+    "Sayonika watches our eyes dart at each other and pipes up."
+    show sayonika zorder 3 at f43
+    sm 1b "I can explain..."
+    sm 2h "Monika and Sayori reached out to me a few weeks ago about this."
+    sm 3h "I work part-time for a cartoon and technology studio."
+    sm "We've been around for a while, but I've only worked with them for a year."
+    show sayonika zorder 2 at t43
+    "Sayonika notices the copies of {i}The Illusion of Living{/i} on the table."
+    show sayonika zorder 3 at f43
+    sm 3f "Oh, looks like you guys already know..."
+    sm 1i "I should've guessed since everyone's talking about it now."
+    show sayonika zorder 2 at t43
+    "Sayonika glances back at the table again, this time with the rest of us joining her."
+    "It doesn't take long for Yuri to connect the dots."
+    show yuri zorder 3 at f42
+    y 2f "So you're saying you work for Joey Drew Studios?"
+    show yuri zorder 2 at t42
+    "Natsuki scoffs in the background."
+    show natsuki zorder 3 at t44
+    show sayori at thide
+    hide sayori
+    n 2y "What? I thought they were long gone."
+    show natsuki zorder 2 at t44
+    show sayonika zorder 3 at f43
+    sm 3h "Well, we're not even really called {i}Joey Drew Studios{/i} anymore."
+    sm 3b "We're under new management, actually."
+    sm 4b "And I just happen to be the assistant of the CEO!"
+    sm "She's quite a gal!"
+    show sayonika 1b zorder 2 at t43
+    "The room falls to an awkward silence."
+    "We look at each other and don't say anything for a while."
+    "{i}Did she just...{/i}"
+    "Monika takes the lead in breaking the silence."
+    show monika zorder 3 at f41
+    m 1d "Sayonika, you never said anything about that!"
+    m 3d "That's kind of an important detail to disclose, wouldn't you agree?"
+    show sayonika zorder 3 at f43
+    show monika 1c zorder 2 at t41
+    sm 1i "Ehehe~"
+    sm "I kinda forget to say things..."
+    sm "I get so lost in my own thoughts~"
+    show monika zorder 3 at f41
+    show sayonika zorder 2 at t43
+    m 4d "So, wait..."
+    m "Are you saying you work for...{w=0.5}{i}Alice Angel{/i}?"
+    show monika at h41
+    m 1k "Oh my God, my {i}favorite{/i}~!"
+    show monika 1a zorder 2 at t41
+    show natsuki zorder 3 at f44
+    n 2k "Hold up, are we talking Pendle here or, like, Susie?"
+    show sayonika zorder 3 at f43
+    show natsuki zorder 2 at t44
+    show monika 1d at t41
+    sm 2g "Wait, who's Susie?"
+    show sayonika zorder 2 at t43
+    mc "That's been my question since the beginning of the club."
+    show sayonika zorder 3 at f43
+    sm 3h "I mean, if I'm honest, I haven't seen or heard of a 'Susie'."
+    sm "Allison Pendle did leave us sometime last year."
+    sm 2n "I think she went to go work for JetBrains instead."
+    show yuri zorder 3 at f42
+    show sayonika zorder 2 at t43
+    y 2f "What about someone by the last name of Campbell?"
+    show sayonika zorder 3 at f43
+    show yuri zorder 2 at t42
+    sm 1h "Campbell?"
+    sm 1i "Ehehe~"
+    sm 1m "Ehehehehe~"
+    sm 1q "She got herself on to the {i}chopping board{/i}, if you know what I mean..."
+    show yuri zorder 3 at f42
+    show sayonika zorder 2 at t43
+    y 3n "S-Sayonika!!!"
+    show natsuki zorder 3 at f44
+    show yuri zorder 2 at t42
+    n 1p "Sayonika! Show some decency, will you?"
+    n 5o "Yuri gets offended easily with those kinds of puns, you big dummy!"
+    show sayonika zorder 3 at h43
+    show natsuki zorder 2 at t44
+    sm 1x "Uwaa~! Sorry, I didn't know!"
+    sm "I should've thought about that!"
+    show sayori 1 zorder 3 at f44
+    show natsuki at thide
+    hide natsuki
+    s 1j "Heey, wait a minute!"
+    s "You just spoiled Chapter 17 for them!"
+    show sayori zorder 2 at t44
+    mc "Sayori, were you eavesdropping on our conversation earlier?"
+    show sayori zorder 3 at f44
+    s 5a "Ehehe~"
+    s "I couldn't resist hearing about that book."
+    s "I read it three times already the past week..."
+    show sayori zorder 2 at t44
+    mc "Wow. Now {i}that's{/i} dedication..."
+    mc "So, you mean that you don't actually know who you're working for?"
+    show sayori 1a at t44
+    show sayonika zorder 3 at f43
+    sm 2p "Don't be silly! Of course I do!"
+    sm 1i "It's... {w=0.5}Alice Angel..."
+    show monika zorder 3 at f41
+    show sayonika zorder 2 at t43
+    m 1b "That must be exciting to work for an angel!"
     return
     
