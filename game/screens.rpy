@@ -1652,6 +1652,15 @@ style nameboxblue:
     background Frame("/mod_assets/images/gui/nameboxblue.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
+style nameboxred:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+    background Frame("/mod_assets/images/gui/nameboxred.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
 style namebox_apple:
     xpos gui.name_xpos
     xanchor gui.name_xalign
@@ -1696,15 +1705,6 @@ style nameboxpink:
     ypos gui.name_ypos
     ysize gui.namebox_height
     background Frame("/mod_assets/images/gui/nameboxpink.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
-    padding gui.namebox_borders.padding
-
-style nameboxred:
-    xpos gui.name_xpos
-    xanchor gui.name_xalign
-    xsize gui.namebox_width
-    ypos gui.name_ypos
-    ysize gui.namebox_height
-    background Frame("/mod_assets/images/gui/nameboxred.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
 style nameboxteal:

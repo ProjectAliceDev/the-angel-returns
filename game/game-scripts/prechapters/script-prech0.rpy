@@ -136,6 +136,7 @@ label pre_ch0:
     show ts_menu_logo
     show menu_particles
     show ts_menu_fade
+    $ renpy.pause(4.0)
     $ renpyApp.ask_app_permissions()
     $ renpy.pause(3.0)
     show screen tear(20, 0.1, 0.1, 0, 40)
