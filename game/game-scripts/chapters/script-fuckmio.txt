@@ -1,0 +1,111 @@
+###################################################
+## Note: This is an experimental script. This may
+## or may not be used in the final rewrite of the
+## game at all. Please take this into consideration.
+###################################################
+"Without notice, Monika re-enters the room."
+show monika 1 at t31
+show yuri at t32
+show natsuki at t33
+m 1k "Alright, I'm back!"
+show yuri at f32
+y 2f "Oh? Where from?"
+show monika at f31
+show yuri at t32
+m 3l "Ahaha, well..."
+m "Just from a little... creative discussion."
+show natsuki at f33
+show monika at t31
+n 1f "Was it Mio again?"
+show monika at f31
+show natsuki at t33
+m 1p "Yeah..."
+show natsuki at f33
+show monika at t31
+n 1e "I swear that girl's got something wrong about her."
+n "Like Susie!"
+n 4f "Going around thinking that her French flirting's gonna get her anywhere."
+n 5e "I swear, one of these days, I'll give her a piece of my damn mind!"
+show natsuki 5g at t33
+show monika at f31
+m 3p "I don't thinkg fighting will get us anywhere, but you're right."
+m 3i "She did that thing again with [player] a few minutes ago."
+show yuri at f32
+show monika at t31
+y 2g "How unprofessional."
+y "I would also appreciate it if she didn't complain about our book every few minutes."
+y 2h "She's always making crude remarks about its 'innacurate retelling' of past events."
+show natsuki at f33
+show yuri at t32
+n "Like that damn bitch would know!"
+n 5r "Jeez, she's such a big dummy."
+show natsuki at t33
+mc "Is Mio the girl I met in the hallway?"
+show monika at f31
+$ mi_name = "Mio"
+m 1o "Sadly, yes..."
+show natsuki at f33
+show monika at t31
+n 1i "She's just a really picky kind of person."
+n "She acts so proper and 'charming' all the time."
+n "Prefers the classics over anything, especially in music and cartoons."
+n 2o "She called my manga 'an obliteration to cartoons' and 'a disgrace to her eyes'!"
+n "'Oh, darling, that's not literature at all.'"
+n 1v "MANGA IS LITERATURE, BITCH!"
+n 1e "I don't know what the hell her problem is, but it's pissing me off."
+n "To make matters worse, she always seems to be attacking the literature club all the damn time!"
+n "Don't let her appearance fool you!"
+n "She may seem like a little angel at first, but then when she finds something to dislike about you, it's all over."
+n 5r "Just... stay away from her!"
+n "I-it's not like I'm trying to protect you or anything!"
+show natsuki at t33
+mc "..."
+mc "So I guess everyone's not at ease with her..."
+show yuri at f32
+y 3v "I have her in my graphic design class."
+y "She tends to stick to older designs and complains at my work for being 'too ornate'."
+y 2g "Yet she makes these ink drawings all over her designs and she finds {i}that{/i} acceptable."
+show monika at f31
+show yuri at t32
+m "..."
+m "I guess you already kind of see my 'issues' with her..."
+m 1g "She gets a little emotional during French class."
+m "She always like to pick on me for the tiniest details."
+m "I could mess up a conjugation and she'll throw a hissy fit over it."
+m 1r "Honestly, I don't know how I'm to deal with her."
+show sayori 1e at f43
+show monika at t41
+show yuri at t42
+show natsuki at t44
+s "Is everyone alright over here?"
+s "You seem upset. I don't like it."
+show natsuki at f44
+show sayori at t43
+n "It's fucking Mio again, Sayori."
+show sayori at f43
+show natsuki at t44
+s 4w "Again?"
+s 4v "W-was she making fun of the club again?"
+show monika at f41
+show sayori at t43
+m "No, no..."
+m "She just did her flirty thing with [player] again."
+show sayori at f43
+show monika at t41
+s 4w "N-noooo!"
+s "Not [player]!"
+s "She always keeps making comments about me being too childish."
+s "And my depression, too!"
+s 1u "She said she can smell it from miles away..."
+s 5c "She's such a big bulli!"
+show sayori at t43
+"Unexpectedly, we hear someone yelling in the hall."
+python:
+    sm_name = "???"
+    style.say_dialogue = style.edited
+sm "Fuck off, you slimy bitch!"
+sm "Aren't you quite a gal?"
+sm "I'm sure my boss would love to tear you to shreds if you acted like that in front of her."
+sm "Jesus..."
+$ style.say_dialogue = style.normal
+"A teal-eyed girl walks into the room as Natsuki walks toward the doors."

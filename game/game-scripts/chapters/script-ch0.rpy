@@ -303,6 +303,7 @@ label ch0_main:
     "Slowly, I walk towards the direction of the conversation."
     show monika 1c at t21
     show mio 2r at t22
+    play music t6
     m 1g "I don't even think Yuri and Natsuki know you well, if at all."
     m "I think you'd be giving them a wrong impression."
     show mio at f22
@@ -312,12 +313,11 @@ label ch0_main:
     show monika 1d at h21
     m "...!"
     m "[player]!!!"
-    play music t3
     m 1l "I didn't expect you to find me out here!"
     "The other girl with Monika begins to inspect me."
     show mio at f22
     mi 4a "Hmm!"
-    mi 3e "Comment tu t'appelles?"
+    mi 3e "Comment tu t'appelles?" # What is your name?
     show mio at t22
     mc "Uh..."
     "All words escape me in this situation."
@@ -333,25 +333,115 @@ label ch0_main:
     m "So I chose French instead."
     show mio at f22
     show monika at t21
-    mi 6b "Comment il s'appelle?"
+    mi 6b "Comment il s'appelle?" # What is his name?
     show monika at f21
     show mio at t22
-    m "Il s'appelle [player]."
+    m "Il s'appelle [player]." # His name is [player]
     show mio at f22
     show monika at t21
     mi "[player]..."
-    mi 5x "Je suis amoureuse, ehehe~"
+    mi 5x "Je suis amoureuse, ehehe~" # I am in love... Ehehe~ (taken lightly)
     show mio at t22
-    show monika 1c at t21
+    show monika 1f at h21
     mc "What in the world are you guys talking about?"
     show monika at f21
     m 4l "Oh, it's nothing~!"
+    show mio at f22
+    show monika at t21
+    mi 8q "Ferme ta bouche!" # Shut up! (lit. 'Shut your mouth!')
+    mi 4f "Lui, je l'aime..." # This one, I like him...
+    mi 1c "Tu es jalouse? En colère?" # Are you jealous? Angry?
+    show monika at f21
+    show mio at t22
+    m 5b "I don't appreciate your attitude towards him right now."
+    m "He's not a toy to play around with."
+    m 4i "He's one of my members in the literature club; I would appreciate it if you didn't act so inappropriately."
+    m 1g "[player]..."
+    m "I'm sorry about this. Could you please go back to the clubroom?"
+    m "I promise I'll be with you in a moment!"
+    show monika at t21
+    mc "Y-yeah, I should probably go back..."
+    show monika at thide
+    show mio at thide
+    hide monika
+    hide mio
+    stop music fadeout 1.5
+    "Slowly, I retreat back to the clubroom."
+    "What the hell was that all about?"
 
+    scene bg club_day
+    with wipeleft
+    play music t3
+    "When I return to the club room, I notice Yuri and Natsuki exchanging papers."
+    "I advance towards them, hoping to forget about what had happened."
+    show yuri 1 at f21
+    show natsuki 4 at t22
+    y 1j "I'll say, not bad for your first time with my style of writing."
+    y 1f "I really enjoyed your metaphor of mind control and love to represent the dynamic relationships between Joey Drew and his employees."
+    y 1c "Your allusions in that metaphor were spot on as well!"
+    show natsuki at f22
+    show yuri at t21
+    n 4q "I guess it wasn't that bad..."
+    n "I mean, it's not my cup of tea or anything, but I tried."
+    n "T-thanks..."
+    show natsuki at t22
+    mc "Wait, was it time to start sharing poems already?"
+    show yuri at f21
+    y 1b "Oh, no! We just decided to write a poem based on our thoughts of the book thus far."
+    show natsuki at f22
+    show yuri at t21
+    n 2k "Just as a challenge, we wrote in each other's styles."
+    n 5s "Not that I'm trying to do new things or anything..."
+    show natsuki at t22
+    mc "Oh, I see."
+    mc "I probably should wait until I finish reading before I start reading your poems..."
 
+    "Monika returns to the room with another girl that looks almost like her."
+    show sayonika 1a at t43
+    show monika 1b at f41
+    show yuri at t42
+    show natsuki at t44
+    m "Alright, everyone!"
+    m 3b "I'd like to introduce a classmate that will be with us the next few days."
+    m 3k "This is Sayonika; we're in the same computer science class!"
+    show sayonika at f43
+    show monika zorder 2 at t41
+    $ sm_name = "Sayonika"
+    sm 1i "Uh, hey guys..."
+    sm 1b "Nice to meet you..."
+    show yuri zorder 3 at f42
+    show sayonika at t43
+    y 1a "Welcome to the Literature Club. It's a pleasure having you."
+    y 2f "May I ask what brings you here?"
+    show sayonika zorder 3 at f43
+    show yuri at t42
+    sm "Well, I'm here to help you guys out with spring break."
+    sm "I don't think Monika said anything yet, so I won't spoil anything for now."
+    sm 4b "But I hope I'll make it fun for everyone!"
+    show sayonika 1a zorder 2 at t43
+    show monika zorder 3 at f41
+    m 1b "Ahaha, yes, that's right!"
+    m "This might take a while to discuss, so we'll be holding off on poem sharing today."
+    m "Anways, about spring break..."
+    m 1d "Sayori, are the pamphlets finished?"
+    show sayori 1 at f44
+    show natsuki at thide
+    hide natsuki
+    s 1x "All done!"
+    "Sayori hands each of us one."
+    "I feel the softness from the colored-in pictures."
+    "The pamhplet has interesting creatures and designs that I haven't seen before."
+    "I look up again, waiting for further instructions."
+    show monika zorder 3 at f41
+    show sayori at t44
+    m 1b "These are wonderful, Sayori!"
+    m 1k "I love how you decorated each of these so uniquely..."
+    return
 
+label ch0_end:
     # Important letter to display
-    call showletter(letter_1)
-    $ poemsread = 4
+    # call showletter(letter_1)
+    # $ poemsread = 4
     
     return
     
