@@ -253,5 +253,7 @@ image monika_body_glitch2:
 
 image room_glitch = "images/cg/monika/monika_bg_glitch.png"
 
+image monika 5c = "mod_assets/images/monika/3c.png"
+
 image room_mask = LiveComposite((1280, 720), (0, 0), "mask_test", (0, 0), "mask_test2")
 image room_mask2 = LiveComposite((1280, 720), (0, 0), "mask_test3", (0, 0), "mask_test4")

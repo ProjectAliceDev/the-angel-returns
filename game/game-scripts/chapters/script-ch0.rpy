@@ -527,7 +527,7 @@ label ch0_end:
     show sayonika zorder 2 at t43
     y 3n "S-Sayonika!!!"
     show natsuki zorder 3 at f44
-    show yuri zorder 2 at t42
+    show yuri 1o zorder 2 at t42
     n 1p "Sayonika! Show some decency, will you?"
     n 5o "Yuri gets offended easily with those kinds of puns, you big dummy!"
     show sayonika zorder 3 at h43
@@ -555,5 +555,108 @@ label ch0_end:
     show monika zorder 3 at f41
     show sayonika zorder 2 at t43
     m 1b "That must be exciting to work for an angel!"
+    show monika zorder 2 at t41
+    show yuri 1e zorder 2 at t42
+    mc "Is it just me, or is Monika getting really excited and not paying attention to what we're talking about?"
+    show sayonika zorder 3 at f43
+    sm 2i "Well, it's kind of complicated..."
+    sm 1h "All I know is that I work for Alice. And she runs what used to be Joey Drew Studios."
+    sm 1b "We renamed it to Angelhaus last year."
+    sm 1i "I wasn't there when it happened, though..."
+    sm 1b "I think you all will like her."
+    sm "Especially you, Monika, since you're all into computers."
+    show monika zorder 3 at f41
+    show sayonika zorder 2 at t43
+    m 1b "{i}*gasp*{/i} Really?"
+    show monika zorder 3 at h41
+    m 5c "Finally! Someone who I can share my interests with!"
+    show yuri zorder 3 at f42
+    show monika 1k zorder 2 at t41
+    y 1e "Wow, Monika, I haven't seen you this excited before in a while."
+    show yuri zorder 2 at t42
+    show sayonika zorder 3 at f43
+    sm 1r "She's usually not like this during club meetings, is she?"
+    show sayori zorder 3 at f44
+    show sayonika zorder 2 at t43
+    s 1x "It kind of is the first time, actually."
+    s 1l "When it's after club meetings, it's a different story..."
+    show sayori zorder 2 at t44
+    show natsuki 4 zorder 3 at f42
+    show yuri at thide
+    hide yuri
+    n 4d "Whoa, there! Take a chill pill, Monika."
+    n "I think you're more excited than Sayori is!"
+    show monika zorder 3 at f41
+    show natsuki zorder 2 at t42
+    m 1n "Ehehe, sorry..."
+    m "I, uh..."
+    show monika zorder 2 at t41
+    mc "Well, this is a first."
+    mc "I'm sure the spring break will certainly be interesting..."
+
+    scene bg club_day
+    with wipeleft
+    "We continue discussing the plans for spring break in details."
+    "Natsuki agreed to bringing any baking supplies they already didn't have."
+    "Yuri proposed bringing some different teas for the trip."
+    "Sayori jotted everything down with her red crayon."
+    "Surprisingly, Monika just remained giddy."
+    "We start reassembling the desks and get ready to leave for the day."
+    "I grab my books and bag, waiting for Sayori to come with me to the door."
+    show sayori 1 at t11
+    s 1x "[player], I'm going with Natsuki today to get a few things before the big travel tomorrow."
+    s "Do you need anything?"
+    mc "It's okay, Sayori, I think I have everything."
+    s 4r "Okay!"
+    s 4x "Just let me know if you need anything~"
+    show sayori at thide
+    hide sayori
+    "Sayori shuffles out the door with Natsuki."
+    "I guess I'll be going home alone, then..."
+    m "Wait, [player]!"
+    "I turn around to see Monika right behind me."
+    show monika 1 at t11
+    m 1d "Didn't you want to talk to me about something?"
+    mc "Oh, uh..."
+    "I had forgotten about my intentions before the escapade."
+    mc "I kind of forgot, actually..."
+    m 1g "Wait, isn't Sayori going home with you?"
+    mc "She said she was going to go shopping with Natsuki."
+    m 1d "Oh..."
+    m "So I guess you're going alone."
+    mc "It's no big deal. I've done it before..."
+    m 5a "Why don't I come with you?"
+    mc "Uh..."
+    mc "Sure, I guess..."
+    show monika at thide
+    hide monika
+    "Monika grabs her bags from the desk and comes with me."
+
+    scene bg residential_day
+    with wipeleft
+    show monika 1 at t11
+    m 1p "I'm sorry for what happened back there in the hallway."
+    m "I was hoping she didn't do that..."
+    m 1r "She's kind of done this to a lot of people I interact with."
+    mc "Monika, if I'm honest, I would understand if I knew what she was saying."
+    m 1g "She was trying to flirt with you in French."
+    m 3n "I didn't quite take it well..."
+    mc "I get it. You wanted her to act a little more professionally towards me."
+    m 1f "I-it's..."
+    m 1q "Nevermind."
+    m 1m "I'm probably just rambling on again..."
+    mc "It's fine, Monika."
+    mc "I hope she and I don't run into each other again."
+    mc "I didn't really like her, anyway."
+    m 1e "I'm sure we won't run into her again."
+    mc "So, Monika..."
+    mc "You seem to really like Alice, don't you?"
+    m 4d "Well, when I was little and often at my grandmother's house, she'd put on the Bendy cartoons."
+    m "They were the standard cartoons of troublemaker Bendy and food-obsessive Boris."
+    m "I didn't really connect with them as much."
+    m "When my grandmother started showing my her personal favorites with Alice Angel, I was hooked."
+    m 4b "You know, I felt I could really connect with her..."
+    m 1a "She's been my favorite ever since."
+    m 1n "I guess my childhood kind of controlled my behavior today, though..."
     return
     
