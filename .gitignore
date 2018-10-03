@@ -125,3 +125,4 @@ game/*.moj
 
 # JetBrains IDEA folders
 .idea
+.vscode/launch.json
