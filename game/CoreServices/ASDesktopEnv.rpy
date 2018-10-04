@@ -5,3 +5,4 @@
 
 image default_background = "Resources/backgrounds/default_busy.png"
 image oem_background = "Resources/backgrounds/default.png"
+image mc_desktop = "Resources/backgrounds/default_mc.jpg"

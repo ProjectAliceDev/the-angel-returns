@@ -81,6 +81,7 @@ image ts_menu_logo:
 label pre_ch0:
     stop music fadeout 1.0
     $ config.allow_skipping = False
+    $ persistent.alice_desktop = True
     scene oem_background
     with dissolve_scene_full
     if not persistent.alice_activate:
@@ -112,10 +113,12 @@ label pre_ch0:
     with dissolve_scene_full
     
     # Start fake DDLC title screen
-    $ persistent.ghost_menu = False
-    $ splash_message = splash_message_default
-    $ config.main_menu_music = audio.t1
-    $ renpy.music.play(config.main_menu_music)
+    python:
+        persistent.ghost_menu = False
+        splash_message = splash_message_default
+        config.main_menu_music = audio.t1
+        renpy.music.play(config.main_menu_music)
+        persistent.alice_desktop = False
     show ts_intro with Dissolve(0.5, alpha=True)
     pause 2.5
     hide ts_intro with Dissolve(0.5, alpha=True)

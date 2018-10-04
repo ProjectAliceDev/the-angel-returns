@@ -9,6 +9,7 @@ image blight start = "mod_assets/images/gui/blackbox/u.png"
 image amesh = "mod_assets/images/gui/blackbox/ac.png"
 
 image bg campus = "mod_assets/images/bg/campus.png"
+image bg residential_entrance = "mod_assets/images/bg/entrance_mod.png"
 image bg station = "mod_assets/images/bg/unknown by LeoDeCraprio.png"
 image bg studio entrance = "mod_assets/images/bg/studio-1.png"
 image bg studio inkmachine = "mod_assets/images/bg/studio-2.png"

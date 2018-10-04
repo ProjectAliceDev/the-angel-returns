@@ -658,5 +658,151 @@ label ch0_end:
     m 4b "You know, I felt I could really connect with her..."
     m 1a "She's been my favorite ever since."
     m 1n "I guess my childhood kind of controlled my behavior today, though..."
+    mc "I don't think anoyne was really complaining."
+    mc "I guess we were just a little surprised you got as excited as you did."
+    m 1e "Ahaha~"
+    m 5a "I guess I'm a total enigma to you all."
+    mc "Eh, I wouldn't say that..."
+    m 1a "Okay, maybe not a {i}total{/i} enigma..."
+    mc "Say, Monika..."
+    mc "Didn't we pass your house already?"
+    m "Oh, that we did~"
+    m 1n "I just... uh..."
+    m 1e "...wanted to spend some more time with you..."
+    show monika 1o at t11
+    "I hear Monika mumble something under her breath, but I can't quite make it out."
+    "I know she wants to make sure I'm happy and all, but this..."
+    "This is just awkward."
+    "Before either Monika or I could say anything, I hear a familiar voice behind me."
+    s "[player]!"
+    "Sayori."
+    "I guess she must've finished shopping."
+    "Sayori approaches us, gripping onto some pastic shopping bags."
+    show sayori 1a at t22
+    show monika at t21
+    s 1x "[player], look! I found a deal on toiletries!"
+    "Sayori shows the contents of the bag to me."
+    mc "Sayori, why do you have four of everything in here?"
+    show sayori at f22
+    s 1c "There was a deal!"
+    s "A four-for-five!"
+    show sayori at t22
+    mc "Sayori, that's a Wendy's thing."
+    mc "Well, at least in Hawaii..."
+    mc "But, anyway, it looks like shopping went well."
+    show sayori at f22
+    s 1x "Yeah, it did."
+    s "Natsuki helped me find things at lower prices."
+    s 4r "So now we're super prepared!"
+    "Sayori notices Monika, now looking embarassed."
+    s 1x "Oh, hiya Monika!"
+    s 1l "I, uh, didn't see you there..."
+    "Monika remains silent."
+    s 2g "Is she alright?"
+    show sayori at t22
+    mc "This just started, Sayori."
+    mc "I don't know..."
+    show sayori at f22
+    s "Isn't your house up that way?"
+    show sayori at t22
+    show monika at f21
+    m 3l "Ehehe~"
+    show sayori 1o at h22
+    show monika 1o at t21
+    "Sayori seems to be pondering something."
+    "She looks back at Monika, then at me."
+    show sayori at f22
+    show monika 1g at t21
+    s 3n "Ooh~"
+    "Sayori approaches me closer, motioning to move my ear."
+    "She beings whispering."
+    s 1b "I think she wants to stay with you for a while."
+    s 5a "But she's kinda really bad at flirting, so..."
+    mc "S-S...!"
+    s 1a "Trust me."
+    "She mouths the last part."
+    show sayori at t22
+    mc "Uh..."
+    show sayori at f22
+    s 3h "Is something going on at home, Monika?"
+    "She winks at me as while saying that."
+    show monika at f21
+    show sayori at t22
+    m 1p "I-It's nothing, Sayori..."
+    m "Just, uh..."
+    show monika at t21
+    mc "Mio?"
+    show monika at f21
+    m 3n "Y-yeah..."
+    m 3g "She's been staying at my place for a while, and it's kind of getting on my nerves."
+    m "She's been getting really chummy with my family..."
+    m "I just need a break from her for a while."
+    show monika at t21
+    mc "Oh..."
+    mc "Damn. That's..."
+    "Sayori winks at me once more, nodding her head in Monika's direction."
+    mc "I'm sorry to hear that. You need somewhere to crash?"
+    "Sayori facepalms."
+    "I fucked up, didn't I...?"
+    show monika at f21
+    m 1g "If it's alright with you, [player]..."
+    show monika at t21
+    mc "Yeah, it's fine. My parents are on a business trip and won't be back for a while."
+    show sayori at f22
+    s 1x "Here, let me help you out~!"
+    "Sayori grabs her duffel bag from her unexpectedly."
+    s "[player], I'm going to need you to open the door..."
+    "I part with Sayori quickly to assist her."
+    show monika at thide
+    hide monika
+    show sayori at t11
+    s 1j "Not that I actually need help or anything, but you suck at this."
+    s "'Need somewhere to crash'? Jeez, she's not me..."
+    s "She's trying to get your attention here!"
+    mc "Sayori, you're the only girl that's entered my house. And uninvited, too..."
+    s 5c "Heey, that's mean!"
+    s 1j "And totally not even related!"
+    s "Just... try, please."
+    s 1g "Please? For me?"
+    "I sigh."
+    mc "I'll try..."
+    s 1h "Good. Now please open the door so she doesn't catch onto my lie."
+    mc "Right..."
+    "I open the door for Sayori as she rushes through with the bag."
+    "She comes out feeling relieved."
+    s 1x "Good!"
+    s "Have fun~!"
+    show sayori at thide
+    hide sayori
+    mc "Sayori, wait!"
+    "Before I know it, she's already hopped the fence and prances to her front door."
+    "Not again, Sayori..."
+    "Monika timidly approaches me, watching the escapade unfold."
+    show monika 3 at t11
+    m 3l "Such a dynamic duo!"
+    mc "That's one way of looking at it..."
+    "I open the door for her, though it took a bit of effort for her to enter."
+
+    scene bg residential_entrance
+    with wipeleft
+    show monika 1 at t11
+    m 1n "I'm sorry if this is a bit awkward..."
+    m 3n "Mio's been everywhere else except here."
+    m "Not that I've been here, either, but..."
+    m 1e "At least I know she won't follow me."
+    mc "No worries. I'll make sure she stays away from here."
+    mc "I'm guaranteeing that, too."
+    mc "We have a spare bedroom upstairs that you can use if you want that."
+    m 3l "It's fine, I can just take the couch..."
+    mc "Okay, let me just get the sheets for you..."
+
+    scene bg residential_entrance
+    with wipeleft
+    "I retreat to the closet upstairs to grab the linens for Monika."
+    "I let my mind drift for a bit while I'm searching for the sheets."
+    "This will be an interesting break..."
+    "Spending time with everyone in a cartoon studio..."
+    "And Monika staying the night..."
+    "I just hope that Mio girl stays away from all of this."
     return
     

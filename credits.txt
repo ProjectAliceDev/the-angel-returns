@@ -10,6 +10,7 @@ Campus background - yagamirai10
 Studio backgrounds - Uncle Mugen
 Craig sprite - Cyrke, Cylent Night (edits by alicerunsonfedora)
 Monika head edit - u/Lunatic_Rabbit
+MC house entrance - Nuxill
 Apple Store background - Cyrke
 /* NOTE: If you plan to use the Apple Store background in your own mod, please consult Cyrke for permissions. */
 
@@ -18,9 +19,3 @@ Break room - Pexels (edited)
 Old ink machine room (aka new offices) - MagicDesk (edited)
 Studio entrance - MagicDesk (edited)
 Alice Angel sprites (Monika base) - BippityZop
-Jazz music - Dee Yan-key
-  - City Twilight
-  - Business Trip
-  - May Everlasting Light Shine
-  - Loss (no, really, this IS the title!)
-  - Bathtub Gin
