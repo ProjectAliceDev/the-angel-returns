@@ -82,8 +82,20 @@ label pre_ch0:
     stop music fadeout 1.0
     $ config.allow_skipping = False
     $ persistent.alice_desktop = True
+
+    scene black with dissolve_scene_full
+
+    h "I have no clue how I managed to get myself here."
+    h "What the hell am I doing?"
+    h "Haven't I already been through enough?"
+    h "{i}*sigh*{/i}"
+    h "I guess it's up to me now..."
+    h "Just turn the applet on, get the game going, and walk away."
+    h "Out of all people..."
+    h "Well, someone's got to do this."
+
     scene oem_background
-    with dissolve_scene_full
+    with dissolve_scene_half
     if not persistent.alice_activate:
         call screen bing_desktop()
         if _return != 'aliceangel':

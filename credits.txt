@@ -1,21 +1,27 @@
 Credits
-//TODO: Place this in the game's credits
 
+#############################################################
+## Sprites and Sprite Edits                                ##
+#############################################################
 Monika casual sprite - Oliver [Exit Music]
-Train station - LeoDiCraprio
-Alice Angel sprites (new) - Noelia Riveros + yagamirai10
+Alice Angel sprites - Noelia Riveros + yagamirai10
 Monika kimono casual sprite - yagamirai10
-Mio character - yagamirai10
-Campus background - yagamirai10
-Studio backgrounds - Uncle Mugen
+Mio character - yagamirai10 (Susie edits by alicerunsonfedora)
 Craig sprite - Cyrke, Cylent Night (edits by alicerunsonfedora)
 Monika head edit - u/Lunatic_Rabbit
+
+
+#############################################################
+## Backgrounds                                             ##
+#############################################################
+Train station - LeoDiCraprio
+Campus background - yagamirai10
+Studio backgrounds - Uncle Mugen
 MC house entrance, living room - Nuxill
 Apple Store background - Cyrke
-/* NOTE: If you plan to use the Apple Store background in your own mod, please consult Cyrke for permissions. */
-
-# Demo-specific
 Break room - Pexels (edited)
 Old ink machine room (aka new offices) - MagicDesk (edited)
 Studio entrance - MagicDesk (edited)
-Alice Angel sprites (Monika base) - BippityZop
+MC bedroom at night - Gyrosona
+
+## NOTE: If you plan to use the Apple Store background in your own mod, please consult Cyrke for permissions.

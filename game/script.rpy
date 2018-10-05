@@ -15,6 +15,7 @@ label start:
         sm_name = "Sayonika"
         c_name = "Craig"
         a_name = "Alice"
+        h_name = "Henry"
 
         quick_menu = True
         style.say_dialogue = style.normal
