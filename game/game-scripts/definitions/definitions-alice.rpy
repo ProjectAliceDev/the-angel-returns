@@ -138,7 +138,7 @@ image alice 1y5 = im.Composite((960,960), (0,0), "mod_assets/images/alice/1l.png
 
 
 image alice 1sy1 = im.Composite((960,960), (0,0), "mod_assets/images/alice/1l.png", (0,0), "mod_assets/images/alice/1r.png", (0,0), "mod_assets/images/alice/y1.png", (0,0), "mod_assets/images/alice/deformy.png")
-image alice 1sy1 = im.Composite((960,960), (0,0), "mod_assets/images/alice/1l.png", (0,0), "mod_assets/images/alice/1r.png", (0,0), "mod_assets/images/alice/y2.png", (0,0), "mod_assets/images/alice/deformy.png")
-image alice 1sy1 = im.Composite((960,960), (0,0), "mod_assets/images/alice/1l.png", (0,0), "mod_assets/images/alice/1r.png", (0,0), "mod_assets/images/alice/y3.png", (0,0), "mod_assets/images/alice/deformy.png")
-image alice 1sy1 = im.Composite((960,960), (0,0), "mod_assets/images/alice/1l.png", (0,0), "mod_assets/images/alice/1r.png", (0,0), "mod_assets/images/alice/y4.png", (0,0), "mod_assets/images/alice/deformy.png")
-image alice 1sy1 = im.Composite((960,960), (0,0), "mod_assets/images/alice/1l.png", (0,0), "mod_assets/images/alice/1r.png", (0,0), "mod_assets/images/alice/y5.png", (0,0), "mod_assets/images/alice/deformy.png")
+image alice 1sy2 = im.Composite((960,960), (0,0), "mod_assets/images/alice/1l.png", (0,0), "mod_assets/images/alice/1r.png", (0,0), "mod_assets/images/alice/y2.png", (0,0), "mod_assets/images/alice/deformy.png")
+image alice 1sy3 = im.Composite((960,960), (0,0), "mod_assets/images/alice/1l.png", (0,0), "mod_assets/images/alice/1r.png", (0,0), "mod_assets/images/alice/y3.png", (0,0), "mod_assets/images/alice/deformy.png")
+image alice 1sy4 = im.Composite((960,960), (0,0), "mod_assets/images/alice/1l.png", (0,0), "mod_assets/images/alice/1r.png", (0,0), "mod_assets/images/alice/y4.png", (0,0), "mod_assets/images/alice/deformy.png")
+image alice 1sy5 = im.Composite((960,960), (0,0), "mod_assets/images/alice/1l.png", (0,0), "mod_assets/images/alice/1r.png", (0,0), "mod_assets/images/alice/y5.png", (0,0), "mod_assets/images/alice/deformy.png")
