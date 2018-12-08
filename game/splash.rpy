@@ -30,7 +30,7 @@ image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign
 
 
 image menu_logo:
-    "/mod_assets/logo.png"
+    "gui/logo.png"
     subpixel True
     xcenter 240
     ycenter 120
@@ -39,76 +39,49 @@ image menu_logo:
 
 image menu_bg:
     topleft
-    block:
-        choice:
-            "mod_assets/images/menu/hl3.png"
-        choice:
-            "mod_assets/images/menu/hl3-2.png"
-    # menu_bg_move
+    "gui/menu_bg.png"
+    menu_bg_move
 
 image game_menu_bg:
     topleft
-    "mod_assets/images/menu/hl3.png"
-#    menu_bg_loop
+    "gui/menu_bg.png"
+    menu_bg_loop
 
 image menu_fade:
-    "black"
+    "white"
     menu_fadeout
-
-label menu_glitch:
-    show screen tear(20, 0.1, 0.1, 0, 40)
-    play sound "sfx/s_kill_glitch1.ogg"
-    $ pause(0.25)
-    hide screen tear
-    return
 
 image menu_art_y:
     subpixel True
     "gui/menu_art_y.png"
-    xcenter 825
+    xcenter 600
     ycenter 335
     zoom 0.60
-    menu_art_move(0.54, 825, 0.60)
+    menu_art_move(0.54, 600, 0.60)
 
 image menu_art_n:
     subpixel True
     "gui/menu_art_n.png"
-    xcenter 460
-    ycenter 400
+    xcenter 750
+    ycenter 385
     zoom 0.58
-    menu_art_move(0.54, 750, 0.54)
+    menu_art_move(0.58, 750, 0.58)
 
 image menu_art_s:
     subpixel True
     "gui/menu_art_s.png"
-    xcenter 665
-    ycenter 345
-    zoom 0.56
-    menu_art_move(0.56, 665, 0.56)
+    xcenter 510
+    ycenter 500
+    zoom 0.68
+    menu_art_move(0.68, 510, 0.68)
 
 image menu_art_m:
     subpixel True
-    "mod_assets/images/menu/menu_art_sm.png"
-    xcenter 1050
-    ycenter 580
-    zoom 0.60
-    menu_art_move(0.60, 600, 0.60)
-
-image menu_art_a:
-    subpixel True
     "mod_assets/images/menu/menu_art_a.png"
-    xcenter 875
-    ycenter 590
-    zoom 0.80
-    menu_art_move(0.54, 1100, 0.80)
-
-image menu_art_mi:
-    subpixel True
-    "gui/menu_art_m.png"
-    xcenter 725
-    ycenter 580
-    zoom 0.60
-    menu_art_move(0.60, 600, 0.60)
+    xcenter 1000
+    ycenter 640
+    zoom 1.00
+    menu_art_move(1.00, 1000, 1.00)
 
 image menu_art_y_ghost:
     subpixel True
@@ -151,7 +124,7 @@ image menu_art_s_glitch:
     menu_art_move(.8, 470, .8)
 
 image menu_nav:
-    "mod_assets/images/gui/overlay/main_menu.png"
+    "gui/overlay/main_menu.png"
     menu_nav_move
 
 image menu_particles:
@@ -196,13 +169,6 @@ transform menu_nav_move:
     time 1.5
     easein_quint 1 xoffset 0
 
-transform menu_fadein:
-    easeout 0.75 alpha 0
-    time 2.481
-    alpha 0.6
-    easeout 0.5 alpha 1
-
-
 transform menu_fadeout:
     easeout 0.75 alpha 0
     time 2.481
@@ -223,20 +189,23 @@ transform menu_art_move(z, x, z2):
 
 image intro:
     truecenter
-    "black"
+    "white"
     0.5
-    "mod_assets/images/bg/splash-white.png" with Dissolve(0.5, alpha=True)
-    2.0
-    "black" with Dissolve(0.5, alpha=True)
+    "bg/splash.png" with Dissolve(0.5, alpha=True)
+    2.5
+    "white" with Dissolve(0.5, alpha=True)
     0.5
 
 image warning:
     truecenter
-    "black"
+    "white"
     "splash_warning" with Dissolve(0.5, alpha=True)
     2.5
     "white" with Dissolve(0.5, alpha=True)
     0.5
+
+image tos = "bg/warning.png"
+image tos2 = "bg/warning2.png"
 
 
 init python:
@@ -264,6 +233,41 @@ init python:
 
 
 label splashscreen:
+
+
+    python:
+        firstrun = ""
+        try:
+            firstrun = renpy.file("firstrun").read(1)
+        except:
+            with open(config.basedir + "/game/firstrun", "wb") as f:
+                pass
+    if not firstrun:
+        if persistent.first_run and not persistent.do_not_delete:
+            $ quick_menu = False
+            scene black
+            menu:
+                "A previous save file has been found. Would you like to delete your save data and start over?"
+                "Yes, delete my existing data.":
+                    "Deleting save data...{nw}"
+                    python:
+                        delete_all_saves()
+                        renpy.loadsave.location.unlink_persistent()
+                        renpy.persistent.should_save_persistent = False
+                        renpy.utter_restart()
+                "No, continue where I left off.":
+                    pass
+
+        python:
+            if not firstrun:
+                with open(config.basedir + "/game/firstrun", "w") as f:
+                    f.write("1")
+            filepath = renpy.file("firstrun").name
+            open(filepath, "a").close()
+
+
+    call bootloader
+
     python:
         basedir = config.basedir.replace('\\', '/')
 
@@ -271,11 +275,11 @@ label splashscreen:
         jump autoload
 
     $ config.allow_skipping = False
-    call bootloader
-    scene black
+
+    show white
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
-    $ config.main_menu_music = audio.bt
+    $ config.main_menu_music = audio.t1
     $ renpy.music.play(config.main_menu_music)
     show intro with Dissolve(0.5, alpha=True)
     pause 2.5
@@ -283,13 +287,10 @@ label splashscreen:
 
     if persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
         $ splash_message = renpy.random.choice(splash_messages)
-    elif "beta" in config.version:
-        $ splash_message = splash_message_beta
     show splash_warning "[splash_message]" with Dissolve(0.5, alpha=True)
     pause 2.0
     hide splash_warning with Dissolve(0.5, alpha=True)
     $ config.allow_skipping = True
-    with fade
     return
 
 label warningscreen:
@@ -306,7 +307,10 @@ label after_load:
     if anticheat != persistent.anticheat:
         stop music
         scene black
-        call screen alert("Cannot Load Save File", "Are you trying to cheat?", ok_action=Return(0))
+        "The save file could not be loaded."
+        "Are you trying to cheat?"
+
+
         $ renpy.utter_restart()
     return
 
@@ -334,13 +338,11 @@ label autoload:
     jump expression persistent.autoload
 
 label before_main_menu:
-    $ config.main_menu_music = audio.bt
-    $ persistent.bootpass = 0
-    
+    $ config.main_menu_music = audio.t1
     return
 
 label quit:
 
     # stuff that happens when the game closes
 
-    return
+return

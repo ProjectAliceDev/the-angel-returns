@@ -39,7 +39,7 @@ init -1 style hyperlink_text:
 
 init -1 style splash_text:
     size 24
-    color "#fff"
+    color "#000"
     font gui.default_font
     text_align 0.5
     outlines []

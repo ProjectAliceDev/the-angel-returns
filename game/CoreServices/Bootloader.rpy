@@ -28,7 +28,7 @@ label bootloader:
         show boot_copyright:
             yalign 1.0
             xalign 0.5
-        pause 5.0
+        pause 0.5
     if not persistent.setup_complete:
         call setup
         $ persistent.setup_complete = True

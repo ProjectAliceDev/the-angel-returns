@@ -4,15 +4,15 @@ screen main_menu():
     tag menu
 
     style_prefix "main_menu"
-    
-    add "menu_fade"
-    add "menu_bg"
-    # add "menu_art_n"
-    # add "menu_art_s"
-    # add "menu_art_y"
-    add "menu_art_m"
-    add "menu_art_mi"
-    add "menu_art_a"
+
+    if persistent.ghost_menu:
+         add "white"
+         add "menu_art_y_ghost"
+         add "menu_art_n_ghost"
+    else:
+        add "menu_bg"
+        add "menu_art_y"
+        add "menu_art_n"
     frame:
         pass
 
@@ -20,14 +20,8 @@ screen main_menu():
 ## contents of the main menu are in the navigation screen.
     use navigation
 
-#    add "menu_particles"
-#    add "menu_particles"
-#    add "menu_particles"
-#    add "menu_logo"
-#    add "menu_particles"
-#    add "menu_fade"
-    text "[config.name!t]":
-        style "info_title"
+    # text "[config.name!t]":
+    #     style "info_title"
 
     if gui.show_name:
         vbox:
@@ -39,8 +33,24 @@ screen main_menu():
             else:
                 text "For evaluation purposes only.":
                     style "hl3_version_text"
-                
 
+    if not persistent.ghost_menu:
+        add "menu_particles"
+        add "menu_particles"
+        add "menu_particles"
+        add "menu_logo"
+    if persistent.ghost_menu:
+        add "menu_art_s_ghost"
+        add "menu_art_m_ghost"
+    else:
+        if persistent.playthrough == 1 or persistent.playthrough == 2:
+            add "menu_art_s_glitch"
+        else:
+            add "menu_art_s"
+    add "menu_particles"
+    if persistent.playthrough != 4:
+        add "menu_art_m"
+        add "menu_fade"
 
     key "K_ESCAPE" action Quit(confirm=False)
 
