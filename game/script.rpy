@@ -24,7 +24,7 @@ label start:
         config.allow_skipping = True
 
     if persistent.playthrough == 0:
-        call pre_ch0
+        # call pre_ch0
         call ch0_main
         call ch0_end
         
