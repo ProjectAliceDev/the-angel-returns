@@ -53,24 +53,24 @@ image yuri 3by7 = im.Composite((960, 960), (0, 0), "yuri/y7.png", (0, 0), "yuri/
 #############################################################
 ## Dynamic Characters                                      ##
 #############################################################
-define narrator = Character(ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxmc.png", xalign=0.5, yalign=1.0))
+define narrator = Character(ctc="ctc", ctc_position="fixed")
 
-define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxmc.png", xalign=0.5, yalign=1.0), who_style='say_label_mc')
+define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
-define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxblue.png", xalign=0.5, yalign=1.0), who_style='say_label_blue')
+define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
-define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxgreen.png", xalign=0.5, yalign=1.0), who_style='say_label_green')
+define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
-define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxpink.png", xalign=0.5, yalign=1.0), who_style='say_label_pink')
+define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
-define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxpurple.png", xalign=0.5, yalign=1.0), who_style='say_label_purple')
+define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
-define a = DynamicCharacter('a_name', image='alice', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxamber.png", xalign=0.5, yalign=1.0), who_style='say_label_amber')
+define a = DynamicCharacter('a_name', image='alice', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
-define sm = DynamicCharacter('sm_name', image='sayonika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxteal.png", xalign=0.5, yalign=1.0), who_style='say_label_teal')
+define sm = DynamicCharacter('sm_name', image='sayonika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
-define c = DynamicCharacter('c_name', image='craig', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxapple.png", xalign=0.5, yalign=1.0), who_style='say_label_apple')
+define c = DynamicCharacter('c_name', image='craig', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
-define h = DynamicCharacter('h_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_background=Image("/mod_assets/images/gui/textboxamber.png", xalign=0.5, yalign=1.0), who_style='say_label_amber')
+define h = DynamicCharacter('h_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")

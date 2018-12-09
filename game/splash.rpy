@@ -14,15 +14,15 @@ init python:
     splash_message_beta = "This is a pre-release version of The Angel Returns.\nSome things may be changed in the future."
 
     splash_messages = [
-        "The choices of the beautiful are unbearable.",
-        "It took so many tries to make this beautiful.",
-        "Fear more than the Ink Demon.",
         "Dark nights are upon us!",
         "You will be forever mine.",
         "I've waited here for the longest time.",
+        "Just Alice.",
+        "Alan, please add details.",
         "This game is not suitable for children\nor those who are easily disturbed?",
         "This game is not suitable for children\nor those who are easily dismembered.",
-        "This game is not suitable for children\nor those who are easily disguarded."
+        "This game is not suitable for children\nor those who are easily discarded.",
+        "This game is not suitable for children\nor those who easily cast pacify."
     ]
 
 

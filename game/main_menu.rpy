@@ -23,17 +23,6 @@ screen main_menu():
     # text "[config.name!t]":
     #     style "info_title"
 
-    if gui.show_name:
-        vbox:
-            text "v. [config.version]":
-                style "hl3_version_text"
-            if persistent.ctf_mode:
-                text "For evaluation purposes only. CTF mode enabled.":
-                    style "hl3_version_text"
-            else:
-                text "For evaluation purposes only.":
-                    style "hl3_version_text"
-
     if not persistent.ghost_menu:
         add "menu_particles"
         add "menu_particles"
@@ -53,6 +42,17 @@ screen main_menu():
         add "menu_fade"
 
     key "K_ESCAPE" action Quit(confirm=False)
+
+    if gui.show_name:
+        vbox:
+            text "v. [config.version]":
+                style "hl3_version_text"
+            if persistent.ctf_mode:
+                text "For evaluation purposes only. CTF mode enabled.":
+                    style "hl3_version_text"
+            else:
+                text "For evaluation purposes only.":
+                    style "hl3_version_text"
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
