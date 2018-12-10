@@ -493,10 +493,10 @@ init -1 style navigation_button:
 init -1 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
     font "Resources/systemfont/Medium.ttf"
-    color "#485a6c"
-    outlines [(3, "#f9c440", 0, 0), (1, "#f9c440", 1, 1)]
-    hover_outlines [(4, "#fff394", 0, 0), (2, "#fff394", 2, 2)]
-    insensitive_outlines [(4, "#d48e15", 0, 0), (2, "#d48e15", 2, 2)]
+    color "#fff"
+    outlines [(3, aliceos_oem_pink[300], 0, 0), (1, aliceos_oem_pink[300], 1, 1)]
+    hover_outlines [(4, aliceos_oem_pink[100], 0, 0), (2, aliceos_oem_pink[100], 2, 2)]
+    insensitive_outlines [(4, silver[300], 0, 0), (2, silver[300], 2, 2)]
 
 
 
@@ -691,7 +691,7 @@ init -1 style game_menu_outer_frame:
     bottom_padding 30
     top_padding 120
 
-    background "mod_assets/images/gui/overlay/game_menu.png"
+    background "gui/overlay/game_menu.png"
 
 init -1 style game_menu_navigation_frame:
     xsize 280
@@ -718,8 +718,8 @@ init -1 style game_menu_label:
 init -1 style game_menu_label_text:
     font "Resources/systemfont/Medium.ttf"
     size gui.title_text_size
-    color "#485a6c"
-    outlines [(3, "#f9c440", 0, 0), (1, "#f9c440", 1, 1)]
+    color "#fff"
+    outlines [(3, aliceos_oem_pink[300], 0, 0), (1, aliceos_oem_pink[300], 1, 1)]
     yalign 0.5
 
 init -1 style return_button:
@@ -1058,8 +1058,8 @@ init -1 style pref_label:
 init -1 style pref_label_text:
     font "Resources/systemfont/Medium.ttf"
     size 24
-    color "#485a6c"
-    outlines [(1, "#f9c440", 0, 0), (1, "#f9c440", 0, 0)]
+    color "#fff"
+    outlines [(1, aliceos_oem_pink[500], 0, 0), (1, aliceos_oem_pink[500], 0, 0)]
     yalign 1.0
 
 init -1 style pref_vbox:
