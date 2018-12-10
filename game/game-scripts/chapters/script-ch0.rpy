@@ -344,33 +344,69 @@ label ch0_main:
     h "I'm sorry, I must've thought you two met already."
     h "I guess my memory is starting to fail on me again..."
 
-    mc "It's fine, Grandpa."
+    show mc at f42
+    mc 1d "It's fine, Grandpa."
     mc "Yuri, Natsuki, need me to help you?"
+    show yuri at f41
+    show mc at t42
     y "I think I'm fine."
+    show natsuki at f43
+    show yuri at t41
     n "Same here."
+    show mc at f42
+    show natsuki at t43
     mc "Alright, then."
     s "Alrighty, everyone!"
+    show yuri at thide
+    show mc at thide
+    show natsuki at thide
+    show alice at thide
+    hide yuri
+    hide mc
+    hide natsuki
+    hide alice
 
     "Sayori steps forward and addresses the club."
 
+    show sayori 1a at t21
+    show mc 1a at t22
     s "We have guests, so let's make sure they feel at home, alright?"
     mc "Got it."
 
+    show sayori at thide
+    show mc at thide
+    hide sayori
+    hide mc
     "Yuri grabs the tea set from its usual location and starts setting it up."
     "Alice glances over from the side."
 
-    a "Do the teachers allow you to have that in here?"
-    y "Yes, they do. It's great having tea with a good book, isn't it?"
-    a "Well, I can't say I disagree with you..."
-    a "Though most of my reading is done on my MacBook."
-    y "Excuse me, I'll be right back."
+    show yuri 1a at t21
+    show alice 1a at t22
+    a 1d "Do the teachers allow you to have that in here?"
+    show yuri at f21
+    y 1f "Yes, they do. It's great having tea with a good book, isn't it?"
+    show alice at f22
+    show yuri at t21
+    a 2b "Well, I can't say I disagree with you..."
+    a 1p "Though most of my reading is done on my MacBook."
+    show yuri at f21
+    show alice at t22
+    y 2b "Excuse me, I'll be right back."
     y "I need to fill up the water pitcher."
 
+    show alice at thide
+    show yuri at thide
+    hide alice
+    hide yuri
     "Yuri walks out of the room to fill up the pitcher."
     "Meanwhile, Natsuki sets the tray down on the table and lifts off the foil."
 
+    show natsuki 1a at t21
+    show sayori 1a at t22
     n "There we go!"
-    s "Cupcakes, yaay~!"
+    show sayori at f22
+    s 4r "Cupcakes, yaay~!"
+    show sayori at t22
 
     "I study the designs on the cupcakes Natsuki made."
     "The designs remind me of the paintings in Joey's house."
@@ -378,154 +414,259 @@ label ch0_main:
     "I try to imagine their taste coupled with the look."
 
     h "{i}Reminds me of home...{/i}"
-    n "Eh?"
+    show natsuki at f21
+    n 4c "Eh?"
+    show natsuki at t21
     h "My bad. I was just mumbling to myself..."
-    n "If there's something you want to say, you can just say it."
-    a "Henry, don't these look like the paintings Joey had in his house?"
+    show natsuki at f21
+    n 5c "If there's something you want to say, you can just say it."
+    show alice 1a at t33
+    show natsuki at t31
+    show sayori at t32
+    a 2g "Henry, don't these look like the paintings Joey had in his house?"
     h "They do, don't they?"
-    n "Who's Joey?"
-    a "Joey was Henry's old partner back in the day."
+    show natsuki at f31
+    n 2c "Who's Joey?"
+    show natsuki at t31
+    show alice at f33
+    a 1d "Joey was Henry's old partner back in the day."
     a "They ran an animation studio that went bankrupt."
-    a "You might remember some cartoons from them."
-    a "I think Sayori kind of nailed it when she was talking about Henry's doodles."
+    a 1e "You might remember some cartoons from them."
+    a 2k "I think Sayori kind of nailed it when she was talking about Henry's doodles."
 
+    show alice at t33
     "Sayori giggles in the corner."
     "I sigh, hoping to shrug off her explanation of Joey."
     "About the studio."
     "Alice picks up on my aura and frowns."
 
-    a "I'm sorry, that's still a bit touchy for you, isn't it?"
+    show alice at f33
+    a 1h "I'm sorry, that's still a bit touchy for you, isn't it?"
     h "A little bit."
+    show alice at t33
     h "It's just an old story that I'm a bit tired of hearing..."
-    a "Sorry."
+    show alice at f33
+    a 1q "Sorry."
 
+    show sayori at thide
+    show alice at thide
+    hide sayori
+    hide alice
+    show natsuki 1a at t22
     "Yuri comes back with the pitcher full and lets it boil."
     "After putting the tea leaves in the cups, she comes towards us."
 
+    show yuri 2f at t21
     y "Did I miss anything?"
-    n "N-not really..."
+    show natsuki at f22
+    n 5u "N-not really..."
     n "Just [player]'s grandpa reminiscing about bad times."
-    n "I'm sorry if my cupcakes accidentally triggered you..."
-    n "Had Sayori told me beforehand, I would've done cats or something."
+    n 4m "I'm sorry if my cupcakes accidentally triggered you..."
+    n 5u "Had Sayori told me beforehand, I would've done cats or something."
+    show natsuki at t22
     h "It's not your fault."
     h "Things happened. Things didn't happen."
     h "Ultimately, I took a much better road and ended up seeing my old friend's broken road."
     h "Dream too big, and you'll fall."
 
+    show yuri at thide
+    hide yuri
     "Yuri disappears from the group temporarily to grab the cups."
     "As Sayori situates us, Yuri comes back with the tea cups in hand."
 
+    show yuri 1c at t21
     y "Here. Perhaps this will calm you a bit..."
     h "Thank you."
 
+    show yuri at thide
+    show natsuki at thide
+    hide yuri
+    hide natsuki
     "She continues to pass out cups while Natsuki distributes the cupcakes."
     "As soon as she gets to me, she takes a knife and cuts off the frosting."
     "She pulls out chocolate frosting from her bag and re-frosts the cupcake."
 
+    show natsuki 1m at t11
     n "I don't want you getting more upset, so I figured the chocolate frosting would do better for you."
     h "You didn't have to do that..."
     h "I appreciate you going out of your way for it, though."
 
+    show natsuki 1n at t11
     "Natsuki blushes in embarrassment."
     "She tries to hold back her tongue."
 
+    show natsuki 5r at t11
     n "I-I-I..."
-    n "Nevermind."
+    n 5s "Nevermind."
 
+    show natsuki at thide
+    hide natsuki
     "She brushes it off and continues passing out the cupcakes."
     "Once everyone is situated, Sayori begins her announcements."
 
-    s "Let's get the announcements out of the way before I forget."
+    show sayori 1a at t32
+    show yuri 1a at t31
+    show alice 1a at t33
+    s 1x "Let's get the announcements out of the way before I forget."
     s "So, about spring break..."
-    s "I've been thinking about a few things, but it looks like uncle Henry and Miss Angel..."
-    a "You can call me Alice."
-    s "..."
-    s "...Alice have a proposal. Is that right?"
+    s 2c "I've been thinking about a few things, but it looks like uncle Henry and Miss Angel..."
+    show alice at f33
+    a 1g "You can call me Alice."
+    show sayori at f32
+    show alice at t33
+    s 1i "..."
+    s 1c "...Alice have a proposal. Is that right?"
+    show sayori at t32
     h "Ah, yes..."
     h "So, you guys saw the kinds of things we do this morning with the coding presentation, right?"
-    y "You make mobile game for smartphones, yes."
+    show yuri at f31
+    y 2b "You make mobile game for smartphones, yes."
+    show yuri 1a at t31
     h "Well, we also do small animations on the side."
     h "[player] was telling me this morning that you all are hoping to explore literature in different forms."
     h "So, I figured you guys may want to check out what we have to offer at our studio for a week."
     h "That way, you guys get to know a little more about cartoon animation and how literature plays a role in it."
-    a "Well, that and a few other things."
+    show alice at f33
+    a 1g "Well, that and a few other things."
     a "Again, we do make mobile games."
-    a "But we've been working on some new technologies as well that might interest you."
-    a "I don't mind you all taking a look at what we do!"
-    s "Oh, I see now!"
+    a 2d "But we've been working on some new technologies as well that might interest you."
+    a 1k "I don't mind you all taking a look at what we do!"
+    show sayori at f32
+    show alice at t33
+    s 1x "Oh, I see now!"
     s "Well, thank you for suggesting this, uncle Henry!"
-    s "Are there any questions or concerns about this idea?"
-    s "I want us to have fun and do things that go in line with the club, so I'm all ears."
-    y "It'd be interesting to see how literature manifests in cartoon animations, especially with mobile game development."
+    s 3c "Are there any questions or concerns about this idea?"
+    s 1x "I want us to have fun and do things that go in line with the club, so I'm all ears."
+    show yuri at f31
+    show sayori at t32
+    y 2f "It'd be interesting to see how literature manifests in cartoon animations, especially with mobile game development."
     y "I'm not against it."
+    show yuri at thide 
+    hide yuri
+    show mc 1d at t31
     mc "I mean, I'm fine with it, but it all depends on you guys."
-    n "..."
-    n "There isn't anything dangerous, right?"
-    a "Safety is a priority for us, so we'll do everything we can to make sure you're as safe as possible."
-    n "Uh, okay..."
+    show mc at thide
+    hide mc
+    show natsuki 5a at t31
+    n 5g "..."
+    n 5h "There isn't anything dangerous, right?"
+    show alice at f33
+    show natsuki at t31
+    a 1b "Safety is a priority for us, so we'll do everything we can to make sure you're as safe as possible."
+    show natsuki at f31
+    show alice at t33
+    n 4c "Uh, okay..."
     n "It's kind of cool, I guess..."
-    s "So we're all in agreement?"
+    show natsuki at t31
+    show sayori at f32
+    s 4x "So we're all in agreement?"
 
+    show sayori at t32
     "The members' heads nod in agreement."
     "Sayori looks back at me and Alice, smiling."
 
-    s "Well then, uncle Henry, we accept!"
+    show sayori at f32
+    s 4r "Well then, uncle Henry, we accept!"
+    show sayori 1a at t32
     h "That's wonderful. We can help you work out all of the details later."
-    s "Perfect! On to the next announcement..."
-    s "I know we've been hard at work with everything for this quarter and what not, including poem writing."
-    s "So I want to give you a break today. We won't be sharing poems."
+    show sayori at f32
+    s 2x "Perfect! On to the next announcement..."
+    s 1c "I know we've been hard at work with everything for this quarter and what not, including poem writing."
+    s 1x "So I want to give you a break today. We won't be sharing poems."
 
+    show sayori at t32
+    show natsuki 5a at t31
     "Natsuki sighs in relief."
     "[player] chuckles to himself while Alice smirks."
 
-    a "I guess I should have been better prepared today."
-    s "Don't worry! The main thing is that we have fun!"
+    show alice at f33
+    a 1p "I guess I should have been better prepared today."
+    show alice at t33
+    show sayori at f32
+    s 1x "Don't worry! The main thing is that we have fun!"
     s "So, I thought we'd do something a little bit different today..."
 
+    show sayori at t32
+    stop music fadeout 1.5
     "Sayori pulls out a box from one of her bags and places it on the table."
     "Scrabble..."
 
+    play music t6
     h "I haven't played this in years!"
     h "I'm afraid I'm going to be beaten quite easily..."
-    a "Ha ha!"
-    a "Playing the deceptive card now?"
-    n "Scrabble?"
+    show alice at f33
+    a 1k "Ha ha!"
+    a 1b "Playing the deceptive card now?"
+    show natsuki at f31
+    show alice at t33
+    n 3k "Scrabble?"
     n "Since when did we start playing board games?"
+    show alice at thide
+    hide alice
+    show yuri 2e at t33
     y "Oh, my..."
+    show natsuki at t41
+    show sayori at t42
+    show mc 1c at t43
+    show yuri at t44
     mc "Well, it looks like I'm going to have to remember the dictionary again..."
-    s "Ehehe~"
-    s "I think we can use a bit of competitive gaming to wind down after a brutal week!"
+    show sayori at f42
+    s 4r "Ehehe~"
+    s 1x "I think we can use a bit of competitive gaming to wind down after a brutal week!"
 
+    show sayori at thide
+    show yuri at thide
+    show natsuki at thide
+    show mc at thide
+    hide sayori
+    hide yuri
+    hide natsuki
+    hide mc
+
+    stop music fadeout 1.0
     "We play a few rounds to fill time."
     "Sayori managed to win a round, but, unsurprisingly, Alice destroys all of us a few times."
     "When the meeting is over, Sayori cleans up the game while Yuri and Natsuki help in cleaning up the room."
     "Alice and I help reorganize the room while [player] makes sure the crumbs are swept."
     "When everything is all cleaned up, Sayori approaches us."
+    play music t3
 
+    show sayori 1x at t21
+    show alice 1a at t22
     s "Thanks for joining us today!"
-    s "I think we all have had some good fund today."
+    s "I think we all have had some good fun today."
     h "Thank you for letting us come. We can't wait to kick of spring break for you all."
-    a "You make a great leader, Sayori."
+    show alice at f22
+    a 1b "You make a great leader, Sayori."
     a "I hope we can make this spring break eventful."
+    show sayori at f21
+    show alice at t22
     s "Thank you!"
-    s "I can't wait!"
+    s 4r "I can't wait!"
 
     "Yuri and Natsuki wave at us before leaving the room."
 
-    s "By, everyone! See you all tomorrow!"
+    s 1x "By, everyone! See you all tomorrow!"
     s "Make sure you pack for a couple of days' worth!"
-    s "Let's meet in front of the school tomorrow at 10 o'clock."
+    s 1c "Let's meet in front of the school tomorrow at 10 o'clock."
 
     "The girls give a thumbs up ad they leave the room."
     "Sayori looks back at us."
 
-    s "You ready to walk home, [player]?"
+    s 1x "You ready to walk home, [player]?"
+    show sayori at t21
     h "Why don't I take you?"
     h "Besides, I'd best drop Alice off, too..."
-    a "Oh, you don't have to do that, Henry..."
-    a "Besides, don't we have to work on details about this?"
+    show alice at f22
+    show sayori at t21
+    a 2g "Oh, you don't have to do that, Henry..."
+    a 1h "Besides, don't we have to work on details about this?"
+    show alice at t22
     h "..."
     h "Right."
+    show mc 1c at t32
+    show sayori at t31
+    show alice at t33
     mc "I think we'd best get moving, then."
     h "Heey! Don't rush your old grandpa here!"
 
@@ -541,47 +682,51 @@ label ch0_main:
     "[player] and Sayori are presumably asleep already."
     "The soft glow of the lights fill the room with a calm, settling atmosphere."
 
-    a "This will be an interesting week, won't it?"
+    # This should probably be a CG or something...
+    play music t10
+    show alice 1a at t11
+    a 1b "This will be an interesting week, won't it?"
     h "I think we'll enjoy ourselves while we're at it."
     h "I'm sure Bendy will get a kick out of it."
-    a "I'm just praying he doesn't cause a ruckus."
+    a 1h "I'm just praying he doesn't cause a ruckus."
     a "I'm hoping the club gives him some exposure to friendship and compassion."
-    a "You know, something that he doesn't comprehend easily because of Joey's doing."
+    a 2n "You know, something that he doesn't comprehend easily because of Joey's doing."
     h "It'll be fine, I'm sure..."
     h "He's kind of more like a toddler than anything. Always curious..."
-    a "Sure, we'll go with that."
+    a 1j "Sure, we'll go with that."
 
     "She titters lightly and take a sip from the tea."
 
-    a "Isn't it funny, just thinking about it?"
-    a "We're paving our road from his mistakes."
+    a 1g "Isn't it funny, just thinking about it?"
+    a 2i "We're paving our road from his mistakes."
     a "I think that's impressive from someone that's just a thought like me..."
     h "You turned out alright, I think."
-    a "Have you asked yourself, 'Who am I?'"
+    a 1i "Have you asked yourself, 'Who am I?'"
     h "I've debated it a few times..."
     a "Isn't it weird just knowing our lives are a mystery?"
     a "We don't really know who we are until the very end."
-    a "Just little parts of a bigger masterpiece in the universe."
+    a 1v "Just little parts of a bigger masterpiece in the universe."
     h "Aren't you a bit philosophical now..."
+    h "Like that new kid that showed up last week."
 
     "I snicker."
 
-    a "Ha, ha."
-    a "But you know I ask these questions."
+    a 1f "Ha, ha."
+    a 1g "But you know I ask these questions."
     a "It feels like this universe didn't want our worlds colliding with each other."
     a "Yet your world tethers mine through engineering and magic."
-    a "Like older iPhones with iTunes and all the set up stuff..."
+    a 1b "Like older iPhones with iTunes and all the set up stuff..."
     h "Now you're getting out of my league again."
-    a "Ahaha~"
+    a 1j "Ahaha~"
 
     "I lean back in my chair and take another sip from the cup."
     "Alice continues to look out the window, admiring the stars."
     "She starts humming to herself while I grab another tea bag and the pitcher from the counter."
     "I place another tea bag in her cup, discarding the old one, and pour the water in."
 
-    a "Oh, you didn't have to do that..."
-    h "But you din't know where I keep the tea bags."
-    a "One day I will."
+    a 1f "Oh, you didn't have to do that..."
+    h "But you don't know where I keep the tea bags."
+    a 1b "One day I will."
 
     "She grins in the warm lights."
     "Her smile reminds me of Linda's smile when we first met."
@@ -591,18 +736,18 @@ label ch0_main:
     "I guess it must've been because Alice and Linda spent so much time together."
     "Like mother and daughter..."
 
-    a "Henry?"
+    a 1h "Henry?"
 
     "I jolt quickly and shake my head."
 
     h "Hehe, sorry..."
     a "Thinking about Linda again?"
     h "Ehehe~"
-    a "Thought so."
-    a "We'd better get to writing that email before we forget."
+    a 1j "Thought so."
+    a 1b "We'd better get to writing that email before we forget."
     h "You're right."
     h "I assume you have that MacBook of yours on you?"
-    a "As always."
+    a 1e "As always."
     return
 
 label ch0_end:
