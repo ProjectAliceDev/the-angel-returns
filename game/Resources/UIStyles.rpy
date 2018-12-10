@@ -131,7 +131,7 @@ init 2:
 
         style aliceos_input is aliceos_bold:
             size 48
-            color strawberry[500]
+            color aliceos_oem_pink[500]
     else:
         style setup_title_text is aliceos_bold:
             color "#000"
@@ -159,7 +159,7 @@ init 2:
 
         style aliceos_input is aliceos_bold:
             size 32
-            color strawberry[500]
+            color aliceos_oem_pink[500]
 
     style confirm_prompt_details_mute_text is aliceos_regular:
         color slate[700]
@@ -173,27 +173,27 @@ init 2:
 
     style confirm_button is aliceos_bold:
         properties gui.button_properties("confirm_button")
-        color strawberry[500]
-        hover_color strawberry[100]
+        color aliceos_oem_pink[500]
+        hover_color aliceos_oem_pink[100]
         outlines []
         size 28
 
     style confirm_button_negative is aliceos_bold:
         properties gui.button_properties("confirm_button")
-        color strawberry[500]
-        hover_color strawberry[100]
+        color aliceos_oem_pink[500]
+        hover_color aliceos_oem_pink[100]
         outlines []
 
     style confirm_button_text is aliceos_regular:
         properties gui.button_text_properties("confirm_button")
-        color strawberry[500]
-        hover_color strawberry[100]
+        color aliceos_oem_pink[500]
+        hover_color aliceos_oem_pink[100]
         outlines []
 
     style confirm_button_negative_text is aliceos_bold:
         properties gui.button_text_properties("confirm_button")
-        color strawberry[500]
-        hover_color strawberry[100]
+        color aliceos_oem_pink[500]
+        hover_color aliceos_oem_pink[100]
         outlines []
 
     style banner_frame:
@@ -238,7 +238,7 @@ init 2:
         outlines []
 
     style aliceos_input_text is aliceos_italic:
-        color strawberry[500]
+        color aliceos_oem_pink[500]
 
 
     ## ASErrorHandler Styles
