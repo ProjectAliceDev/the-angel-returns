@@ -58,11 +58,12 @@ define -2 gui.interface_text_color = '#ffffff'
 
 
 
-define -2 gui.default_font = "mod_assets/gui/font/generic.ttf"
+# define -2 gui.default_font = "mod_assets/gui/font/generic.ttf"
+define -2 gui.default_font = "gui/font/Aller_Rg.ttf"
 
 
-define -2 gui.name_font = "mod_assets/gui/font/name.ttf"
-# define -2 gui.name_font = "gui/font/RifficFree-Bold.ttf"
+# define -2 gui.name_font = "mod_assets/gui/font/name.ttf"
+define -2 gui.name_font = "gui/font/RifficFree-Bold.ttf"
 
 
 define -2 gui.interface_font = "Resources/systemfont/Regular.ttf"

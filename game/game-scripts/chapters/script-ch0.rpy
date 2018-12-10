@@ -751,6 +751,26 @@ label ch0_main:
     return
 
 label ch0_end:
-    # h "Alright, Joey, I'm here."
+    stop music fadeout 1.0
+    scene black
+    with trueblack
+    $ m_name = glitchtext(12)
+    $ gtext = glitchtext(32)
+    play music m1 fadein 3.0
+    m "Damn the ignorant fools!"
+    m "Condemn the proud and determined!"
+    m "In this world, no one survives its infinite tortures."
+    python:
+        gtexta = glitchtext(6)
+        gtextb = glitchtext(12)
+    m "Either you [gtexta]..."
+    m "... or [gtextb]..."
+    $ style.say_dialogue = style.edited
+    m "The fall of the Angel will tear us apart and destroy this world."
+    m "May our hearts combine us in the darkness..."
+    m "And forever shutter this place out of existence."
+    m "Rise and shine, Henry..."
+    m "Wake up and feel the darkness consume you..."
+    $ style.say_dialogue = style.normal
     return
     

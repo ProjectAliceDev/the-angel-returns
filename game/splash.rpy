@@ -30,7 +30,7 @@ image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign
 
 
 image menu_logo:
-    "gui/logo.png"
+    "mod_assets/newlogo.png"
     subpixel True
     xcenter 240
     ycenter 120
