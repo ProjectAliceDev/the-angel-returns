@@ -19,7 +19,7 @@ init python:
         # description of your app, as where as the name of the
         # folder that your applet lives in.
         app_dir = "RenPy"
-        author = "Author"
+        author = "Team Salvato"
         version = "1.1.1"
         description = gui.about
 

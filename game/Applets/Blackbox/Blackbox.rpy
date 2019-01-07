@@ -19,7 +19,7 @@ init python:
         # description of your app, as where as the name of the
         # folder that your applet lives in.
         app_dir = "Blackbox"
-        author = "Marquis Kurt"
+        author = "Project Alice"
         version = "1.0.0"
         description = """\
 Puzzle Time provides a fun and unique way of solving puzzles in between scenes in DDLC.

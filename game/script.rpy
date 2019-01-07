@@ -24,9 +24,11 @@ label start:
         config.allow_skipping = True
 
     if persistent.playthrough == 0:
+        call screen alert("Open Demo Concept", "The following demo is a concept for a rewrite of The Angel Returns.\nTo send feeback, click the Send Feedback button in the quick menu.", ok_action=Return('dismiss'))
         # call pre_ch0
         call ch0_main
         call ch0_end
+        call screen alert("Demo Concept End", "This marks the end of the open demo concept.\nPlease submit any feedback you may have.", ok_action=Return('dismiss'))
         
 
         # $ chapter = 1
@@ -44,9 +46,9 @@ label start:
         # call demo_end_2
         # call ch1_puzzle
 
-    if persistent.playthrough == 1:
-        call demo_end_loop
-        pass
+    # if persistent.playthrough == 1:
+    #     call demo_end_loop
+    #     pass
 
     return
 label endgame(pause_length=4.0):

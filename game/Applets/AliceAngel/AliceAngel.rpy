@@ -19,7 +19,7 @@ init python:
         # description of your app, as where as the name of the
         # folder that your applet lives in.
         app_dir = "AliceAngel"
-        author = "Marquis Kurt"
+        author = "Project Alice"
         version = "7.7.7"
         description = """\
 A lil' angel sent from above. I'm quite a gal, I'm Alice Angel!

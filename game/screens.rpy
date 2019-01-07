@@ -960,6 +960,13 @@ init -501 screen preferences() tag menu:
                     textbutton _("Unseen Text") action Preference("skip", "toggle")
                     textbutton _("After Choices") action Preference("after choices", "toggle")
 
+                vbox:
+                    null height 12
+                    label "Misc.":
+                        style "pref_label"
+                    textbutton "View installed applets >" action ShowMenu("applets"):
+                        style "applets_button"
+
 
 
 

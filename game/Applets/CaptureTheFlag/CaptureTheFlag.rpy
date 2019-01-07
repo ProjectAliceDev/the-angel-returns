@@ -19,7 +19,7 @@ init python:
         # description of your app, as where as the name of the
         # folder that your applet lives in.
         app_dir = "CaptureTheFlag"
-        author = "Marquis Kurt"
+        author = "Project Alice"
         version = "0.1.0"
         description = """\
 It's time to capture the flag!
