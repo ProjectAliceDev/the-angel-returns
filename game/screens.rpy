@@ -492,7 +492,7 @@ init -1 style navigation_button:
 
 init -1 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-    font "Resources/systemfont/Medium.ttf"
+    font gui.name_font
     color "#fff"
     outlines [(3, aliceos_oem_pink[300], 0, 0), (1, aliceos_oem_pink[300], 1, 1)]
     hover_outlines [(4, aliceos_oem_pink[100], 0, 0), (2, aliceos_oem_pink[100], 2, 2)]
@@ -716,7 +716,7 @@ init -1 style game_menu_label:
     ysize 120
 
 init -1 style game_menu_label_text:
-    font "Resources/systemfont/Medium.ttf"
+    font gui.name_font
     size gui.title_text_size
     color "#fff"
     outlines [(3, aliceos_oem_pink[300], 0, 0), (1, aliceos_oem_pink[300], 1, 1)]
@@ -1063,7 +1063,7 @@ init -1 style pref_label:
     bottom_margin 2
 
 init -1 style pref_label_text:
-    font "Resources/systemfont/Medium.ttf"
+    font gui.name_font
     size 24
     color "#fff"
     outlines [(1, aliceos_oem_pink[500], 0, 0), (1, aliceos_oem_pink[500], 0, 0)]

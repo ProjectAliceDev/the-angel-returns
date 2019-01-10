@@ -1,7 +1,7 @@
 # Doki Doki: The Angel Returns
 [![Build Status](https://travis-ci.org/ProjectAliceDev/the-angel-returns.svg?branch=nova-scotia)](https://travis-ci.org/ProjectAliceDev/the-angel-returns)
 
-> This is the for the branch `nova-scotia`, dedicated to the developments of Project Nova and Project Scotia. To get started with quick development on Nova/Scotia, you can get started with [your own Gitpod workspace](https://gitpod.io/#https://github.com/ProjectAliceDev/the-angel-returns/tree/nova-scotia) or [use an existing one](https://c53bfdb0-f2e1-45e2-bcb5-cfa29a105200.ws-us.gitpod.io/
+> This is the for the branch `ralsei`, dedicated to the developments of Project Nova and Project Scotia. To get started with quick development on Nova/Scotia, you can get started with [your own Gitpod workspace](https://gitpod.io/#https://github.com/ProjectAliceDev/the-angel-returns/tree/nova-scotia) or [use an existing one](https://c53bfdb0-f2e1-45e2-bcb5-cfa29a105200.ws-us.gitpod.io/
 ) (hosted by Marquis Kurt).
 
 It's spring break! Join the Literature Club girls in an exciting one-week adventure as they visit Angelhouse, the spiritual successor to Joey Drew Studios! Solve fun minipuzzles and have a good time with the girls. Just remember that `<DATA EXPUNGED>`.
