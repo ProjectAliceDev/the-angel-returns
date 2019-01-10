@@ -174,7 +174,7 @@ label ch0_main:
 
     h "Oh! My grandson goes there."
     a 1g "Really?"
-    a 2j "Well, I won't feel alone on this, then!"
+    a 2j "Perfect. I won't feel so alone."
     h "What are you presenting down there, exactly?"
     a 1o "Just some technical stuff about how we make games."
     a "They're trying to get their students excited about coding."
