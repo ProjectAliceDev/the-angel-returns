@@ -66,7 +66,7 @@ define -2 gui.default_font = "gui/font/Aller_Rg.ttf"
 define -2 gui.name_font = "gui/font/RifficFree-Bold.ttf"
 
 
-define -2 gui.interface_font = "Resources/systemfont/Regular.ttf"
+define -2 gui.interface_font = "gui/font/Aller_Rg.ttf"
 
 
 define -2 gui.text_size = 24
