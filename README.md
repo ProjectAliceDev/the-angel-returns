@@ -2,8 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ProjectAliceDev/the-angel-returns.svg?branch=nova-scotia)](https://travis-ci.org/ProjectAliceDev/the-angel-returns)
 
-> This is the for the branch `ralsei`, dedicated to the developments of Project Nova and Project Scotia. To get started with quick development on Nova/Scotia, you can get started with [your own Gitpod workspace](https://gitpod.io/#https://github.com/ProjectAliceDev/the-angel-returns/tree/nova-scotia) or [use an existing one](https://c53bfdb0-f2e1-45e2-bcb5-cfa29a105200.ws-us.gitpod.io/
-) (hosted by Marquis Kurt).
+> Branch `ralsei` is dedicated to the open-concept demo of a potential story rewrite for _The Angel Returns_ as well as better implementations of AliceOS into the game. If you want to review or make changes, you can get started with [your own Gitpod workspace](https://gitpod.io/#https://github.com/ProjectAliceDev/the-angel-returns/tree/ralsei).
 
 It's spring break! Join the Literature Club girls in an exciting one-week adventure as they visit Angelhouse, the spiritual successor to Joey Drew Studios! Solve fun minipuzzles and have a good time with the girls. Just remember that `<DATA EXPUNGED>`.
 
@@ -23,6 +22,10 @@ Doki Doki Doki: The Angel Returns requires the following:
 
 To build the mod:
 
-```bash
-./run.py
-```
+## Running through VSCode
+
+This project comes with tasks for [Visual Studio Code](https://code.visualstudio.com) that you can use to quickly run _The Angel Returns_ from the text editor:
+
+* **Run**: Runs Ren'Py and loads the project.
+
+> Note: You'll need to change some variables around in `.vscode/tasks.json` to direct the command to where Ren'Py is located
