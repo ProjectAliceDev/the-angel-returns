@@ -3,8 +3,8 @@
 # You find yourself in a strange place. This is where we inject semvering via Git Tags
 # No need to change anything below the replacer variable.
 # Just change the value of replacer, the script will do everything for you
- 
-replacer="1.0.0betaRALSEI"
+
+replacer="1.0.0"
 
 if [ ! -z $TRAVIS_TAG ]; then
   echo " ---> Tag exists, using tag."

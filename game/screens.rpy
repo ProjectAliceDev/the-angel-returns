@@ -380,12 +380,7 @@ init -501 screen quick_menu():
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Load") action ShowMenu('load')
-
-            # Insider Content
-            if "beta" in config.version:
-                textbutton _("Send Feedback") action [Help("feedback.html"), Show(screen="alert", title="Feedback Tool Opened", message="The feedback tool has been opened in your browser.\nIf it doesn't open properly, please file an issue on GitHub.", ok_action=Hide("alert"))]
-
-
+            textbutton _("Send Feedback") action [Help("feedback.html"), Show(screen="alert", title="Feedback Tool Opened", message="The feedback tool has been opened in your browser.\nIf it doesn't open properly, please file an issue on GitHub.", ok_action=Hide("alert"))]
             textbutton _("Settings") action ShowMenu('preferences')
 
 
@@ -466,9 +461,7 @@ init -501 screen navigation():
 
             textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
 
-            # Insider Content
-            if "beta" in config.version:
-                textbutton _("Send Feedback") action [Help("feedback.html"), Show(screen="alert", title="Feedback Tool Opened", message="The feedback tool has been opened in your browser.\nIf it doesn't open properly, please file an issue on GitHub.", ok_action=Hide("alert"))]
+            textbutton _("Feedback") action [Help("feedback.html"), Show(screen="alert", title="Feedback Tool Opened", message="The feedback tool has been opened in your browser.\nIf it doesn't open properly, please file an issue on GitHub.", ok_action=Hide("alert"))]
 
             if renpy.variant("pc"):
 
@@ -1608,7 +1601,7 @@ screen say(who, what):
             window:
                 style "namebox"
                 text who id "who"
-                
+
         use quick_menu
 
 style input:
